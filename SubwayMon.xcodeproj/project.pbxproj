@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93A4FF0C17C849AB003F90A0 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */; };
+		93EC28CE17C484FC00F5F90B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CD17C484FC00F5F90B /* Cocoa.framework */; };
+		93EC28D017C484FC00F5F90B /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CF17C484FC00F5F90B /* ScreenSaver.framework */; };
+		93EC28DA17C484FC00F5F90B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93EC28D817C484FC00F5F90B /* InfoPlist.strings */; };
+		93EC28DE17C484FC00F5F90B /* SubwayMonView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28DD17C484FC00F5F90B /* SubwayMonView.mm */; };
+		93EC28E817C4854000F5F90B /* TrainView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC28E617C4854000F5F90B /* TrainView.h */; };
+		93EC28E917C4854000F5F90B /* TrainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28E717C4854000F5F90B /* TrainView.m */; };
+		93EC28F417C4858E00F5F90B /* backend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28EB17C4858E00F5F90B /* backend.cpp */; };
+		93EC28F517C4858E00F5F90B /* backend.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC28EC17C4858E00F5F90B /* backend.h */; };
+		93EC28F617C4858E00F5F90B /* csv-parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28ED17C4858E00F5F90B /* csv-parser.cpp */; };
+		93EC28F717C4858E00F5F90B /* csv-parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC28EE17C4858E00F5F90B /* csv-parser.h */; };
+		93EC28F817C4858E00F5F90B /* gtfs-realtime.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28EF17C4858E00F5F90B /* gtfs-realtime.pb.cc */; };
+		93EC28F917C4858E00F5F90B /* gtfs-realtime.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC28F017C4858E00F5F90B /* gtfs-realtime.pb.h */; };
+		93EC28FA17C4858E00F5F90B /* nyct-subway.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28F117C4858E00F5F90B /* nyct-subway.pb.cc */; };
+		93EC28FB17C4858E00F5F90B /* nyct-subway.pb.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC28F217C4858E00F5F90B /* nyct-subway.pb.h */; };
+		93EC28FF17C4872900F5F90B /* stops.txt in Resources */ = {isa = PBXBuildFile; fileRef = 93EC28FE17C4872900F5F90B /* stops.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
+		93EC28CA17C484FC00F5F90B /* SubwayMon.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubwayMon.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		93EC28CD17C484FC00F5F90B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		93EC28CF17C484FC00F5F90B /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		93EC28D217C484FC00F5F90B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		93EC28D317C484FC00F5F90B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		93EC28D417C484FC00F5F90B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		93EC28D717C484FC00F5F90B /* SubwayMon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SubwayMon-Info.plist"; sourceTree = "<group>"; };
+		93EC28D917C484FC00F5F90B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		93EC28DB17C484FC00F5F90B /* SubwayMon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SubwayMon-Prefix.pch"; sourceTree = "<group>"; };
+		93EC28DC17C484FC00F5F90B /* SubwayMonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubwayMonView.h; sourceTree = "<group>"; };
+		93EC28DD17C484FC00F5F90B /* SubwayMonView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SubwayMonView.mm; sourceTree = "<group>"; };
+		93EC28E617C4854000F5F90B /* TrainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainView.h; sourceTree = "<group>"; };
+		93EC28E717C4854000F5F90B /* TrainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainView.m; sourceTree = "<group>"; };
+		93EC28EB17C4858E00F5F90B /* backend.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = backend.cpp; sourceTree = "<group>"; };
+		93EC28EC17C4858E00F5F90B /* backend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backend.h; sourceTree = "<group>"; };
+		93EC28ED17C4858E00F5F90B /* csv-parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "csv-parser.cpp"; sourceTree = "<group>"; };
+		93EC28EE17C4858E00F5F90B /* csv-parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "csv-parser.h"; sourceTree = "<group>"; };
+		93EC28EF17C4858E00F5F90B /* gtfs-realtime.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "gtfs-realtime.pb.cc"; sourceTree = "<group>"; };
+		93EC28F017C4858E00F5F90B /* gtfs-realtime.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gtfs-realtime.pb.h"; sourceTree = "<group>"; };
+		93EC28F117C4858E00F5F90B /* nyct-subway.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "nyct-subway.pb.cc"; sourceTree = "<group>"; };
+		93EC28F217C4858E00F5F90B /* nyct-subway.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "nyct-subway.pb.h"; sourceTree = "<group>"; };
+		93EC28FE17C4872900F5F90B /* stops.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stops.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93EC28C517C484FC00F5F90B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EC28CE17C484FC00F5F90B /* Cocoa.framework in Frameworks */,
+				93EC28D017C484FC00F5F90B /* ScreenSaver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93EC28BF17C484FC00F5F90B = {
+			isa = PBXGroup;
+			children = (
+				93EC28D517C484FC00F5F90B /* SubwayMon */,
+				93EC28CC17C484FC00F5F90B /* Frameworks */,
+				93EC28CB17C484FC00F5F90B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93EC28CB17C484FC00F5F90B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93EC28CA17C484FC00F5F90B /* SubwayMon.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93EC28CC17C484FC00F5F90B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93EC28CD17C484FC00F5F90B /* Cocoa.framework */,
+				93EC28CF17C484FC00F5F90B /* ScreenSaver.framework */,
+				93EC28D117C484FC00F5F90B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93EC28D117C484FC00F5F90B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93EC28D217C484FC00F5F90B /* AppKit.framework */,
+				93EC28D317C484FC00F5F90B /* CoreData.framework */,
+				93EC28D417C484FC00F5F90B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		93EC28D517C484FC00F5F90B /* SubwayMon */ = {
+			isa = PBXGroup;
+			children = (
+				93EC28E517C4851B00F5F90B /* Frontend */,
+				93EC28E417C4851300F5F90B /* Backend */,
+				93EC28DC17C484FC00F5F90B /* SubwayMonView.h */,
+				93EC28DD17C484FC00F5F90B /* SubwayMonView.mm */,
+				93EC28D617C484FC00F5F90B /* Supporting Files */,
+			);
+			path = SubwayMon;
+			sourceTree = "<group>";
+		};
+		93EC28D617C484FC00F5F90B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93EC28FE17C4872900F5F90B /* stops.txt */,
+				93EC28D717C484FC00F5F90B /* SubwayMon-Info.plist */,
+				93EC28D817C484FC00F5F90B /* InfoPlist.strings */,
+				93EC28DB17C484FC00F5F90B /* SubwayMon-Prefix.pch */,
+				93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93EC28E417C4851300F5F90B /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				93EC28EB17C4858E00F5F90B /* backend.cpp */,
+				93EC28EC17C4858E00F5F90B /* backend.h */,
+				93EC28ED17C4858E00F5F90B /* csv-parser.cpp */,
+				93EC28EE17C4858E00F5F90B /* csv-parser.h */,
+				93EC28EF17C4858E00F5F90B /* gtfs-realtime.pb.cc */,
+				93EC28F017C4858E00F5F90B /* gtfs-realtime.pb.h */,
+				93EC28F117C4858E00F5F90B /* nyct-subway.pb.cc */,
+				93EC28F217C4858E00F5F90B /* nyct-subway.pb.h */,
+			);
+			name = Backend;
+			sourceTree = "<group>";
+		};
+		93EC28E517C4851B00F5F90B /* Frontend */ = {
+			isa = PBXGroup;
+			children = (
+				93EC28E617C4854000F5F90B /* TrainView.h */,
+				93EC28E717C4854000F5F90B /* TrainView.m */,
+			);
+			name = Frontend;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		93EC28C617C484FC00F5F90B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EC28E817C4854000F5F90B /* TrainView.h in Headers */,
+				93EC28F517C4858E00F5F90B /* backend.h in Headers */,
+				93EC28F717C4858E00F5F90B /* csv-parser.h in Headers */,
+				93EC28F917C4858E00F5F90B /* gtfs-realtime.pb.h in Headers */,
+				93EC28FB17C4858E00F5F90B /* nyct-subway.pb.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		93EC28C917C484FC00F5F90B /* SubwayMon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93EC28E117C484FC00F5F90B /* Build configuration list for PBXNativeTarget "SubwayMon" */;
+			buildPhases = (
+				93EC28C417C484FC00F5F90B /* Sources */,
+				93EC28C517C484FC00F5F90B /* Frameworks */,
+				93EC28C617C484FC00F5F90B /* Headers */,
+				93EC28C717C484FC00F5F90B /* Resources */,
+				93EC28C817C484FC00F5F90B /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SubwayMon;
+			productName = SubwayMon;
+			productReference = 93EC28CA17C484FC00F5F90B /* SubwayMon.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93EC28C017C484FC00F5F90B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Owen Yamauchi";
+			};
+			buildConfigurationList = 93EC28C317C484FC00F5F90B /* Build configuration list for PBXProject "SubwayMon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 93EC28BF17C484FC00F5F90B;
+			productRefGroup = 93EC28CB17C484FC00F5F90B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93EC28C917C484FC00F5F90B /* SubwayMon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93EC28C717C484FC00F5F90B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EC28DA17C484FC00F5F90B /* InfoPlist.strings in Resources */,
+				93EC28FF17C4872900F5F90B /* stops.txt in Resources */,
+				93A4FF0C17C849AB003F90A0 /* ConfigureSheet.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		93EC28C817C484FC00F5F90B /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93EC28C417C484FC00F5F90B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93EC28DE17C484FC00F5F90B /* SubwayMonView.mm in Sources */,
+				93EC28E917C4854000F5F90B /* TrainView.m in Sources */,
+				93EC28F417C4858E00F5F90B /* backend.cpp in Sources */,
+				93EC28F617C4858E00F5F90B /* csv-parser.cpp in Sources */,
+				93EC28F817C4858E00F5F90B /* gtfs-realtime.pb.cc in Sources */,
+				93EC28FA17C4858E00F5F90B /* nyct-subway.pb.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		93EC28D817C484FC00F5F90B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93EC28D917C484FC00F5F90B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93EC28DF17C484FC00F5F90B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		93EC28E017C484FC00F5F90B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		93EC28E217C484FC00F5F90B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SubwayMon/SubwayMon-Prefix.pch";
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				INFOPLIST_FILE = "SubwayMon/SubwayMon-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SubwayMon\"",
+					/opt/local/lib,
+				);
+				OTHER_LDFLAGS = "-lprotobuf-lite";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		93EC28E317C484FC00F5F90B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libstdc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SubwayMon/SubwayMon-Prefix.pch";
+				HEADER_SEARCH_PATHS = /opt/local/include;
+				INFOPLIST_FILE = "SubwayMon/SubwayMon-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/SubwayMon\"",
+					/opt/local/lib,
+				);
+				OTHER_LDFLAGS = "-lprotobuf-lite";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93EC28C317C484FC00F5F90B /* Build configuration list for PBXProject "SubwayMon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93EC28DF17C484FC00F5F90B /* Debug */,
+				93EC28E017C484FC00F5F90B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93EC28E117C484FC00F5F90B /* Build configuration list for PBXNativeTarget "SubwayMon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93EC28E217C484FC00F5F90B /* Debug */,
+				93EC28E317C484FC00F5F90B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93EC28C017C484FC00F5F90B /* Project object */;
+}
