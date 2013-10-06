@@ -15,9 +15,6 @@ default MacPorts install location. If you're using MacPorts, just do:
 If you'd like to get protobuf some other way, you'll need to point the Xcode
 project at the header tree and libprotobuf-lite.a.
 
-To build the screensaver on your own, you'll need to create a file called
-api-key.h, with the definition of the constant `kApiKey`.
-
 
 ## Data
 
@@ -25,6 +22,9 @@ The display is refreshed every 5 seconds (updating the time deltas given the
 most recent data fetched) and the train time data is re-downloaded every
 minute. The static GTFS file "stops.txt" is bundled with the screensaver; I'll
 have to manually update it if it ever changes.
+
+The feed is fetched from an endpoint on my server, which caches the feed fetched
+from the MTA for up to 30 seconds. This is to comply with the MTA's terms of use.
 
 
 ## Code
