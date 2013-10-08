@@ -3,6 +3,8 @@
 SubwayMon is a Mac OS X screensaver patterned after the in-station countdown
 clocks in some New York City Subway stations.
 
+![Screenshot](http://i.imgur.com/BMA0tWa.png "Arrivals at Grand Central")
+
 ## Building
 
 The real-time train times feed uses Google's Protocol Buffers. You'll need to
