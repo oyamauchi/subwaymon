@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface SubwayMonView : NSView <NSURLDownloadDelegate> {
+@interface SubwayMonView : NSView {
   // I'd rather save the parsed form -- i.e. std::vector<std::vector<std::string>> --
   // but dealing with C++ members of Objective-C objects doesn't sound like fun.
   NSString* _gtfsStops;
@@ -16,16 +16,15 @@
   NSMutableArray* _trainViews;
   NSData* _feedData;
 
-  NSURLDownload* _urlDownload;
-  NSString* _dataDownloadPath;
+  NSURLSessionTask* _sessionTask;
+
   NSInteger _selectedStationTag;
 }
 
 @property(nonatomic, strong) NSString* gtfsStops;
 @property(nonatomic, strong) NSArray* trainViews;
 @property(nonatomic, strong) NSData* feedData;
-@property(nonatomic, strong) NSURLDownload* urlDownload;
-@property(nonatomic, copy) NSString* dataDownloadPath;
+@property(nonatomic, strong) NSURLSessionTask* sessionTask;
 @property(nonatomic, assign) NSInteger selectedStationTag;
 
 - (void)initialize:(NSInteger)stationTag;

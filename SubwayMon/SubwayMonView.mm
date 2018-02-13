@@ -15,19 +15,25 @@
 
 @implementation SubwayMonView
 
-- (void)initialize:(NSInteger)stationTag {
-  // Set up 8 long-lived TrainViews at start time, and keep updating them as time goes on
-  _trainViews = [[NSMutableArray alloc] initWithCapacity:8];
-
+- (void)setSubviewSizes {
   float rowHeight = self.frame.size.height / 8;
   float padding = 0.1 * rowHeight;
 
   for (int i = 0; i < 8; ++i) {
     float y = self.frame.size.height - ((i + 1) * rowHeight) + padding;
     float height = rowHeight - padding * 2;
-    TrainView* train = [[TrainView alloc] initWithFrame:NSMakeRect(padding, y,
-                                                                   self.frame.size.width - 2*padding,
-                                                                   height)
+    [[_trainViews objectAtIndex:i] setFrame:NSMakeRect(padding, y,
+                                                       self.frame.size.width - 2*padding,
+                                                       height)];
+  }
+}
+
+- (void)initialize:(NSInteger)stationTag {
+  // Set up 8 long-lived TrainViews at start time, and keep updating them as time goes on
+  _trainViews = [[NSMutableArray alloc] initWithCapacity:8];
+
+  for (int i = 0; i < 8; ++i) {
+    TrainView* train = [[TrainView alloc] initWithFrame:NSZeroRect
                                                  symbol:'X'
                                                   color:LineColorShuttle
                                                   shape:LineShapeCircle
@@ -37,6 +43,8 @@
     [self addSubview:train];
     [_trainViews addObject:train];
   }
+
+  [self setSubviewSizes];
 
   NSString* stopsPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"stops"
                                                                          ofType:@"txt"];
@@ -50,40 +58,27 @@
 }
 
 - (void)sendRequest {
-  if (!_urlDownload) {
+  if (!_sessionTask) {
     NSString* uri = @"http://subwaymon.nfshost.com/fetch.php";
-    NSURLRequest* req = [NSURLRequest requestWithURL:[NSURL URLWithString:uri]];
-    self.urlDownload = [[NSURLDownload alloc] initWithRequest:req delegate:self];
+
+    _sessionTask = [[NSURLSession sharedSession]
+                    dataTaskWithURL:[NSURL URLWithString:uri]
+                    completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                      if (!_feedData) {
+                        dispatch_async(dispatch_get_main_queue(), ^{
+                          [self setNeedsDisplay:YES];
+                        });
+                      }
+
+                      self.feedData = data;
+                      self.sessionTask = nil;
+
+                      [self performSelector:@selector(sendRequest)
+                                 withObject:nil
+                                 afterDelay:60.0];
+                    }];
+    [_sessionTask resume];
   }
-}
-
-
-- (void)download:(NSURLDownload *)download didCreateDestination:(NSString *)path {
-  self.dataDownloadPath = path;
-}
-
-- (void)downloadDidFinish:(NSURLDownload *)download {
-  if (!_feedData) {
-    // If this is the first update, force an immediate redraw
-    [self setNeedsDisplay:YES];
-  }
-
-  // This will be picked up by the next redraw
-  self.feedData = [NSData dataWithContentsOfFile:self.dataDownloadPath];
-
-  self.urlDownload = nil;
-  self.dataDownloadPath = nil;
-
-  // Schedule the next refresh to be done in one minute
-  [self performSelector:@selector(sendRequest)
-             withObject:nil
-             afterDelay:60.0];
-}
-
-- (void)download:(NSURLDownload *)download didFailWithError:(NSError *)error {
-  [self performSelector:@selector(sendRequest)
-             withObject:nil
-             afterDelay:60.0];
 }
 
 - (ELineColor)lineColorForSymbol:(const char)sym {
@@ -155,6 +150,11 @@
   [line setLineWidth:2.5];
   [[NSColor whiteColor] set];
   [line stroke];
+}
+
+- (void)resizeSubviewsWithOldSize:(NSSize)oldSize {
+  [super resizeSubviewsWithOldSize:oldSize];
+  [self setSubviewSizes];
 }
 
 @end
