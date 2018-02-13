@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9387C1852032981F000BB42A /* SubwayMonView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9387C1832032981F000BB42A /* SubwayMonView.h */; };
+		9387C1862032981F000BB42A /* SubwayMonView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9387C1842032981F000BB42A /* SubwayMonView.mm */; };
 		93A4FF0C17C849AB003F90A0 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */; };
 		93EC28CE17C484FC00F5F90B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CD17C484FC00F5F90B /* Cocoa.framework */; };
 		93EC28D017C484FC00F5F90B /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CF17C484FC00F5F90B /* ScreenSaver.framework */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9387C1832032981F000BB42A /* SubwayMonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubwayMonView.h; sourceTree = "<group>"; };
+		9387C1842032981F000BB42A /* SubwayMonView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SubwayMonView.mm; sourceTree = "<group>"; };
 		93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
 		93EC28CA17C484FC00F5F90B /* SubwayMon.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubwayMon.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EC28CD17C484FC00F5F90B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -106,6 +110,8 @@
 			children = (
 				93EC28E517C4851B00F5F90B /* Frontend */,
 				93EC28E417C4851300F5F90B /* Backend */,
+				9387C1832032981F000BB42A /* SubwayMonView.h */,
+				9387C1842032981F000BB42A /* SubwayMonView.mm */,
 				93EC28DC17C484FC00F5F90B /* SubwayMonScreenSaverView.h */,
 				93EC28DD17C484FC00F5F90B /* SubwayMonScreenSaverView.mm */,
 				93EC28D617C484FC00F5F90B /* Supporting Files */,
@@ -157,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93EC28E817C4854000F5F90B /* TrainView.h in Headers */,
+				9387C1852032981F000BB42A /* SubwayMonView.h in Headers */,
 				93EC28F517C4858E00F5F90B /* backend.h in Headers */,
 				93EC28F717C4858E00F5F90B /* csv-parser.h in Headers */,
 				93EC28F917C4858E00F5F90B /* gtfs-realtime.pb.h in Headers */,
@@ -243,6 +250,7 @@
 				93EC28DE17C484FC00F5F90B /* SubwayMonScreenSaverView.mm in Sources */,
 				93EC28E917C4854000F5F90B /* TrainView.m in Sources */,
 				93EC28F417C4858E00F5F90B /* backend.cpp in Sources */,
+				9387C1862032981F000BB42A /* SubwayMonView.mm in Sources */,
 				93EC28F617C4858E00F5F90B /* csv-parser.cpp in Sources */,
 				93EC28F817C4858E00F5F90B /* gtfs-realtime.pb.cc in Sources */,
 				93EC28FA17C4858E00F5F90B /* nyct-subway.pb.cc in Sources */,
