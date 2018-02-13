@@ -33,16 +33,9 @@ static NSString* kSelectedStationKey = @"SelectedStation";
     [self setAnimationTimeInterval:5.0];
 
     _subwayView = [[SubwayMonView alloc] initWithFrame:self.bounds];
-    [_subwayView initialize];
-    _subwayView.selectedStationTag = [self selectedStationTag];
+    [_subwayView initialize:[self selectedStationTag]];
+    _gtfsStops = _subwayView.gtfsStops;
     [self addSubview:_subwayView];
-
-    NSString* stopsPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"stops"
-                                                                           ofType:@"txt"];
-    _gtfsStops = [[NSString alloc] initWithContentsOfFile:stopsPath
-                                                 encoding:NSUTF8StringEncoding
-                                                    error:NULL];
-    _subwayView.gtfsStops = _gtfsStops;
   }
   return self;
 }

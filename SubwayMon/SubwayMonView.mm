@@ -15,7 +15,7 @@
 
 @implementation SubwayMonView
 
-- (void)initialize {
+- (void)initialize:(NSInteger)stationTag {
   // Set up 8 long-lived TrainViews at start time, and keep updating them as time goes on
   _trainViews = [[NSMutableArray alloc] initWithCapacity:8];
 
@@ -37,6 +37,14 @@
     [self addSubview:train];
     [_trainViews addObject:train];
   }
+
+  NSString* stopsPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"stops"
+                                                                         ofType:@"txt"];
+  _gtfsStops = [[NSString alloc] initWithContentsOfFile:stopsPath
+                                               encoding:NSUTF8StringEncoding
+                                                  error:NULL];
+
+  self.selectedStationTag = stationTag;
 
   [self sendRequest];
 }

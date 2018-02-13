@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		9387C1852032981F000BB42A /* SubwayMonView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9387C1832032981F000BB42A /* SubwayMonView.h */; };
 		9387C1862032981F000BB42A /* SubwayMonView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9387C1842032981F000BB42A /* SubwayMonView.mm */; };
+		9387C18E20329D49000BB42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387C18D20329D49000BB42A /* AppDelegate.swift */; };
+		9387C19020329D49000BB42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9387C18F20329D49000BB42A /* Assets.xcassets */; };
+		9387C19320329D49000BB42A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9387C19120329D49000BB42A /* MainMenu.xib */; };
+		9387C19820329DA9000BB42A /* SubwayMonView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9387C1842032981F000BB42A /* SubwayMonView.mm */; };
+		9387C19920329DB7000BB42A /* TrainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28E717C4854000F5F90B /* TrainView.m */; };
+		9387C19A20329DB7000BB42A /* backend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28EB17C4858E00F5F90B /* backend.cpp */; };
+		9387C19B20329DB7000BB42A /* csv-parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28ED17C4858E00F5F90B /* csv-parser.cpp */; };
+		9387C19C20329DB7000BB42A /* gtfs-realtime.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28EF17C4858E00F5F90B /* gtfs-realtime.pb.cc */; };
+		9387C19D20329DB7000BB42A /* nyct-subway.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28F117C4858E00F5F90B /* nyct-subway.pb.cc */; };
+		9387C19F2032A017000BB42A /* stops.txt in Resources */ = {isa = PBXBuildFile; fileRef = 93EC28FE17C4872900F5F90B /* stops.txt */; };
 		93A4FF0C17C849AB003F90A0 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */; };
 		93EC28CE17C484FC00F5F90B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CD17C484FC00F5F90B /* Cocoa.framework */; };
 		93EC28D017C484FC00F5F90B /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CF17C484FC00F5F90B /* ScreenSaver.framework */; };
@@ -30,6 +40,12 @@
 /* Begin PBXFileReference section */
 		9387C1832032981F000BB42A /* SubwayMonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubwayMonView.h; sourceTree = "<group>"; };
 		9387C1842032981F000BB42A /* SubwayMonView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SubwayMonView.mm; sourceTree = "<group>"; };
+		9387C18B20329D49000BB42A /* SubwayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9387C18D20329D49000BB42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9387C18F20329D49000BB42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9387C19220329D49000BB42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9387C19420329D49000BB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9387C19E20329DFD000BB42A /* SubwayMonView-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SubwayMonView-Bridging-Header.h"; sourceTree = "<group>"; };
 		93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
 		93EC28CA17C484FC00F5F90B /* SubwayMon.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubwayMon.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EC28CD17C484FC00F5F90B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -56,6 +72,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9387C18820329D49000BB42A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93EC28C517C484FC00F5F90B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,10 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9387C18C20329D49000BB42A /* SubwayApp */ = {
+			isa = PBXGroup;
+			children = (
+				9387C18D20329D49000BB42A /* AppDelegate.swift */,
+				9387C18F20329D49000BB42A /* Assets.xcassets */,
+				9387C19120329D49000BB42A /* MainMenu.xib */,
+				9387C19420329D49000BB42A /* Info.plist */,
+				9387C19E20329DFD000BB42A /* SubwayMonView-Bridging-Header.h */,
+			);
+			path = SubwayApp;
+			sourceTree = "<group>";
+		};
 		93EC28BF17C484FC00F5F90B = {
 			isa = PBXGroup;
 			children = (
 				93EC28D517C484FC00F5F90B /* SubwayMon */,
+				9387C18C20329D49000BB42A /* SubwayApp */,
 				93EC28CC17C484FC00F5F90B /* Frameworks */,
 				93EC28CB17C484FC00F5F90B /* Products */,
 			);
@@ -81,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				93EC28CA17C484FC00F5F90B /* SubwayMon.saver */,
+				9387C18B20329D49000BB42A /* SubwayApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +211,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9387C18A20329D49000BB42A /* SubwayApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9387C19520329D49000BB42A /* Build configuration list for PBXNativeTarget "SubwayApp" */;
+			buildPhases = (
+				9387C18720329D49000BB42A /* Sources */,
+				9387C18820329D49000BB42A /* Frameworks */,
+				9387C18920329D49000BB42A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SubwayApp;
+			productName = SubwayApp;
+			productReference = 9387C18B20329D49000BB42A /* SubwayApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		93EC28C917C484FC00F5F90B /* SubwayMon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93EC28E117C484FC00F5F90B /* Build configuration list for PBXNativeTarget "SubwayMon" */;
@@ -199,8 +253,15 @@
 		93EC28C017C484FC00F5F90B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Owen Yamauchi";
+				TargetAttributes = {
+					9387C18A20329D49000BB42A = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 93EC28C317C484FC00F5F90B /* Build configuration list for PBXProject "SubwayMon" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -208,6 +269,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 93EC28BF17C484FC00F5F90B;
 			productRefGroup = 93EC28CB17C484FC00F5F90B /* Products */;
@@ -215,11 +277,22 @@
 			projectRoot = "";
 			targets = (
 				93EC28C917C484FC00F5F90B /* SubwayMon */,
+				9387C18A20329D49000BB42A /* SubwayApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9387C18920329D49000BB42A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9387C19020329D49000BB42A /* Assets.xcassets in Resources */,
+				9387C19320329D49000BB42A /* MainMenu.xib in Resources */,
+				9387C19F2032A017000BB42A /* stops.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93EC28C717C484FC00F5F90B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,6 +316,20 @@
 /* End PBXRezBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9387C18720329D49000BB42A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9387C19920329DB7000BB42A /* TrainView.m in Sources */,
+				9387C19A20329DB7000BB42A /* backend.cpp in Sources */,
+				9387C19B20329DB7000BB42A /* csv-parser.cpp in Sources */,
+				9387C19C20329DB7000BB42A /* gtfs-realtime.pb.cc in Sources */,
+				9387C19D20329DB7000BB42A /* nyct-subway.pb.cc in Sources */,
+				9387C18E20329D49000BB42A /* AppDelegate.swift in Sources */,
+				9387C19820329DA9000BB42A /* SubwayMonView.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93EC28C417C484FC00F5F90B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,6 +347,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9387C19120329D49000BB42A /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9387C19220329D49000BB42A /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		93EC28D817C484FC00F5F90B /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -271,6 +366,81 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9387C19620329D49000BB42A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = SubwayApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oyamauchi.SubwayApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "SubwayApp/SubwayMonView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9387C19720329D49000BB42A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = SubwayApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oyamauchi.SubwayApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SubwayApp/SubwayMonView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		93EC28DF17C484FC00F5F90B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -367,6 +537,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9387C19520329D49000BB42A /* Build configuration list for PBXNativeTarget "SubwayApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9387C19620329D49000BB42A /* Debug */,
+				9387C19720329D49000BB42A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		93EC28C317C484FC00F5F90B /* Build configuration list for PBXProject "SubwayMon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

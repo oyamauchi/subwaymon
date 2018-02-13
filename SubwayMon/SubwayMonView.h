@@ -28,6 +28,6 @@
 @property(nonatomic, copy) NSString* dataDownloadPath;
 @property(nonatomic, assign) NSInteger selectedStationTag;
 
-- (void)initialize;
+- (void)initialize:(NSInteger)stationTag;
 
 @end
