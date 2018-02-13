@@ -21,10 +21,10 @@
   NSInteger _selectedStationTag;
 }
 
-@property(nonatomic, retain) NSString* gtfsStops;
-@property(nonatomic, retain) NSArray* trainViews;
-@property(nonatomic, retain) NSData* feedData;
-@property(nonatomic, retain) NSURLDownload* urlDownload;
+@property(nonatomic, strong) NSString* gtfsStops;
+@property(nonatomic, strong) NSArray* trainViews;
+@property(nonatomic, strong) NSData* feedData;
+@property(nonatomic, strong) NSURLDownload* urlDownload;
 @property(nonatomic, copy) NSString* dataDownloadPath;
 @property(nonatomic, assign) NSInteger selectedStationTag;
 

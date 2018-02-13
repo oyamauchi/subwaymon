@@ -20,10 +20,6 @@
   return self;
 }
 
-- (void)dealloc {
-  [_text release];
-  [super dealloc];
-}
 
 - (NSString*)truncateText:(NSString*)text
            withAttributes:(NSDictionary*)attr

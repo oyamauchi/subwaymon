@@ -36,7 +36,6 @@
     [train setHidden:YES];
     [self addSubview:train];
     [_trainViews addObject:train];
-    [train release];
   }
 
   [self sendRequest];
@@ -46,7 +45,7 @@
   if (!_urlDownload) {
     NSString* uri = @"http://subwaymon.nfshost.com/fetch.php";
     NSURLRequest* req = [NSURLRequest requestWithURL:[NSURL URLWithString:uri]];
-    self.urlDownload = [[[NSURLDownload alloc] initWithRequest:req delegate:self] autorelease];
+    self.urlDownload = [[NSURLDownload alloc] initWithRequest:req delegate:self];
   }
 }
 

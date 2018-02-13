@@ -47,12 +47,6 @@ static NSString* kSelectedStationKey = @"SelectedStation";
   return self;
 }
 
-- (void)dealloc {
-  [_topLevelObjects release];
-  [_subwayView release];
-  [_gtfsStops release];
-  [super dealloc];
-}
 
 - (void)animateOneFrame {
   [self setNeedsDisplay:YES];
@@ -64,10 +58,11 @@ static NSString* kSelectedStationKey = @"SelectedStation";
 
 - (NSWindow*)configureSheet {
   if (!_configSheet) {
+    NSArray* topLevelObjects;
     [[NSBundle bundleForClass:[self class]] loadNibNamed:@"ConfigureSheet"
                                                    owner:self
-                                         topLevelObjects:&_topLevelObjects];
-    [_topLevelObjects retain];
+                                         topLevelObjects:&topLevelObjects];
+    _topLevelObjects = topLevelObjects;
 
     auto lines = parseCSV([_gtfsStops UTF8String]);
 
