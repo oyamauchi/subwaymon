@@ -11,7 +11,7 @@
 		93EC28CE17C484FC00F5F90B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CD17C484FC00F5F90B /* Cocoa.framework */; };
 		93EC28D017C484FC00F5F90B /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CF17C484FC00F5F90B /* ScreenSaver.framework */; };
 		93EC28DA17C484FC00F5F90B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93EC28D817C484FC00F5F90B /* InfoPlist.strings */; };
-		93EC28DE17C484FC00F5F90B /* SubwayMonView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28DD17C484FC00F5F90B /* SubwayMonView.mm */; };
+		93EC28DE17C484FC00F5F90B /* SubwayMonScreenSaverView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28DD17C484FC00F5F90B /* SubwayMonScreenSaverView.mm */; };
 		93EC28E817C4854000F5F90B /* TrainView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC28E617C4854000F5F90B /* TrainView.h */; };
 		93EC28E917C4854000F5F90B /* TrainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28E717C4854000F5F90B /* TrainView.m */; };
 		93EC28F417C4858E00F5F90B /* backend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28EB17C4858E00F5F90B /* backend.cpp */; };
@@ -36,8 +36,8 @@
 		93EC28D717C484FC00F5F90B /* SubwayMon-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SubwayMon-Info.plist"; sourceTree = "<group>"; };
 		93EC28D917C484FC00F5F90B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		93EC28DB17C484FC00F5F90B /* SubwayMon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SubwayMon-Prefix.pch"; sourceTree = "<group>"; };
-		93EC28DC17C484FC00F5F90B /* SubwayMonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubwayMonView.h; sourceTree = "<group>"; };
-		93EC28DD17C484FC00F5F90B /* SubwayMonView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SubwayMonView.mm; sourceTree = "<group>"; };
+		93EC28DC17C484FC00F5F90B /* SubwayMonScreenSaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubwayMonScreenSaverView.h; sourceTree = "<group>"; };
+		93EC28DD17C484FC00F5F90B /* SubwayMonScreenSaverView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SubwayMonScreenSaverView.mm; sourceTree = "<group>"; };
 		93EC28E617C4854000F5F90B /* TrainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainView.h; sourceTree = "<group>"; };
 		93EC28E717C4854000F5F90B /* TrainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainView.m; sourceTree = "<group>"; };
 		93EC28EB17C4858E00F5F90B /* backend.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = backend.cpp; sourceTree = "<group>"; };
@@ -106,8 +106,8 @@
 			children = (
 				93EC28E517C4851B00F5F90B /* Frontend */,
 				93EC28E417C4851300F5F90B /* Backend */,
-				93EC28DC17C484FC00F5F90B /* SubwayMonView.h */,
-				93EC28DD17C484FC00F5F90B /* SubwayMonView.mm */,
+				93EC28DC17C484FC00F5F90B /* SubwayMonScreenSaverView.h */,
+				93EC28DD17C484FC00F5F90B /* SubwayMonScreenSaverView.mm */,
 				93EC28D617C484FC00F5F90B /* Supporting Files */,
 			);
 			path = SubwayMon;
@@ -240,7 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93EC28DE17C484FC00F5F90B /* SubwayMonView.mm in Sources */,
+				93EC28DE17C484FC00F5F90B /* SubwayMonScreenSaverView.mm in Sources */,
 				93EC28E917C4854000F5F90B /* TrainView.m in Sources */,
 				93EC28F417C4858E00F5F90B /* backend.cpp in Sources */,
 				93EC28F617C4858E00F5F90B /* csv-parser.cpp in Sources */,

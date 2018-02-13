@@ -2,7 +2,7 @@
 
 #import <ScreenSaver/ScreenSaver.h>
 
-@interface SubwayMonView : ScreenSaverView <NSURLDownloadDelegate>
+@interface SubwayMonScreenSaverView : ScreenSaverView <NSURLDownloadDelegate>
 {
   // I'd rather save the parsed form -- i.e. std::vector<std::vector<std::string>> --
   // but dealing with C++ members of Objective-C objects doesn't sound like fun.

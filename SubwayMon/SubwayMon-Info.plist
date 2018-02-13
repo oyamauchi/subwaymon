@@ -25,6 +25,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2013 Owen Yamauchi. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string>SubwayMonView</string>
+	<string>SubwayMonScreenSaverView</string>
 </dict>
 </plist>

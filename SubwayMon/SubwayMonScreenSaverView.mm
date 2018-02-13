@@ -1,5 +1,5 @@
 
-#import "SubwayMonView.h"
+#import "SubwayMonScreenSaverView.h"
 
 #import <cstdlib>
 #import <sstream>
@@ -11,7 +11,7 @@
 
 static NSString* kSelectedStationKey = @"SelectedStation";
 
-@implementation SubwayMonView
+@implementation SubwayMonScreenSaverView
 
 - (IBAction)closeSheet:(id)sender {
   ScreenSaverDefaults* defaults =
