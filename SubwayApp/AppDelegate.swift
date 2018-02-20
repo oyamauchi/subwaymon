@@ -13,16 +13,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   @IBOutlet weak var window: NSWindow!
   @IBOutlet weak var subway: SubwayMonView!
+  @IBOutlet weak var menu: NSPopUpButton!
 
+
+  @IBAction func menuSelected(sender: NSPopUpButton) {
+    subway.selectedStationTag = menu.selectedTag()
+    subway.needsDisplay = true
+  }
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     subway.initialize(631)
+    subway.populateMenu(menu)
   }
 
   func applicationWillTerminate(_ aNotification: Notification) {
     // Insert code here to tear down your application
   }
-
-
 }
-

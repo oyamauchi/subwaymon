@@ -29,4 +29,6 @@
 
 - (void)initialize:(NSInteger)stationTag;
 
+- (void)populateMenu:(NSPopUpButton*)menu;
+
 @end

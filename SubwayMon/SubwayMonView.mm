@@ -12,6 +12,7 @@
 
 #import "TrainView.h"
 #import "backend.h"
+#import "csv-parser.h"
 
 @implementation SubwayMonView
 
@@ -57,6 +58,12 @@
   [self sendRequest];
 }
 
+//////////////////////////////////////////////////////////////////////////////////
+//
+#pragma mark Data fetching
+//
+//////////////////////////////////////////////////////////////////////////////////
+
 - (void)sendRequest {
   if (!_sessionTask) {
     NSString* uri = @"http://subwaymon.nfshost.com/fetch.php";
@@ -80,6 +87,68 @@
     [_sessionTask resume];
   }
 }
+
+//////////////////////////////////////////////////////////////////////////////////
+//
+#pragma mark UI logic
+//
+//////////////////////////////////////////////////////////////////////////////////
+
+- (void)populateMenu:(NSPopUpButton*)menu {
+  auto lines = parseCSV([_gtfsStops UTF8String]);
+
+  // This is pretty heinous engineering. It assumes the stops file is sorted and is going to be a
+  // pain to change if we ever get real-time data for more lines. Whatever.
+  int section = 0;
+  [menu removeAllItems];
+  [menu addItemWithTitle:@"Broadway - 7 Av trains"];
+  [[menu lastItem] setEnabled:NO];
+
+  for (auto const& line : lines) {
+    if (line.size() < 3) {
+      continue;
+    }
+
+    auto const& stopId = line[0];
+    if (stopId.size() != 3 ||
+        stopId[0] < '1' || stopId[0] > '9' || stopId[0] == '7') {
+      // We don't want the directional stop ids (like 631N), or the ones for the B Division, or
+      // the ones for the Flushing line (i.e. 7 train).
+      continue;
+    }
+
+    // If we're seeing 4xx stops (i.e. 4 train stops) for the first time, or a 9xx stop (the GS
+    // shuttle), start a new section.
+    if (stopId[0] == '4' && section == 0) {
+      [[menu menu] addItem:[NSMenuItem separatorItem]];
+      [menu addItemWithTitle:@"Lexington Av trains"];
+      [[menu lastItem] setEnabled:NO];
+      section = 1;
+    } else if (stopId[0] == '9' && section == 1) {
+      [[menu menu] addItem:[NSMenuItem separatorItem]];
+      [menu addItemWithTitle:@"42 St Shuttle"];
+      [[menu lastItem] setEnabled:NO];
+      section = 2;
+    }
+
+    auto const& stopName = line[2];
+    [[menu menu] addItemWithTitle:[NSString stringWithUTF8String:stopName.c_str()]
+                           action:nil
+                    keyEquivalent:@""];
+    [[menu lastItem] setTag:atoi(stopId.c_str())];
+    [[menu lastItem] setEnabled:YES];
+    [[menu lastItem] setIndentationLevel:1];
+  }
+
+  [menu selectItemWithTag:[self selectedStationTag]];
+}
+
+//////////////////////////////////////////////////////////////////////////////////
+//
+#pragma mark Drawing logic
+//
+//////////////////////////////////////////////////////////////////////////////////
+
 
 - (ELineColor)lineColorForSymbol:(const char)sym {
   switch (sym) {

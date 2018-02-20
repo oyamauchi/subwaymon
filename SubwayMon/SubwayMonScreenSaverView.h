@@ -10,8 +10,6 @@
   IBOutlet NSWindow* _configSheet;
   IBOutlet NSPopUpButton* _menu;
   IBOutlet SubwayMonView* _subwayView;
-
-  NSString* _gtfsStops;
 }
 
 - (IBAction)closeSheet:(id)sender;
