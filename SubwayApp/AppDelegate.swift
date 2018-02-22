@@ -15,14 +15,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   @IBOutlet weak var subway: SubwayMonView!
   @IBOutlet weak var menu: NSPopUpButton!
 
+  let defaultsKey = "SelectedStation"
 
   @IBAction func menuSelected(sender: NSPopUpButton) {
     subway.selectedStationTag = menu.selectedTag()
     subway.needsDisplay = true
+
+    UserDefaults.standard.set(menu.selectedTag(), forKey: defaultsKey)
   }
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    subway.initialize(631)
+    let selectedTag = UserDefaults.standard.integer(forKey: defaultsKey)
+
+    subway.initialize(selectedTag == 0 ? 631 : selectedTag)
     subway.populateMenu(menu)
   }
 
