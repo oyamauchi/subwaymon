@@ -24,11 +24,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     UserDefaults.standard.set(menu.selectedTag(), forKey: defaultsKey)
   }
 
+  func timerFired() {
+    subway.needsDisplay = true
+  }
+
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     let selectedTag = UserDefaults.standard.integer(forKey: defaultsKey)
 
     subway.initialize(selectedTag == 0 ? 631 : selectedTag)
     subway.populateMenu(menu)
+
+    Timer.scheduledTimer(
+      timeInterval: 5.0,
+      target: self,
+      selector: #selector(AppDelegate.timerFired),
+      userInfo: nil,
+      repeats: true
+    )
   }
 
   func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
