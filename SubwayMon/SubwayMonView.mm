@@ -10,7 +10,7 @@
 
 #import <sstream>
 
-#import "TrainView.h"
+#import "SubwayApp-Swift.h"
 #import "backend.h"
 #import "csv-parser.h"
 
@@ -34,12 +34,7 @@
   _trainViews = [[NSMutableArray alloc] initWithCapacity:8];
 
   for (int i = 0; i < 8; ++i) {
-    TrainView* train = [[TrainView alloc] initWithFrame:NSZeroRect
-                                                 symbol:'X'
-                                                  color:LineColorShuttle
-                                                  shape:LineShapeCircle
-                                                   text:@"Loading..."
-                                                minutes:1];
+    SwiftTrainView* train = [[SwiftTrainView alloc] init];
     [train setHidden:YES];
     [self addSubview:train];
     [_trainViews addObject:train];
@@ -150,16 +145,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-- (ELineColor)lineColorForSymbol:(const char)sym {
+- (NSString *)lineColorForSymbol:(const char)sym {
   switch (sym) {
     case '1': case '2': case '3':
-      return LineColorBwaySeventh;
+      return @"BwaySeventh";
     case '4': case '5': case '6':
-      return LineColorLexington;
-    case 'S':
-      return LineColorShuttle;
+      return @"Lexington";
+    case 'S': default:
+      return @"Shuttle";
   }
-  return LineColorShuttle;
 }
 
 - (void)updateViews:(const std::vector<Arrival>&)arrs top:(BOOL)top {
@@ -167,14 +161,18 @@
   int i = 0;
 
   for (; i < 4 && i < arrs.size(); ++i) {
-    TrainView* tv = _trainViews[i + offset];
+    SwiftTrainView* tv = _trainViews[i + offset];
 
     auto const& arr = arrs[i];
-    const char symbol = (arr.train == "6X" ? '6'
+    char symbolChars[2] = "X";
+    symbolChars[0] = (arr.train == "6X" ? '6'
                          : arr.train == "GS" ? 'S'
                          : arr.train[0]);
-    const ELineShape shape = (arr.train == "6X" ? LineShapeDiamond : LineShapeCircle);
-    const ELineColor color = [self lineColorForSymbol:symbol];
+    symbolChars[1] = '\0';
+    NSString* symbol = [NSString stringWithCString:symbolChars encoding:NSUTF8StringEncoding];
+
+    NSString* shape = (arr.train == "6X" ? @"Diamond" : @"Circle");
+    NSString* color = [self lineColorForSymbol:symbolChars[0]];
     NSString* dest = [NSString stringWithCString:arr.destination.c_str()
                                         encoding:NSUTF8StringEncoding];
 

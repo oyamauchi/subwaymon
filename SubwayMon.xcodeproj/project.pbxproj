@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93175C0620435EBB00FBD535 /* SwiftTrainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93175C0520435EBB00FBD535 /* SwiftTrainView.swift */; };
+		93175C0720435EBB00FBD535 /* SwiftTrainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93175C0520435EBB00FBD535 /* SwiftTrainView.swift */; };
+		93175C09204365C300FBD535 /* LineEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93175C08204365C300FBD535 /* LineEnums.swift */; };
+		93175C0A204365C300FBD535 /* LineEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93175C08204365C300FBD535 /* LineEnums.swift */; };
 		9387C1852032981F000BB42A /* SubwayMonView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9387C1832032981F000BB42A /* SubwayMonView.h */; };
 		9387C1862032981F000BB42A /* SubwayMonView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9387C1842032981F000BB42A /* SubwayMonView.mm */; };
 		9387C18E20329D49000BB42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387C18D20329D49000BB42A /* AppDelegate.swift */; };
 		9387C19020329D49000BB42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9387C18F20329D49000BB42A /* Assets.xcassets */; };
 		9387C19320329D49000BB42A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9387C19120329D49000BB42A /* MainMenu.xib */; };
 		9387C19820329DA9000BB42A /* SubwayMonView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9387C1842032981F000BB42A /* SubwayMonView.mm */; };
-		9387C19920329DB7000BB42A /* TrainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28E717C4854000F5F90B /* TrainView.m */; };
 		9387C19A20329DB7000BB42A /* backend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28EB17C4858E00F5F90B /* backend.cpp */; };
 		9387C19B20329DB7000BB42A /* csv-parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28ED17C4858E00F5F90B /* csv-parser.cpp */; };
 		9387C19C20329DB7000BB42A /* gtfs-realtime.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28EF17C4858E00F5F90B /* gtfs-realtime.pb.cc */; };
@@ -24,8 +27,6 @@
 		93EC28D017C484FC00F5F90B /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CF17C484FC00F5F90B /* ScreenSaver.framework */; };
 		93EC28DA17C484FC00F5F90B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93EC28D817C484FC00F5F90B /* InfoPlist.strings */; };
 		93EC28DE17C484FC00F5F90B /* SubwayMonScreenSaverView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28DD17C484FC00F5F90B /* SubwayMonScreenSaverView.mm */; };
-		93EC28E817C4854000F5F90B /* TrainView.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC28E617C4854000F5F90B /* TrainView.h */; };
-		93EC28E917C4854000F5F90B /* TrainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28E717C4854000F5F90B /* TrainView.m */; };
 		93EC28F417C4858E00F5F90B /* backend.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28EB17C4858E00F5F90B /* backend.cpp */; };
 		93EC28F517C4858E00F5F90B /* backend.h in Headers */ = {isa = PBXBuildFile; fileRef = 93EC28EC17C4858E00F5F90B /* backend.h */; };
 		93EC28F617C4858E00F5F90B /* csv-parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 93EC28ED17C4858E00F5F90B /* csv-parser.cpp */; };
@@ -38,6 +39,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93175C0420435EBA00FBD535 /* SubwayMon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SubwayMon-Bridging-Header.h"; sourceTree = "<group>"; };
+		93175C0520435EBB00FBD535 /* SwiftTrainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTrainView.swift; sourceTree = "<group>"; };
+		93175C08204365C300FBD535 /* LineEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineEnums.swift; sourceTree = "<group>"; };
 		9387C1832032981F000BB42A /* SubwayMonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubwayMonView.h; sourceTree = "<group>"; };
 		9387C1842032981F000BB42A /* SubwayMonView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SubwayMonView.mm; sourceTree = "<group>"; };
 		9387C18B20329D49000BB42A /* SubwayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,8 +62,6 @@
 		93EC28DB17C484FC00F5F90B /* SubwayMon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SubwayMon-Prefix.pch"; sourceTree = "<group>"; };
 		93EC28DC17C484FC00F5F90B /* SubwayMonScreenSaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubwayMonScreenSaverView.h; sourceTree = "<group>"; };
 		93EC28DD17C484FC00F5F90B /* SubwayMonScreenSaverView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SubwayMonScreenSaverView.mm; sourceTree = "<group>"; };
-		93EC28E617C4854000F5F90B /* TrainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainView.h; sourceTree = "<group>"; };
-		93EC28E717C4854000F5F90B /* TrainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainView.m; sourceTree = "<group>"; };
 		93EC28EB17C4858E00F5F90B /* backend.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = backend.cpp; sourceTree = "<group>"; };
 		93EC28EC17C4858E00F5F90B /* backend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backend.h; sourceTree = "<group>"; };
 		93EC28ED17C4858E00F5F90B /* csv-parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "csv-parser.cpp"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				93EC28E517C4851B00F5F90B /* Frontend */,
 				93EC28E417C4851300F5F90B /* Backend */,
+				93175C0420435EBA00FBD535 /* SubwayMon-Bridging-Header.h */,
 				9387C1832032981F000BB42A /* SubwayMonView.h */,
 				9387C1842032981F000BB42A /* SubwayMonView.mm */,
 				93EC28DC17C484FC00F5F90B /* SubwayMonScreenSaverView.h */,
@@ -186,8 +189,8 @@
 		93EC28E517C4851B00F5F90B /* Frontend */ = {
 			isa = PBXGroup;
 			children = (
-				93EC28E617C4854000F5F90B /* TrainView.h */,
-				93EC28E717C4854000F5F90B /* TrainView.m */,
+				93175C0520435EBB00FBD535 /* SwiftTrainView.swift */,
+				93175C08204365C300FBD535 /* LineEnums.swift */,
 			);
 			name = Frontend;
 			sourceTree = "<group>";
@@ -199,7 +202,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93EC28E817C4854000F5F90B /* TrainView.h in Headers */,
 				9387C1852032981F000BB42A /* SubwayMonView.h in Headers */,
 				93EC28F517C4858E00F5F90B /* backend.h in Headers */,
 				93EC28F717C4858E00F5F90B /* csv-parser.h in Headers */,
@@ -261,6 +263,9 @@
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
+					93EC28C917C484FC00F5F90B = {
+						LastSwiftMigration = 0820;
+					};
 				};
 			};
 			buildConfigurationList = 93EC28C317C484FC00F5F90B /* Build configuration list for PBXProject "SubwayMon" */;
@@ -320,11 +325,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9387C19920329DB7000BB42A /* TrainView.m in Sources */,
 				9387C19A20329DB7000BB42A /* backend.cpp in Sources */,
 				9387C19B20329DB7000BB42A /* csv-parser.cpp in Sources */,
 				9387C19C20329DB7000BB42A /* gtfs-realtime.pb.cc in Sources */,
 				9387C19D20329DB7000BB42A /* nyct-subway.pb.cc in Sources */,
+				93175C0720435EBB00FBD535 /* SwiftTrainView.swift in Sources */,
+				93175C0A204365C300FBD535 /* LineEnums.swift in Sources */,
 				9387C18E20329D49000BB42A /* AppDelegate.swift in Sources */,
 				9387C19820329DA9000BB42A /* SubwayMonView.mm in Sources */,
 			);
@@ -335,10 +341,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				93EC28DE17C484FC00F5F90B /* SubwayMonScreenSaverView.mm in Sources */,
-				93EC28E917C4854000F5F90B /* TrainView.m in Sources */,
 				93EC28F417C4858E00F5F90B /* backend.cpp in Sources */,
 				9387C1862032981F000BB42A /* SubwayMonView.mm in Sources */,
 				93EC28F617C4858E00F5F90B /* csv-parser.cpp in Sources */,
+				93175C0620435EBB00FBD535 /* SwiftTrainView.swift in Sources */,
+				93175C09204365C300FBD535 /* LineEnums.swift in Sources */,
 				93EC28F817C4858E00F5F90B /* gtfs-realtime.pb.cc in Sources */,
 				93EC28FA17C4858E00F5F90B /* nyct-subway.pb.cc in Sources */,
 			);
@@ -509,13 +516,18 @@
 		93EC28E217C484FC00F5F90B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SubwayMon/SubwayMon-Prefix.pch";
 				INFOPLIST_FILE = "SubwayMon/SubwayMon-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SubwayMon/SubwayMon-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -523,13 +535,17 @@
 		93EC28E317C484FC00F5F90B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SubwayMon/SubwayMon-Prefix.pch";
 				INFOPLIST_FILE = "SubwayMon/SubwayMon-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SubwayMon/SubwayMon-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
@@ -544,6 +560,7 @@
 				9387C19720329D49000BB42A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93EC28C317C484FC00F5F90B /* Build configuration list for PBXProject "SubwayMon" */ = {
 			isa = XCConfigurationList;
