@@ -6,46 +6,42 @@
 //  Copyright © 2018 Owen Yamauchi. All rights reserved.
 //
 
-import Foundation
+func parseCsv(_ input: String) -> Array<Array<String>> {
+  var result = Array<Array<String>>()
 
-class CSV : NSObject {
-  class func parseCsv(_ input: String) -> Array<Array<String>> {
-    var result = Array<Array<String>>()
+  input.enumerateLines { line, _ in
+    var fields = Array<String>()
+    var field = String()
+    var inQuoted = false
+    var index = line.startIndex
 
-    input.enumerateLines { line, _ in
-      var fields = Array<String>()
-      var field = String()
-      var inQuoted = false
-      var index = line.startIndex
-
-      while index < line.endIndex {
-        if inQuoted {
-          if line[index] == "\"" {
-            inQuoted = false
-          } else if line[index] == "\\" && line[line.index(after: index)] == "\"" {
-            field.append("\"")
-            index = line.index(after: index)
-          } else {
-            field.append(line[index])
-          }
+    while index < line.endIndex {
+      if inQuoted {
+        if line[index] == "\"" {
+          inQuoted = false
+        } else if line[index] == "\\" && line[line.index(after: index)] == "\"" {
+          field.append("\"")
+          index = line.index(after: index)
         } else {
-          switch line[index] {
-          case ",":
-            fields.append(field)
-            field = String()
-          case "\"":
-            inQuoted = true
-          default:
-            field.append(line[index])
-          }
+          field.append(line[index])
         }
-
-        index = line.index(after: index)
+      } else {
+        switch line[index] {
+        case ",":
+          fields.append(field)
+          field = String()
+        case "\"":
+          inQuoted = true
+        default:
+          field.append(line[index])
+        }
       }
 
-      result.append(fields)
+      index = line.index(after: index)
     }
 
-    return result
+    result.append(fields)
   }
+
+  return result
 }

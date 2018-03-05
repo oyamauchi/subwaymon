@@ -1,5 +1,5 @@
 //
-//  SwiftTrainView.swift
+//  TrainView.swift
 //  SubwayMon
 //
 //  Created by Owen Yamauchi on 2/25/18.
@@ -8,7 +8,7 @@
 
 import AppKit
 
-class SwiftTrainView: NSView {
+class TrainView: NSView {
 
   var symbol: Character = "X"
   var color: LineColor = .Shuttle
@@ -16,7 +16,9 @@ class SwiftTrainView: NSView {
   var text: String = ""
   var minutes: Int = 0
 
-  private func truncate(text: String, withAttributes attributes: Dictionary<String, Any>, toWidth width: CGFloat) -> String {
+  private func truncate(text: String,
+                        withAttributes attributes: Dictionary<String, Any>,
+                        toWidth width: CGFloat) -> String {
     var attempt = text
 
     while (attempt.size(withAttributes: attributes).width > width && attempt.count > 1) {
