@@ -22,7 +22,7 @@ enum LineColor {
     case "S":
       return .Shuttle
     default:
-      assert(false)
+      fatalError("Unknown line symbol \(symbol)")
     }
   }
 }
