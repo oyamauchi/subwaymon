@@ -36,13 +36,18 @@ class SubwayMonScreenSaverView : ScreenSaverView {
   override init?(frame: NSRect, isPreview: Bool) {
     super.init(frame: frame, isPreview: isPreview)
 
+    Bundle(for: SubwayMonScreenSaverView.self).loadNibNamed(
+      "ConfigureSheet",
+      owner: self,
+      topLevelObjects: nil
+    )
+
     self.animationTimeInterval = 5.0
 
-    self.subwayView = SubwayMonView()
+    self.subwayView = SubwayMonView(frame: self.bounds)
     self.subwayView.initialize(stationTag: self.selectedStationTag())
+    self.subwayView.populate(menu: popupMenu)
     self.addSubview(self.subwayView)
-
-    Bundle.main.loadNibNamed("ConfigureSheet", owner: self, topLevelObjects: nil)
   }
 
   required init?(coder: NSCoder) {

@@ -35,7 +35,7 @@ class SubwayMonView : NSView {
 
     self.setSubviewSizes()
 
-    let stopsPath = Bundle.main.path(forResource: "stops", ofType: "txt")!
+    let stopsPath = Bundle(for: SubwayMonView.self).path(forResource: "stops", ofType: "txt")!
     let rawGtfsStops = try? String.init(contentsOfFile: stopsPath)
 
     self.gtfsStops = parseCsv(rawGtfsStops!)
