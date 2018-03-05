@@ -67,21 +67,14 @@ struct Arrival {
   let seconds: Int64
 }
 
-func arrivals(atStop stopId: String, gtfsFeed: Data, stopMap: StopIdToNameMap) -> Array<Arrival> {
-  var fm: TransitRealtime_FeedMessage
-
-  do {
-    fm = try TransitRealtime_FeedMessage(serializedData: gtfsFeed)
-  } catch {
-    print("couldn't parse your thign!")
-    return []
-  }
-
+func arrivals(atStop stopId: String,
+              feedMessage: TransitRealtime_FeedMessage,
+              stopMap: StopIdToNameMap) -> Array<Arrival> {
   let now = Date()
 
   var result = Array<Arrival>()
 
-  for entity in fm.entity {
+  for entity in feedMessage.entity {
     if entity.hasTripUpdate, let timeAndTrack = arrival(atStop: stopId,
                                                         tripUpdate: entity.tripUpdate) {
       let arrivalTime = timeAndTrack.0

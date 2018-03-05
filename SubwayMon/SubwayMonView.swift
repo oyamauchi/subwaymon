@@ -14,7 +14,7 @@ class SubwayMonView : NSView {
   private var gtfsStops: Array<Array<String>>!
   private var stopMap: StopIdToNameMap!
 
-  private var feedData: Data?
+  private var feedMessage: TransitRealtime_FeedMessage?
   private var sessionTask: URLSessionTask?
 
   var selectedStationTag: Int = 631
@@ -153,19 +153,19 @@ class SubwayMonView : NSView {
     NSColor.black.set()
     NSRectFill(dirtyRect)
 
-    if let feedData = self.feedData {
+    if let feedMessage = self.feedMessage {
       // Read the arrivals twice: once for the northbound direction of our stop id and once for the
       // southbound. The GS shuttle considers TS to be north and GC to be south.
       let northArrs = arrivals(
         atStop: "\(self.selectedStationTag)N",
-        gtfsFeed: feedData,
+        feedMessage: feedMessage,
         stopMap: self.stopMap
       )
       self.updateViews(arrivals: northArrs, top: true)
 
       let southArrs = arrivals(
         atStop: "\(self.selectedStationTag)S",
-        gtfsFeed: feedData,
+        feedMessage: feedMessage,
         stopMap: self.stopMap
       )
       self.updateViews(arrivals: southArrs, top: false)
@@ -194,11 +194,11 @@ class SubwayMonView : NSView {
     let url = URL.init(string: "http://subwaymon.nfshost.com/fetch.php")!
 
     self.sessionTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
-      if self.feedData == nil {
+      if self.feedMessage == nil {
         DispatchQueue.main.async(execute: { self.needsDisplay = true })
       }
 
-      self.feedData = data
+      self.feedMessage = try? TransitRealtime_FeedMessage(serializedData: data!)
       self.sessionTask = nil
 
       DispatchQueue.main.asyncAfter(deadline: .now() + 60.0, execute: self.sendRequest)
