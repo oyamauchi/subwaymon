@@ -11,11 +11,10 @@ import Foundation
 typealias StopIdToNameMap = Dictionary<String, String>
 typealias TimeAndTrack = (Date, String)
 
-private func buildStopIdMap(gtfsStops: String) -> StopIdToNameMap {
-  let parsed = CSV.parseCsv(gtfsStops)
+func buildStopIdMap(parsedGtfsStops: Array<Array<String>>) -> StopIdToNameMap {
   var result = StopIdToNameMap()
 
-  for line in parsed {
+  for line in parsedGtfsStops {
     if line.isEmpty || line.first == "stop_id" {
       continue
     }
@@ -77,7 +76,7 @@ class SwiftArrival : NSObject {
 }
 
 class Backend : NSObject {
-  class func arrivals(atStop stopId: String, gtfsFeed: Data, gtfsStops: String) -> Array<SwiftArrival> {
+  class func arrivals(atStop stopId: String, gtfsFeed: Data, stopMap: StopIdToNameMap) -> Array<SwiftArrival> {
     var fm: TransitRealtime_FeedMessage
 
     do {
@@ -87,7 +86,6 @@ class Backend : NSObject {
       return []
     }
 
-    let stopMap = buildStopIdMap(gtfsStops: gtfsStops)
     let now = Date()
 
     var result = Array<SwiftArrival>()

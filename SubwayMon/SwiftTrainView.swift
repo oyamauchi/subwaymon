@@ -10,11 +10,11 @@ import AppKit
 
 class SwiftTrainView: NSView {
 
-  @objc var symbol: String = "X"
-  @objc var color: String = "Shuttle"  // TODO replace with enum
-  @objc var shape: String = "Circle"   // TODO replace with enum
-  @objc var text: String = ""
-  @objc var minutes: Int = 0
+  var symbol: Character = "X"
+  var color: LineColor = .Shuttle
+  var shape: LineShape = .Circle
+  var text: String = ""
+  var minutes: Int = 0
 
   private func truncate(text: String, withAttributes attributes: Dictionary<String, Any>, toWidth width: CGFloat) -> String {
     var attempt = text
@@ -31,23 +31,21 @@ class SwiftTrainView: NSView {
     NSColor.black.set()
     NSRectFill(dirtyRect)
 
-    var bulletColor: NSColor? = nil
+    var bulletColor: NSColor
 
     switch self.color {
-    case "BwaySeventh":
+    case .BwaySeventh:
       bulletColor =
         NSColor(calibratedRed: 0xEE / 255.0, green: 0x35 / 255.0, blue: 0x23 / 255.0, alpha: 1.0)
-    case "Lexington":
+    case .Lexington:
       bulletColor =
         NSColor(calibratedRed: 0, green: 0x93 / 255.0, blue: 0x3C / 255.0, alpha: 1.0)
-    case "Shuttle":
+    case .Shuttle:
       bulletColor =
         NSColor(calibratedRed: 0x80 / 255.0, green: 0x81 / 255.0, blue: 0x83 / 255.0, alpha: 1.0)
-    default:
-      assert(false)
     }
 
-    bulletColor!.set()
+    bulletColor.set()
 
     // These values will be used for all the text
     let fontSize = 0.84 * self.bounds.size.height
@@ -60,7 +58,7 @@ class SwiftTrainView: NSView {
     // left-aligned. First draw the shape.
     let shapeRect = NSMakeRect(0, 0, self.bounds.size.height, self.bounds.size.height)
 
-    if (shape == "Diamond") {
+    if (shape == .Diamond) {
       let shape = NSBezierPath()
       shape.move(to: NSMakePoint(shapeRect.size.width / 2, 0))
       shape.line(to: NSMakePoint(shapeRect.size.width, shapeRect.size.height / 2))
@@ -74,11 +72,12 @@ class SwiftTrainView: NSView {
     }
 
     // Now draw the symbol
-    let textSize = symbol.size(withAttributes: giantWhiteText)
+    let symStr = String(symbol)
+    let textSize = symStr.size(withAttributes: giantWhiteText)
 
     let x = (shapeRect.size.width - textSize.width) / 2 + shapeRect.origin.x
     let y = (shapeRect.size.height - textSize.height) / 2 + shapeRect.origin.y
-    symbol.draw(at: NSMakePoint(x, y), withAttributes: giantWhiteText)
+    symStr.draw(at: NSMakePoint(x, y), withAttributes: giantWhiteText)
 
     // Draw the time remaining. It's simple text.
     let minString = "\(self.minutes) min"

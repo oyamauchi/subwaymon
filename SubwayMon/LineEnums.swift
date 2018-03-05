@@ -12,6 +12,19 @@ enum LineColor {
   case Lexington
   case BwaySeventh
   case Shuttle
+
+  static func forSymbol(_ symbol: Character) -> LineColor {
+    switch (symbol) {
+    case "1", "2", "3":
+      return .BwaySeventh
+    case "4", "5", "6":
+      return .Lexington
+    case "S":
+      return .Shuttle
+    default:
+      assert(false)
+    }
+  }
 }
 
 enum LineShape {

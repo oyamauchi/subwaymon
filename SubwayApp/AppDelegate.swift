@@ -31,8 +31,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     let selectedTag = UserDefaults.standard.integer(forKey: defaultsKey)
 
-    subway.initialize(selectedTag == 0 ? 631 : selectedTag)
-    subway.populateMenu(menu)
+    subway.initialize(stationTag: selectedTag == 0 ? 631 : selectedTag)
+    subway.populate(menu: menu)
 
     Timer.scheduledTimer(
       timeInterval: 5.0,
