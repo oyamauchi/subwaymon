@@ -12,7 +12,9 @@ class StopsFileInfo {
   static let shared = StopsFileInfo()
 
   private var gtfsStops: Array<Array<String>>!
-  private var idToName = Dictionary<String, String>()
+  private var idToName = Dictionary<StopId, String>()
+  private var tagToId = Dictionary<Int, StopId>()
+  private var idToTag = Dictionary<StopId, Int>()
 
   private(set) var menu: NSMenu!
 
@@ -22,18 +24,32 @@ class StopsFileInfo {
 
     gtfsStops = parseCsv(rawGtfsStops!)
 
+    var tag = 1
+
     for line in gtfsStops {
       if line.isEmpty || line.first == "stop_id" {
         continue
       }
       idToName[line[0]] = line[2]
+      tagToId[tag] = line[0]
+      idToTag[line[0]] = tag
+
+      tag += 1
     }
 
     populateMenu()
   }
 
-  func name(ofStopId stopId: String) -> String {
+  func name(ofStopId stopId: StopId) -> String {
     return idToName[stopId]!
+  }
+
+  func stopId(forTag tag: Int) -> StopId {
+    return tagToId[tag]!
+  }
+
+  func tag(forStopId stopId: StopId) -> Int {
+    return idToTag[stopId]!
   }
 
   private func populateMenu() {
@@ -71,7 +87,7 @@ class StopsFileInfo {
       }
 
       let item = NSMenuItem(title: line[2], action: nil, keyEquivalent: "")
-      item.tag = Int(stopId)!
+      item.tag = idToTag[stopId]!
       item.isEnabled = true
       item.indentationLevel = 1
       menu.addItem(item)

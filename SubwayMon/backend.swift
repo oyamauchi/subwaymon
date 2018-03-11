@@ -9,8 +9,9 @@
 import Foundation
 
 typealias TimeAndTrack = (Date, String)
+typealias StopId = String
 
-private func tripDestination(tripUpdate: TransitRealtime_TripUpdate) -> String {
+private func tripDestination(tripUpdate: TransitRealtime_TripUpdate) -> StopId {
   if let stu = tripUpdate.stopTimeUpdate.last {
     return stu.stopID
   } else {
@@ -18,7 +19,7 @@ private func tripDestination(tripUpdate: TransitRealtime_TripUpdate) -> String {
   }
 }
 
-private func arrival(atStop stopId: String,
+private func arrival(atStop stopId: StopId,
                      tripUpdate: TransitRealtime_TripUpdate
   ) -> TimeAndTrack? {
   assert(stopId.count == 3 || stopId.count == 4)
@@ -45,12 +46,12 @@ private func arrival(atStop stopId: String,
 
 struct Arrival {
   let train: String
-  let destinationStopId: String
+  let destinationStopId: StopId
   let track: String
   let seconds: Int64
 }
 
-func arrivals(atStop stopId: String,
+func arrivals(atStop stopId: StopId,
               feedMessage: TransitRealtime_FeedMessage) -> Array<Arrival> {
   let now = Date()
 

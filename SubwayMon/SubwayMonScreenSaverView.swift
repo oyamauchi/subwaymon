@@ -18,19 +18,13 @@ class SubwayMonScreenSaverView : ScreenSaverView {
 
   @IBAction func closeSheet(sender: Any) {
     let defaults = ScreenSaverDefaults.init(forModuleWithName: "com.oyamauchi.SubwayMon")!
-    defaults.set(self.popupMenu.selectedTag(), forKey: kSelectedStationKey)
+    let stopId = StopsFileInfo.shared.stopId(forTag: popupMenu.selectedTag())
+    defaults.set(stopId, forKey: kSelectedStationKey)
     defaults.synchronize()
 
-    self.subwayView.selectedStationTag = popupMenu.selectedTag()
+    self.subwayView.selectedStopId = stopId
 
     NSApplication.shared().endSheet(configSheet)
-  }
-
-  func selectedStationTag() -> Int {
-    let defaults = ScreenSaverDefaults.init(forModuleWithName: "com.oyamauchi.SubwayMon")!
-    let value = defaults.integer(forKey: kSelectedStationKey)
-    // Grand Central on the Lex by default
-    return value != 0 ? value : 631
   }
 
   override init?(frame: NSRect, isPreview: Bool) {
@@ -44,11 +38,16 @@ class SubwayMonScreenSaverView : ScreenSaverView {
 
     self.animationTimeInterval = 5.0
 
+    let defaults = ScreenSaverDefaults.init(forModuleWithName: "com.oyamauchi.SubwayMon")!
+    // Grand Central on the Lex by default
+    let stopId = defaults.string(forKey: kSelectedStationKey) ?? "631"
+
     self.subwayView = SubwayMonView(frame: self.bounds)
-    self.subwayView.initialize(stationTag: self.selectedStationTag())
+    self.subwayView.initialize(stopId: stopId)
     self.addSubview(self.subwayView)
 
     popupMenu.menu = StopsFileInfo.shared.menu
+    popupMenu.selectItem(withTag: StopsFileInfo.shared.tag(forStopId: stopId))
   }
 
   required init?(coder: NSCoder) {

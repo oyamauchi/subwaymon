@@ -11,12 +11,10 @@ import AppKit
 class SubwayMonView : NSView {
   private var trainViews = Array<TrainView>()
 
-  private var gtfsStops: Array<Array<String>>!
-
   private var feedMessage: TransitRealtime_FeedMessage?
   private var sessionTask: URLSessionTask?
 
-  var selectedStationTag: Int = 631
+  var selectedStopId: StopId!
 
   //////////////////////////////////////////////////////////////////////////////////
   //
@@ -24,7 +22,7 @@ class SubwayMonView : NSView {
   //
   //////////////////////////////////////////////////////////////////////////////////
 
-  func initialize(stationTag: Int) {
+  func initialize(stopId: StopId) {
     for _ in 0 ..< 8 {
       let train = TrainView()
       train.isHidden = true
@@ -32,14 +30,9 @@ class SubwayMonView : NSView {
       trainViews.append(train)
     }
 
+    selectedStopId = stopId
+
     self.setSubviewSizes()
-
-    let stopsPath = Bundle(for: SubwayMonView.self).path(forResource: "stops", ofType: "txt")!
-    let rawGtfsStops = try? String.init(contentsOfFile: stopsPath)
-
-    self.gtfsStops = parseCsv(rawGtfsStops!)
-    self.selectedStationTag = stationTag
-
     self.sendRequest()
   }
 
@@ -112,13 +105,13 @@ class SubwayMonView : NSView {
       // Read the arrivals twice: once for the northbound direction of our stop id and once for the
       // southbound. The GS shuttle considers TS to be north and GC to be south.
       let northArrs = arrivals(
-        atStop: "\(self.selectedStationTag)N",
+        atStop: selectedStopId + "N",
         feedMessage: feedMessage
       )
       self.updateViews(arrivals: northArrs, top: true)
 
       let southArrs = arrivals(
-        atStop: "\(self.selectedStationTag)S",
+        atStop: selectedStopId + "S",
         feedMessage: feedMessage
       )
       self.updateViews(arrivals: southArrs, top: false)

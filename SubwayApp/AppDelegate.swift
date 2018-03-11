@@ -18,10 +18,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   let defaultsKey = "SelectedStation"
 
   @IBAction func menuSelected(sender: NSPopUpButton) {
-    subway.selectedStationTag = menu.selectedTag()
+    let stopId = StopsFileInfo.shared.stopId(forTag: menu.selectedTag())
+    subway.selectedStopId = stopId
     subway.needsDisplay = true
 
-    UserDefaults.standard.set(menu.selectedTag(), forKey: defaultsKey)
+    UserDefaults.standard.set(stopId, forKey: defaultsKey)
   }
 
   func timerFired() {
@@ -29,10 +30,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   }
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
-    let selectedTag = UserDefaults.standard.integer(forKey: defaultsKey)
+    let selectedStopId = UserDefaults.standard.string(forKey: defaultsKey) ?? "631"
+    let tag = StopsFileInfo.shared.tag(forStopId: selectedStopId)
 
-    subway.initialize(stationTag: selectedTag == 0 ? 631 : selectedTag)
+    subway.initialize(stopId: selectedStopId)
     menu.menu = StopsFileInfo.shared.menu
+    menu.selectItem(withTag: tag)
 
     Timer.scheduledTimer(
       timeInterval: 5.0,
