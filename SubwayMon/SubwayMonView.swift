@@ -12,7 +12,6 @@ class SubwayMonView : NSView {
   private var trainViews = Array<TrainView>()
 
   private var gtfsStops: Array<Array<String>>!
-  private var stopMap: StopIdToNameMap!
 
   private var feedMessage: TransitRealtime_FeedMessage?
   private var sessionTask: URLSessionTask?
@@ -39,8 +38,6 @@ class SubwayMonView : NSView {
     let rawGtfsStops = try? String.init(contentsOfFile: stopsPath)
 
     self.gtfsStops = parseCsv(rawGtfsStops!)
-    self.stopMap = buildStopIdMap(parsedGtfsStops: self.gtfsStops)
-
     self.selectedStationTag = stationTag
 
     self.sendRequest()
@@ -89,7 +86,7 @@ class SubwayMonView : NSView {
       tv.symbol = symbol
       tv.shape = shape
       tv.color = color
-      tv.text = arrival.destination
+      tv.text = StopsFileInfo.shared.name(ofStopId: arrival.destinationStopId)
       tv.minutes = Int(arrival.seconds + 29) / 60  // round to nearest minute
 
       tv.isHidden = false
@@ -116,15 +113,13 @@ class SubwayMonView : NSView {
       // southbound. The GS shuttle considers TS to be north and GC to be south.
       let northArrs = arrivals(
         atStop: "\(self.selectedStationTag)N",
-        feedMessage: feedMessage,
-        stopMap: self.stopMap
+        feedMessage: feedMessage
       )
       self.updateViews(arrivals: northArrs, top: true)
 
       let southArrs = arrivals(
         atStop: "\(self.selectedStationTag)S",
-        feedMessage: feedMessage,
-        stopMap: self.stopMap
+        feedMessage: feedMessage
       )
       self.updateViews(arrivals: southArrs, top: false)
 

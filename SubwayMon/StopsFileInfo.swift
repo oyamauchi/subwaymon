@@ -9,18 +9,31 @@
 import AppKit
 
 class StopsFileInfo {
+  static let shared = StopsFileInfo()
 
   private var gtfsStops: Array<Array<String>>!
+  private var idToName = Dictionary<String, String>()
 
   private(set) var menu: NSMenu!
 
-  init() {
+  private init() {
     let stopsPath = Bundle(for: SubwayMonView.self).path(forResource: "stops", ofType: "txt")!
     let rawGtfsStops = try? String.init(contentsOfFile: stopsPath)
 
     gtfsStops = parseCsv(rawGtfsStops!)
 
+    for line in gtfsStops {
+      if line.isEmpty || line.first == "stop_id" {
+        continue
+      }
+      idToName[line[0]] = line[2]
+    }
+
     populateMenu()
+  }
+
+  func name(ofStopId stopId: String) -> String {
+    return idToName[stopId]!
   }
 
   private func populateMenu() {

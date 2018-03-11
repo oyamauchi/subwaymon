@@ -8,28 +8,11 @@
 
 import Foundation
 
-typealias StopIdToNameMap = Dictionary<String, String>
 typealias TimeAndTrack = (Date, String)
 
-func buildStopIdMap(parsedGtfsStops: Array<Array<String>>) -> StopIdToNameMap {
-  var result = StopIdToNameMap()
-
-  for line in parsedGtfsStops {
-    if line.isEmpty || line.first == "stop_id" {
-      continue
-    }
-    result[line[0]] = line[2]
-  }
-
-  return result
-}
-
-private func tripDestination(tripUpdate: TransitRealtime_TripUpdate,
-                             stopMap: StopIdToNameMap
-  ) -> String {
+private func tripDestination(tripUpdate: TransitRealtime_TripUpdate) -> String {
   if let stu = tripUpdate.stopTimeUpdate.last {
-    let stopId = stu.stopID
-    return stopMap[stopId]!
+    return stu.stopID
   } else {
     return "nowhere"
   }
@@ -62,14 +45,13 @@ private func arrival(atStop stopId: String,
 
 struct Arrival {
   let train: String
-  let destination: String
+  let destinationStopId: String
   let track: String
   let seconds: Int64
 }
 
 func arrivals(atStop stopId: String,
-              feedMessage: TransitRealtime_FeedMessage,
-              stopMap: StopIdToNameMap) -> Array<Arrival> {
+              feedMessage: TransitRealtime_FeedMessage) -> Array<Arrival> {
   let now = Date()
 
   var result = Array<Arrival>()
@@ -85,7 +67,7 @@ func arrivals(atStop stopId: String,
 
       result.append(Arrival(
         train: entity.tripUpdate.trip.routeID,
-        destination: tripDestination(tripUpdate: entity.tripUpdate, stopMap: stopMap),
+        destinationStopId: tripDestination(tripUpdate: entity.tripUpdate),
         track: timeAndTrack.1,
         seconds: Int64(seconds)
       ))
