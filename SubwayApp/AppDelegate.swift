@@ -15,6 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   @IBOutlet weak var subway: SubwayMonView!
   @IBOutlet weak var menu: NSPopUpButton!
 
+  let stopsFileInfo = StopsFileInfo()
+
   let defaultsKey = "SelectedStation"
 
   @IBAction func menuSelected(sender: NSPopUpButton) {
@@ -32,7 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let selectedTag = UserDefaults.standard.integer(forKey: defaultsKey)
 
     subway.initialize(stationTag: selectedTag == 0 ? 631 : selectedTag)
-    subway.populate(menu: menu)
+    menu.menu = stopsFileInfo.menu
 
     Timer.scheduledTimer(
       timeInterval: 5.0,

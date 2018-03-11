@@ -46,48 +46,6 @@ class SubwayMonView : NSView {
     self.sendRequest()
   }
 
-  func populate(menu: NSPopUpButton) {
-    // This is pretty heinous engineering. It assumes the stops file is sorted and is going to be a
-    // pain to change if we ever get real-time data for more lines. Whatever.
-
-    var section = 0
-    menu.removeAllItems()
-    menu.addItem(withTitle: "Broadway - 7 Av trains")
-    menu.lastItem!.isEnabled = false
-
-    for line in self.gtfsStops {
-      let stopId = line[0]
-      let first = stopId.first!
-
-      // We don't want the directional stop ids (like 631N), or the ones for the B Division, or
-      // the ones for the Flushing line (i.e. 7 train).
-      if stopId.count != 3 || first < "1" || first > "9" || first == "7" {
-        continue
-      }
-
-      // If we're seeing 4xx stops (i.e. 4 train stops) for the first time, or a 9xx stop (the GS
-      // shuttle), start a new section.
-      if first == "4" && section == 0 {
-        menu.menu!.addItem(NSMenuItem.separator())
-        menu.addItem(withTitle: "Lexington Av trains")
-        menu.lastItem!.isEnabled = false
-        section = 1
-      } else if first == "9" && section == 1 {
-        menu.menu!.addItem(NSMenuItem.separator())
-        menu.addItem(withTitle: "42 St Shuttle")
-        menu.lastItem!.isEnabled = false
-        section = 2
-      }
-
-      menu.addItem(withTitle: line[2])
-      menu.lastItem!.tag = Int(stopId)!
-      menu.lastItem!.isEnabled = true
-      menu.lastItem!.indentationLevel = 1
-    }
-
-    menu.selectItem(withTag: self.selectedStationTag)
-  }
-
   //////////////////////////////////////////////////////////////////////////////////
   //
   // MARK: View logic

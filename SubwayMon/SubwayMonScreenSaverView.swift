@@ -13,6 +13,7 @@ class SubwayMonScreenSaverView : ScreenSaverView {
   @IBOutlet var popupMenu: NSPopUpButton!
 
   private var subwayView: SubwayMonView!
+  private let stopsFileInfo = StopsFileInfo()
 
   private let kSelectedStationKey = "SelectedStation"
 
@@ -46,8 +47,9 @@ class SubwayMonScreenSaverView : ScreenSaverView {
 
     self.subwayView = SubwayMonView(frame: self.bounds)
     self.subwayView.initialize(stationTag: self.selectedStationTag())
-    self.subwayView.populate(menu: popupMenu)
     self.addSubview(self.subwayView)
+
+    popupMenu.menu = stopsFileInfo.menu
   }
 
   required init?(coder: NSCoder) {
