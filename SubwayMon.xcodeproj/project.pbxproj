@@ -110,13 +110,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9354ABB92056202200E7C52F /* SubwayMon */ = {
+			isa = PBXGroup;
+			children = (
+				93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */,
+				93EC28D717C484FC00F5F90B /* SubwayMon-Info.plist */,
+				93650968204CE85E00705BCF /* SubwayMonScreenSaverView.swift */,
+			);
+			path = SubwayMon;
+			sourceTree = "<group>";
+		};
+		9354ABBA205620C400E7C52F /* GTFS */ = {
+			isa = PBXGroup;
+			children = (
+				93C5C1442054DBDE00492A2D /* StopsFileInfo.swift */,
+				9379850F204C6F1400236FD3 /* csv-parser.swift */,
+				93EC28FE17C4872900F5F90B /* stops.txt */,
+			);
+			path = GTFS;
+			sourceTree = "<group>";
+		};
 		9387C18C20329D49000BB42A /* SubwayApp */ = {
 			isa = PBXGroup;
 			children = (
 				9387C18D20329D49000BB42A /* AppDelegate.swift */,
 				9387C18F20329D49000BB42A /* Assets.xcassets */,
-				9387C19120329D49000BB42A /* MainMenu.xib */,
 				9387C19420329D49000BB42A /* Info.plist */,
+				9387C19120329D49000BB42A /* MainMenu.xib */,
 			);
 			path = SubwayApp;
 			sourceTree = "<group>";
@@ -124,7 +144,8 @@
 		93EC28BF17C484FC00F5F90B = {
 			isa = PBXGroup;
 			children = (
-				93EC28D517C484FC00F5F90B /* SubwayMon */,
+				93EC28D517C484FC00F5F90B /* Common */,
+				9354ABB92056202200E7C52F /* SubwayMon */,
 				9387C18C20329D49000BB42A /* SubwayApp */,
 				93EC28CC17C484FC00F5F90B /* Frameworks */,
 				93EC28CB17C484FC00F5F90B /* Products */,
@@ -161,47 +182,34 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		93EC28D517C484FC00F5F90B /* SubwayMon */ = {
+		93EC28D517C484FC00F5F90B /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				93EC28E517C4851B00F5F90B /* Frontend */,
-				93EC28E417C4851300F5F90B /* Backend */,
-				93C5C1442054DBDE00492A2D /* StopsFileInfo.swift */,
+				9354ABBA205620C400E7C52F /* GTFS */,
+				93EC28E417C4851300F5F90B /* Generated */,
 				93650965204C9EB300705BCF /* SubwayMonView.swift */,
-				93650968204CE85E00705BCF /* SubwayMonScreenSaverView.swift */,
-				93EC28D617C484FC00F5F90B /* Supporting Files */,
+				93798512204C748F00236FD3 /* backend.swift */,
 			);
-			path = SubwayMon;
+			path = Common;
 			sourceTree = "<group>";
 		};
-		93EC28D617C484FC00F5F90B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				93EC28FE17C4872900F5F90B /* stops.txt */,
-				93EC28D717C484FC00F5F90B /* SubwayMon-Info.plist */,
-				93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		93EC28E417C4851300F5F90B /* Backend */ = {
+		93EC28E417C4851300F5F90B /* Generated */ = {
 			isa = PBXGroup;
 			children = (
 				93798509204C6EEF00236FD3 /* gtfs-realtime.pb.swift */,
 				9379850A204C6EEF00236FD3 /* nyct-subway.pb.swift */,
-				9379850F204C6F1400236FD3 /* csv-parser.swift */,
-				93798512204C748F00236FD3 /* backend.swift */,
 			);
-			name = Backend;
+			path = Generated;
 			sourceTree = "<group>";
 		};
 		93EC28E517C4851B00F5F90B /* Frontend */ = {
 			isa = PBXGroup;
 			children = (
-				93175C0520435EBB00FBD535 /* TrainView.swift */,
 				93175C08204365C300FBD535 /* LineEnums.swift */,
+				93175C0520435EBB00FBD535 /* TrainView.swift */,
 			);
-			name = Frontend;
+			path = Frontend;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +375,7 @@
 				9387C19220329D49000BB42A /* Base */,
 			);
 			name = MainMenu.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
