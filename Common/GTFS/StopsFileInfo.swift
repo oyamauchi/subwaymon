@@ -11,28 +11,36 @@ import AppKit
 class StopsFileInfo {
   static let shared = StopsFileInfo()
 
-  private var gtfsStops: Array<Array<String>>!
+  private var groups = Dictionary<String, Array<StopId>>()
+
   private var idToName = Dictionary<StopId, String>()
+  private var idToFeeds = Dictionary<StopId, Array<Int>>()
+
   private var tagToId = Dictionary<Int, StopId>()
   private var idToTag = Dictionary<StopId, Int>()
 
   private(set) var menu: NSMenu!
 
   private init() {
-    let stopsPath = Bundle(for: SubwayMonView.self).path(forResource: "stops", ofType: "txt")!
-    let rawGtfsStops = try? String.init(contentsOfFile: stopsPath)
+    let path = Bundle(for: SubwayMonView.self).path(forResource: "feedinfo", ofType: "json")!
+    let stream = InputStream(fileAtPath: path)!
+    stream.open()
 
-    gtfsStops = parseCsv(rawGtfsStops!)
+    let feedInfoRaw = try? JSONSerialization.jsonObject(with: stream,
+                                                        options: JSONSerialization.ReadingOptions())
+    let feedInfo = feedInfoRaw as! Dictionary<String, Any>
+
+    groups = feedInfo["groups"] as! Dictionary<String, Array<StopId>>
+
+    let stopInfo = feedInfo["stopinfo"] as! Dictionary<StopId, Dictionary<String, Any>>
 
     var tag = 1
+    for (stopId, infoDict) in stopInfo {
+      idToName[stopId] = (infoDict["name"] as! String)
+      idToFeeds[stopId] = (infoDict["feeds"] as! Array<Int>)
 
-    for line in gtfsStops {
-      if line.isEmpty || line.first == "stop_id" {
-        continue
-      }
-      idToName[line[0]] = line[2]
-      tagToId[tag] = line[0]
-      idToTag[line[0]] = tag
+      tagToId[tag] = stopId
+      idToTag[stopId] = tag
 
       tag += 1
     }
@@ -41,7 +49,11 @@ class StopsFileInfo {
   }
 
   func name(ofStopId stopId: StopId) -> String {
-    return idToName[stopId]!
+    return idToName[trim(stopId: stopId)]!
+  }
+
+  func feeds(forStopId stopId: StopId) -> Array<Int> {
+    return idToFeeds[trim(stopId: stopId)]!
   }
 
   func stopId(forTag tag: Int) -> StopId {
@@ -49,48 +61,36 @@ class StopsFileInfo {
   }
 
   func tag(forStopId stopId: StopId) -> Int {
-    return idToTag[stopId]!
+    return idToTag[trim(stopId: stopId)]!
+  }
+
+  private func trim(stopId: StopId) -> StopId {
+    return stopId.substring(to: stopId.index(stopId.startIndex, offsetBy: 3))
   }
 
   private func populateMenu() {
     menu = NSMenu()
     menu.autoenablesItems = false
 
-    // This is pretty heinous engineering. It assumes the stops file is sorted and is going to be a
-    // pain to change if we ever get real-time data for more lines. Whatever.
-    var section = 0
-    menu.addItem(withTitle: "Broadway - 7 Av trains", action: nil, keyEquivalent: "")
-    menu.items.last!.isEnabled = false
+    let sections = ["1, 2, 3", "4, 5, 6", "42 St Shuttle"]
 
-    for line in gtfsStops {
-      let stopId = line[0]
-      let first = stopId.first!
+    for section in sections {
+      let group = groups[section]!
 
-      // We don't want the directional stop ids (like 631N), or the ones for the B Division, or
-      // the ones for the Flushing line (i.e. 7 train).
-      if stopId.count != 3 || first < "1" || first > "9" || first == "7" {
-        continue
+      if menu.items.count > 0 {
+        menu.addItem(NSMenuItem.separator())
       }
 
-      // If we're seeing 4xx stops (i.e. 4 train stops) for the first time, or a 9xx stop (the GS
-      // shuttle), start a new section.
-      if first == "4" && section == 0 {
-        menu.addItem(NSMenuItem.separator())
-        menu.addItem(withTitle: "Lexington Av trains", action: nil, keyEquivalent: "")
-        menu.items.last!.isEnabled = false
-        section = 1
-      } else if first == "9" && section == 1 {
-        menu.addItem(NSMenuItem.separator())
-        menu.addItem(withTitle: "42 St Shuttle", action: nil, keyEquivalent: "")
-        menu.items.last!.isEnabled = false
-        section = 2
-      }
+      menu.addItem(withTitle: section, action: nil, keyEquivalent: "")
+      menu.items.last!.isEnabled = false
 
-      let item = NSMenuItem(title: line[2], action: nil, keyEquivalent: "")
-      item.tag = idToTag[stopId]!
-      item.isEnabled = true
-      item.indentationLevel = 1
-      menu.addItem(item)
+      for stopId in group {
+        let item = NSMenuItem(title: idToName[stopId]!, action: nil, keyEquivalent: "")
+        item.tag = idToTag[stopId]!
+        item.isEnabled = true
+        item.indentationLevel = 1
+        menu.addItem(item)
+      }
     }
   }
 }
