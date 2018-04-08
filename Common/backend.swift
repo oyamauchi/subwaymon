@@ -52,26 +52,28 @@ struct Arrival {
 }
 
 func arrivals(atStop stopId: StopId,
-              feedMessage: TransitRealtime_FeedMessage) -> Array<Arrival> {
+              feedMessages: [TransitRealtime_FeedMessage]) -> Array<Arrival> {
   let now = Date()
 
   var result = Array<Arrival>()
 
-  for entity in feedMessage.entity {
-    if entity.hasTripUpdate, let timeAndTrack = arrival(atStop: stopId,
-                                                        tripUpdate: entity.tripUpdate) {
-      let arrivalTime = timeAndTrack.0
-      let seconds = arrivalTime.timeIntervalSince(now)
-      if seconds < 0 {
-        continue
-      }
+  for feedMessage in feedMessages {
+    for entity in feedMessage.entity {
+      if entity.hasTripUpdate, let timeAndTrack = arrival(atStop: stopId,
+                                                          tripUpdate: entity.tripUpdate) {
+        let arrivalTime = timeAndTrack.0
+        let seconds = arrivalTime.timeIntervalSince(now)
+        if seconds < 0 {
+          continue
+        }
 
-      result.append(Arrival(
-        train: entity.tripUpdate.trip.routeID,
-        destinationStopId: tripDestination(tripUpdate: entity.tripUpdate),
-        track: timeAndTrack.1,
-        seconds: Int64(seconds)
-      ))
+        result.append(Arrival(
+          train: entity.tripUpdate.trip.routeID,
+          destinationStopId: tripDestination(tripUpdate: entity.tripUpdate),
+          track: timeAndTrack.1,
+          seconds: Int64(seconds)
+        ))
+      }
     }
   }
 

@@ -11,8 +11,9 @@ import AppKit
 class TrainView: NSView {
 
   var symbol: Character = "X"
-  var color: LineColor = .Shuttle
-  var shape: LineShape = .Circle
+  var color: NSColor = NSColor.white
+  var isDiamond: Bool = false
+  var isBlackText: Bool = false
   var text: String = ""
   var minutes: Int = 0
 
@@ -29,38 +30,28 @@ class TrainView: NSView {
     return attempt
   }
 
+  private func getTextAttributes(size: CGFloat, color: NSColor) -> Dictionary<String, Any> {
+    return [
+      NSForegroundColorAttributeName: color,
+      NSFontAttributeName: NSFont(name: "Helvetica Bold", size: size) as Any
+    ]
+  }
+
   override func draw(_ dirtyRect: NSRect) {
     NSColor.black.set()
     NSRectFill(dirtyRect)
 
-    var bulletColor: NSColor
-
-    switch self.color {
-    case .BwaySeventh:
-      bulletColor =
-        NSColor(calibratedRed: 0xEE / 255.0, green: 0x35 / 255.0, blue: 0x23 / 255.0, alpha: 1.0)
-    case .Lexington:
-      bulletColor =
-        NSColor(calibratedRed: 0, green: 0x93 / 255.0, blue: 0x3C / 255.0, alpha: 1.0)
-    case .Shuttle:
-      bulletColor =
-        NSColor(calibratedRed: 0x80 / 255.0, green: 0x81 / 255.0, blue: 0x83 / 255.0, alpha: 1.0)
-    }
-
-    bulletColor.set()
+    self.color.set()
 
     // These values will be used for all the text
     let fontSize = 0.84 * self.bounds.size.height
-    let giantWhiteText: Dictionary<String, Any> = [
-      NSForegroundColorAttributeName: NSColor.white,
-      NSFontAttributeName: NSFont(name: "Helvetica Bold", size: fontSize) as Any
-    ]
+    let giantWhiteText = getTextAttributes(size: fontSize, color: NSColor.white)
 
     // Draw the route bullet. It should be a square that fills the height of this view,
     // left-aligned. First draw the shape.
     let shapeRect = NSMakeRect(0, 0, self.bounds.size.height, self.bounds.size.height)
 
-    if (shape == .Diamond) {
+    if (self.isDiamond) {
       let shape = NSBezierPath()
       shape.move(to: NSMakePoint(shapeRect.size.width / 2, 0))
       shape.line(to: NSMakePoint(shapeRect.size.width, shapeRect.size.height / 2))
@@ -79,7 +70,13 @@ class TrainView: NSView {
 
     let x = (shapeRect.size.width - textSize.width) / 2 + shapeRect.origin.x
     let y = (shapeRect.size.height - textSize.height) / 2 + shapeRect.origin.y
-    symStr.draw(at: NSMakePoint(x, y), withAttributes: giantWhiteText)
+
+    if (isBlackText) {
+      symStr.draw(at: NSMakePoint(x, y),
+                  withAttributes: getTextAttributes(size: fontSize, color: NSColor.black))
+    } else {
+      symStr.draw(at: NSMakePoint(x, y), withAttributes: giantWhiteText)
+    }
 
     // Draw the time remaining. It's simple text.
     let minString = "\(self.minutes) min"

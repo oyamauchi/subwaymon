@@ -11,10 +11,14 @@ import AppKit
 class SubwayMonView : NSView {
   private var trainViews = Array<TrainView>()
 
-  private var feedMessage: TransitRealtime_FeedMessage?
-  private var sessionTask: URLSessionTask?
+  private var feedMessages = Dictionary<Int, TransitRealtime_FeedMessage>()
+  private var feedsInProgress = Set<Int>()
 
-  var selectedStopId: StopId!
+  var selectedStopId: StopId! {
+    didSet {
+      self.sendRequest()
+    }
+  }
 
   //////////////////////////////////////////////////////////////////////////////////
   //
@@ -63,22 +67,10 @@ class SubwayMonView : NSView {
       let arrival = arrivals[i]
       i += 1
 
-      var symbol: Character
-      switch (arrival.train) {
-      case "6X":
-        symbol = "6"
-      case "GS":
-        symbol = "S"
-      default:
-        symbol = arrival.train.first!
-      }
-
-      let shape = arrival.train == "6X" ? LineShape.Diamond : LineShape.Circle
-      let color = LineColor.forSymbol(symbol)
-
-      tv.symbol = symbol
-      tv.shape = shape
-      tv.color = color
+      tv.symbol = char(forRoute: arrival.train)
+      tv.color = color(forRoute: arrival.train)
+      tv.isDiamond = (arrival.train.last == "X")
+      tv.isBlackText = (["N", "Q", "R", "W"].contains(arrival.train))
       tv.text = StopsFileInfo.shared.name(ofStopId: arrival.destinationStopId)
       tv.minutes = Int(arrival.seconds + 29) / 60  // round to nearest minute
 
@@ -101,18 +93,18 @@ class SubwayMonView : NSView {
     NSColor.black.set()
     NSRectFill(dirtyRect)
 
-    if let feedMessage = self.feedMessage {
+    if let stopId = selectedStopId {
       // Read the arrivals twice: once for the northbound direction of our stop id and once for the
       // southbound. The GS shuttle considers TS to be north and GC to be south.
       let northArrs = arrivals(
-        atStop: selectedStopId + "N",
-        feedMessage: feedMessage
+        atStop: stopId + "N",
+        feedMessages: Array(self.feedMessages.values)
       )
       self.updateViews(arrivals: northArrs, top: true)
 
       let southArrs = arrivals(
-        atStop: selectedStopId + "S",
-        feedMessage: feedMessage
+        atStop: stopId + "S",
+        feedMessages: Array(self.feedMessages.values)
       )
       self.updateViews(arrivals: southArrs, top: false)
 
@@ -133,23 +125,22 @@ class SubwayMonView : NSView {
   //////////////////////////////////////////////////////////////////////////////////
 
   private func sendRequest() {
-    if sessionTask != nil {
-      return
-    }
-
-    let url = URL.init(string: "http://subwaymon.nfshost.com/fetch.php")!
-
-    self.sessionTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
-      if self.feedMessage == nil {
-        DispatchQueue.main.async(execute: { self.needsDisplay = true })
+    for feed in StopsFileInfo.shared.feeds(forStopId: selectedStopId) {
+      if feedsInProgress.contains(feed) {
+        continue
       }
 
-      self.feedMessage = try? TransitRealtime_FeedMessage(serializedData: data!)
-      self.sessionTask = nil
+      feedsInProgress.insert(feed)
 
-      DispatchQueue.main.asyncAfter(deadline: .now() + 60.0, execute: self.sendRequest)
+      let url = URL.init(string: "http://subwaymon.nfshost.com/fetch.php?feed=\(feed)")!
+
+      let sessionTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        self.feedsInProgress.remove(feed)
+        self.feedMessages[feed] = try? TransitRealtime_FeedMessage(serializedData: data!)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 60.0, execute: self.sendRequest)
+      }
+
+      sessionTask.resume()
     }
-
-    self.sessionTask!.resume()
   }
 }

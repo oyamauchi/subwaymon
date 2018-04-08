@@ -29,10 +29,9 @@ class StopsFileInfo {
     let feedInfoRaw = try? JSONSerialization.jsonObject(with: stream,
                                                         options: JSONSerialization.ReadingOptions())
     let feedInfo = feedInfoRaw as! Dictionary<String, Any>
+    let stopInfo = feedInfo["stopinfo"] as! Dictionary<StopId, Dictionary<String, Any>>
 
     groups = feedInfo["groups"] as! Dictionary<String, Array<StopId>>
-
-    let stopInfo = feedInfo["stopinfo"] as! Dictionary<StopId, Dictionary<String, Any>>
 
     var tag = 1
     for (stopId, infoDict) in stopInfo {
@@ -72,11 +71,7 @@ class StopsFileInfo {
     menu = NSMenu()
     menu.autoenablesItems = false
 
-    let sections = ["1, 2, 3", "4, 5, 6", "42 St Shuttle"]
-
-    for section in sections {
-      let group = groups[section]!
-
+    for (section, group) in groups {
       if menu.items.count > 0 {
         menu.addItem(NSMenuItem.separator())
       }
