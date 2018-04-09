@@ -71,7 +71,11 @@ class StopsFileInfo {
     menu = NSMenu()
     menu.autoenablesItems = false
 
-    for (section, group) in groups {
+    let sections = groups.keys.sorted()
+
+    for section in sections {
+      let group = groups[section]!
+
       if menu.items.count > 0 {
         menu.addItem(NSMenuItem.separator())
       }

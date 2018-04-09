@@ -67,12 +67,15 @@ func arrivals(atStop stopId: StopId,
           continue
         }
 
-        result.append(Arrival(
-          train: entity.tripUpdate.trip.routeID,
-          destinationStopId: tripDestination(tripUpdate: entity.tripUpdate),
-          track: timeAndTrack.1,
-          seconds: Int64(seconds)
-        ))
+        let destination = tripDestination(tripUpdate: entity.tripUpdate)
+        if destination != stopId {
+          result.append(Arrival(
+            train: entity.tripUpdate.trip.routeID,
+            destinationStopId: destination,
+            track: timeAndTrack.1,
+            seconds: Int64(seconds)
+          ))
+        }
       }
     }
   }
