@@ -152,8 +152,8 @@ outputdict = {
     'stopinfo': {
         k: {
             'name': stop_names[k],
-            'feeds': list(feeds_for_stop[k])
-        } for k in sorted(feeds_for_stop.keys())
+            'feeds': list(feeds_for_stop[k] if k in feeds_for_stop else [])
+        } for k in sorted(stop_names.keys())
     }
 }
 

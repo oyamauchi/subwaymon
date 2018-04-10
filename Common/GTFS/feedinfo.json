@@ -881,6 +881,10 @@
         1
       ]
     },
+    "140": {
+      "name": "South Ferry Loop",
+      "feeds": []
+    },
     "142": {
       "name": "South Ferry",
       "feeds": [
@@ -2895,6 +2899,10 @@
         26
       ]
     },
+    "H19": {
+      "name": "Broad Channel",
+      "feeds": []
+    },
     "J12": {
       "name": "121 St",
       "feeds": [
@@ -3176,6 +3184,14 @@
         21
       ]
     },
+    "M09": {
+      "name": "Knickerbocker Av",
+      "feeds": []
+    },
+    "M10": {
+      "name": "Central Av",
+      "feeds": []
+    },
     "M11": {
       "name": "Myrtle Av",
       "feeds": [
@@ -3304,6 +3320,10 @@
       "feeds": [
         16
       ]
+    },
+    "N12": {
+      "name": "S.B. Coney Island",
+      "feeds": []
     },
     "Q01": {
       "name": "Canal St",
@@ -3594,11 +3614,19 @@
         11
       ]
     },
+    "S10": {
+      "name": "Atlantic",
+      "feeds": []
+    },
     "S11": {
       "name": "Arthur Kill",
       "feeds": [
         11
       ]
+    },
+    "S12": {
+      "name": "Nassau",
+      "feeds": []
     },
     "S13": {
       "name": "Richmond Valley",
