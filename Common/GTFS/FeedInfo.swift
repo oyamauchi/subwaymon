@@ -8,8 +8,8 @@
 
 import AppKit
 
-class StopsFileInfo {
-  static let shared = StopsFileInfo()
+class FeedInfo {
+  static let shared = FeedInfo()
 
   private var groups = Dictionary<String, Array<StopId>>()
 

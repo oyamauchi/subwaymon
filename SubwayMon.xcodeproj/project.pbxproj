@@ -20,8 +20,6 @@
 		9379850C204C6EEF00236FD3 /* gtfs-realtime.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798509204C6EEF00236FD3 /* gtfs-realtime.pb.swift */; };
 		9379850D204C6EEF00236FD3 /* nyct-subway.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379850A204C6EEF00236FD3 /* nyct-subway.pb.swift */; };
 		9379850E204C6EEF00236FD3 /* nyct-subway.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379850A204C6EEF00236FD3 /* nyct-subway.pb.swift */; };
-		93798510204C6F1400236FD3 /* csv-parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379850F204C6F1400236FD3 /* csv-parser.swift */; };
-		93798511204C6F1400236FD3 /* csv-parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379850F204C6F1400236FD3 /* csv-parser.swift */; };
 		93798513204C748F00236FD3 /* backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798512204C748F00236FD3 /* backend.swift */; };
 		93798514204C748F00236FD3 /* backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798512204C748F00236FD3 /* backend.swift */; };
 		9381DC64204C93AD008409A1 /* SwiftProtobuf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 93798506204C6ED800236FD3 /* SwiftProtobuf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -32,8 +30,8 @@
 		93A2FF0C207ABC30003336D2 /* feedinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 93A2FF0B207ABC30003336D2 /* feedinfo.json */; };
 		93A2FF0D207ABC30003336D2 /* feedinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 93A2FF0B207ABC30003336D2 /* feedinfo.json */; };
 		93A4FF0C17C849AB003F90A0 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */; };
-		93C5C1452054DBDE00492A2D /* StopsFileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1442054DBDE00492A2D /* StopsFileInfo.swift */; };
-		93C5C1462054DBDE00492A2D /* StopsFileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1442054DBDE00492A2D /* StopsFileInfo.swift */; };
+		93C5C1452054DBDE00492A2D /* FeedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1442054DBDE00492A2D /* FeedInfo.swift */; };
+		93C5C1462054DBDE00492A2D /* FeedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1442054DBDE00492A2D /* FeedInfo.swift */; };
 		93EC28CE17C484FC00F5F90B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CD17C484FC00F5F90B /* Cocoa.framework */; };
 		93EC28D017C484FC00F5F90B /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CF17C484FC00F5F90B /* ScreenSaver.framework */; };
 /* End PBXBuildFile section */
@@ -69,7 +67,6 @@
 		93798506204C6ED800236FD3 /* SwiftProtobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftProtobuf.framework; sourceTree = "<group>"; };
 		93798509204C6EEF00236FD3 /* gtfs-realtime.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "gtfs-realtime.pb.swift"; sourceTree = "<group>"; };
 		9379850A204C6EEF00236FD3 /* nyct-subway.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "nyct-subway.pb.swift"; sourceTree = "<group>"; };
-		9379850F204C6F1400236FD3 /* csv-parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "csv-parser.swift"; sourceTree = "<group>"; };
 		93798512204C748F00236FD3 /* backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backend.swift; sourceTree = "<group>"; };
 		9387C18B20329D49000BB42A /* SubwayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9387C18D20329D49000BB42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +75,7 @@
 		9387C19420329D49000BB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A2FF0B207ABC30003336D2 /* feedinfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feedinfo.json; sourceTree = "<group>"; };
 		93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
-		93C5C1442054DBDE00492A2D /* StopsFileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopsFileInfo.swift; sourceTree = "<group>"; };
+		93C5C1442054DBDE00492A2D /* FeedInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInfo.swift; sourceTree = "<group>"; };
 		93EC28CA17C484FC00F5F90B /* SubwayMon.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubwayMon.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EC28CD17C484FC00F5F90B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		93EC28CF17C484FC00F5F90B /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
@@ -123,8 +120,7 @@
 		9354ABBA205620C400E7C52F /* GTFS */ = {
 			isa = PBXGroup;
 			children = (
-				93C5C1442054DBDE00492A2D /* StopsFileInfo.swift */,
-				9379850F204C6F1400236FD3 /* csv-parser.swift */,
+				93C5C1442054DBDE00492A2D /* FeedInfo.swift */,
 				93A2FF0B207ABC30003336D2 /* feedinfo.json */,
 			);
 			path = GTFS;
@@ -343,9 +339,8 @@
 				93175C0720435EBB00FBD535 /* TrainView.swift in Sources */,
 				93175C0A204365C300FBD535 /* LineEnums.swift in Sources */,
 				9387C18E20329D49000BB42A /* AppDelegate.swift in Sources */,
-				93798511204C6F1400236FD3 /* csv-parser.swift in Sources */,
 				9379850C204C6EEF00236FD3 /* gtfs-realtime.pb.swift in Sources */,
-				93C5C1462054DBDE00492A2D /* StopsFileInfo.swift in Sources */,
+				93C5C1462054DBDE00492A2D /* FeedInfo.swift in Sources */,
 				93798514204C748F00236FD3 /* backend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,9 +354,8 @@
 				9379850D204C6EEF00236FD3 /* nyct-subway.pb.swift in Sources */,
 				93175C0620435EBB00FBD535 /* TrainView.swift in Sources */,
 				93175C09204365C300FBD535 /* LineEnums.swift in Sources */,
-				93798510204C6F1400236FD3 /* csv-parser.swift in Sources */,
 				9379850B204C6EEF00236FD3 /* gtfs-realtime.pb.swift in Sources */,
-				93C5C1452054DBDE00492A2D /* StopsFileInfo.swift in Sources */,
+				93C5C1452054DBDE00492A2D /* FeedInfo.swift in Sources */,
 				93798513204C748F00236FD3 /* backend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   let defaultsKey = "SelectedStation"
 
   @IBAction func menuSelected(sender: NSPopUpButton) {
-    let stopId = StopsFileInfo.shared.stopId(forTag: menu.selectedTag())
+    let stopId = FeedInfo.shared.stopId(forTag: menu.selectedTag())
     subway.selectedStopId = stopId
     subway.needsDisplay = true
 
@@ -31,10 +31,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     let selectedStopId = UserDefaults.standard.string(forKey: defaultsKey) ?? "631"
-    let tag = StopsFileInfo.shared.tag(forStopId: selectedStopId)
+    let tag = FeedInfo.shared.tag(forStopId: selectedStopId)
 
     subway.initialize(stopId: selectedStopId)
-    menu.menu = StopsFileInfo.shared.menu
+    menu.menu = FeedInfo.shared.menu
     menu.selectItem(withTag: tag)
 
     Timer.scheduledTimer(

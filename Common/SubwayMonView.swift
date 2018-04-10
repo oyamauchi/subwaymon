@@ -71,7 +71,7 @@ class SubwayMonView : NSView {
       tv.color = color(forRoute: arrival.train)
       tv.isDiamond = (arrival.train.last == "X")
       tv.isBlackText = (["N", "Q", "R", "W"].contains(arrival.train))
-      tv.text = StopsFileInfo.shared.name(ofStopId: arrival.destinationStopId)
+      tv.text = FeedInfo.shared.name(ofStopId: arrival.destinationStopId)
       tv.minutes = Int(arrival.seconds + 29) / 60  // round to nearest minute
 
       tv.isHidden = false
@@ -125,7 +125,7 @@ class SubwayMonView : NSView {
   //////////////////////////////////////////////////////////////////////////////////
 
   private func sendRequest() {
-    for feed in StopsFileInfo.shared.feeds(forStopId: selectedStopId) {
+    for feed in FeedInfo.shared.feeds(forStopId: selectedStopId) {
       if feedsInProgress.contains(feed) {
         continue
       }
