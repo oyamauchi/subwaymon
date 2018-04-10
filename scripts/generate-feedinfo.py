@@ -59,7 +59,7 @@ def get_stop_names() -> Dict[str, str]:
     result = {}
     for line in open(os.path.join(FEED_DIR, 'stops.txt'), 'r'):
         stop_id, _, stop_name = line.split(',')[:3]
-        if stop_id == 'stop_id':
+        if stop_id == 'stop_id' or len(stop_id) > 3:
             continue
         result[stop_id] = stop_name
     return result
@@ -152,8 +152,8 @@ outputdict = {
     'stopinfo': {
         k: {
             'name': stop_names[k],
-            'feeds': list(v),
-        } for k,v in feeds_for_stop.items()
+            'feeds': list(feeds_for_stop[k])
+        } for k in sorted(feeds_for_stop.keys())
     }
 }
 
