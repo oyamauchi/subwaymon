@@ -19,7 +19,7 @@ func color(forRoute: String) -> NSColor {
     (r, g, b) = (0x00, 0x93, 0x3C)
   case "7", "7X":
     (r, g, b) = (0xB9, 0x33, 0xAD)
-  case "A", "C", "E", "SI":
+  case "A", "C", "E", "SI", "SS":
     (r, g, b) = (0x00, 0x39, 0xA6)
   case "B", "D", "F", "M":
     (r, g, b) = (0xFF, 0x63, 0x19)
