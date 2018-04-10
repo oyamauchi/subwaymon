@@ -17,10 +17,26 @@ class TrainView: NSView {
   var text: String = ""
   var minutes: Int = 0
 
+  /// First try cutting the string at the hyphens, until it fits in the available width.
+  /// If that doesn't work, truncate and ellipsize the string until it fits.
   private func truncate(text: String,
                         withAttributes attributes: Dictionary<String, Any>,
                         toWidth width: CGFloat) -> String {
-    var attempt = text
+    let fields = text.components(separatedBy: " - ")
+
+    var lastField = fields.endIndex
+
+    while (lastField > fields.startIndex) {
+      let attempt = fields[fields.startIndex..<lastField].joined(separator: " - ")
+
+      if (attempt.size(withAttributes: attributes).width <= width) {
+        return attempt
+      }
+
+      lastField = lastField.advanced(by: -1)
+    }
+
+    var attempt = fields[0]
 
     while (attempt.size(withAttributes: attributes).width > width && attempt.count > 1) {
       let range = attempt.index(attempt.endIndex, offsetBy: -2)..<attempt.endIndex
