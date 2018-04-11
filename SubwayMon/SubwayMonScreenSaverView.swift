@@ -18,7 +18,7 @@ class SubwayMonScreenSaverView : ScreenSaverView {
 
   @IBAction func closeSheet(sender: Any) {
     let defaults = ScreenSaverDefaults.init(forModuleWithName: "com.oyamauchi.SubwayMon")!
-    let stopId = StopsFileInfo.shared.stopId(forTag: popupMenu.selectedTag())
+    let stopId = FeedInfo.shared.stopId(forTag: popupMenu.selectedTag())
     defaults.set(stopId, forKey: kSelectedStationKey)
     defaults.synchronize()
 
@@ -46,8 +46,8 @@ class SubwayMonScreenSaverView : ScreenSaverView {
     self.subwayView.initialize(stopId: stopId)
     self.addSubview(self.subwayView)
 
-    popupMenu.menu = StopsFileInfo.shared.menu
-    popupMenu.selectItem(withTag: StopsFileInfo.shared.tag(forStopId: stopId))
+    popupMenu.menu = FeedInfo.shared.menu
+    popupMenu.selectItem(withTag: FeedInfo.shared.tag(forStopId: stopId))
   }
 
   required init?(coder: NSCoder) {
