@@ -3,6 +3,9 @@
 SubwayMon is a Mac OS X screensaver patterned after the in-station countdown
 clocks in some New York City Subway stations.
 
+__If you're on High Sierra__, you have to update to 10.13.4 to use
+SubwayMon 2.0. Swift screensavers were broken in earlier version of High Sierra.
+
 ![Screenshot](http://i.imgur.com/BMA0tWa.png "Arrivals at Grand Central")
 
 ## Building
