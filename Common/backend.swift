@@ -20,8 +20,7 @@ private func tripDestination(tripUpdate: TransitRealtime_TripUpdate) -> StopId {
 }
 
 private func arrival(atStop stopId: StopId,
-                     tripUpdate: TransitRealtime_TripUpdate
-  ) -> TimeAndTrack? {
+                     tripUpdate: TransitRealtime_TripUpdate) -> TimeAndTrack? {
   assert(stopId.count == 3 || stopId.count == 4)
   if stopId.count == 4 {
     assert(stopId.last == "N" || stopId.last == "S")
@@ -32,7 +31,7 @@ private func arrival(atStop stopId: StopId,
     // doesn't, it's a train arriving at its terminus at the end of a trip, and
     // we don't want to show that as a train "arriving" at the station.
     // However, for purposes of time display, use the arrival time if available.
-    if stu.hasDeparture && stu.stopID == stopId {
+    if stu.hasDeparture, stu.stopID == stopId {
       let time = stu.hasArrival ? stu.arrival.time : stu.departure.time
       let extUpdate = stu.nyctStopTimeUpdate
       let track = extUpdate.hasActualTrack ? extUpdate.actualTrack : extUpdate.scheduledTrack
@@ -80,7 +79,7 @@ func arrivals(atStop stopId: StopId,
     }
   }
 
-  result.sort(by: { a, b in a.seconds < b.seconds})
+  result.sort(by: { a, b in a.seconds < b.seconds })
 
   return result
 }

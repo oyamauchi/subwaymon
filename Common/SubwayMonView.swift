@@ -8,7 +8,7 @@
 
 import AppKit
 
-class SubwayMonView : NSView {
+class SubwayMonView: NSView {
   private var trainViews = [TrainView]()
 
   private var feedMessages = [Int: TransitRealtime_FeedMessage]()
@@ -16,13 +16,15 @@ class SubwayMonView : NSView {
 
   var selectedStopId: StopId! {
     didSet {
-      self.sendRequest()
+      sendRequest()
     }
   }
 
   //////////////////////////////////////////////////////////////////////////////////
   //
+
   // MARK: Public interface
+
   //
   //////////////////////////////////////////////////////////////////////////////////
 
@@ -30,31 +32,33 @@ class SubwayMonView : NSView {
     for _ in 0 ..< 8 {
       let train = TrainView()
       train.isHidden = true
-      self.addSubview(train)
+      addSubview(train)
       trainViews.append(train)
     }
 
     selectedStopId = stopId
 
-    self.setSubviewSizes()
-    self.sendRequest()
+    setSubviewSizes()
+    sendRequest()
   }
 
   //////////////////////////////////////////////////////////////////////////////////
   //
+
   // MARK: View logic
+
   //
   //////////////////////////////////////////////////////////////////////////////////
 
   private func setSubviewSizes() {
-    let rowHeight = self.frame.size.height / 8
+    let rowHeight = frame.size.height / 8
     let padding = 0.1 * rowHeight
 
-    for i in 0..<8 {
-      let y = self.frame.size.height - (CGFloat(i + 1) * rowHeight) + padding
+    for i in 0 ..< 8 {
+      let y = frame.size.height - (CGFloat(i + 1) * rowHeight) + padding
       let height = rowHeight - padding * 2
       trainViews[i].setFrameOrigin(NSMakePoint(padding, y))
-      trainViews[i].setFrameSize(NSMakeSize(self.frame.size.width - padding * 2, height))
+      trainViews[i].setFrameSize(NSMakeSize(frame.size.width - padding * 2, height))
     }
   }
 
@@ -63,7 +67,7 @@ class SubwayMonView : NSView {
     var i = 0
 
     while i < min(arrivals.count, 4) {
-      let tv = self.trainViews[i + offset]
+      let tv = trainViews[i + offset]
       let arrival = arrivals[i]
       i += 1
 
@@ -72,21 +76,21 @@ class SubwayMonView : NSView {
       tv.isDiamond = (arrival.train.last == "X")
       tv.isBlackText = (["N", "Q", "R", "W"].contains(arrival.train))
       tv.text = FeedInfo.shared.name(ofStopId: arrival.destinationStopId)
-      tv.minutes = Int(arrival.seconds + 29) / 60  // round to nearest minute
+      tv.minutes = Int(arrival.seconds + 29) / 60 // round to nearest minute
 
       tv.isHidden = false
       tv.needsDisplay = true
     }
 
     while i < 4 {
-      self.trainViews[i + offset].isHidden = true
+      trainViews[i + offset].isHidden = true
       i += 1
     }
   }
 
   override func resize(withOldSuperviewSize oldSize: NSSize) {
     super.resize(withOldSuperviewSize: oldSize)
-    self.setSubviewSizes()
+    setSubviewSizes()
   }
 
   override func draw(_ dirtyRect: NSRect) {
@@ -98,20 +102,20 @@ class SubwayMonView : NSView {
       // southbound. The GS shuttle considers TS to be north and GC to be south.
       let northArrs = arrivals(
         atStop: stopId + "N",
-        feedMessages: Array(self.feedMessages.values)
+        feedMessages: Array(feedMessages.values)
       )
-      self.updateViews(arrivals: northArrs, top: true)
+      updateViews(arrivals: northArrs, top: true)
 
       let southArrs = arrivals(
         atStop: stopId + "S",
-        feedMessages: Array(self.feedMessages.values)
+        feedMessages: Array(feedMessages.values)
       )
-      self.updateViews(arrivals: southArrs, top: false)
+      updateViews(arrivals: southArrs, top: false)
 
       // Draw the separator between the two halves
       let line = NSBezierPath()
-      line.move(to: NSMakePoint(0, self.bounds.size.height / 2))
-      line.line(to: NSMakePoint(self.bounds.size.width, self.bounds.size.height / 2))
+      line.move(to: NSMakePoint(0, bounds.size.height / 2))
+      line.line(to: NSMakePoint(bounds.size.width, bounds.size.height / 2))
       line.lineWidth = 2.5
       NSColor.white.set()
       line.stroke()
@@ -120,7 +124,9 @@ class SubwayMonView : NSView {
 
   //////////////////////////////////////////////////////////////////////////////////
   //
+
   // MARK: Data fetching
+
   //
   //////////////////////////////////////////////////////////////////////////////////
 
@@ -132,9 +138,9 @@ class SubwayMonView : NSView {
 
       feedsInProgress.insert(feed)
 
-      let url = URL.init(string: "http://subwaymon.nfshost.com/fetch.php?feed=\(feed)")!
+      let url = URL(string: "http://subwaymon.nfshost.com/fetch.php?feed=\(feed)")!
 
-      let sessionTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
+      let sessionTask = URLSession.shared.dataTask(with: url) { data, _, _ in
         self.feedsInProgress.remove(feed)
         self.feedMessages[feed] = try? TransitRealtime_FeedMessage(serializedData: data!)
         DispatchQueue.main.asyncAfter(deadline: .now() + 60.0, execute: self.sendRequest)

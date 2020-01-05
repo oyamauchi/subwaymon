@@ -12,7 +12,7 @@ func color(forRoute: String) -> NSColor {
   var r: Int
   var g: Int
   var b: Int
-  switch (forRoute) {
+  switch forRoute {
   case "1", "2", "3":
     (r, g, b) = (0xEE, 0x35, 0x2E)
   case "4", "5", "5X", "6", "6X":
@@ -45,7 +45,7 @@ func color(forRoute: String) -> NSColor {
 }
 
 func char(forRoute: String) -> Character {
-  switch (forRoute) {
+  switch forRoute {
   case "FS", "GS", "H":
     return "S"
   case "SI":

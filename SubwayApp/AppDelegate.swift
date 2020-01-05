@@ -10,14 +10,13 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-  @IBOutlet weak var window: NSWindow!
-  @IBOutlet weak var subway: SubwayMonView!
-  @IBOutlet weak var menu: NSPopUpButton!
+  @IBOutlet var window: NSWindow!
+  @IBOutlet var subway: SubwayMonView!
+  @IBOutlet var menu: NSPopUpButton!
 
   let defaultsKey = "SelectedStation"
 
-  @IBAction func menuSelected(sender: NSPopUpButton) {
+  @IBAction func menuSelected(sender _: NSPopUpButton) {
     let stopId = FeedInfo.shared.stopId(forTag: menu.selectedTag())
     subway.selectedStopId = stopId
     subway.needsDisplay = true
@@ -30,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     subway.needsDisplay = true
   }
 
-  func applicationDidFinishLaunching(_ aNotification: Notification) {
+  func applicationDidFinishLaunching(_: Notification) {
     let selectedStopId = UserDefaults.standard.string(forKey: defaultsKey) ?? "631"
     let tag = FeedInfo.shared.tag(forStopId: selectedStopId)
 
@@ -47,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     )
   }
 
-  func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+  func applicationShouldTerminateAfterLastWindowClosed(_: NSApplication) -> Bool {
     return true
   }
 }

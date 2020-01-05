@@ -8,7 +8,7 @@
 
 import ScreenSaver
 
-class SubwayMonScreenSaverView : ScreenSaverView {
+class SubwayMonScreenSaverView: ScreenSaverView {
   @IBOutlet var configSheet: NSWindow!
   @IBOutlet var popupMenu: NSPopUpButton!
 
@@ -16,13 +16,13 @@ class SubwayMonScreenSaverView : ScreenSaverView {
 
   private let kSelectedStationKey = "SelectedStation"
 
-  @IBAction func closeSheet(sender: Any) {
-    let defaults = ScreenSaverDefaults.init(forModuleWithName: "com.oyamauchi.SubwayMon")!
+  @IBAction func closeSheet(sender _: Any) {
+    let defaults = ScreenSaverDefaults(forModuleWithName: "com.oyamauchi.SubwayMon")!
     let stopId = FeedInfo.shared.stopId(forTag: popupMenu.selectedTag())
     defaults.set(stopId, forKey: kSelectedStationKey)
     defaults.synchronize()
 
-    self.subwayView.selectedStopId = stopId
+    subwayView.selectedStopId = stopId
 
     NSApplication.shared().endSheet(configSheet)
   }
@@ -36,15 +36,15 @@ class SubwayMonScreenSaverView : ScreenSaverView {
       topLevelObjects: nil
     )
 
-    self.animationTimeInterval = 5.0
+    animationTimeInterval = 5.0
 
-    let defaults = ScreenSaverDefaults.init(forModuleWithName: "com.oyamauchi.SubwayMon")!
+    let defaults = ScreenSaverDefaults(forModuleWithName: "com.oyamauchi.SubwayMon")!
     // Grand Central on the Lex by default
     let stopId = defaults.string(forKey: kSelectedStationKey) ?? "631"
 
-    self.subwayView = SubwayMonView(frame: self.bounds)
-    self.subwayView.initialize(stopId: stopId)
-    self.addSubview(self.subwayView)
+    subwayView = SubwayMonView(frame: bounds)
+    subwayView.initialize(stopId: stopId)
+    addSubview(subwayView)
 
     popupMenu.menu = FeedInfo.shared.menu
     popupMenu.selectItem(withTag: FeedInfo.shared.tag(forStopId: stopId))
@@ -55,7 +55,7 @@ class SubwayMonScreenSaverView : ScreenSaverView {
   }
 
   override func animateOneFrame() {
-    self.needsDisplay = true
+    needsDisplay = true
   }
 
   override func hasConfigureSheet() -> Bool {
@@ -63,7 +63,6 @@ class SubwayMonScreenSaverView : ScreenSaverView {
   }
 
   override func configureSheet() -> NSWindow? {
-    return self.configSheet
+    return configSheet
   }
 }
-
