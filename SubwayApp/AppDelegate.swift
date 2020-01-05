@@ -25,6 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     UserDefaults.standard.set(stopId, forKey: defaultsKey)
   }
 
+  @objc
   func timerFired() {
     subway.needsDisplay = true
   }

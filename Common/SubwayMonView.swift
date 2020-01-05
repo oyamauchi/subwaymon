@@ -9,9 +9,9 @@
 import AppKit
 
 class SubwayMonView : NSView {
-  private var trainViews = Array<TrainView>()
+  private var trainViews = [TrainView]()
 
-  private var feedMessages = Dictionary<Int, TransitRealtime_FeedMessage>()
+  private var feedMessages = [Int: TransitRealtime_FeedMessage]()
   private var feedsInProgress = Set<Int>()
 
   var selectedStopId: StopId! {
@@ -91,7 +91,7 @@ class SubwayMonView : NSView {
 
   override func draw(_ dirtyRect: NSRect) {
     NSColor.black.set()
-    NSRectFill(dirtyRect)
+    dirtyRect.fill()
 
     if let stopId = selectedStopId {
       // Read the arrivals twice: once for the northbound direction of our stop id and once for the

@@ -11,13 +11,13 @@ import AppKit
 class FeedInfo {
   static let shared = FeedInfo()
 
-  private var groups = Dictionary<String, Array<StopId>>()
+  private var groups = [String: [StopId]]()
 
-  private var idToName = Dictionary<StopId, String>()
-  private var idToFeeds = Dictionary<StopId, Array<Int>>()
+  private var idToName = [StopId: String]()
+  private var idToFeeds = [StopId: [Int]]()
 
-  private var tagToId = Dictionary<Int, StopId>()
-  private var idToTag = Dictionary<StopId, Int>()
+  private var tagToId = [Int: StopId]()
+  private var idToTag = [StopId: Int]()
 
   private(set) var menu: NSMenu!
 
@@ -28,15 +28,15 @@ class FeedInfo {
 
     let feedInfoRaw = try? JSONSerialization.jsonObject(with: stream,
                                                         options: JSONSerialization.ReadingOptions())
-    let feedInfo = feedInfoRaw as! Dictionary<String, Any>
-    let stopInfo = feedInfo["stopinfo"] as! Dictionary<StopId, Dictionary<String, Any>>
+    let feedInfo = feedInfoRaw as! [String: Any]
+    let stopInfo = feedInfo["stopinfo"] as! [StopId: [String: Any]]
 
-    groups = feedInfo["groups"] as! Dictionary<String, Array<StopId>>
+    groups = feedInfo["groups"] as! [String: [StopId]]
 
     var tag = 1
     for (stopId, infoDict) in stopInfo {
       idToName[stopId] = (infoDict["name"] as! String)
-      idToFeeds[stopId] = (infoDict["feeds"] as! Array<Int>)
+      idToFeeds[stopId] = (infoDict["feeds"] as! [Int])
 
       tagToId[tag] = stopId
       idToTag[stopId] = tag
@@ -51,7 +51,7 @@ class FeedInfo {
     return idToName[trim(stopId: stopId)]!
   }
 
-  func feeds(forStopId stopId: StopId) -> Array<Int> {
+  func feeds(forStopId stopId: StopId) -> [Int] {
     return idToFeeds[trim(stopId: stopId)]!
   }
 
@@ -64,7 +64,7 @@ class FeedInfo {
   }
 
   private func trim(stopId: StopId) -> StopId {
-    return stopId.substring(to: stopId.index(stopId.startIndex, offsetBy: 3))
+    return String(stopId[..<stopId.index(stopId.startIndex, offsetBy: 3)])
   }
 
   private func populateMenu() {

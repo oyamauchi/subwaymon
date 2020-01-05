@@ -20,7 +20,7 @@ class TrainView: NSView {
   /// First try cutting the string at the hyphens, until it fits in the available width.
   /// If that doesn't work, truncate and ellipsize the string until it fits.
   private func truncate(text: String,
-                        withAttributes attributes: Dictionary<String, Any>,
+                        withAttributes attributes:[NSAttributedString.Key: Any],
                         toWidth width: CGFloat) -> String {
     let fields = text.components(separatedBy: " - ")
 
@@ -46,16 +46,16 @@ class TrainView: NSView {
     return attempt
   }
 
-  private func getTextAttributes(size: CGFloat, color: NSColor) -> Dictionary<String, Any> {
+  private func getTextAttributes(size: CGFloat, color: NSColor) -> [NSAttributedString.Key: Any] {
     return [
-      NSForegroundColorAttributeName: color,
-      NSFontAttributeName: NSFont(name: "Helvetica Bold", size: size) as Any
+      NSAttributedString.Key.foregroundColor: color,
+      NSAttributedString.Key.font: NSFont(name: "Helvetica Bold", size: size) as Any
     ]
   }
 
   override func draw(_ dirtyRect: NSRect) {
     NSColor.black.set()
-    NSRectFill(dirtyRect)
+    dirtyRect.fill()
 
     self.color.set()
 
