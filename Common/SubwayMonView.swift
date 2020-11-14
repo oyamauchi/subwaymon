@@ -14,11 +14,8 @@ class SubwayMonView: NSView {
   private var feedMessages = [Int: TransitRealtime_FeedMessage]()
   private var feedsInProgress = Set<Int>()
 
-  var selectedStopId: StopId! {
-    didSet {
-      sendRequest()
-    }
-  }
+  private var feedInfo: FeedInfo!
+  private var selectedStopId: StopId!
 
   //////////////////////////////////////////////////////////////////////////////////
   //
@@ -28,17 +25,29 @@ class SubwayMonView: NSView {
   //
   //////////////////////////////////////////////////////////////////////////////////
 
-  func initialize(stopId: StopId) {
+  override init(frame: NSRect) {
+    super.init(frame: frame)
+    createSubviews()
+  }
+
+  required init?(coder: NSCoder) {
+    super.init(coder: coder)
+    createSubviews()
+  }
+
+  private func createSubviews() {
     for _ in 0 ..< 8 {
       let train = TrainView()
       train.isHidden = true
       addSubview(train)
       trainViews.append(train)
     }
-
-    selectedStopId = stopId
-
     setSubviewSizes()
+  }
+
+  func setStopId(stopId: StopId, feedInfo: FeedInfo) {
+    self.selectedStopId = stopId
+    self.feedInfo = feedInfo
     sendRequest()
   }
 
@@ -75,7 +84,7 @@ class SubwayMonView: NSView {
       tv.color = color(forRoute: arrival.train)
       tv.isDiamond = (arrival.train.last == "X")
       tv.isBlackText = (["N", "Q", "R", "W"].contains(arrival.train))
-      tv.text = FeedInfo.shared.name(ofStopId: arrival.destinationStopId)
+      tv.text = feedInfo.name(ofStopId: arrival.destinationStopId)
       tv.minutes = Int(arrival.seconds + 29) / 60 // round to nearest minute
 
       tv.isHidden = false
@@ -131,7 +140,7 @@ class SubwayMonView: NSView {
   //////////////////////////////////////////////////////////////////////////////////
 
   private func sendRequest() {
-    for feed in FeedInfo.shared.feeds(forStopId: selectedStopId) {
+    for feed in feedInfo.feeds(forStopId: selectedStopId) {
       if feedsInProgress.contains(feed) {
         continue
       }

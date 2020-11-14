@@ -12,16 +12,29 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
   @IBOutlet var window: NSWindow!
   @IBOutlet var subway: SubwayMonView!
-  @IBOutlet var menu: NSPopUpButton!
+  @IBOutlet var providerMenu: NSPopUpButton!
+  @IBOutlet var stopGroupMenu: NSPopUpButton!
+  @IBOutlet var stopMenu: NSPopUpButton!
 
-  let defaultsKey = "SelectedStation"
+  var feedInfo: FeedInfo!
 
-  @IBAction func menuSelected(sender _: NSPopUpButton) {
-    let stopId = FeedInfo.shared.stopId(forTag: menu.selectedTag())
-    subway.selectedStopId = stopId
+  @IBAction func providerMenuSelected(_ sender: NSPopUpButton) {
+    feedInfo = FeedInfo(providerTag: sender.selectedTag())
+    stopGroupMenu.menu = feedInfo.stopGroupMenu
+    stopGroupMenu.isEnabled = true
+    stopGroupMenu.selectItem(at: 0)
+  }
+
+  @IBAction func stopGroupMenuSelected(_ sender: NSPopUpButton) {
+    stopMenu.menu = feedInfo.stopMenu(forStopGroupTag: sender.selectedTag())
+    stopMenu.isEnabled = true
+    stopMenu.selectItem(at: 0)
+  }
+
+  @IBAction func stopMenuSelected(_ sender: NSPopUpButton) {
+    let stopId = feedInfo.stopId(forTag: sender.selectedTag())
+    subway.setStopId(stopId: stopId, feedInfo: feedInfo)
     subway.needsDisplay = true
-
-    UserDefaults.standard.set(stopId, forKey: defaultsKey)
   }
 
   @objc
@@ -30,12 +43,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   }
 
   func applicationDidFinishLaunching(_: Notification) {
-    let selectedStopId = UserDefaults.standard.string(forKey: defaultsKey) ?? "631"
-    let tag = FeedInfo.shared.tag(forStopId: selectedStopId)
-
-    subway.initialize(stopId: selectedStopId)
-    menu.menu = FeedInfo.shared.menu
-    menu.selectItem(withTag: tag)
+    providerMenu.menu = FeedInfo.providerMenu
+    providerMenu.selectItem(at: 0)
 
     Timer.scheduledTimer(
       timeInterval: 5.0,

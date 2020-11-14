@@ -27,8 +27,8 @@
 		9387C18E20329D49000BB42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387C18D20329D49000BB42A /* AppDelegate.swift */; };
 		9387C19020329D49000BB42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9387C18F20329D49000BB42A /* Assets.xcassets */; };
 		9387C19320329D49000BB42A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9387C19120329D49000BB42A /* MainMenu.xib */; };
-		93A2FF0C207ABC30003336D2 /* feedinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 93A2FF0B207ABC30003336D2 /* feedinfo.json */; };
-		93A2FF0D207ABC30003336D2 /* feedinfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 93A2FF0B207ABC30003336D2 /* feedinfo.json */; };
+		93A2FF0C207ABC30003336D2 /* mta-subway.json in Resources */ = {isa = PBXBuildFile; fileRef = 93A2FF0B207ABC30003336D2 /* mta-subway.json */; };
+		93A2FF0D207ABC30003336D2 /* mta-subway.json in Resources */ = {isa = PBXBuildFile; fileRef = 93A2FF0B207ABC30003336D2 /* mta-subway.json */; };
 		93A4FF0C17C849AB003F90A0 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */; };
 		93C5C1452054DBDE00492A2D /* FeedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1442054DBDE00492A2D /* FeedInfo.swift */; };
 		93C5C1462054DBDE00492A2D /* FeedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1442054DBDE00492A2D /* FeedInfo.swift */; };
@@ -73,7 +73,7 @@
 		9387C18F20329D49000BB42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9387C19220329D49000BB42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9387C19420329D49000BB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A2FF0B207ABC30003336D2 /* feedinfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feedinfo.json; sourceTree = "<group>"; };
+		93A2FF0B207ABC30003336D2 /* mta-subway.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mta-subway.json"; sourceTree = "<group>"; };
 		93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
 		93C5C1442054DBDE00492A2D /* FeedInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInfo.swift; sourceTree = "<group>"; };
 		93EC28CA17C484FC00F5F90B /* SubwayMon.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubwayMon.saver; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				93C5C1442054DBDE00492A2D /* FeedInfo.swift */,
-				93A2FF0B207ABC30003336D2 /* feedinfo.json */,
+				93A2FF0B207ABC30003336D2 /* mta-subway.json */,
 			);
 			path = GTFS;
 			sourceTree = "<group>";
@@ -303,7 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9387C19020329D49000BB42A /* Assets.xcassets in Resources */,
-				93A2FF0D207ABC30003336D2 /* feedinfo.json in Resources */,
+				93A2FF0D207ABC30003336D2 /* mta-subway.json in Resources */,
 				9387C19320329D49000BB42A /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A2FF0C207ABC30003336D2 /* feedinfo.json in Resources */,
+				93A2FF0C207ABC30003336D2 /* mta-subway.json in Resources */,
 				93A4FF0C17C849AB003F90A0 /* ConfigureSheet.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

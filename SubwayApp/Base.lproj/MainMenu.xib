@@ -15,7 +15,9 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SubwayApp" customModuleProvider="target">
             <connections>
-                <outlet property="menu" destination="H1I-Sa-ihG" id="rqA-Se-nrh"/>
+                <outlet property="providerMenu" destination="H1I-Sa-ihG" id="fcJ-j3-xQm"/>
+                <outlet property="stopGroupMenu" destination="4pd-8f-zPp" id="Tae-Hl-LtY"/>
+                <outlet property="stopMenu" destination="7pq-IN-tmK" id="2HR-pe-pa0"/>
                 <outlet property="subway" destination="Saj-nc-kwl" id="2Ku-Pl-exT"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
@@ -694,8 +696,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H1I-Sa-ihG">
-                        <rect key="frame" x="18" y="358" width="337" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <rect key="frame" x="106" y="357" width="357" height="26"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="Lpx-FX-6Yr" id="snS-g3-qg0">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
@@ -708,13 +710,64 @@
                             </menu>
                         </popUpButtonCell>
                         <connections>
-                            <action selector="menuSelectedWithSender:" target="Voe-Tx-rLC" id="UVO-qQ-KaD"/>
+                            <action selector="providerMenuSelected:" target="Voe-Tx-rLC" id="Kqe-lt-s7c"/>
+                        </connections>
+                    </popUpButton>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4pd-8f-zPp">
+                        <rect key="frame" x="106" y="325" width="357" height="26"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" enabled="NO" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" id="EYZ-G7-513">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" autoenablesItems="NO" id="jf0-SP-3e0"/>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="stopGroupMenuSelected:" target="Voe-Tx-rLC" id="OxB-Xt-Yfn"/>
                         </connections>
                     </popUpButton>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Saj-nc-kwl" customClass="SubwayMonView" customModule="SubwayApp" customModuleProvider="target">
-                        <rect key="frame" x="20" y="20" width="440" height="333"/>
+                        <rect key="frame" x="20" y="21" width="439" height="267"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     </customView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zR-7X-3H9">
+                        <rect key="frame" x="18" y="363" width="59" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Provider:" id="vaf-vS-kVw">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jUo-cV-Adb">
+                        <rect key="frame" x="18" y="331" width="76" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Stop group:" id="QkX-jW-XZG">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7pq-IN-tmK">
+                        <rect key="frame" x="106" y="293" width="357" height="26"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" enabled="NO" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" id="Dnx-LX-FDb">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" autoenablesItems="NO" id="VH9-I2-397"/>
+                        </popUpButtonCell>
+                        <connections>
+                            <action selector="stopMenuSelected:" target="Voe-Tx-rLC" id="z9o-ot-9wG"/>
+                        </connections>
+                    </popUpButton>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uzt-to-Dof">
+                        <rect key="frame" x="18" y="299" width="36" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Stop:" id="TjD-9v-VRK">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
                 </subviews>
             </view>
             <point key="canvasLocation" x="131" y="-84"/>

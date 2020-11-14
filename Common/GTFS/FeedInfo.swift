@@ -9,8 +9,26 @@
 import AppKit
 
 class FeedInfo {
-  static let shared = FeedInfo()
+  static let providers = ["mta-subway"]
+  static let providerMenu = createProviderMenu()
 
+  private static func createProviderMenu() -> NSMenu {
+    var index = 0
+    let menu = NSMenu()
+    menu.autoenablesItems = false
+
+    for provider in providers {
+      let item = NSMenuItem(title: provider, action: nil, keyEquivalent: "")
+      item.isEnabled = true
+      item.tag = index
+      index += 1
+      menu.addItem(item)
+    }
+
+    return menu
+  }
+
+  private var groupTagToGroupName = [Int: String]()
   private var groups = [String: [StopId]]()
 
   private var idToName = [StopId: String]()
@@ -19,10 +37,11 @@ class FeedInfo {
   private var tagToId = [Int: StopId]()
   private var idToTag = [StopId: Int]()
 
-  private(set) var menu: NSMenu!
+  private(set) var stopGroupMenu: NSMenu!
 
-  private init() {
-    let path = Bundle(for: SubwayMonView.self).path(forResource: "feedinfo", ofType: "json")!
+  init(providerTag: Int) {
+    let path = Bundle(for: SubwayMonView.self).path(forResource: FeedInfo.providers[providerTag],
+                                                    ofType: "json")!
     let stream = InputStream(fileAtPath: path)!
     stream.open()
 
@@ -44,7 +63,19 @@ class FeedInfo {
       tag += 1
     }
 
-    populateMenu()
+    var groupTag = 0
+    stopGroupMenu = NSMenu()
+    stopGroupMenu.autoenablesItems = false
+
+    for section in groups.keys.sorted() {
+      let item = NSMenuItem(title: section, action: nil, keyEquivalent: "")
+      item.isEnabled = true
+      item.tag = groupTag
+      groupTagToGroupName[groupTag] = section
+
+      stopGroupMenu.addItem(item)
+      groupTag += 1
+    }
   }
 
   func name(ofStopId stopId: StopId) -> String {
@@ -63,33 +94,24 @@ class FeedInfo {
     return idToTag[trim(stopId: stopId)]!
   }
 
-  private func trim(stopId: StopId) -> StopId {
-    return String(stopId[..<stopId.index(stopId.startIndex, offsetBy: 3)])
-  }
+  func stopMenu(forStopGroupTag groupTag: Int) -> NSMenu {
+    let groupName = groupTagToGroupName[groupTag]!
+    let group = groups[groupName]!
 
-  private func populateMenu() {
-    menu = NSMenu()
+    let menu = NSMenu()
     menu.autoenablesItems = false
 
-    let sections = groups.keys.sorted()
-
-    for section in sections {
-      let group = groups[section]!
-
-      if menu.items.count > 0 {
-        menu.addItem(NSMenuItem.separator())
-      }
-
-      menu.addItem(withTitle: section, action: nil, keyEquivalent: "")
-      menu.items.last!.isEnabled = false
-
-      for stopId in group {
-        let item = NSMenuItem(title: idToName[stopId]!, action: nil, keyEquivalent: "")
-        item.tag = idToTag[stopId]!
-        item.isEnabled = true
-        item.indentationLevel = 1
-        menu.addItem(item)
-      }
+    for stopId in group {
+      let item = NSMenuItem(title: idToName[stopId]!, action: nil, keyEquivalent: "")
+      item.tag = idToTag[stopId]!
+      item.isEnabled = true
+      menu.addItem(item)
     }
+
+    return menu
+  }
+
+  private func trim(stopId: StopId) -> StopId {
+    return String(stopId[..<stopId.index(stopId.startIndex, offsetBy: 3)])
   }
 }
