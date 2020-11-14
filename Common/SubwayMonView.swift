@@ -46,7 +46,7 @@ class SubwayMonView: NSView {
   }
 
   func setStopId(stopId: StopId, feedInfo: FeedInfo) {
-    self.selectedStopId = stopId
+    selectedStopId = stopId
     self.feedInfo = feedInfo
     sendRequest()
   }
@@ -80,7 +80,7 @@ class SubwayMonView: NSView {
       let arrival = arrivals[i]
       i += 1
 
-      tv.symbol = char(forRoute: arrival.train)
+      tv.symbol = text(forRoute: arrival.train)
       tv.color = color(forRoute: arrival.train)
       tv.isDiamond = (arrival.train.last == "X")
       tv.isBlackText = (["N", "Q", "R", "W"].contains(arrival.train))

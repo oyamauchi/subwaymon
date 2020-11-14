@@ -19,7 +19,7 @@ func color(forRoute: String) -> NSColor {
     (r, g, b) = (0x00, 0x93, 0x3C)
   case "7", "7X":
     (r, g, b) = (0xB9, 0x33, 0xAD)
-  case "A", "C", "E", "SI", "SS":
+  case "A", "C", "E", "SS":
     (r, g, b) = (0x00, 0x39, 0xA6)
   case "B", "D", "F", "M":
     (r, g, b) = (0xFF, 0x63, 0x19)
@@ -33,6 +33,8 @@ func color(forRoute: String) -> NSColor {
     (r, g, b) = (0xFC, 0xCC, 0x0A)
   case "FS", "GS", "H":
     (r, g, b) = (0x80, 0x81, 0x83)
+  case "SI":
+    (r, g, b) = (0x12, 0x7B, 0xC5)
   default:
     fatalError("Unknown route \(forRoute)")
   }
@@ -44,17 +46,17 @@ func color(forRoute: String) -> NSColor {
   )
 }
 
-func char(forRoute: String) -> Character {
+func text(forRoute: String) -> String {
   switch forRoute {
   case "FS", "GS", "H":
     return "S"
   case "SI":
-    return "S"
+    return "SIR"
   case "6X":
     return "6"
   case "7X":
     return "7"
   default:
-    return forRoute.first!
+    return String(forRoute.first!)
   }
 }
