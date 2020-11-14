@@ -23,12 +23,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     stopGroupMenu.menu = feedInfo.stopGroupMenu
     stopGroupMenu.isEnabled = true
     stopGroupMenu.selectItem(at: 0)
+    stopGroupMenuSelected(stopGroupMenu)
   }
 
   @IBAction func stopGroupMenuSelected(_ sender: NSPopUpButton) {
     stopMenu.menu = feedInfo.stopMenu(forStopGroupTag: sender.selectedTag())
     stopMenu.isEnabled = true
     stopMenu.selectItem(at: 0)
+    stopMenuSelected(stopMenu)
   }
 
   @IBAction func stopMenuSelected(_ sender: NSPopUpButton) {
@@ -45,6 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   func applicationDidFinishLaunching(_: Notification) {
     providerMenu.menu = FeedInfo.providerMenu
     providerMenu.selectItem(at: 0)
+    providerMenuSelected(providerMenu)
 
     Timer.scheduledTimer(
       timeInterval: 5.0,
