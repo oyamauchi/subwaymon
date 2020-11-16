@@ -25,24 +25,13 @@ class SubwayMonView: NSView {
   //
   //////////////////////////////////////////////////////////////////////////////////
 
-  override init(frame: NSRect) {
-    super.init(frame: frame)
-    createSubviews()
-  }
-
-  required init?(coder: NSCoder) {
-    super.init(coder: coder)
-    createSubviews()
-  }
-
-  private func createSubviews() {
+  override func viewDidMoveToWindow() {
     for _ in 0 ..< 8 {
       let train = TrainView()
       train.isHidden = true
       addSubview(train)
       trainViews.append(train)
     }
-    setSubviewSizes()
   }
 
   func setStopId(stopId: StopId, feedInfo: FeedInfo) {
@@ -97,12 +86,9 @@ class SubwayMonView: NSView {
     }
   }
 
-  override func resize(withOldSuperviewSize oldSize: NSSize) {
-    super.resize(withOldSuperviewSize: oldSize)
-    setSubviewSizes()
-  }
-
   override func draw(_ dirtyRect: NSRect) {
+    setSubviewSizes()
+
     NSColor.black.set()
     dirtyRect.fill()
 
