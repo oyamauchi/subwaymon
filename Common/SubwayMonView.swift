@@ -146,6 +146,7 @@ class SubwayMonView: NSView {
         if let data = data {
           self.feedMessages[feed] = try? TransitRealtime_FeedMessage(serializedData: data)
         }
+        DispatchQueue.main.async { self.needsDisplay = true }
         DispatchQueue.main.asyncAfter(deadline: .now() + 60.0, execute: self.sendRequest)
       }
 
