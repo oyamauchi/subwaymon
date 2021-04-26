@@ -133,11 +133,19 @@ class SubwayMonView: NSView {
 
       feedsInProgress.insert(feed)
 
-      let url = URL(string: "http://subwaymon.nfshost.com/fetch.php?feed=\(feed)")!
+      #if LOCAL_SERVER
+      let host = "http://localhost:5000"
+      #else
+      let host = "https://subwaymon.owenyamauchi.com"
+      #endif
+
+      let url = URL(string: "\(host)/fetch.php?feed=\(feed)")!
 
       let sessionTask = URLSession.shared.dataTask(with: url) { data, _, _ in
         self.feedsInProgress.remove(feed)
-        self.feedMessages[feed] = try? TransitRealtime_FeedMessage(serializedData: data!)
+        if let data = data {
+          self.feedMessages[feed] = try? TransitRealtime_FeedMessage(serializedData: data)
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 60.0, execute: self.sendRequest)
       }
 
