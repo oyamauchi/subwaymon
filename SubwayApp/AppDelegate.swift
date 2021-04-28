@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   var feedInfo: FeedInfo!
 
   @IBAction func providerMenuSelected(_ sender: NSPopUpButton) {
-    feedInfo = FeedInfo(providerTag: sender.selectedTag())
+    feedInfo = FeedInfo.feedInfo(forTag: sender.selectedTag())
     routeMenu.menu = feedInfo.routeMenu
     routeMenu.isEnabled = true
     routeMenu.selectItem(at: 0)

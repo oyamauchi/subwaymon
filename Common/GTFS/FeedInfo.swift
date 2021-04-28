@@ -9,7 +9,8 @@
 import AppKit
 
 class FeedInfo {
-  static let providers = ["mta"]
+  private static let providerIds = ["mta"]
+  private static var feedInfos = [Int: FeedInfo]()
   static let providerMenu = createProviderMenu()
 
   private struct StopInfo: Codable {
@@ -37,12 +38,16 @@ class FeedInfo {
     let menu = NSMenu()
     menu.autoenablesItems = false
 
-    for provider in providers {
-      let item = NSMenuItem(title: provider, action: nil, keyEquivalent: "")
+    for providerId in providerIds {
+      let feedInfo = FeedInfo(providerId: providerId)
+
+      let item = NSMenuItem(title: feedInfo.name, action: nil, keyEquivalent: "")
       item.isEnabled = true
       item.tag = index
       index += 1
       menu.addItem(item)
+
+      feedInfos[item.tag] = feedInfo
     }
 
     return menu
@@ -54,14 +59,17 @@ class FeedInfo {
   private var routeToSymbol = [RouteId: RouteSymbol]()
 
   private(set) var routeMenu: NSMenu!
-  private(set) var provider: String!
+  private(set) var providerId: String!
+  private(set) var name: String!
 
-  init(providerTag: Int) {
-    provider = FeedInfo.providers[providerTag]
-    let url = Bundle(for: SubwayMonView.self).url(forResource: provider,
-                                                    withExtension: "json")!
+  private init(providerId: String) {
+    self.providerId = providerId
+
+    let url = Bundle(for: SubwayMonView.self).url(forResource: providerId,
+                                                  withExtension: "json")!
     let data = try? Data(contentsOf: url)
     let providerInfo = try? JSONDecoder().decode(ProviderInfo.self, from: data!)
+    self.name = providerInfo!.name
 
     var routeTag = 1
     routeMenu = NSMenu()
@@ -84,6 +92,10 @@ class FeedInfo {
       routeTag += 1
       routeMenu.addItem(menuItem)
     }
+  }
+
+  static func feedInfo(forTag tag: Int) -> FeedInfo {
+    return feedInfos[tag]!
   }
 
   func stopMenu(forRouteTag routeTag: Int) -> NSMenu {

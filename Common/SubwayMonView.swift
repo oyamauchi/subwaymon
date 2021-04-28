@@ -133,7 +133,7 @@ class SubwayMonView: NSView {
       "stop_id=\($0.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)"
     }.joined(separator: "&")
 
-    let url = URL(string: "\(host)/feed/\(feedInfo.provider!)?\(queryString)")!
+    let url = URL(string: "\(host)/feed/\(feedInfo.providerId!)?\(queryString)")!
 
     let sessionTask = URLSession.shared.dataTask(with: url) { data, _, _ in
       self.feedInProgress = false
