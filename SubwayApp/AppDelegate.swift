@@ -13,29 +13,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   @IBOutlet var window: NSWindow!
   @IBOutlet var subway: SubwayMonView!
   @IBOutlet var providerMenu: NSPopUpButton!
-  @IBOutlet var stopGroupMenu: NSPopUpButton!
+  @IBOutlet var routeMenu: NSPopUpButton!
   @IBOutlet var stopMenu: NSPopUpButton!
 
   var feedInfo: FeedInfo!
 
   @IBAction func providerMenuSelected(_ sender: NSPopUpButton) {
     feedInfo = FeedInfo(providerTag: sender.selectedTag())
-    stopGroupMenu.menu = feedInfo.stopGroupMenu
-    stopGroupMenu.isEnabled = true
-    stopGroupMenu.selectItem(at: 0)
-    stopGroupMenuSelected(stopGroupMenu)
+    routeMenu.menu = feedInfo.routeMenu
+    routeMenu.isEnabled = true
+    routeMenu.selectItem(at: 0)
+    routeMenuSelected(routeMenu)
   }
 
-  @IBAction func stopGroupMenuSelected(_ sender: NSPopUpButton) {
-    stopMenu.menu = feedInfo.stopMenu(forStopGroupTag: sender.selectedTag())
+  @IBAction func routeMenuSelected(_ sender: NSPopUpButton) {
+    stopMenu.menu = feedInfo.stopMenu(forRouteTag: sender.selectedTag())
     stopMenu.isEnabled = true
     stopMenu.selectItem(at: 0)
     stopMenuSelected(stopMenu)
   }
 
   @IBAction func stopMenuSelected(_ sender: NSPopUpButton) {
-    let stopId = feedInfo.stopId(forTag: sender.selectedTag())
-    subway.setStopId(stopId: stopId, feedInfo: feedInfo)
+    let stopIds = feedInfo.stopIdsFor(stopTag: sender.selectedTag())
+    subway.setStopIds(stopIds: stopIds, feedInfo: feedInfo)
     subway.needsDisplay = true
   }
 

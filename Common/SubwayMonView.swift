@@ -11,11 +11,11 @@ import AppKit
 class SubwayMonView: NSView {
   private var trainViews = [TrainView]()
 
-  private var feedMessages = [Int: TransitRealtime_FeedMessage]()
-  private var feedsInProgress = Set<Int>()
+  private var feed: Feed?
+  private var feedInProgress = false
 
   private var feedInfo: FeedInfo!
-  private var selectedStopId: StopId!
+  private var selectedStopIds: [StopId]!
 
   //////////////////////////////////////////////////////////////////////////////////
   //
@@ -34,8 +34,8 @@ class SubwayMonView: NSView {
     }
   }
 
-  func setStopId(stopId: StopId, feedInfo: FeedInfo) {
-    selectedStopId = stopId
+  func setStopIds(stopIds: [StopId], feedInfo: FeedInfo) {
+    selectedStopIds = stopIds
     self.feedInfo = feedInfo
     sendRequest()
   }
@@ -60,21 +60,22 @@ class SubwayMonView: NSView {
     }
   }
 
-  private func updateViews(arrivals: Array<Arrival>, top: Bool) {
+  private func updateViews(updates: [StopUpdate], top: Bool) {
+    let now = Date()
     let offset = top ? 0 : 4
     var i = 0
 
-    while i < min(arrivals.count, 4) {
+    while i < min(updates.count, 4) {
       let tv = trainViews[i + offset]
-      let arrival = arrivals[i]
+      let update = updates[i]
       i += 1
 
-      tv.symbol = text(forRoute: arrival.train)
-      tv.color = color(forRoute: arrival.train)
-      tv.isDiamond = (arrival.train.last == "X")
-      tv.isBlackText = (["N", "Q", "R", "W"].contains(arrival.train))
-      tv.text = feedInfo.name(ofStopId: arrival.destinationStopId)
-      tv.minutes = Int(arrival.seconds + 29) / 60 // round to nearest minute
+      let arrivalTime = Date(timeIntervalSince1970: Double(update.time))
+      let seconds = arrivalTime.timeIntervalSince(now)
+
+      tv.symbol = feedInfo.symbolFor(routeId: update.route)
+      tv.text = update.headsign
+      tv.minutes = Int(seconds + 29) / 60 // round to nearest minute
 
       tv.isHidden = false
       tv.needsDisplay = true
@@ -92,21 +93,10 @@ class SubwayMonView: NSView {
     NSColor.black.set()
     dirtyRect.fill()
 
-    if let stopId = selectedStopId {
-      // Read the arrivals twice: once for the northbound direction of our stop id and once for the
-      // southbound. The GS shuttle considers TS to be north and GC to be south.
-      let northArrs = arrivals(
-        atStop: stopId + "N",
-        feedMessages: Array(feedMessages.values)
-      )
-      updateViews(arrivals: northArrs, top: true)
+    updateViews(updates: feed?.northbound ?? [], top: true)
+    updateViews(updates: feed?.southbound ?? [], top: false)
 
-      let southArrs = arrivals(
-        atStop: stopId + "S",
-        feedMessages: Array(feedMessages.values)
-      )
-      updateViews(arrivals: southArrs, top: false)
-
+    if self.feed != nil {
       // Draw the separator between the two halves
       let line = NSBezierPath()
       line.move(to: NSMakePoint(0, bounds.size.height / 2))
@@ -126,31 +116,34 @@ class SubwayMonView: NSView {
   //////////////////////////////////////////////////////////////////////////////////
 
   private func sendRequest() {
-    for feed in feedInfo.feeds(forStopId: selectedStopId) {
-      if feedsInProgress.contains(feed) {
-        continue
-      }
-
-      feedsInProgress.insert(feed)
-
-      #if LOCAL_SERVER
-      let host = "http://localhost:5000"
-      #else
-      let host = "https://subwaymon.owenyamauchi.com"
-      #endif
-
-      let url = URL(string: "\(host)/fetch.php?feed=\(feed)")!
-
-      let sessionTask = URLSession.shared.dataTask(with: url) { data, _, _ in
-        self.feedsInProgress.remove(feed)
-        if let data = data {
-          self.feedMessages[feed] = try? TransitRealtime_FeedMessage(serializedData: data)
-        }
-        DispatchQueue.main.async { self.needsDisplay = true }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 60.0, execute: self.sendRequest)
-      }
-
-      sessionTask.resume()
+    if feedInProgress {
+      return
     }
+
+    feedInProgress = true
+    feed = nil
+
+    #if LOCAL_SERVER
+    let host = "http://localhost:5000"
+    #else
+    let host = "https://subwaymon.owenyamauchi.com"
+    #endif
+
+    let queryString = selectedStopIds.map() {
+      "stop_id=\($0.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)"
+    }.joined(separator: "&")
+
+    let url = URL(string: "\(host)/feed/\(feedInfo.provider!)?\(queryString)")!
+
+    let sessionTask = URLSession.shared.dataTask(with: url) { data, _, _ in
+      self.feedInProgress = false
+      if let data = data {
+        self.feed = try? JSONDecoder().decode(Feed.self, from: data)
+      }
+      DispatchQueue.main.async { self.needsDisplay = true }
+      DispatchQueue.main.asyncAfter(deadline: .now() + 60.0, execute: self.sendRequest)
+    }
+
+    sessionTask.resume()
   }
 }

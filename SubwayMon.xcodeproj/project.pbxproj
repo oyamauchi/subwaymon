@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		93175C0620435EBB00FBD535 /* TrainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93175C0520435EBB00FBD535 /* TrainView.swift */; };
 		93175C0720435EBB00FBD535 /* TrainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93175C0520435EBB00FBD535 /* TrainView.swift */; };
-		93175C09204365C300FBD535 /* LineEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93175C08204365C300FBD535 /* LineEnums.swift */; };
-		93175C0A204365C300FBD535 /* LineEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93175C08204365C300FBD535 /* LineEnums.swift */; };
+		934F347C2638E0D200E6FC68 /* RouteSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F347B2638E0D200E6FC68 /* RouteSymbol.swift */; };
+		934F347D2638E0D200E6FC68 /* RouteSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934F347B2638E0D200E6FC68 /* RouteSymbol.swift */; };
+		934F347F2638E57C00E6FC68 /* mta.json in Resources */ = {isa = PBXBuildFile; fileRef = 934F347E2638E57C00E6FC68 /* mta.json */; };
+		934F34802638E57C00E6FC68 /* mta.json in Resources */ = {isa = PBXBuildFile; fileRef = 934F347E2638E57C00E6FC68 /* mta.json */; };
 		93650966204C9EB300705BCF /* SubwayMonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93650965204C9EB300705BCF /* SubwayMonView.swift */; };
 		93650967204C9EB300705BCF /* SubwayMonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93650965204C9EB300705BCF /* SubwayMonView.swift */; };
 		93650969204CE85E00705BCF /* SubwayMonScreenSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93650968204CE85E00705BCF /* SubwayMonScreenSaverView.swift */; };
@@ -23,8 +25,6 @@
 		9387C18E20329D49000BB42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387C18D20329D49000BB42A /* AppDelegate.swift */; };
 		9387C19020329D49000BB42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9387C18F20329D49000BB42A /* Assets.xcassets */; };
 		9387C19320329D49000BB42A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9387C19120329D49000BB42A /* MainMenu.xib */; };
-		93A2FF0C207ABC30003336D2 /* mta-subway.json in Resources */ = {isa = PBXBuildFile; fileRef = 93A2FF0B207ABC30003336D2 /* mta-subway.json */; };
-		93A2FF0D207ABC30003336D2 /* mta-subway.json in Resources */ = {isa = PBXBuildFile; fileRef = 93A2FF0B207ABC30003336D2 /* mta-subway.json */; };
 		93A4FF0C17C849AB003F90A0 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */; };
 		93AB85A52560B40A00775B15 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 93AB85A42560B40A00775B15 /* SwiftProtobuf */; };
 		93AB85A72560B42200775B15 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 93AB85A62560B42200775B15 /* SwiftProtobuf */; };
@@ -36,7 +36,8 @@
 
 /* Begin PBXFileReference section */
 		93175C0520435EBB00FBD535 /* TrainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainView.swift; sourceTree = "<group>"; };
-		93175C08204365C300FBD535 /* LineEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineEnums.swift; sourceTree = "<group>"; };
+		934F347B2638E0D200E6FC68 /* RouteSymbol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteSymbol.swift; sourceTree = "<group>"; };
+		934F347E2638E57C00E6FC68 /* mta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mta.json; sourceTree = "<group>"; };
 		93650965204C9EB300705BCF /* SubwayMonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayMonView.swift; sourceTree = "<group>"; };
 		93650968204CE85E00705BCF /* SubwayMonScreenSaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayMonScreenSaverView.swift; sourceTree = "<group>"; };
 		93798509204C6EEF00236FD3 /* gtfs-realtime.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "gtfs-realtime.pb.swift"; sourceTree = "<group>"; };
@@ -47,7 +48,6 @@
 		9387C18F20329D49000BB42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9387C19220329D49000BB42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9387C19420329D49000BB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A2FF0B207ABC30003336D2 /* mta-subway.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "mta-subway.json"; sourceTree = "<group>"; };
 		93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
 		93C5C1442054DBDE00492A2D /* FeedInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInfo.swift; sourceTree = "<group>"; };
 		93EC28CA17C484FC00F5F90B /* SubwayMon.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubwayMon.saver; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				93C5C1442054DBDE00492A2D /* FeedInfo.swift */,
-				93A2FF0B207ABC30003336D2 /* mta-subway.json */,
+				934F347E2638E57C00E6FC68 /* mta.json */,
 			);
 			path = GTFS;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 		93EC28E517C4851B00F5F90B /* Frontend */ = {
 			isa = PBXGroup;
 			children = (
-				93175C08204365C300FBD535 /* LineEnums.swift */,
+				934F347B2638E0D200E6FC68 /* RouteSymbol.swift */,
 				93175C0520435EBB00FBD535 /* TrainView.swift */,
 			);
 			path = Frontend;
@@ -283,7 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9387C19020329D49000BB42A /* Assets.xcassets in Resources */,
-				93A2FF0D207ABC30003336D2 /* mta-subway.json in Resources */,
+				934F34802638E57C00E6FC68 /* mta.json in Resources */,
 				9387C19320329D49000BB42A /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,8 +292,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93A2FF0C207ABC30003336D2 /* mta-subway.json in Resources */,
 				93A4FF0C17C849AB003F90A0 /* ConfigureSheet.xib in Resources */,
+				934F347F2638E57C00E6FC68 /* mta.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +317,7 @@
 				9379850E204C6EEF00236FD3 /* nyct-subway.pb.swift in Sources */,
 				93650967204C9EB300705BCF /* SubwayMonView.swift in Sources */,
 				93175C0720435EBB00FBD535 /* TrainView.swift in Sources */,
-				93175C0A204365C300FBD535 /* LineEnums.swift in Sources */,
+				934F347D2638E0D200E6FC68 /* RouteSymbol.swift in Sources */,
 				9387C18E20329D49000BB42A /* AppDelegate.swift in Sources */,
 				9379850C204C6EEF00236FD3 /* gtfs-realtime.pb.swift in Sources */,
 				93C5C1462054DBDE00492A2D /* FeedInfo.swift in Sources */,
@@ -333,7 +333,7 @@
 				93650966204C9EB300705BCF /* SubwayMonView.swift in Sources */,
 				9379850D204C6EEF00236FD3 /* nyct-subway.pb.swift in Sources */,
 				93175C0620435EBB00FBD535 /* TrainView.swift in Sources */,
-				93175C09204365C300FBD535 /* LineEnums.swift in Sources */,
+				934F347C2638E0D200E6FC68 /* RouteSymbol.swift in Sources */,
 				9379850B204C6EEF00236FD3 /* gtfs-realtime.pb.swift in Sources */,
 				93C5C1452054DBDE00492A2D /* FeedInfo.swift in Sources */,
 				93798513204C748F00236FD3 /* backend.swift in Sources */,

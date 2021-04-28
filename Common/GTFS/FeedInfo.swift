@@ -9,8 +9,28 @@
 import AppKit
 
 class FeedInfo {
-  static let providers = ["mta-subway"]
+  static let providers = ["mta"]
   static let providerMenu = createProviderMenu()
+
+  private struct StopInfo: Codable {
+    let ids: [StopId]
+    let name: String
+  }
+
+  private struct RouteInfo: Codable {
+    let routeId: RouteId
+    let name: String
+    let symbolText: String
+    let symbolTextColor: String
+    let symbolShape: String
+    let symbolColor: String
+    let stops: [StopInfo]
+  }
+
+  private struct ProviderInfo: Codable {
+    let name: String
+    let routes: [RouteInfo]
+  }
 
   private static func createProviderMenu() -> NSMenu {
     var index = 0
@@ -28,90 +48,72 @@ class FeedInfo {
     return menu
   }
 
-  private var groupTagToGroupName = [Int: String]()
-  private var groups = [String: [StopId]]()
+  private var routeTagToStopDicts = [Int: [StopInfo]]()
+  private var stopTagToStopIds = [Int: [StopId]]()
 
-  private var idToName = [StopId: String]()
-  private var idToFeeds = [StopId: [Int]]()
+  private var routeToSymbol = [RouteId: RouteSymbol]()
 
-  private var tagToId = [Int: StopId]()
-  private var idToTag = [StopId: Int]()
-
-  private(set) var stopGroupMenu: NSMenu!
+  private(set) var routeMenu: NSMenu!
+  private(set) var provider: String!
 
   init(providerTag: Int) {
-    let path = Bundle(for: SubwayMonView.self).path(forResource: FeedInfo.providers[providerTag],
-                                                    ofType: "json")!
-    let stream = InputStream(fileAtPath: path)!
-    stream.open()
+    provider = FeedInfo.providers[providerTag]
+    let url = Bundle(for: SubwayMonView.self).url(forResource: provider,
+                                                    withExtension: "json")!
+    let data = try? Data(contentsOf: url)
+    let providerInfo = try? JSONDecoder().decode(ProviderInfo.self, from: data!)
 
-    let feedInfoRaw = try? JSONSerialization.jsonObject(with: stream,
-                                                        options: JSONSerialization.ReadingOptions())
-    let feedInfo = feedInfoRaw as! [String: Any]
-    let stopInfo = feedInfo["stopinfo"] as! [StopId: [String: Any]]
+    var routeTag = 1
+    routeMenu = NSMenu()
+    routeMenu.autoenablesItems = false
 
-    groups = feedInfo["groups"] as! [String: [StopId]]
+    for routeInfo in providerInfo!.routes {
+      let symbol: RouteSymbol = RouteSymbol(
+        text: routeInfo.symbolText,
+        textColor: RouteSymbol.colorFrom(hexString: routeInfo.symbolTextColor),
+        shape: RouteSymbol.Shape(rawValue: routeInfo.symbolShape)!,
+        color: RouteSymbol.colorFrom(hexString: routeInfo.symbolColor))
+      routeToSymbol[routeInfo.routeId] = symbol
 
-    var tag = 1
-    for (stopId, infoDict) in stopInfo {
-      idToName[stopId] = (infoDict["name"] as! String)
-      idToFeeds[stopId] = (infoDict["feeds"] as! [Int])
+      routeTagToStopDicts[routeTag] = routeInfo.stops
 
-      tagToId[tag] = stopId
-      idToTag[stopId] = tag
+      let menuItem = NSMenuItem(title: routeInfo.name, action: nil, keyEquivalent: "")
+      menuItem.isEnabled = true
+      menuItem.tag = routeTag
 
-      tag += 1
-    }
-
-    var groupTag = 0
-    stopGroupMenu = NSMenu()
-    stopGroupMenu.autoenablesItems = false
-
-    for section in groups.keys.sorted() {
-      let item = NSMenuItem(title: section, action: nil, keyEquivalent: "")
-      item.isEnabled = true
-      item.tag = groupTag
-      groupTagToGroupName[groupTag] = section
-
-      stopGroupMenu.addItem(item)
-      groupTag += 1
+      routeTag += 1
+      routeMenu.addItem(menuItem)
     }
   }
 
-  func name(ofStopId stopId: StopId) -> String {
-    return idToName[trim(stopId: stopId)]!
-  }
+  func stopMenu(forRouteTag routeTag: Int) -> NSMenu {
+    stopTagToStopIds.removeAll()
 
-  func feeds(forStopId stopId: StopId) -> [Int] {
-    return idToFeeds[trim(stopId: stopId)]!
-  }
+    let stopInfos = routeTagToStopDicts[routeTag]!
 
-  func stopId(forTag tag: Int) -> StopId {
-    return tagToId[tag]!
-  }
-
-  func tag(forStopId stopId: StopId) -> Int {
-    return idToTag[trim(stopId: stopId)]!
-  }
-
-  func stopMenu(forStopGroupTag groupTag: Int) -> NSMenu {
-    let groupName = groupTagToGroupName[groupTag]!
-    let group = groups[groupName]!
-
+    var stopTag = 1
     let menu = NSMenu()
     menu.autoenablesItems = false
 
-    for stopId in group {
-      let item = NSMenuItem(title: idToName[stopId]!, action: nil, keyEquivalent: "")
-      item.tag = idToTag[stopId]!
+    for stopInfo in stopInfos {
+      let item = NSMenuItem(title: stopInfo.name, action: nil, keyEquivalent: "")
+      item.tag = stopTag
       item.isEnabled = true
+
+      stopTagToStopIds[stopTag] = stopInfo.ids
+
       menu.addItem(item)
+      stopTag += 1
     }
 
     return menu
   }
 
-  private func trim(stopId: StopId) -> StopId {
-    return String(stopId[..<stopId.index(stopId.startIndex, offsetBy: 3)])
+  func stopIdsFor(stopTag: Int) -> [StopId] {
+    return stopTagToStopIds[stopTag]!
+  }
+
+  func symbolFor(routeId: String) -> RouteSymbol {
+    return routeToSymbol[routeId]!
   }
 }

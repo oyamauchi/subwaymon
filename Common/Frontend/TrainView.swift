@@ -9,24 +9,23 @@
 import AppKit
 
 class TrainView: NSView {
-  var symbol: String = ""
-  var color: NSColor = NSColor.white
-  var isDiamond: Bool = false
-  var isBlackText: Bool = false
+  var symbol: RouteSymbol!
   var text: String = ""
   var minutes: Int = 0
 
   /// First try cutting the string at the hyphens, until it fits in the available width.
   /// If that doesn't work, truncate and ellipsize the string until it fits.
-  private func truncate(text: String,
-                        withAttributes attributes: [NSAttributedString.Key: Any],
-                        toWidth width: CGFloat) -> String {
+  private func truncate(
+    text: String,
+    withAttributes attributes: [NSAttributedString.Key: Any],
+    toWidth width: CGFloat
+  ) -> String {
     let fields = text.components(separatedBy: " - ")
 
     var firstField = fields.startIndex
 
     while firstField < fields.endIndex {
-      let attempt = fields[firstField ..< fields.endIndex].joined(separator: " - ")
+      let attempt = fields[firstField..<fields.endIndex].joined(separator: " - ")
 
       if attempt.size(withAttributes: attributes).width <= width {
         return attempt
@@ -38,7 +37,7 @@ class TrainView: NSView {
     var attempt = fields[0]
 
     while attempt.size(withAttributes: attributes).width > width, attempt.count > 1 {
-      let range = attempt.index(attempt.endIndex, offsetBy: -2) ..< attempt.endIndex
+      let range = attempt.index(attempt.endIndex, offsetBy: -2)..<attempt.endIndex
       attempt = attempt.replacingCharacters(in: range, with: "\u{2026}")
     }
 
@@ -56,13 +55,18 @@ class TrainView: NSView {
     NSColor.black.set()
     dirtyRect.fill()
 
-    color.set()
+    if symbol == nil {
+      return
+    }
+
+    symbol.color.set()
 
     // Draw the route bullet. It should be a square that fills the height of this view,
     // left-aligned. First draw the shape.
     let shapeRect = NSMakeRect(0, 0, bounds.size.height, bounds.size.height)
 
-    if isDiamond {
+    switch symbol.shape {
+    case .diamond:
       let shape = NSBezierPath()
       shape.move(to: NSMakePoint(shapeRect.size.width / 2, 0))
       shape.line(to: NSMakePoint(shapeRect.size.width, shapeRect.size.height / 2))
@@ -70,30 +74,29 @@ class TrainView: NSView {
       shape.line(to: NSMakePoint(0, shapeRect.size.height / 2))
       shape.close()
       shape.fill()
-    } else {
+    case .circle:
       let bullet = NSBezierPath(ovalIn: shapeRect)
       bullet.fill()
     }
 
     // Now draw the symbol
     let symbolFontSize: CGFloat
-    switch symbol.count {
+    switch symbol.text.count {
     case 1: symbolFontSize = 0.84 * bounds.size.height
     case 2: symbolFontSize = 0.55 * bounds.size.height
     case 3: symbolFontSize = 0.46 * bounds.size.height
     default: symbolFontSize = 0.4 * bounds.size.height
     }
 
-    let symbolColor = isBlackText ? NSColor.black : NSColor.white
-    let symbolAttributes = getTextAttributes(size: symbolFontSize, color: symbolColor)
-    let textSize = symbol.size(withAttributes: symbolAttributes)
+    let symbolAttributes = getTextAttributes(size: symbolFontSize, color: symbol.textColor)
+    let textSize = symbol.text.size(withAttributes: symbolAttributes)
 
     let symbolPoint = NSMakePoint(
       (shapeRect.size.width - textSize.width) / 2 + shapeRect.origin.x,
       (shapeRect.size.height - textSize.height) / 2 + shapeRect.origin.y
     )
 
-    symbol.draw(at: symbolPoint, withAttributes: symbolAttributes)
+    symbol.text.draw(at: symbolPoint, withAttributes: symbolAttributes)
 
     // These values will be used for the rest of the text
     let baseFontSize = 0.84 * bounds.size.height
