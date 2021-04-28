@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,18 +16,12 @@
 		93650966204C9EB300705BCF /* SubwayMonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93650965204C9EB300705BCF /* SubwayMonView.swift */; };
 		93650967204C9EB300705BCF /* SubwayMonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93650965204C9EB300705BCF /* SubwayMonView.swift */; };
 		93650969204CE85E00705BCF /* SubwayMonScreenSaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93650968204CE85E00705BCF /* SubwayMonScreenSaverView.swift */; };
-		9379850B204C6EEF00236FD3 /* gtfs-realtime.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798509204C6EEF00236FD3 /* gtfs-realtime.pb.swift */; };
-		9379850C204C6EEF00236FD3 /* gtfs-realtime.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798509204C6EEF00236FD3 /* gtfs-realtime.pb.swift */; };
-		9379850D204C6EEF00236FD3 /* nyct-subway.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379850A204C6EEF00236FD3 /* nyct-subway.pb.swift */; };
-		9379850E204C6EEF00236FD3 /* nyct-subway.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9379850A204C6EEF00236FD3 /* nyct-subway.pb.swift */; };
 		93798513204C748F00236FD3 /* backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798512204C748F00236FD3 /* backend.swift */; };
 		93798514204C748F00236FD3 /* backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93798512204C748F00236FD3 /* backend.swift */; };
 		9387C18E20329D49000BB42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9387C18D20329D49000BB42A /* AppDelegate.swift */; };
 		9387C19020329D49000BB42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9387C18F20329D49000BB42A /* Assets.xcassets */; };
 		9387C19320329D49000BB42A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9387C19120329D49000BB42A /* MainMenu.xib */; };
 		93A4FF0C17C849AB003F90A0 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */; };
-		93AB85A52560B40A00775B15 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 93AB85A42560B40A00775B15 /* SwiftProtobuf */; };
-		93AB85A72560B42200775B15 /* SwiftProtobuf in Frameworks */ = {isa = PBXBuildFile; productRef = 93AB85A62560B42200775B15 /* SwiftProtobuf */; };
 		93C5C1452054DBDE00492A2D /* FeedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1442054DBDE00492A2D /* FeedInfo.swift */; };
 		93C5C1462054DBDE00492A2D /* FeedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1442054DBDE00492A2D /* FeedInfo.swift */; };
 		93EC28CE17C484FC00F5F90B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CD17C484FC00F5F90B /* Cocoa.framework */; };
@@ -40,8 +34,6 @@
 		934F347E2638E57C00E6FC68 /* mta.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mta.json; sourceTree = "<group>"; };
 		93650965204C9EB300705BCF /* SubwayMonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayMonView.swift; sourceTree = "<group>"; };
 		93650968204CE85E00705BCF /* SubwayMonScreenSaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayMonScreenSaverView.swift; sourceTree = "<group>"; };
-		93798509204C6EEF00236FD3 /* gtfs-realtime.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "gtfs-realtime.pb.swift"; sourceTree = "<group>"; };
-		9379850A204C6EEF00236FD3 /* nyct-subway.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "nyct-subway.pb.swift"; sourceTree = "<group>"; };
 		93798512204C748F00236FD3 /* backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backend.swift; sourceTree = "<group>"; };
 		9387C18B20329D49000BB42A /* SubwayApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9387C18D20329D49000BB42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +56,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93AB85A52560B40A00775B15 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +65,6 @@
 			files = (
 				93EC28CE17C484FC00F5F90B /* Cocoa.framework in Frameworks */,
 				93EC28D017C484FC00F5F90B /* ScreenSaver.framework in Frameworks */,
-				93AB85A72560B42200775B15 /* SwiftProtobuf in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,20 +146,10 @@
 			children = (
 				93EC28E517C4851B00F5F90B /* Frontend */,
 				9354ABBA205620C400E7C52F /* GTFS */,
-				93EC28E417C4851300F5F90B /* Generated */,
 				93650965204C9EB300705BCF /* SubwayMonView.swift */,
 				93798512204C748F00236FD3 /* backend.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		93EC28E417C4851300F5F90B /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				93798509204C6EEF00236FD3 /* gtfs-realtime.pb.swift */,
-				9379850A204C6EEF00236FD3 /* nyct-subway.pb.swift */,
-			);
-			path = Generated;
 			sourceTree = "<group>";
 		};
 		93EC28E517C4851B00F5F90B /* Frontend */ = {
@@ -208,7 +188,6 @@
 			);
 			name = SubwayApp;
 			packageProductDependencies = (
-				93AB85A42560B40A00775B15 /* SwiftProtobuf */,
 			);
 			productName = SubwayApp;
 			productReference = 9387C18B20329D49000BB42A /* SubwayApp.app */;
@@ -230,7 +209,6 @@
 			);
 			name = SubwayMon;
 			packageProductDependencies = (
-				93AB85A62560B42200775B15 /* SwiftProtobuf */,
 			);
 			productName = SubwayMon;
 			productReference = 93EC28CA17C484FC00F5F90B /* SubwayMon.saver */;
@@ -265,7 +243,6 @@
 			);
 			mainGroup = 93EC28BF17C484FC00F5F90B;
 			packageReferences = (
-				93AB85A32560B40A00775B15 /* XCRemoteSwiftPackageReference "swift-protobuf" */,
 			);
 			productRefGroup = 93EC28CB17C484FC00F5F90B /* Products */;
 			projectDirPath = "";
@@ -314,12 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9379850E204C6EEF00236FD3 /* nyct-subway.pb.swift in Sources */,
 				93650967204C9EB300705BCF /* SubwayMonView.swift in Sources */,
 				93175C0720435EBB00FBD535 /* TrainView.swift in Sources */,
 				934F347D2638E0D200E6FC68 /* RouteSymbol.swift in Sources */,
 				9387C18E20329D49000BB42A /* AppDelegate.swift in Sources */,
-				9379850C204C6EEF00236FD3 /* gtfs-realtime.pb.swift in Sources */,
 				93C5C1462054DBDE00492A2D /* FeedInfo.swift in Sources */,
 				93798514204C748F00236FD3 /* backend.swift in Sources */,
 			);
@@ -331,10 +306,8 @@
 			files = (
 				93650969204CE85E00705BCF /* SubwayMonScreenSaverView.swift in Sources */,
 				93650966204C9EB300705BCF /* SubwayMonView.swift in Sources */,
-				9379850D204C6EEF00236FD3 /* nyct-subway.pb.swift in Sources */,
 				93175C0620435EBB00FBD535 /* TrainView.swift in Sources */,
 				934F347C2638E0D200E6FC68 /* RouteSymbol.swift in Sources */,
-				9379850B204C6EEF00236FD3 /* gtfs-realtime.pb.swift in Sources */,
 				93C5C1452054DBDE00492A2D /* FeedInfo.swift in Sources */,
 				93798513204C748F00236FD3 /* backend.swift in Sources */,
 			);
@@ -376,10 +349,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = SubwayApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oyamauchi.SubwayApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,15 +379,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = SubwayApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oyamauchi.SubwayApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -494,8 +460,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -512,11 +477,7 @@
 				);
 				INFOPLIST_FILE = "SubwayMon/SubwayMon-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oyamauchi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -536,11 +497,7 @@
 				);
 				INFOPLIST_FILE = "SubwayMon/SubwayMon-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.oyamauchi.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = saver;
@@ -578,30 +535,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		93AB85A32560B40A00775B15 /* XCRemoteSwiftPackageReference "swift-protobuf" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-protobuf";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.13.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		93AB85A42560B40A00775B15 /* SwiftProtobuf */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 93AB85A32560B40A00775B15 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
-			productName = SwiftProtobuf;
-		};
-		93AB85A62560B42200775B15 /* SwiftProtobuf */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 93AB85A32560B40A00775B15 /* XCRemoteSwiftPackageReference "swift-protobuf" */;
-			productName = SwiftProtobuf;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93EC28C017C484FC00F5F90B /* Project object */;
 }
