@@ -1,1 +1,6906 @@
-{"name":"New York City - Subway","routes":[{"routeId":"1","name":"1 \u2014 Broadway - 7 Avenue Local","symbolText":"1","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"EE352E","stops":[{"ids":["101N","101S"],"name":"Van Cortlandt Park-242 St"},{"ids":["103N","103S"],"name":"238 St"},{"ids":["104N","104S"],"name":"231 St"},{"ids":["106N","106S"],"name":"Marble Hill-225 St"},{"ids":["107N","107S"],"name":"215 St"},{"ids":["108N","108S"],"name":"207 St"},{"ids":["109N","109S"],"name":"Dyckman St"},{"ids":["110N","110S"],"name":"191 St"},{"ids":["111N","111S"],"name":"181 St"},{"ids":["112N","112S"],"name":"168 St-Washington Hts"},{"ids":["113N","113S"],"name":"157 St"},{"ids":["114N","114S"],"name":"145 St"},{"ids":["115N","115S"],"name":"137 St-City College"},{"ids":["116N","116S"],"name":"125 St"},{"ids":["117N","117S"],"name":"116 St-Columbia University"},{"ids":["118N","118S"],"name":"Cathedral Pkwy (110 St)"},{"ids":["119N","119S"],"name":"103 St"},{"ids":["120N","120S"],"name":"96 St"},{"ids":["121N","121S"],"name":"86 St"},{"ids":["122N","122S"],"name":"79 St"},{"ids":["123N","123S"],"name":"72 St"},{"ids":["124N","124S"],"name":"66 St-Lincoln Center"},{"ids":["125N","125S"],"name":"59 St-Columbus Circle"},{"ids":["126N","126S"],"name":"50 St"},{"ids":["127N","127S"],"name":"Times Sq-42 St"},{"ids":["128N","128S"],"name":"34 St-Penn Station"},{"ids":["129N","129S"],"name":"28 St"},{"ids":["130N","130S"],"name":"23 St"},{"ids":["131N","131S"],"name":"18 St"},{"ids":["132N","132S"],"name":"14 St"},{"ids":["133N","133S"],"name":"Christopher St-Sheridan Sq"},{"ids":["134N","134S"],"name":"Houston St"},{"ids":["135N","135S"],"name":"Canal St"},{"ids":["136N","136S"],"name":"Franklin St"},{"ids":["137N","137S"],"name":"Chambers St"},{"ids":["138N","138S"],"name":"WTC Cortlandt"},{"ids":["139N","139S"],"name":"Rector St"},{"ids":["142N","142S"],"name":"South Ferry"}]},{"routeId":"2","name":"2 \u2014 7 Avenue Express","symbolText":"2","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"EE352E","stops":[{"ids":["201N","201S"],"name":"Wakefield-241 St"},{"ids":["204N","204S"],"name":"Nereid Av"},{"ids":["205N","205S"],"name":"233 St"},{"ids":["206N","206S"],"name":"225 St"},{"ids":["207N","207S"],"name":"219 St"},{"ids":["208N","208S"],"name":"Gun Hill Rd"},{"ids":["209N","209S"],"name":"Burke Av"},{"ids":["210N","210S"],"name":"Allerton Av"},{"ids":["211N","211S"],"name":"Pelham Pkwy"},{"ids":["212N","212S"],"name":"Bronx Park East"},{"ids":["213N","213S"],"name":"E 180 St"},{"ids":["214N","214S"],"name":"West Farms Sq-E Tremont Av"},{"ids":["215N","215S"],"name":"174 St"},{"ids":["216N","216S"],"name":"Freeman St"},{"ids":["217N","217S"],"name":"Simpson St"},{"ids":["218N","218S"],"name":"Intervale Av"},{"ids":["219N","219S"],"name":"Prospect Av"},{"ids":["220N","220S"],"name":"Jackson Av"},{"ids":["221N","221S"],"name":"3 Av-149 St"},{"ids":["222N","222S"],"name":"149 St-Grand Concourse"},{"ids":["224N","224S"],"name":"135 St"},{"ids":["225N","225S"],"name":"125 St"},{"ids":["226N","226S"],"name":"116 St"},{"ids":["227N","227S"],"name":"Central Park North (110 St)"},{"ids":["120N","120S"],"name":"96 St"},{"ids":["121N","121S"],"name":"86 St"},{"ids":["122N","122S"],"name":"79 St"},{"ids":["123N","123S"],"name":"72 St"},{"ids":["124N","124S"],"name":"66 St-Lincoln Center"},{"ids":["125N","125S"],"name":"59 St-Columbus Circle"},{"ids":["126N","126S"],"name":"50 St"},{"ids":["127N","127S"],"name":"Times Sq-42 St"},{"ids":["128N","128S"],"name":"34 St-Penn Station"},{"ids":["129N","129S"],"name":"28 St"},{"ids":["130N","130S"],"name":"23 St"},{"ids":["131N","131S"],"name":"18 St"},{"ids":["132N","132S"],"name":"14 St"},{"ids":["133N","133S"],"name":"Christopher St-Sheridan Sq"},{"ids":["134N","134S"],"name":"Houston St"},{"ids":["135N","135S"],"name":"Canal St"},{"ids":["136N","136S"],"name":"Franklin St"},{"ids":["137N","137S"],"name":"Chambers St"},{"ids":["228N","228S"],"name":"Park Place"},{"ids":["229N","229S"],"name":"Fulton St"},{"ids":["230N","230S"],"name":"Wall St"},{"ids":["231N","231S"],"name":"Clark St"},{"ids":["232N","232S"],"name":"Borough Hall"},{"ids":["233N","233S"],"name":"Hoyt St"},{"ids":["234N","234S"],"name":"Nevins St"},{"ids":["235N","235S"],"name":"Atlantic Av-Barclays Ctr"},{"ids":["236N","236S"],"name":"Bergen St"},{"ids":["237N","237S"],"name":"Grand Army Plaza"},{"ids":["238N","238S"],"name":"Eastern Pkwy-Brooklyn Museum"},{"ids":["239N","239S"],"name":"Franklin Av-Medgar Evers College"},{"ids":["248N","248S"],"name":"Nostrand Av"},{"ids":["249N","249S"],"name":"Kingston Av"},{"ids":["250N","250S"],"name":"Crown Hts-Utica Av"},{"ids":["251N","251S"],"name":"Sutter Av-Rutland Rd"},{"ids":["252N","252S"],"name":"Saratoga Av"},{"ids":["253N","253S"],"name":"Rockaway Av"},{"ids":["254N","254S"],"name":"Junius St"},{"ids":["255N","255S"],"name":"Pennsylvania Av"},{"ids":["256N","256S"],"name":"Van Siclen Av"},{"ids":["257N","257S"],"name":"New Lots Av"},{"ids":["241N","241S"],"name":"President St-Medgar Evers College"},{"ids":["242N","242S"],"name":"Sterling St"},{"ids":["243N","243S"],"name":"Winthrop St"},{"ids":["244N","244S"],"name":"Church Av"},{"ids":["245N","245S"],"name":"Beverly Rd"},{"ids":["246N","246S"],"name":"Newkirk Av"},{"ids":["247N","247S"],"name":"Flatbush Av-Brooklyn College"}]},{"routeId":"3","name":"3 \u2014 7 Avenue Express","symbolText":"3","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"EE352E","stops":[{"ids":["301N","301S"],"name":"Harlem-148 St"},{"ids":["302N","302S"],"name":"145 St"},{"ids":["224N","224S"],"name":"135 St"},{"ids":["225N","225S"],"name":"125 St"},{"ids":["226N","226S"],"name":"116 St"},{"ids":["227N","227S"],"name":"Central Park North (110 St)"},{"ids":["120N","120S"],"name":"96 St"},{"ids":["123N","123S"],"name":"72 St"},{"ids":["127N","127S"],"name":"Times Sq-42 St"},{"ids":["128N","128S"],"name":"34 St-Penn Station"},{"ids":["132N","132S"],"name":"14 St"},{"ids":["137N","137S"],"name":"Chambers St"},{"ids":["228N","228S"],"name":"Park Place"},{"ids":["229N","229S"],"name":"Fulton St"},{"ids":["230N","230S"],"name":"Wall St"},{"ids":["231N","231S"],"name":"Clark St"},{"ids":["232N","232S"],"name":"Borough Hall"},{"ids":["233N","233S"],"name":"Hoyt St"},{"ids":["234N","234S"],"name":"Nevins St"},{"ids":["235N","235S"],"name":"Atlantic Av-Barclays Ctr"},{"ids":["236N","236S"],"name":"Bergen St"},{"ids":["237N","237S"],"name":"Grand Army Plaza"},{"ids":["238N","238S"],"name":"Eastern Pkwy-Brooklyn Museum"},{"ids":["239N","239S"],"name":"Franklin Av-Medgar Evers College"},{"ids":["248N","248S"],"name":"Nostrand Av"},{"ids":["249N","249S"],"name":"Kingston Av"},{"ids":["250N","250S"],"name":"Crown Hts-Utica Av"},{"ids":["251N","251S"],"name":"Sutter Av-Rutland Rd"},{"ids":["252N","252S"],"name":"Saratoga Av"},{"ids":["253N","253S"],"name":"Rockaway Av"},{"ids":["254N","254S"],"name":"Junius St"},{"ids":["255N","255S"],"name":"Pennsylvania Av"},{"ids":["256N","256S"],"name":"Van Siclen Av"},{"ids":["257N","257S"],"name":"New Lots Av"}]},{"routeId":"4","name":"4 \u2014 Lexington Avenue Express","symbolText":"4","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"00933C","stops":[{"ids":["401N","401S"],"name":"Woodlawn"},{"ids":["402N","402S"],"name":"Mosholu Pkwy"},{"ids":["405N","405S"],"name":"Bedford Park Blvd-Lehman College"},{"ids":["406N","406S"],"name":"Kingsbridge Rd"},{"ids":["407N","407S"],"name":"Fordham Rd"},{"ids":["408N","408S"],"name":"183 St"},{"ids":["409N","409S"],"name":"Burnside Av"},{"ids":["410N","410S"],"name":"176 St"},{"ids":["411N","411S"],"name":"Mt Eden Av"},{"ids":["412N","412S"],"name":"170 St"},{"ids":["413N","413S"],"name":"167 St"},{"ids":["414N","414S"],"name":"161 St-Yankee Stadium"},{"ids":["415N","415S"],"name":"149 St-Grand Concourse"},{"ids":["416N","416S"],"name":"138 St-Grand Concourse"},{"ids":["621N","621S"],"name":"125 St"},{"ids":["622N","622S"],"name":"116 St"},{"ids":["623N","623S"],"name":"110 St"},{"ids":["624N","624S"],"name":"103 St"},{"ids":["625N","625S"],"name":"96 St"},{"ids":["626N","626S"],"name":"86 St"},{"ids":["627N","627S"],"name":"77 St"},{"ids":["628N","628S"],"name":"68 St-Hunter College"},{"ids":["629N","629S"],"name":"59 St"},{"ids":["630N","630S"],"name":"51 St"},{"ids":["631N","631S"],"name":"Grand Central-42 St"},{"ids":["632N","632S"],"name":"33 St"},{"ids":["633N","633S"],"name":"28 St"},{"ids":["634N","634S"],"name":"23 St"},{"ids":["635N","635S"],"name":"14 St-Union Sq"},{"ids":["636N","636S"],"name":"Astor Pl"},{"ids":["637N","637S"],"name":"Bleecker St"},{"ids":["638N","638S"],"name":"Spring St"},{"ids":["639N","639S"],"name":"Canal St"},{"ids":["640N","640S"],"name":"Brooklyn Bridge-City Hall"},{"ids":["418N","418S"],"name":"Fulton St"},{"ids":["419N","419S"],"name":"Wall St"},{"ids":["420N","420S"],"name":"Bowling Green"},{"ids":["423N","423S"],"name":"Borough Hall"},{"ids":["234N","234S"],"name":"Nevins St"},{"ids":["235N","235S"],"name":"Atlantic Av-Barclays Ctr"},{"ids":["236N","236S"],"name":"Bergen St"},{"ids":["237N","237S"],"name":"Grand Army Plaza"},{"ids":["238N","238S"],"name":"Eastern Pkwy-Brooklyn Museum"},{"ids":["239N","239S"],"name":"Franklin Av-Medgar Evers College"},{"ids":["248N","248S"],"name":"Nostrand Av"},{"ids":["249N","249S"],"name":"Kingston Av"},{"ids":["250N","250S"],"name":"Crown Hts-Utica Av"},{"ids":["251N","251S"],"name":"Sutter Av-Rutland Rd"},{"ids":["252N","252S"],"name":"Saratoga Av"},{"ids":["253N","253S"],"name":"Rockaway Av"},{"ids":["254N","254S"],"name":"Junius St"},{"ids":["255N","255S"],"name":"Pennsylvania Av"},{"ids":["256N","256S"],"name":"Van Siclen Av"},{"ids":["257N","257S"],"name":"New Lots Av"}]},{"routeId":"5","name":"5 \u2014 Lexington Avenue Express","symbolText":"5","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"00933C","stops":[{"ids":["501N","501S"],"name":"Eastchester-Dyre Av"},{"ids":["502N","502S"],"name":"Baychester Av"},{"ids":["503N","503S"],"name":"Gun Hill Rd"},{"ids":["504N","504S"],"name":"Pelham Pkwy"},{"ids":["505N","505S"],"name":"Morris Park"},{"ids":["204N","204S"],"name":"Nereid Av"},{"ids":["205N","205S"],"name":"233 St"},{"ids":["206N","206S"],"name":"225 St"},{"ids":["207N","207S"],"name":"219 St"},{"ids":["208N","208S"],"name":"Gun Hill Rd"},{"ids":["209N","209S"],"name":"Burke Av"},{"ids":["210N","210S"],"name":"Allerton Av"},{"ids":["211N","211S"],"name":"Pelham Pkwy"},{"ids":["212N","212S"],"name":"Bronx Park East"},{"ids":["213N","213S"],"name":"E 180 St"},{"ids":["214N","214S"],"name":"West Farms Sq-E Tremont Av"},{"ids":["215N","215S"],"name":"174 St"},{"ids":["216N","216S"],"name":"Freeman St"},{"ids":["217N","217S"],"name":"Simpson St"},{"ids":["218N","218S"],"name":"Intervale Av"},{"ids":["219N","219S"],"name":"Prospect Av"},{"ids":["220N","220S"],"name":"Jackson Av"},{"ids":["221N","221S"],"name":"3 Av-149 St"},{"ids":["222N","222S"],"name":"149 St-Grand Concourse"},{"ids":["416N","416S"],"name":"138 St-Grand Concourse"},{"ids":["621N","621S"],"name":"125 St"},{"ids":["626N","626S"],"name":"86 St"},{"ids":["629N","629S"],"name":"59 St"},{"ids":["631N","631S"],"name":"Grand Central-42 St"},{"ids":["635N","635S"],"name":"14 St-Union Sq"},{"ids":["640N","640S"],"name":"Brooklyn Bridge-City Hall"},{"ids":["418N","418S"],"name":"Fulton St"},{"ids":["419N","419S"],"name":"Wall St"},{"ids":["420N","420S"],"name":"Bowling Green"},{"ids":["423N","423S"],"name":"Borough Hall"},{"ids":["234N","234S"],"name":"Nevins St"},{"ids":["235N","235S"],"name":"Atlantic Av-Barclays Ctr"},{"ids":["239N","239S"],"name":"Franklin Av-Medgar Evers College"},{"ids":["250N","250S"],"name":"Crown Hts-Utica Av"},{"ids":["241N","241S"],"name":"President St-Medgar Evers College"},{"ids":["242N","242S"],"name":"Sterling St"},{"ids":["243N","243S"],"name":"Winthrop St"},{"ids":["244N","244S"],"name":"Church Av"},{"ids":["245N","245S"],"name":"Beverly Rd"},{"ids":["246N","246S"],"name":"Newkirk Av"},{"ids":["247N","247S"],"name":"Flatbush Av-Brooklyn College"}]},{"routeId":"6","name":"6 \u2014 Lexington Avenue Local","symbolText":"6","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"00933C","stops":[{"ids":["601N","601S"],"name":"Pelham Bay Park"},{"ids":["602N","602S"],"name":"Buhre Av"},{"ids":["603N","603S"],"name":"Middletown Rd"},{"ids":["604N","604S"],"name":"Westchester Sq-E Tremont Av"},{"ids":["606N","606S"],"name":"Zerega Av"},{"ids":["607N","607S"],"name":"Castle Hill Av"},{"ids":["608N","608S"],"name":"Parkchester"},{"ids":["609N","609S"],"name":"St Lawrence Av"},{"ids":["610N","610S"],"name":"Morrison Av-Soundview"},{"ids":["611N","611S"],"name":"Elder Av"},{"ids":["612N","612S"],"name":"Whitlock Av"},{"ids":["613N","613S"],"name":"Hunts Point Av"},{"ids":["614N","614S"],"name":"Longwood Av"},{"ids":["615N","615S"],"name":"E 149 St"},{"ids":["616N","616S"],"name":"E 143 St-St Mary's St"},{"ids":["617N","617S"],"name":"Cypress Av"},{"ids":["618N","618S"],"name":"Brook Av"},{"ids":["619N","619S"],"name":"3 Av-138 St"},{"ids":["621N","621S"],"name":"125 St"},{"ids":["622N","622S"],"name":"116 St"},{"ids":["623N","623S"],"name":"110 St"},{"ids":["624N","624S"],"name":"103 St"},{"ids":["625N","625S"],"name":"96 St"},{"ids":["626N","626S"],"name":"86 St"},{"ids":["627N","627S"],"name":"77 St"},{"ids":["628N","628S"],"name":"68 St-Hunter College"},{"ids":["629N","629S"],"name":"59 St"},{"ids":["630N","630S"],"name":"51 St"},{"ids":["631N","631S"],"name":"Grand Central-42 St"},{"ids":["632N","632S"],"name":"33 St"},{"ids":["633N","633S"],"name":"28 St"},{"ids":["634N","634S"],"name":"23 St"},{"ids":["635N","635S"],"name":"14 St-Union Sq"},{"ids":["636N","636S"],"name":"Astor Pl"},{"ids":["637N","637S"],"name":"Bleecker St"},{"ids":["638N","638S"],"name":"Spring St"},{"ids":["639N","639S"],"name":"Canal St"},{"ids":["640N","640S"],"name":"Brooklyn Bridge-City Hall"}]},{"routeId":"6X","name":"6X \u2014 Pelham Bay Park Express","symbolText":"6","symbolTextColor":"FFFFFF","symbolShape":"diamond","symbolColor":"00A65C","stops":[{"ids":["601N","601S"],"name":"Pelham Bay Park"},{"ids":["602N","602S"],"name":"Buhre Av"},{"ids":["603N","603S"],"name":"Middletown Rd"},{"ids":["604N","604S"],"name":"Westchester Sq-E Tremont Av"},{"ids":["606N","606S"],"name":"Zerega Av"},{"ids":["607N","607S"],"name":"Castle Hill Av"},{"ids":["608N","608S"],"name":"Parkchester"},{"ids":["609S"],"name":"St Lawrence Av"},{"ids":["610S"],"name":"Morrison Av-Soundview"},{"ids":["611S"],"name":"Elder Av"},{"ids":["612S"],"name":"Whitlock Av"},{"ids":["613N","613S"],"name":"Hunts Point Av"},{"ids":["619N","619S"],"name":"3 Av-138 St"},{"ids":["621N","621S"],"name":"125 St"},{"ids":["622N","622S"],"name":"116 St"},{"ids":["623N","623S"],"name":"110 St"},{"ids":["624N","624S"],"name":"103 St"},{"ids":["625N","625S"],"name":"96 St"},{"ids":["626N","626S"],"name":"86 St"},{"ids":["627N","627S"],"name":"77 St"},{"ids":["628N","628S"],"name":"68 St-Hunter College"},{"ids":["629N","629S"],"name":"59 St"},{"ids":["630N","630S"],"name":"51 St"},{"ids":["631N","631S"],"name":"Grand Central-42 St"},{"ids":["632N","632S"],"name":"33 St"},{"ids":["633N","633S"],"name":"28 St"},{"ids":["634N","634S"],"name":"23 St"},{"ids":["635N","635S"],"name":"14 St-Union Sq"},{"ids":["636N","636S"],"name":"Astor Pl"},{"ids":["637N","637S"],"name":"Bleecker St"},{"ids":["638N","638S"],"name":"Spring St"},{"ids":["639N","639S"],"name":"Canal St"},{"ids":["640N","640S"],"name":"Brooklyn Bridge-City Hall"}]},{"routeId":"7","name":"7 \u2014 Flushing Local","symbolText":"7","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"B933AD","stops":[{"ids":["701N","701S"],"name":"Flushing-Main St"},{"ids":["702N","702S"],"name":"Mets-Willets Point"},{"ids":["705N","705S"],"name":"111 St"},{"ids":["706N","706S"],"name":"103 St-Corona Plaza"},{"ids":["707N","707S"],"name":"Junction Blvd"},{"ids":["708N","708S"],"name":"90 St-Elmhurst Av"},{"ids":["709N","709S"],"name":"82 St-Jackson Hts"},{"ids":["710N","710S"],"name":"74 St-Broadway"},{"ids":["711N","711S"],"name":"69 St"},{"ids":["712N","712S"],"name":"Woodside-61 St"},{"ids":["713N","713S"],"name":"52 St"},{"ids":["714N","714S"],"name":"46 St-Bliss St"},{"ids":["715N","715S"],"name":"40 St-Lowery St"},{"ids":["716N","716S"],"name":"33 St-Rawson St"},{"ids":["718N","718S"],"name":"Queensboro Plaza"},{"ids":["719N","719S"],"name":"Court Sq"},{"ids":["720N","720S"],"name":"Hunters Point Av"},{"ids":["721N","721S"],"name":"Vernon Blvd-Jackson Av"},{"ids":["723N","723S"],"name":"Grand Central-42 St"},{"ids":["724N","724S"],"name":"5 Av"},{"ids":["725N","725S"],"name":"Times Sq-42 St"},{"ids":["726N","726S"],"name":"34 St-Hudson Yards"}]},{"routeId":"7X","name":"7X \u2014 Flushing Express","symbolText":"7","symbolTextColor":"FFFFFF","symbolShape":"diamond","symbolColor":"B933AD","stops":[{"ids":["701N","701S"],"name":"Flushing-Main St"},{"ids":["702N","702S"],"name":"Mets-Willets Point"},{"ids":["707N","707S"],"name":"Junction Blvd"},{"ids":["712N","712S"],"name":"Woodside-61 St"},{"ids":["718N","718S"],"name":"Queensboro Plaza"},{"ids":["719N","719S"],"name":"Court Sq"},{"ids":["720N","720S"],"name":"Hunters Point Av"},{"ids":["721N","721S"],"name":"Vernon Blvd-Jackson Av"},{"ids":["723N","723S"],"name":"Grand Central-42 St"},{"ids":["724N","724S"],"name":"5 Av"},{"ids":["725N","725S"],"name":"Times Sq-42 St"},{"ids":["726N","726S"],"name":"34 St-Hudson Yards"}]},{"routeId":"GS","name":"S \u2014 42 St Shuttle","symbolText":"S","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"6D6E71","stops":[{"ids":["902N","902S"],"name":"Times Sq-42 St"},{"ids":["901N","901S"],"name":"Grand Central-42 St"}]},{"routeId":"A","name":"A \u2014 8 Avenue Express","symbolText":"A","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"2850AD","stops":[{"ids":["A02N","A02S"],"name":"Inwood-207 St"},{"ids":["A03N","A03S"],"name":"Dyckman St"},{"ids":["A05N","A05S"],"name":"190 St"},{"ids":["A06N","A06S"],"name":"181 St"},{"ids":["A07N","A07S"],"name":"175 St"},{"ids":["A09N","A09S"],"name":"168 St"},{"ids":["A10N","A10S"],"name":"163 St-Amsterdam Av"},{"ids":["A11N","A11S"],"name":"155 St"},{"ids":["A12N","A12S"],"name":"145 St"},{"ids":["A14N","A14S"],"name":"135 St"},{"ids":["A15N","A15S"],"name":"125 St"},{"ids":["A16N","A16S"],"name":"116 St"},{"ids":["A17N","A17S"],"name":"Cathedral Pkwy (110 St)"},{"ids":["A18N","A18S"],"name":"103 St"},{"ids":["A19N","A19S"],"name":"96 St"},{"ids":["A20N","A20S"],"name":"86 St"},{"ids":["A21N","A21S"],"name":"81 St-Museum of Natural History"},{"ids":["A22N","A22S"],"name":"72 St"},{"ids":["A24N","A24S"],"name":"59 St-Columbus Circle"},{"ids":["A25N","A25S"],"name":"50 St"},{"ids":["A27N","A27S"],"name":"42 St-Port Authority Bus Terminal"},{"ids":["A28N","A28S"],"name":"34 St-Penn Station"},{"ids":["A30N","A30S"],"name":"23 St"},{"ids":["A31N","A31S"],"name":"14 St"},{"ids":["A32N","A32S"],"name":"W 4 St-Wash Sq"},{"ids":["A33N","A33S"],"name":"Spring St"},{"ids":["A34N","A34S"],"name":"Canal St"},{"ids":["A36N","A36S"],"name":"Chambers St"},{"ids":["A38N","A38S"],"name":"Fulton St"},{"ids":["A40N","A40S"],"name":"High St"},{"ids":["A41N","A41S"],"name":"Jay St-MetroTech"},{"ids":["A42N","A42S"],"name":"Hoyt-Schermerhorn Sts"},{"ids":["A43N","A43S"],"name":"Lafayette Av"},{"ids":["A44N","A44S"],"name":"Clinton-Washington Avs"},{"ids":["A45N","A45S"],"name":"Franklin Av"},{"ids":["A46N","A46S"],"name":"Nostrand Av"},{"ids":["A47N","A47S"],"name":"Kingston-Throop Avs"},{"ids":["A48N","A48S"],"name":"Utica Av"},{"ids":["A49N","A49S"],"name":"Ralph Av"},{"ids":["A50N","A50S"],"name":"Rockaway Av"},{"ids":["A51N","A51S"],"name":"Broadway Junction"},{"ids":["A52N","A52S"],"name":"Liberty Av"},{"ids":["A53N","A53S"],"name":"Van Siclen Av"},{"ids":["A54N","A54S"],"name":"Shepherd Av"},{"ids":["A55N","A55S"],"name":"Euclid Av"},{"ids":["A57N","A57S"],"name":"Grant Av"},{"ids":["A59N","A59S"],"name":"80 St"},{"ids":["A60N","A60S"],"name":"88 St"},{"ids":["A61N","A61S"],"name":"Rockaway Blvd"},{"ids":["H02N","H02S"],"name":"Aqueduct-N Conduit Av"},{"ids":["H03N","H03S"],"name":"Howard Beach-JFK Airport"},{"ids":["H04N","H04S"],"name":"Broad Channel"},{"ids":["H12N","H12S"],"name":"Beach 90 St"},{"ids":["H13N","H13S"],"name":"Beach 98 St"},{"ids":["H14N","H14S"],"name":"Beach 105 St"},{"ids":["H15N","H15S"],"name":"Rockaway Park-Beach 116 St"},{"ids":["H06N","H06S"],"name":"Beach 67 St"},{"ids":["H07N","H07S"],"name":"Beach 60 St"},{"ids":["H08N","H08S"],"name":"Beach 44 St"},{"ids":["H09N","H09S"],"name":"Beach 36 St"},{"ids":["H10N","H10S"],"name":"Beach 25 St"},{"ids":["H11N","H11S"],"name":"Far Rockaway-Mott Av"},{"ids":["A63N","A63S"],"name":"104 St"},{"ids":["A64N","A64S"],"name":"111 St"},{"ids":["A65N","A65S"],"name":"Ozone Park-Lefferts Blvd"}]},{"routeId":"B","name":"B \u2014 6 Avenue Express","symbolText":"B","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"FF6319","stops":[{"ids":["D03N","D03S"],"name":"Bedford Park Blvd"},{"ids":["D04N","D04S"],"name":"Kingsbridge Rd"},{"ids":["D05N","D05S"],"name":"Fordham Rd"},{"ids":["D06N","D06S"],"name":"182-183 Sts"},{"ids":["D07N","D07S"],"name":"Tremont Av"},{"ids":["D08N","D08S"],"name":"174-175 Sts"},{"ids":["D09N","D09S"],"name":"170 St"},{"ids":["D10N","D10S"],"name":"167 St"},{"ids":["D11N","D11S"],"name":"161 St-Yankee Stadium"},{"ids":["D12N","D12S"],"name":"155 St"},{"ids":["D13N","D13S"],"name":"145 St"},{"ids":["A14N","A14S"],"name":"135 St"},{"ids":["A15N","A15S"],"name":"125 St"},{"ids":["A16N","A16S"],"name":"116 St"},{"ids":["A17N","A17S"],"name":"Cathedral Pkwy (110 St)"},{"ids":["A18N","A18S"],"name":"103 St"},{"ids":["A19N","A19S"],"name":"96 St"},{"ids":["A20N","A20S"],"name":"86 St"},{"ids":["A21N","A21S"],"name":"81 St-Museum of Natural History"},{"ids":["A22N","A22S"],"name":"72 St"},{"ids":["A24N","A24S"],"name":"59 St-Columbus Circle"},{"ids":["D14N","D14S"],"name":"7 Av"},{"ids":["D15N","D15S"],"name":"47-50 Sts-Rockefeller Ctr"},{"ids":["D16N","D16S"],"name":"42 St-Bryant Pk"},{"ids":["D17N","D17S"],"name":"34 St-Herald Sq"},{"ids":["D20N","D20S"],"name":"W 4 St-Wash Sq"},{"ids":["D21N","D21S"],"name":"Broadway-Lafayette St"},{"ids":["D22N","D22S"],"name":"Grand St"},{"ids":["R30N","R30S"],"name":"DeKalb Av"},{"ids":["D24N","D24S"],"name":"Atlantic Av-Barclays Ctr"},{"ids":["D25N","D25S"],"name":"7 Av"},{"ids":["D26N","D26S"],"name":"Prospect Park"},{"ids":["D28N","D28S"],"name":"Church Av"},{"ids":["D31N","D31S"],"name":"Newkirk Plaza"},{"ids":["D35N","D35S"],"name":"Kings Hwy"},{"ids":["D39N","D39S"],"name":"Sheepshead Bay"},{"ids":["D40N","D40S"],"name":"Brighton Beach"}]},{"routeId":"C","name":"C \u2014 8 Avenue Local","symbolText":"C","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"2850AD","stops":[{"ids":["A09N","A09S"],"name":"168 St"},{"ids":["A10N","A10S"],"name":"163 St-Amsterdam Av"},{"ids":["A11N","A11S"],"name":"155 St"},{"ids":["A12N","A12S"],"name":"145 St"},{"ids":["A14N","A14S"],"name":"135 St"},{"ids":["A15N","A15S"],"name":"125 St"},{"ids":["A16N","A16S"],"name":"116 St"},{"ids":["A17N","A17S"],"name":"Cathedral Pkwy (110 St)"},{"ids":["A18N","A18S"],"name":"103 St"},{"ids":["A19N","A19S"],"name":"96 St"},{"ids":["A20N","A20S"],"name":"86 St"},{"ids":["A21N","A21S"],"name":"81 St-Museum of Natural History"},{"ids":["A22N","A22S"],"name":"72 St"},{"ids":["A24N","A24S"],"name":"59 St-Columbus Circle"},{"ids":["A25N","A25S"],"name":"50 St"},{"ids":["A27N","A27S"],"name":"42 St-Port Authority Bus Terminal"},{"ids":["A28N","A28S"],"name":"34 St-Penn Station"},{"ids":["A30N","A30S"],"name":"23 St"},{"ids":["A31N","A31S"],"name":"14 St"},{"ids":["A32N","A32S"],"name":"W 4 St-Wash Sq"},{"ids":["A33N","A33S"],"name":"Spring St"},{"ids":["A34N","A34S"],"name":"Canal St"},{"ids":["A36N","A36S"],"name":"Chambers St"},{"ids":["A38N","A38S"],"name":"Fulton St"},{"ids":["A40N","A40S"],"name":"High St"},{"ids":["A41N","A41S"],"name":"Jay St-MetroTech"},{"ids":["A42N","A42S"],"name":"Hoyt-Schermerhorn Sts"},{"ids":["A43N","A43S"],"name":"Lafayette Av"},{"ids":["A44N","A44S"],"name":"Clinton-Washington Avs"},{"ids":["A45N","A45S"],"name":"Franklin Av"},{"ids":["A46N","A46S"],"name":"Nostrand Av"},{"ids":["A47N","A47S"],"name":"Kingston-Throop Avs"},{"ids":["A48N","A48S"],"name":"Utica Av"},{"ids":["A49N","A49S"],"name":"Ralph Av"},{"ids":["A50N","A50S"],"name":"Rockaway Av"},{"ids":["A51N","A51S"],"name":"Broadway Junction"},{"ids":["A52N","A52S"],"name":"Liberty Av"},{"ids":["A53N","A53S"],"name":"Van Siclen Av"},{"ids":["A54N","A54S"],"name":"Shepherd Av"},{"ids":["A55N","A55S"],"name":"Euclid Av"}]},{"routeId":"D","name":"D \u2014 6 Avenue Express","symbolText":"D","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"FF6319","stops":[{"ids":["D01N","D01S"],"name":"Norwood-205 St"},{"ids":["D03N","D03S"],"name":"Bedford Park Blvd"},{"ids":["D04N","D04S"],"name":"Kingsbridge Rd"},{"ids":["D05N","D05S"],"name":"Fordham Rd"},{"ids":["D06N","D06S"],"name":"182-183 Sts"},{"ids":["D07N","D07S"],"name":"Tremont Av"},{"ids":["D08N","D08S"],"name":"174-175 Sts"},{"ids":["D09N","D09S"],"name":"170 St"},{"ids":["D10N","D10S"],"name":"167 St"},{"ids":["D11N","D11S"],"name":"161 St-Yankee Stadium"},{"ids":["D12N","D12S"],"name":"155 St"},{"ids":["D13N","D13S"],"name":"145 St"},{"ids":["A15N","A15S"],"name":"125 St"},{"ids":["A24N","A24S"],"name":"59 St-Columbus Circle"},{"ids":["D14N","D14S"],"name":"7 Av"},{"ids":["D15N","D15S"],"name":"47-50 Sts-Rockefeller Ctr"},{"ids":["D16N","D16S"],"name":"42 St-Bryant Pk"},{"ids":["D17N","D17S"],"name":"34 St-Herald Sq"},{"ids":["D20N","D20S"],"name":"W 4 St-Wash Sq"},{"ids":["D21N","D21S"],"name":"Broadway-Lafayette St"},{"ids":["D22N","D22S"],"name":"Grand St"},{"ids":["R30N","R30S"],"name":"DeKalb Av"},{"ids":["R31N","R31S"],"name":"Atlantic Av-Barclays Ctr"},{"ids":["R32N","R32S"],"name":"Union St"},{"ids":["R33N","R33S"],"name":"4 Av-9 St"},{"ids":["R34N","R34S"],"name":"Prospect Av"},{"ids":["R35N","R35S"],"name":"25 St"},{"ids":["R36N","R36S"],"name":"36 St"},{"ids":["B12N","B12S"],"name":"9 Av"},{"ids":["B13N","B13S"],"name":"Fort Hamilton Pkwy"},{"ids":["B14N","B14S"],"name":"50 St"},{"ids":["B15N","B15S"],"name":"55 St"},{"ids":["B16N","B16S"],"name":"62 St"},{"ids":["B17N","B17S"],"name":"71 St"},{"ids":["B18N","B18S"],"name":"79 St"},{"ids":["B19N","B19S"],"name":"18 Av"},{"ids":["B20N","B20S"],"name":"20 Av"},{"ids":["B21N","B21S"],"name":"Bay Pkwy"},{"ids":["B22N","B22S"],"name":"25 Av"},{"ids":["B23N","B23S"],"name":"Bay 50 St"},{"ids":["D43N","D43S"],"name":"Coney Island-Stillwell Av"}]},{"routeId":"E","name":"E \u2014 8 Avenue Local","symbolText":"E","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"2850AD","stops":[{"ids":["G05N","G05S"],"name":"Jamaica Center-Parsons/Archer"},{"ids":["G06N","G06S"],"name":"Sutphin Blvd-Archer Av-JFK Airport"},{"ids":["G07N","G07S"],"name":"Jamaica-Van Wyck"},{"ids":["F05N","F05S"],"name":"Briarwood"},{"ids":["F01N","F01S"],"name":"Jamaica-179 St"},{"ids":["F03N","F03S"],"name":"Parsons Blvd"},{"ids":["F06N","F06S"],"name":"Kew Gardens-Union Tpke"},{"ids":["F07N","F07S"],"name":"75 Av"},{"ids":["G08N","G08S"],"name":"Forest Hills-71 Av"},{"ids":["G09N","G09S"],"name":"67 Av"},{"ids":["G10N","G10S"],"name":"63 Dr-Rego Park"},{"ids":["G11N","G11S"],"name":"Woodhaven Blvd"},{"ids":["G12N","G12S"],"name":"Grand Av-Newtown"},{"ids":["G13N","G13S"],"name":"Elmhurst Av"},{"ids":["G14N","G14S"],"name":"Jackson Hts-Roosevelt Av"},{"ids":["G15N","G15S"],"name":"65 St"},{"ids":["G16N","G16S"],"name":"Northern Blvd"},{"ids":["G18N","G18S"],"name":"46 St"},{"ids":["G19N","G19S"],"name":"Steinway St"},{"ids":["G20N","G20S"],"name":"36 St"},{"ids":["G21N","G21S"],"name":"Queens Plaza"},{"ids":["F09N","F09S"],"name":"Court Sq-23 St"},{"ids":["F11N","F11S"],"name":"Lexington Av/53 St"},{"ids":["F12N","F12S"],"name":"5 Av/53 St"},{"ids":["D14N","D14S"],"name":"7 Av"},{"ids":["A25N","A25S"],"name":"50 St"},{"ids":["A27N","A27S"],"name":"42 St-Port Authority Bus Terminal"},{"ids":["A28N","A28S"],"name":"34 St-Penn Station"},{"ids":["A30N","A30S"],"name":"23 St"},{"ids":["A31N","A31S"],"name":"14 St"},{"ids":["A32N","A32S"],"name":"W 4 St-Wash Sq"},{"ids":["A33N","A33S"],"name":"Spring St"},{"ids":["A34N","A34S"],"name":"Canal St"},{"ids":["E01N","E01S"],"name":"World Trade Center"}]},{"routeId":"F","name":"F \u2014 Queens Blvd Express/ 6 Av Local","symbolText":"F","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"FF6319","stops":[{"ids":["F01N","F01S"],"name":"Jamaica-179 St"},{"ids":["F02N","F02S"],"name":"169 St"},{"ids":["F03N","F03S"],"name":"Parsons Blvd"},{"ids":["F04N","F04S"],"name":"Sutphin Blvd"},{"ids":["F05N","F05S"],"name":"Briarwood"},{"ids":["F06N","F06S"],"name":"Kew Gardens-Union Tpke"},{"ids":["F07N","F07S"],"name":"75 Av"},{"ids":["G08N","G08S"],"name":"Forest Hills-71 Av"},{"ids":["G14N","G14S"],"name":"Jackson Hts-Roosevelt Av"},{"ids":["B04N","B04S"],"name":"21 St-Queensbridge"},{"ids":["B06N","B06S"],"name":"Roosevelt Island"},{"ids":["B08N","B08S"],"name":"Lexington Av/63 St"},{"ids":["B10N","B10S"],"name":"57 St"},{"ids":["D15N","D15S"],"name":"47-50 Sts-Rockefeller Ctr"},{"ids":["D16N","D16S"],"name":"42 St-Bryant Pk"},{"ids":["D17N","D17S"],"name":"34 St-Herald Sq"},{"ids":["D18N","D18S"],"name":"23 St"},{"ids":["D19N","D19S"],"name":"14 St"},{"ids":["D20N","D20S"],"name":"W 4 St-Wash Sq"},{"ids":["D21N","D21S"],"name":"Broadway-Lafayette St"},{"ids":["F14N","F14S"],"name":"2 Av"},{"ids":["F15N","F15S"],"name":"Delancey St-Essex St"},{"ids":["F16N","F16S"],"name":"East Broadway"},{"ids":["F18N","F18S"],"name":"York St"},{"ids":["A41N","A41S"],"name":"Jay St-MetroTech"},{"ids":["F20N","F20S"],"name":"Bergen St"},{"ids":["F21N","F21S"],"name":"Carroll St"},{"ids":["F22N","F22S"],"name":"Smith-9 Sts"},{"ids":["F23N","F23S"],"name":"4 Av-9 St"},{"ids":["F24N","F24S"],"name":"7 Av"},{"ids":["F25N","F25S"],"name":"15 St-Prospect Park"},{"ids":["F26N","F26S"],"name":"Fort Hamilton Pkwy"},{"ids":["F27N","F27S"],"name":"Church Av"},{"ids":["F29N","F29S"],"name":"Ditmas Av"},{"ids":["F30N","F30S"],"name":"18 Av"},{"ids":["F31N","F31S"],"name":"Avenue I"},{"ids":["F32N","F32S"],"name":"Bay Pkwy"},{"ids":["F33N","F33S"],"name":"Avenue N"},{"ids":["F34N","F34S"],"name":"Avenue P"},{"ids":["F35N","F35S"],"name":"Kings Hwy"},{"ids":["F36N","F36S"],"name":"Avenue U"},{"ids":["F38N","F38S"],"name":"Avenue X"},{"ids":["F39N","F39S"],"name":"Neptune Av"},{"ids":["D42N","D42S"],"name":"W 8 St-NY Aquarium"},{"ids":["D43N","D43S"],"name":"Coney Island-Stillwell Av"}]},{"routeId":"FS","name":"S \u2014 Franklin Avenue Shuttle","symbolText":"S","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"6D6E71","stops":[{"ids":["S01N","S01S"],"name":"Franklin Av"},{"ids":["S03N","S03S"],"name":"Park Pl"},{"ids":["S04N","S04S"],"name":"Botanic Garden"},{"ids":["D26N","D26S"],"name":"Prospect Park"}]},{"routeId":"G","name":"G \u2014 Brooklyn-Queens Crosstown","symbolText":"G","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"6CBE45","stops":[{"ids":["G22N","G22S"],"name":"Court Sq"},{"ids":["G24N","G24S"],"name":"21 St"},{"ids":["G26N","G26S"],"name":"Greenpoint Av"},{"ids":["G28N","G28S"],"name":"Nassau Av"},{"ids":["G29N","G29S"],"name":"Metropolitan Av"},{"ids":["G30N","G30S"],"name":"Broadway"},{"ids":["G31N","G31S"],"name":"Flushing Av"},{"ids":["G32N","G32S"],"name":"Myrtle-Willoughby Avs"},{"ids":["G33N","G33S"],"name":"Bedford-Nostrand Avs"},{"ids":["G34N","G34S"],"name":"Classon Av"},{"ids":["G35N","G35S"],"name":"Clinton-Washington Avs"},{"ids":["G36N","G36S"],"name":"Fulton St"},{"ids":["A42N","A42S"],"name":"Hoyt-Schermerhorn Sts"},{"ids":["F20N","F20S"],"name":"Bergen St"},{"ids":["F21N","F21S"],"name":"Carroll St"},{"ids":["F22N","F22S"],"name":"Smith-9 Sts"},{"ids":["F23N","F23S"],"name":"4 Av-9 St"},{"ids":["F24N","F24S"],"name":"7 Av"},{"ids":["F25N","F25S"],"name":"15 St-Prospect Park"},{"ids":["F26N","F26S"],"name":"Fort Hamilton Pkwy"},{"ids":["F27N","F27S"],"name":"Church Av"}]},{"routeId":"J","name":"J \u2014 Nassau St Local","symbolText":"J","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"996633","stops":[{"ids":["G05N","G05S"],"name":"Jamaica Center-Parsons/Archer"},{"ids":["G06N","G06S"],"name":"Sutphin Blvd-Archer Av-JFK Airport"},{"ids":["J12N","J12S"],"name":"121 St"},{"ids":["J13N","J13S"],"name":"111 St"},{"ids":["J14N","J14S"],"name":"104 St"},{"ids":["J15N","J15S"],"name":"Woodhaven Blvd"},{"ids":["J16N","J16S"],"name":"85 St-Forest Pkwy"},{"ids":["J17N","J17S"],"name":"75 St-Elderts Ln"},{"ids":["J19N","J19S"],"name":"Cypress Hills"},{"ids":["J20N","J20S"],"name":"Crescent St"},{"ids":["J21N","J21S"],"name":"Norwood Av"},{"ids":["J22N","J22S"],"name":"Cleveland St"},{"ids":["J23N","J23S"],"name":"Van Siclen Av"},{"ids":["J24N","J24S"],"name":"Alabama Av"},{"ids":["J27N","J27S"],"name":"Broadway Junction"},{"ids":["J28N","J28S"],"name":"Chauncey St"},{"ids":["J29N","J29S"],"name":"Halsey St"},{"ids":["J30N","J30S"],"name":"Gates Av"},{"ids":["J31N","J31S"],"name":"Kosciuszko St"},{"ids":["M11N","M11S"],"name":"Myrtle Av"},{"ids":["M12N","M12S"],"name":"Flushing Av"},{"ids":["M13N","M13S"],"name":"Lorimer St"},{"ids":["M14N","M14S"],"name":"Hewes St"},{"ids":["M16N","M16S"],"name":"Marcy Av"},{"ids":["M18N","M18S"],"name":"Delancey St-Essex St"},{"ids":["M19N","M19S"],"name":"Bowery"},{"ids":["M20N","M20S"],"name":"Canal St"},{"ids":["M21N","M21S"],"name":"Chambers St"},{"ids":["M22N","M22S"],"name":"Fulton St"},{"ids":["M23N","M23S"],"name":"Broad St"}]},{"routeId":"L","name":"L \u2014 14 St-Canarsie Local","symbolText":"L","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"A7A9AC","stops":[{"ids":["L01N","L01S"],"name":"8 Av"},{"ids":["L02N","L02S"],"name":"6 Av"},{"ids":["L03N","L03S"],"name":"14 St-Union Sq."},{"ids":["L05N","L05S"],"name":"3 Av"},{"ids":["L06N","L06S"],"name":"1 Av"},{"ids":["L08N","L08S"],"name":"Bedford Av"},{"ids":["L10N","L10S"],"name":"Lorimer St"},{"ids":["L11N","L11S"],"name":"Graham Av"},{"ids":["L12N","L12S"],"name":"Grand St"},{"ids":["L13N","L13S"],"name":"Montrose Av"},{"ids":["L14N","L14S"],"name":"Morgan Av"},{"ids":["L15N","L15S"],"name":"Jefferson St"},{"ids":["L16N","L16S"],"name":"DeKalb Av"},{"ids":["L17N","L17S"],"name":"Myrtle-Wyckoff Avs"},{"ids":["L19N","L19S"],"name":"Halsey St"},{"ids":["L20N","L20S"],"name":"Wilson Av"},{"ids":["L21N","L21S"],"name":"Bushwick Av-Aberdeen St"},{"ids":["L22N","L22S"],"name":"Broadway Junction"},{"ids":["L24N","L24S"],"name":"Atlantic Av"},{"ids":["L25N","L25S"],"name":"Sutter Av"},{"ids":["L26N","L26S"],"name":"Livonia Av"},{"ids":["L27N","L27S"],"name":"New Lots Av"},{"ids":["L28N","L28S"],"name":"East 105 St"},{"ids":["L29N","L29S"],"name":"Canarsie-Rockaway Pkwy"}]},{"routeId":"M","name":"M \u2014 Queens Blvd Local/6 Av Local","symbolText":"M","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"FF6319","stops":[{"ids":["G08N","G08S"],"name":"Forest Hills-71 Av"},{"ids":["G09N","G09S"],"name":"67 Av"},{"ids":["G10N","G10S"],"name":"63 Dr-Rego Park"},{"ids":["G11N","G11S"],"name":"Woodhaven Blvd"},{"ids":["G12N","G12S"],"name":"Grand Av-Newtown"},{"ids":["G13N","G13S"],"name":"Elmhurst Av"},{"ids":["G14N","G14S"],"name":"Jackson Hts-Roosevelt Av"},{"ids":["G15N","G15S"],"name":"65 St"},{"ids":["G16N","G16S"],"name":"Northern Blvd"},{"ids":["G18N","G18S"],"name":"46 St"},{"ids":["G19N","G19S"],"name":"Steinway St"},{"ids":["G20N","G20S"],"name":"36 St"},{"ids":["G21N","G21S"],"name":"Queens Plaza"},{"ids":["F09N","F09S"],"name":"Court Sq-23 St"},{"ids":["F11N","F11S"],"name":"Lexington Av/53 St"},{"ids":["F12N","F12S"],"name":"5 Av/53 St"},{"ids":["D15N","D15S"],"name":"47-50 Sts-Rockefeller Ctr"},{"ids":["D16N","D16S"],"name":"42 St-Bryant Pk"},{"ids":["D17N","D17S"],"name":"34 St-Herald Sq"},{"ids":["D18N","D18S"],"name":"23 St"},{"ids":["D19N","D19S"],"name":"14 St"},{"ids":["D20N","D20S"],"name":"W 4 St-Wash Sq"},{"ids":["D21N","D21S"],"name":"Broadway-Lafayette St"},{"ids":["M18N","M18S"],"name":"Delancey St-Essex St"},{"ids":["M16N","M16S"],"name":"Marcy Av"},{"ids":["M14N","M14S"],"name":"Hewes St"},{"ids":["M13N","M13S"],"name":"Lorimer St"},{"ids":["M12N","M12S"],"name":"Flushing Av"},{"ids":["M11N","M11S"],"name":"Myrtle Av"},{"ids":["M10N","M10S"],"name":"Central Av"},{"ids":["M09N","M09S"],"name":"Knickerbocker Av"},{"ids":["M08N","M08S"],"name":"Myrtle-Wyckoff Avs"},{"ids":["M06N","M06S"],"name":"Seneca Av"},{"ids":["M05N","M05S"],"name":"Forest Av"},{"ids":["M04N","M04S"],"name":"Fresh Pond Rd"},{"ids":["M01N","M01S"],"name":"Middle Village-Metropolitan Av"}]},{"routeId":"N","name":"N \u2014 Broadway Local","symbolText":"N","symbolTextColor":"000000","symbolShape":"circle","symbolColor":"FCCC0A","stops":[{"ids":["R01N","R01S"],"name":"Astoria-Ditmars Blvd"},{"ids":["R03N","R03S"],"name":"Astoria Blvd"},{"ids":["R04N","R04S"],"name":"30 Av"},{"ids":["R05N","R05S"],"name":"Broadway"},{"ids":["R06N","R06S"],"name":"36 Av"},{"ids":["R08N","R08S"],"name":"39 Av-Dutch Kills"},{"ids":["R09N","R09S"],"name":"Queensboro Plaza"},{"ids":["R11N","R11S"],"name":"Lexington Av/59 St"},{"ids":["R13N","R13S"],"name":"5 Av/59 St"},{"ids":["Q05S"],"name":"96 St"},{"ids":["Q04S"],"name":"86 St"},{"ids":["Q03S"],"name":"72 St"},{"ids":["B08S"],"name":"Lexington Av/63 St"},{"ids":["R14N","R14S"],"name":"57 St-7 Av"},{"ids":["R15N","R15S"],"name":"49 St"},{"ids":["R16N","R16S"],"name":"Times Sq-42 St"},{"ids":["R17N","R17S"],"name":"34 St-Herald Sq"},{"ids":["R18N","R18S"],"name":"28 St"},{"ids":["R19N","R19S"],"name":"23 St"},{"ids":["R20N","R20S"],"name":"14 St-Union Sq"},{"ids":["R21N","R21S"],"name":"8 St-NYU"},{"ids":["R22N","R22S"],"name":"Prince St"},{"ids":["R23N","R23S"],"name":"Canal St"},{"ids":["R24N","R24S"],"name":"City Hall"},{"ids":["R25N","R25S"],"name":"Cortlandt St"},{"ids":["R26N","R26S"],"name":"Rector St"},{"ids":["R27N","R27S"],"name":"Whitehall St-South Ferry"},{"ids":["R28N","R28S"],"name":"Court St"},{"ids":["R29N","R29S"],"name":"Jay St-MetroTech"},{"ids":["Q01N","Q01S"],"name":"Canal St"},{"ids":["R30N","R30S"],"name":"DeKalb Av"},{"ids":["R31N","R31S"],"name":"Atlantic Av-Barclays Ctr"},{"ids":["R32N","R32S"],"name":"Union St"},{"ids":["R33N","R33S"],"name":"4 Av-9 St"},{"ids":["R34N","R34S"],"name":"Prospect Av"},{"ids":["R35N","R35S"],"name":"25 St"},{"ids":["R36N","R36S"],"name":"36 St"},{"ids":["R39N","R39S"],"name":"45 St"},{"ids":["R40N","R40S"],"name":"53 St"},{"ids":["R41N","R41S"],"name":"59 St"},{"ids":["N02N","N02S"],"name":"8 Av"},{"ids":["N03N","N03S"],"name":"Fort Hamilton Pkwy"},{"ids":["N04N","N04S"],"name":"New Utrecht Av"},{"ids":["N05N","N05S"],"name":"18 Av"},{"ids":["N06N","N06S"],"name":"20 Av"},{"ids":["N07N","N07S"],"name":"Bay Pkwy"},{"ids":["N08N","N08S"],"name":"Kings Hwy"},{"ids":["N09N","N09S"],"name":"Avenue U"},{"ids":["N10N","N10S"],"name":"86 St"},{"ids":["D43N","D43S"],"name":"Coney Island-Stillwell Av"}]},{"routeId":"Q","name":"Q \u2014 Broadway Express","symbolText":"Q","symbolTextColor":"000000","symbolShape":"circle","symbolColor":"FCCC0A","stops":[{"ids":["Q05N","Q05S"],"name":"96 St"},{"ids":["Q04N","Q04S"],"name":"86 St"},{"ids":["Q03N","Q03S"],"name":"72 St"},{"ids":["B08N","B08S"],"name":"Lexington Av/63 St"},{"ids":["R14N","R14S"],"name":"57 St-7 Av"},{"ids":["R15N","R15S"],"name":"49 St"},{"ids":["R16N","R16S"],"name":"Times Sq-42 St"},{"ids":["R17N","R17S"],"name":"34 St-Herald Sq"},{"ids":["R18N","R18S"],"name":"28 St"},{"ids":["R19N","R19S"],"name":"23 St"},{"ids":["R20N","R20S"],"name":"14 St-Union Sq"},{"ids":["R21N","R21S"],"name":"8 St-NYU"},{"ids":["R22N","R22S"],"name":"Prince St"},{"ids":["Q01N","Q01S"],"name":"Canal St"},{"ids":["R30N","R30S"],"name":"DeKalb Av"},{"ids":["D24N","D24S"],"name":"Atlantic Av-Barclays Ctr"},{"ids":["D25N","D25S"],"name":"7 Av"},{"ids":["D26N","D26S"],"name":"Prospect Park"},{"ids":["D27N","D27S"],"name":"Parkside Av"},{"ids":["D28N","D28S"],"name":"Church Av"},{"ids":["D29N","D29S"],"name":"Beverley Rd"},{"ids":["D30N","D30S"],"name":"Cortelyou Rd"},{"ids":["D31N","D31S"],"name":"Newkirk Plaza"},{"ids":["D32N","D32S"],"name":"Avenue H"},{"ids":["D33N","D33S"],"name":"Avenue J"},{"ids":["D34N","D34S"],"name":"Avenue M"},{"ids":["D35N","D35S"],"name":"Kings Hwy"},{"ids":["D37N","D37S"],"name":"Avenue U"},{"ids":["D38N","D38S"],"name":"Neck Rd"},{"ids":["D39N","D39S"],"name":"Sheepshead Bay"},{"ids":["D40N","D40S"],"name":"Brighton Beach"},{"ids":["D41N","D41S"],"name":"Ocean Pkwy"},{"ids":["D42N","D42S"],"name":"W 8 St-NY Aquarium"},{"ids":["D43N","D43S"],"name":"Coney Island-Stillwell Av"}]},{"routeId":"R","name":"R \u2014 Broadway Local","symbolText":"R","symbolTextColor":"000000","symbolShape":"circle","symbolColor":"FCCC0A","stops":[{"ids":["G08N","G08S"],"name":"Forest Hills-71 Av"},{"ids":["G09N","G09S"],"name":"67 Av"},{"ids":["G10N","G10S"],"name":"63 Dr-Rego Park"},{"ids":["G11N","G11S"],"name":"Woodhaven Blvd"},{"ids":["G12N","G12S"],"name":"Grand Av-Newtown"},{"ids":["G13N","G13S"],"name":"Elmhurst Av"},{"ids":["G14N","G14S"],"name":"Jackson Hts-Roosevelt Av"},{"ids":["G15N","G15S"],"name":"65 St"},{"ids":["G16N","G16S"],"name":"Northern Blvd"},{"ids":["G18N","G18S"],"name":"46 St"},{"ids":["G19N","G19S"],"name":"Steinway St"},{"ids":["G20N","G20S"],"name":"36 St"},{"ids":["G21N","G21S"],"name":"Queens Plaza"},{"ids":["R11N","R11S"],"name":"Lexington Av/59 St"},{"ids":["R13N","R13S"],"name":"5 Av/59 St"},{"ids":["R14N","R14S"],"name":"57 St-7 Av"},{"ids":["R15N","R15S"],"name":"49 St"},{"ids":["R16N","R16S"],"name":"Times Sq-42 St"},{"ids":["R17N","R17S"],"name":"34 St-Herald Sq"},{"ids":["R18N","R18S"],"name":"28 St"},{"ids":["R19N","R19S"],"name":"23 St"},{"ids":["R20N","R20S"],"name":"14 St-Union Sq"},{"ids":["R21N","R21S"],"name":"8 St-NYU"},{"ids":["R22N","R22S"],"name":"Prince St"},{"ids":["R23N","R23S"],"name":"Canal St"},{"ids":["R24N","R24S"],"name":"City Hall"},{"ids":["R25N","R25S"],"name":"Cortlandt St"},{"ids":["R26N","R26S"],"name":"Rector St"},{"ids":["R27N","R27S"],"name":"Whitehall St-South Ferry"},{"ids":["R28N","R28S"],"name":"Court St"},{"ids":["R29N","R29S"],"name":"Jay St-MetroTech"},{"ids":["R30N","R30S"],"name":"DeKalb Av"},{"ids":["R31N","R31S"],"name":"Atlantic Av-Barclays Ctr"},{"ids":["R32N","R32S"],"name":"Union St"},{"ids":["R33N","R33S"],"name":"4 Av-9 St"},{"ids":["R34N","R34S"],"name":"Prospect Av"},{"ids":["R35N","R35S"],"name":"25 St"},{"ids":["R36N","R36S"],"name":"36 St"},{"ids":["R39N","R39S"],"name":"45 St"},{"ids":["R40N","R40S"],"name":"53 St"},{"ids":["R41N","R41S"],"name":"59 St"},{"ids":["R42N","R42S"],"name":"Bay Ridge Av"},{"ids":["R43N","R43S"],"name":"77 St"},{"ids":["R44N","R44S"],"name":"86 St"},{"ids":["R45N","R45S"],"name":"Bay Ridge-95 St"}]},{"routeId":"H","name":"S \u2014 Rockaway Park Shuttle","symbolText":"S","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"6D6E71","stops":[{"ids":["H04N","H04S"],"name":"Broad Channel"},{"ids":["H12N","H12S"],"name":"Beach 90 St"},{"ids":["H13N","H13S"],"name":"Beach 98 St"},{"ids":["H14N","H14S"],"name":"Beach 105 St"},{"ids":["H15N","H15S"],"name":"Rockaway Park-Beach 116 St"}]},{"routeId":"W","name":"W \u2014 Broadway Local","symbolText":"W","symbolTextColor":"000000","symbolShape":"circle","symbolColor":"FCCC0A","stops":[{"ids":["R01N","R01S"],"name":"Astoria-Ditmars Blvd"},{"ids":["R03N","R03S"],"name":"Astoria Blvd"},{"ids":["R04N","R04S"],"name":"30 Av"},{"ids":["R05N","R05S"],"name":"Broadway"},{"ids":["R06N","R06S"],"name":"36 Av"},{"ids":["R08N","R08S"],"name":"39 Av-Dutch Kills"},{"ids":["R09N","R09S"],"name":"Queensboro Plaza"},{"ids":["R11N","R11S"],"name":"Lexington Av/59 St"},{"ids":["R13N","R13S"],"name":"5 Av/59 St"},{"ids":["R14N","R14S"],"name":"57 St-7 Av"},{"ids":["R15N","R15S"],"name":"49 St"},{"ids":["R16N","R16S"],"name":"Times Sq-42 St"},{"ids":["R17N","R17S"],"name":"34 St-Herald Sq"},{"ids":["R18N","R18S"],"name":"28 St"},{"ids":["R19N","R19S"],"name":"23 St"},{"ids":["R20N","R20S"],"name":"14 St-Union Sq"},{"ids":["R21N","R21S"],"name":"8 St-NYU"},{"ids":["R22N","R22S"],"name":"Prince St"},{"ids":["R23N","R23S"],"name":"Canal St"},{"ids":["R24N","R24S"],"name":"City Hall"},{"ids":["R25N","R25S"],"name":"Cortlandt St"},{"ids":["R26N","R26S"],"name":"Rector St"},{"ids":["R27N","R27S"],"name":"Whitehall St-South Ferry"},{"ids":["R28N","R28S"],"name":"Court St"},{"ids":["R29N","R29S"],"name":"Jay St-MetroTech"},{"ids":["R30N","R30S"],"name":"DeKalb Av"},{"ids":["R31N","R31S"],"name":"Atlantic Av-Barclays Ctr"},{"ids":["R32N","R32S"],"name":"Union St"},{"ids":["R33N","R33S"],"name":"4 Av-9 St"},{"ids":["R34N","R34S"],"name":"Prospect Av"},{"ids":["R35N","R35S"],"name":"25 St"},{"ids":["R36N","R36S"],"name":"36 St"},{"ids":["R39N","R39S"],"name":"45 St"},{"ids":["R40N","R40S"],"name":"53 St"},{"ids":["R41N","R41S"],"name":"59 St"},{"ids":["N02N","N02S"],"name":"8 Av"},{"ids":["N03N","N03S"],"name":"Fort Hamilton Pkwy"},{"ids":["N04N","N04S"],"name":"New Utrecht Av"},{"ids":["N05N","N05S"],"name":"18 Av"},{"ids":["N06N","N06S"],"name":"20 Av"},{"ids":["N07N","N07S"],"name":"Bay Pkwy"},{"ids":["N08N","N08S"],"name":"Kings Hwy"},{"ids":["N09N","N09S"],"name":"Avenue U"},{"ids":["N10N","N10S"],"name":"86 St"}]},{"routeId":"Z","name":"Z \u2014 Nassau St Express","symbolText":"Z","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"996633","stops":[{"ids":["G05N","G05S"],"name":"Jamaica Center-Parsons/Archer"},{"ids":["G06N","G06S"],"name":"Sutphin Blvd-Archer Av-JFK Airport"},{"ids":["J12N","J12S"],"name":"121 St"},{"ids":["J14N","J14S"],"name":"104 St"},{"ids":["J15N","J15S"],"name":"Woodhaven Blvd"},{"ids":["J17N","J17S"],"name":"75 St-Elderts Ln"},{"ids":["J20N","J20S"],"name":"Crescent St"},{"ids":["J21N","J21S"],"name":"Norwood Av"},{"ids":["J23N","J23S"],"name":"Van Siclen Av"},{"ids":["J24N","J24S"],"name":"Alabama Av"},{"ids":["J27N","J27S"],"name":"Broadway Junction"},{"ids":["J28N","J28S"],"name":"Chauncey St"},{"ids":["J30N","J30S"],"name":"Gates Av"},{"ids":["M11N","M11S"],"name":"Myrtle Av"},{"ids":["M16N","M16S"],"name":"Marcy Av"},{"ids":["M18N","M18S"],"name":"Delancey St-Essex St"},{"ids":["M19N","M19S"],"name":"Bowery"},{"ids":["M20N","M20S"],"name":"Canal St"},{"ids":["M21N","M21S"],"name":"Chambers St"},{"ids":["M22N","M22S"],"name":"Fulton St"},{"ids":["M23N","M23S"],"name":"Broad St"}]},{"routeId":"SI","name":"SIR \u2014 Staten Island Railway","symbolText":"SIR","symbolTextColor":"FFFFFF","symbolShape":"circle","symbolColor":"127BC5","stops":[{"ids":["S31N","S31S"],"name":"St George"},{"ids":["S30N","S30S"],"name":"Tompkinsville"},{"ids":["S29N","S29S"],"name":"Stapleton"},{"ids":["S28N","S28S"],"name":"Clifton"},{"ids":["S27N","S27S"],"name":"Grasmere"},{"ids":["S26N","S26S"],"name":"Old Town"},{"ids":["S25N","S25S"],"name":"Dongan Hills"},{"ids":["S24N","S24S"],"name":"Jefferson Av"},{"ids":["S23N","S23S"],"name":"Grant City"},{"ids":["S22N","S22S"],"name":"New Dorp"},{"ids":["S21N","S21S"],"name":"Oakwood Heights"},{"ids":["S20N","S20S"],"name":"Bay Terrace"},{"ids":["S19N","S19S"],"name":"Great Kills"},{"ids":["S18N","S18S"],"name":"Eltingville"},{"ids":["S17N","S17S"],"name":"Annadale"},{"ids":["S16N","S16S"],"name":"Huguenot"},{"ids":["S15N","S15S"],"name":"Prince's Bay"},{"ids":["S14N","S14S"],"name":"Pleasant Plains"},{"ids":["S13N","S13S"],"name":"Richmond Valley"},{"ids":["S11N","S11S"],"name":"Arthur Kill"},{"ids":["S09N","S09S"],"name":"Tottenville"}]}]}
+{
+  "name": "New York City - Subway",
+  "routes": [
+    {
+      "routeId": "1",
+      "name": "1 — Broadway - 7 Avenue Local",
+      "symbolText": "1",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "EE352E",
+      "stops": [
+        {
+          "ids": [
+            "101N",
+            "101S"
+          ],
+          "name": "Van Cortlandt Park-242 St"
+        },
+        {
+          "ids": [
+            "103N",
+            "103S"
+          ],
+          "name": "238 St"
+        },
+        {
+          "ids": [
+            "104N",
+            "104S"
+          ],
+          "name": "231 St"
+        },
+        {
+          "ids": [
+            "106N",
+            "106S"
+          ],
+          "name": "Marble Hill-225 St"
+        },
+        {
+          "ids": [
+            "107N",
+            "107S"
+          ],
+          "name": "215 St"
+        },
+        {
+          "ids": [
+            "108N",
+            "108S"
+          ],
+          "name": "207 St"
+        },
+        {
+          "ids": [
+            "109N",
+            "109S"
+          ],
+          "name": "Dyckman St"
+        },
+        {
+          "ids": [
+            "110N",
+            "110S"
+          ],
+          "name": "191 St"
+        },
+        {
+          "ids": [
+            "111N",
+            "111S"
+          ],
+          "name": "181 St"
+        },
+        {
+          "ids": [
+            "112N",
+            "112S"
+          ],
+          "name": "168 St-Washington Hts"
+        },
+        {
+          "ids": [
+            "113N",
+            "113S"
+          ],
+          "name": "157 St"
+        },
+        {
+          "ids": [
+            "114N",
+            "114S"
+          ],
+          "name": "145 St"
+        },
+        {
+          "ids": [
+            "115N",
+            "115S"
+          ],
+          "name": "137 St-City College"
+        },
+        {
+          "ids": [
+            "116N",
+            "116S"
+          ],
+          "name": "125 St"
+        },
+        {
+          "ids": [
+            "117N",
+            "117S"
+          ],
+          "name": "116 St-Columbia University"
+        },
+        {
+          "ids": [
+            "118N",
+            "118S"
+          ],
+          "name": "Cathedral Pkwy (110 St)"
+        },
+        {
+          "ids": [
+            "119N",
+            "119S"
+          ],
+          "name": "103 St"
+        },
+        {
+          "ids": [
+            "120N",
+            "120S"
+          ],
+          "name": "96 St"
+        },
+        {
+          "ids": [
+            "121N",
+            "121S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "122N",
+            "122S"
+          ],
+          "name": "79 St"
+        },
+        {
+          "ids": [
+            "123N",
+            "123S"
+          ],
+          "name": "72 St"
+        },
+        {
+          "ids": [
+            "124N",
+            "124S"
+          ],
+          "name": "66 St-Lincoln Center"
+        },
+        {
+          "ids": [
+            "125N",
+            "125S"
+          ],
+          "name": "59 St-Columbus Circle"
+        },
+        {
+          "ids": [
+            "126N",
+            "126S"
+          ],
+          "name": "50 St"
+        },
+        {
+          "ids": [
+            "127N",
+            "127S"
+          ],
+          "name": "Times Sq-42 St"
+        },
+        {
+          "ids": [
+            "128N",
+            "128S"
+          ],
+          "name": "34 St-Penn Station"
+        },
+        {
+          "ids": [
+            "129N",
+            "129S"
+          ],
+          "name": "28 St"
+        },
+        {
+          "ids": [
+            "130N",
+            "130S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "131N",
+            "131S"
+          ],
+          "name": "18 St"
+        },
+        {
+          "ids": [
+            "132N",
+            "132S"
+          ],
+          "name": "14 St"
+        },
+        {
+          "ids": [
+            "133N",
+            "133S"
+          ],
+          "name": "Christopher St-Sheridan Sq"
+        },
+        {
+          "ids": [
+            "134N",
+            "134S"
+          ],
+          "name": "Houston St"
+        },
+        {
+          "ids": [
+            "135N",
+            "135S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "136N",
+            "136S"
+          ],
+          "name": "Franklin St"
+        },
+        {
+          "ids": [
+            "137N",
+            "137S"
+          ],
+          "name": "Chambers St"
+        },
+        {
+          "ids": [
+            "138N",
+            "138S"
+          ],
+          "name": "WTC Cortlandt"
+        },
+        {
+          "ids": [
+            "139N",
+            "139S"
+          ],
+          "name": "Rector St"
+        },
+        {
+          "ids": [
+            "142N",
+            "142S"
+          ],
+          "name": "South Ferry"
+        }
+      ]
+    },
+    {
+      "routeId": "2",
+      "name": "2 — 7 Avenue Express",
+      "symbolText": "2",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "EE352E",
+      "stops": [
+        {
+          "ids": [
+            "201N",
+            "201S"
+          ],
+          "name": "Wakefield-241 St"
+        },
+        {
+          "ids": [
+            "204N",
+            "204S"
+          ],
+          "name": "Nereid Av"
+        },
+        {
+          "ids": [
+            "205N",
+            "205S"
+          ],
+          "name": "233 St"
+        },
+        {
+          "ids": [
+            "206N",
+            "206S"
+          ],
+          "name": "225 St"
+        },
+        {
+          "ids": [
+            "207N",
+            "207S"
+          ],
+          "name": "219 St"
+        },
+        {
+          "ids": [
+            "208N",
+            "208S"
+          ],
+          "name": "Gun Hill Rd"
+        },
+        {
+          "ids": [
+            "209N",
+            "209S"
+          ],
+          "name": "Burke Av"
+        },
+        {
+          "ids": [
+            "210N",
+            "210S"
+          ],
+          "name": "Allerton Av"
+        },
+        {
+          "ids": [
+            "211N",
+            "211S"
+          ],
+          "name": "Pelham Pkwy"
+        },
+        {
+          "ids": [
+            "212N",
+            "212S"
+          ],
+          "name": "Bronx Park East"
+        },
+        {
+          "ids": [
+            "213N",
+            "213S"
+          ],
+          "name": "E 180 St"
+        },
+        {
+          "ids": [
+            "214N",
+            "214S"
+          ],
+          "name": "West Farms Sq-E Tremont Av"
+        },
+        {
+          "ids": [
+            "215N",
+            "215S"
+          ],
+          "name": "174 St"
+        },
+        {
+          "ids": [
+            "216N",
+            "216S"
+          ],
+          "name": "Freeman St"
+        },
+        {
+          "ids": [
+            "217N",
+            "217S"
+          ],
+          "name": "Simpson St"
+        },
+        {
+          "ids": [
+            "218N",
+            "218S"
+          ],
+          "name": "Intervale Av"
+        },
+        {
+          "ids": [
+            "219N",
+            "219S"
+          ],
+          "name": "Prospect Av"
+        },
+        {
+          "ids": [
+            "220N",
+            "220S"
+          ],
+          "name": "Jackson Av"
+        },
+        {
+          "ids": [
+            "221N",
+            "221S"
+          ],
+          "name": "3 Av-149 St"
+        },
+        {
+          "ids": [
+            "222N",
+            "222S"
+          ],
+          "name": "149 St-Grand Concourse"
+        },
+        {
+          "ids": [
+            "224N",
+            "224S"
+          ],
+          "name": "135 St"
+        },
+        {
+          "ids": [
+            "225N",
+            "225S"
+          ],
+          "name": "125 St"
+        },
+        {
+          "ids": [
+            "226N",
+            "226S"
+          ],
+          "name": "116 St"
+        },
+        {
+          "ids": [
+            "227N",
+            "227S"
+          ],
+          "name": "Central Park North (110 St)"
+        },
+        {
+          "ids": [
+            "120N",
+            "120S"
+          ],
+          "name": "96 St"
+        },
+        {
+          "ids": [
+            "121N",
+            "121S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "122N",
+            "122S"
+          ],
+          "name": "79 St"
+        },
+        {
+          "ids": [
+            "123N",
+            "123S"
+          ],
+          "name": "72 St"
+        },
+        {
+          "ids": [
+            "124N",
+            "124S"
+          ],
+          "name": "66 St-Lincoln Center"
+        },
+        {
+          "ids": [
+            "125N",
+            "125S"
+          ],
+          "name": "59 St-Columbus Circle"
+        },
+        {
+          "ids": [
+            "126N",
+            "126S"
+          ],
+          "name": "50 St"
+        },
+        {
+          "ids": [
+            "127N",
+            "127S"
+          ],
+          "name": "Times Sq-42 St"
+        },
+        {
+          "ids": [
+            "128N",
+            "128S"
+          ],
+          "name": "34 St-Penn Station"
+        },
+        {
+          "ids": [
+            "129N",
+            "129S"
+          ],
+          "name": "28 St"
+        },
+        {
+          "ids": [
+            "130N",
+            "130S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "131N",
+            "131S"
+          ],
+          "name": "18 St"
+        },
+        {
+          "ids": [
+            "132N",
+            "132S"
+          ],
+          "name": "14 St"
+        },
+        {
+          "ids": [
+            "133N",
+            "133S"
+          ],
+          "name": "Christopher St-Sheridan Sq"
+        },
+        {
+          "ids": [
+            "134N",
+            "134S"
+          ],
+          "name": "Houston St"
+        },
+        {
+          "ids": [
+            "135N",
+            "135S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "136N",
+            "136S"
+          ],
+          "name": "Franklin St"
+        },
+        {
+          "ids": [
+            "137N",
+            "137S"
+          ],
+          "name": "Chambers St"
+        },
+        {
+          "ids": [
+            "228N",
+            "228S"
+          ],
+          "name": "Park Place"
+        },
+        {
+          "ids": [
+            "229N",
+            "229S"
+          ],
+          "name": "Fulton St"
+        },
+        {
+          "ids": [
+            "230N",
+            "230S"
+          ],
+          "name": "Wall St"
+        },
+        {
+          "ids": [
+            "231N",
+            "231S"
+          ],
+          "name": "Clark St"
+        },
+        {
+          "ids": [
+            "232N",
+            "232S"
+          ],
+          "name": "Borough Hall"
+        },
+        {
+          "ids": [
+            "233N",
+            "233S"
+          ],
+          "name": "Hoyt St"
+        },
+        {
+          "ids": [
+            "234N",
+            "234S"
+          ],
+          "name": "Nevins St"
+        },
+        {
+          "ids": [
+            "235N",
+            "235S"
+          ],
+          "name": "Atlantic Av-Barclays Ctr"
+        },
+        {
+          "ids": [
+            "236N",
+            "236S"
+          ],
+          "name": "Bergen St"
+        },
+        {
+          "ids": [
+            "237N",
+            "237S"
+          ],
+          "name": "Grand Army Plaza"
+        },
+        {
+          "ids": [
+            "238N",
+            "238S"
+          ],
+          "name": "Eastern Pkwy-Brooklyn Museum"
+        },
+        {
+          "ids": [
+            "239N",
+            "239S"
+          ],
+          "name": "Franklin Av-Medgar Evers College"
+        },
+        {
+          "ids": [
+            "248N",
+            "248S"
+          ],
+          "name": "Nostrand Av"
+        },
+        {
+          "ids": [
+            "249N",
+            "249S"
+          ],
+          "name": "Kingston Av"
+        },
+        {
+          "ids": [
+            "250N",
+            "250S"
+          ],
+          "name": "Crown Hts-Utica Av"
+        },
+        {
+          "ids": [
+            "251N",
+            "251S"
+          ],
+          "name": "Sutter Av-Rutland Rd"
+        },
+        {
+          "ids": [
+            "252N",
+            "252S"
+          ],
+          "name": "Saratoga Av"
+        },
+        {
+          "ids": [
+            "253N",
+            "253S"
+          ],
+          "name": "Rockaway Av"
+        },
+        {
+          "ids": [
+            "254N",
+            "254S"
+          ],
+          "name": "Junius St"
+        },
+        {
+          "ids": [
+            "255N",
+            "255S"
+          ],
+          "name": "Pennsylvania Av"
+        },
+        {
+          "ids": [
+            "256N",
+            "256S"
+          ],
+          "name": "Van Siclen Av"
+        },
+        {
+          "ids": [
+            "257N",
+            "257S"
+          ],
+          "name": "New Lots Av"
+        },
+        {
+          "ids": [
+            "241N",
+            "241S"
+          ],
+          "name": "President St-Medgar Evers College"
+        },
+        {
+          "ids": [
+            "242N",
+            "242S"
+          ],
+          "name": "Sterling St"
+        },
+        {
+          "ids": [
+            "243N",
+            "243S"
+          ],
+          "name": "Winthrop St"
+        },
+        {
+          "ids": [
+            "244N",
+            "244S"
+          ],
+          "name": "Church Av"
+        },
+        {
+          "ids": [
+            "245N",
+            "245S"
+          ],
+          "name": "Beverly Rd"
+        },
+        {
+          "ids": [
+            "246N",
+            "246S"
+          ],
+          "name": "Newkirk Av"
+        },
+        {
+          "ids": [
+            "247N",
+            "247S"
+          ],
+          "name": "Flatbush Av-Brooklyn College"
+        }
+      ]
+    },
+    {
+      "routeId": "3",
+      "name": "3 — 7 Avenue Express",
+      "symbolText": "3",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "EE352E",
+      "stops": [
+        {
+          "ids": [
+            "301N",
+            "301S"
+          ],
+          "name": "Harlem-148 St"
+        },
+        {
+          "ids": [
+            "302N",
+            "302S"
+          ],
+          "name": "145 St"
+        },
+        {
+          "ids": [
+            "224N",
+            "224S"
+          ],
+          "name": "135 St"
+        },
+        {
+          "ids": [
+            "225N",
+            "225S"
+          ],
+          "name": "125 St"
+        },
+        {
+          "ids": [
+            "226N",
+            "226S"
+          ],
+          "name": "116 St"
+        },
+        {
+          "ids": [
+            "227N",
+            "227S"
+          ],
+          "name": "Central Park North (110 St)"
+        },
+        {
+          "ids": [
+            "120N",
+            "120S"
+          ],
+          "name": "96 St"
+        },
+        {
+          "ids": [
+            "123N",
+            "123S"
+          ],
+          "name": "72 St"
+        },
+        {
+          "ids": [
+            "127N",
+            "127S"
+          ],
+          "name": "Times Sq-42 St"
+        },
+        {
+          "ids": [
+            "128N",
+            "128S"
+          ],
+          "name": "34 St-Penn Station"
+        },
+        {
+          "ids": [
+            "132N",
+            "132S"
+          ],
+          "name": "14 St"
+        },
+        {
+          "ids": [
+            "137N",
+            "137S"
+          ],
+          "name": "Chambers St"
+        },
+        {
+          "ids": [
+            "228N",
+            "228S"
+          ],
+          "name": "Park Place"
+        },
+        {
+          "ids": [
+            "229N",
+            "229S"
+          ],
+          "name": "Fulton St"
+        },
+        {
+          "ids": [
+            "230N",
+            "230S"
+          ],
+          "name": "Wall St"
+        },
+        {
+          "ids": [
+            "231N",
+            "231S"
+          ],
+          "name": "Clark St"
+        },
+        {
+          "ids": [
+            "232N",
+            "232S"
+          ],
+          "name": "Borough Hall"
+        },
+        {
+          "ids": [
+            "233N",
+            "233S"
+          ],
+          "name": "Hoyt St"
+        },
+        {
+          "ids": [
+            "234N",
+            "234S"
+          ],
+          "name": "Nevins St"
+        },
+        {
+          "ids": [
+            "235N",
+            "235S"
+          ],
+          "name": "Atlantic Av-Barclays Ctr"
+        },
+        {
+          "ids": [
+            "236N",
+            "236S"
+          ],
+          "name": "Bergen St"
+        },
+        {
+          "ids": [
+            "237N",
+            "237S"
+          ],
+          "name": "Grand Army Plaza"
+        },
+        {
+          "ids": [
+            "238N",
+            "238S"
+          ],
+          "name": "Eastern Pkwy-Brooklyn Museum"
+        },
+        {
+          "ids": [
+            "239N",
+            "239S"
+          ],
+          "name": "Franklin Av-Medgar Evers College"
+        },
+        {
+          "ids": [
+            "248N",
+            "248S"
+          ],
+          "name": "Nostrand Av"
+        },
+        {
+          "ids": [
+            "249N",
+            "249S"
+          ],
+          "name": "Kingston Av"
+        },
+        {
+          "ids": [
+            "250N",
+            "250S"
+          ],
+          "name": "Crown Hts-Utica Av"
+        },
+        {
+          "ids": [
+            "251N",
+            "251S"
+          ],
+          "name": "Sutter Av-Rutland Rd"
+        },
+        {
+          "ids": [
+            "252N",
+            "252S"
+          ],
+          "name": "Saratoga Av"
+        },
+        {
+          "ids": [
+            "253N",
+            "253S"
+          ],
+          "name": "Rockaway Av"
+        },
+        {
+          "ids": [
+            "254N",
+            "254S"
+          ],
+          "name": "Junius St"
+        },
+        {
+          "ids": [
+            "255N",
+            "255S"
+          ],
+          "name": "Pennsylvania Av"
+        },
+        {
+          "ids": [
+            "256N",
+            "256S"
+          ],
+          "name": "Van Siclen Av"
+        },
+        {
+          "ids": [
+            "257N",
+            "257S"
+          ],
+          "name": "New Lots Av"
+        }
+      ]
+    },
+    {
+      "routeId": "4",
+      "name": "4 — Lexington Avenue Express",
+      "symbolText": "4",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "00933C",
+      "stops": [
+        {
+          "ids": [
+            "401N",
+            "401S"
+          ],
+          "name": "Woodlawn"
+        },
+        {
+          "ids": [
+            "402N",
+            "402S"
+          ],
+          "name": "Mosholu Pkwy"
+        },
+        {
+          "ids": [
+            "405N",
+            "405S"
+          ],
+          "name": "Bedford Park Blvd-Lehman College"
+        },
+        {
+          "ids": [
+            "406N",
+            "406S"
+          ],
+          "name": "Kingsbridge Rd"
+        },
+        {
+          "ids": [
+            "407N",
+            "407S"
+          ],
+          "name": "Fordham Rd"
+        },
+        {
+          "ids": [
+            "408N",
+            "408S"
+          ],
+          "name": "183 St"
+        },
+        {
+          "ids": [
+            "409N",
+            "409S"
+          ],
+          "name": "Burnside Av"
+        },
+        {
+          "ids": [
+            "410N",
+            "410S"
+          ],
+          "name": "176 St"
+        },
+        {
+          "ids": [
+            "411N",
+            "411S"
+          ],
+          "name": "Mt Eden Av"
+        },
+        {
+          "ids": [
+            "412N",
+            "412S"
+          ],
+          "name": "170 St"
+        },
+        {
+          "ids": [
+            "413N",
+            "413S"
+          ],
+          "name": "167 St"
+        },
+        {
+          "ids": [
+            "414N",
+            "414S"
+          ],
+          "name": "161 St-Yankee Stadium"
+        },
+        {
+          "ids": [
+            "415N",
+            "415S"
+          ],
+          "name": "149 St-Grand Concourse"
+        },
+        {
+          "ids": [
+            "416N",
+            "416S"
+          ],
+          "name": "138 St-Grand Concourse"
+        },
+        {
+          "ids": [
+            "621N",
+            "621S"
+          ],
+          "name": "125 St"
+        },
+        {
+          "ids": [
+            "622N",
+            "622S"
+          ],
+          "name": "116 St"
+        },
+        {
+          "ids": [
+            "623N",
+            "623S"
+          ],
+          "name": "110 St"
+        },
+        {
+          "ids": [
+            "624N",
+            "624S"
+          ],
+          "name": "103 St"
+        },
+        {
+          "ids": [
+            "625N",
+            "625S"
+          ],
+          "name": "96 St"
+        },
+        {
+          "ids": [
+            "626N",
+            "626S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "627N",
+            "627S"
+          ],
+          "name": "77 St"
+        },
+        {
+          "ids": [
+            "628N",
+            "628S"
+          ],
+          "name": "68 St-Hunter College"
+        },
+        {
+          "ids": [
+            "629N",
+            "629S"
+          ],
+          "name": "59 St"
+        },
+        {
+          "ids": [
+            "630N",
+            "630S"
+          ],
+          "name": "51 St"
+        },
+        {
+          "ids": [
+            "631N",
+            "631S"
+          ],
+          "name": "Grand Central-42 St"
+        },
+        {
+          "ids": [
+            "632N",
+            "632S"
+          ],
+          "name": "33 St"
+        },
+        {
+          "ids": [
+            "633N",
+            "633S"
+          ],
+          "name": "28 St"
+        },
+        {
+          "ids": [
+            "634N",
+            "634S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "635N",
+            "635S"
+          ],
+          "name": "14 St-Union Sq"
+        },
+        {
+          "ids": [
+            "636N",
+            "636S"
+          ],
+          "name": "Astor Pl"
+        },
+        {
+          "ids": [
+            "637N",
+            "637S"
+          ],
+          "name": "Bleecker St"
+        },
+        {
+          "ids": [
+            "638N",
+            "638S"
+          ],
+          "name": "Spring St"
+        },
+        {
+          "ids": [
+            "639N",
+            "639S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "640N",
+            "640S"
+          ],
+          "name": "Brooklyn Bridge-City Hall"
+        },
+        {
+          "ids": [
+            "418N",
+            "418S"
+          ],
+          "name": "Fulton St"
+        },
+        {
+          "ids": [
+            "419N",
+            "419S"
+          ],
+          "name": "Wall St"
+        },
+        {
+          "ids": [
+            "420N",
+            "420S"
+          ],
+          "name": "Bowling Green"
+        },
+        {
+          "ids": [
+            "423N",
+            "423S"
+          ],
+          "name": "Borough Hall"
+        },
+        {
+          "ids": [
+            "234N",
+            "234S"
+          ],
+          "name": "Nevins St"
+        },
+        {
+          "ids": [
+            "235N",
+            "235S"
+          ],
+          "name": "Atlantic Av-Barclays Ctr"
+        },
+        {
+          "ids": [
+            "236N",
+            "236S"
+          ],
+          "name": "Bergen St"
+        },
+        {
+          "ids": [
+            "237N",
+            "237S"
+          ],
+          "name": "Grand Army Plaza"
+        },
+        {
+          "ids": [
+            "238N",
+            "238S"
+          ],
+          "name": "Eastern Pkwy-Brooklyn Museum"
+        },
+        {
+          "ids": [
+            "239N",
+            "239S"
+          ],
+          "name": "Franklin Av-Medgar Evers College"
+        },
+        {
+          "ids": [
+            "248N",
+            "248S"
+          ],
+          "name": "Nostrand Av"
+        },
+        {
+          "ids": [
+            "249N",
+            "249S"
+          ],
+          "name": "Kingston Av"
+        },
+        {
+          "ids": [
+            "250N",
+            "250S"
+          ],
+          "name": "Crown Hts-Utica Av"
+        },
+        {
+          "ids": [
+            "251N",
+            "251S"
+          ],
+          "name": "Sutter Av-Rutland Rd"
+        },
+        {
+          "ids": [
+            "252N",
+            "252S"
+          ],
+          "name": "Saratoga Av"
+        },
+        {
+          "ids": [
+            "253N",
+            "253S"
+          ],
+          "name": "Rockaway Av"
+        },
+        {
+          "ids": [
+            "254N",
+            "254S"
+          ],
+          "name": "Junius St"
+        },
+        {
+          "ids": [
+            "255N",
+            "255S"
+          ],
+          "name": "Pennsylvania Av"
+        },
+        {
+          "ids": [
+            "256N",
+            "256S"
+          ],
+          "name": "Van Siclen Av"
+        },
+        {
+          "ids": [
+            "257N",
+            "257S"
+          ],
+          "name": "New Lots Av"
+        }
+      ]
+    },
+    {
+      "routeId": "5",
+      "name": "5 — Lexington Avenue Express",
+      "symbolText": "5",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "00933C",
+      "stops": [
+        {
+          "ids": [
+            "501N",
+            "501S"
+          ],
+          "name": "Eastchester-Dyre Av"
+        },
+        {
+          "ids": [
+            "502N",
+            "502S"
+          ],
+          "name": "Baychester Av"
+        },
+        {
+          "ids": [
+            "503N",
+            "503S"
+          ],
+          "name": "Gun Hill Rd"
+        },
+        {
+          "ids": [
+            "504N",
+            "504S"
+          ],
+          "name": "Pelham Pkwy"
+        },
+        {
+          "ids": [
+            "505N",
+            "505S"
+          ],
+          "name": "Morris Park"
+        },
+        {
+          "ids": [
+            "204N",
+            "204S"
+          ],
+          "name": "Nereid Av"
+        },
+        {
+          "ids": [
+            "205N",
+            "205S"
+          ],
+          "name": "233 St"
+        },
+        {
+          "ids": [
+            "206N",
+            "206S"
+          ],
+          "name": "225 St"
+        },
+        {
+          "ids": [
+            "207N",
+            "207S"
+          ],
+          "name": "219 St"
+        },
+        {
+          "ids": [
+            "208N",
+            "208S"
+          ],
+          "name": "Gun Hill Rd"
+        },
+        {
+          "ids": [
+            "209N",
+            "209S"
+          ],
+          "name": "Burke Av"
+        },
+        {
+          "ids": [
+            "210N",
+            "210S"
+          ],
+          "name": "Allerton Av"
+        },
+        {
+          "ids": [
+            "211N",
+            "211S"
+          ],
+          "name": "Pelham Pkwy"
+        },
+        {
+          "ids": [
+            "212N",
+            "212S"
+          ],
+          "name": "Bronx Park East"
+        },
+        {
+          "ids": [
+            "213N",
+            "213S"
+          ],
+          "name": "E 180 St"
+        },
+        {
+          "ids": [
+            "214N",
+            "214S"
+          ],
+          "name": "West Farms Sq-E Tremont Av"
+        },
+        {
+          "ids": [
+            "215N",
+            "215S"
+          ],
+          "name": "174 St"
+        },
+        {
+          "ids": [
+            "216N",
+            "216S"
+          ],
+          "name": "Freeman St"
+        },
+        {
+          "ids": [
+            "217N",
+            "217S"
+          ],
+          "name": "Simpson St"
+        },
+        {
+          "ids": [
+            "218N",
+            "218S"
+          ],
+          "name": "Intervale Av"
+        },
+        {
+          "ids": [
+            "219N",
+            "219S"
+          ],
+          "name": "Prospect Av"
+        },
+        {
+          "ids": [
+            "220N",
+            "220S"
+          ],
+          "name": "Jackson Av"
+        },
+        {
+          "ids": [
+            "221N",
+            "221S"
+          ],
+          "name": "3 Av-149 St"
+        },
+        {
+          "ids": [
+            "222N",
+            "222S"
+          ],
+          "name": "149 St-Grand Concourse"
+        },
+        {
+          "ids": [
+            "416N",
+            "416S"
+          ],
+          "name": "138 St-Grand Concourse"
+        },
+        {
+          "ids": [
+            "621N",
+            "621S"
+          ],
+          "name": "125 St"
+        },
+        {
+          "ids": [
+            "626N",
+            "626S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "629N",
+            "629S"
+          ],
+          "name": "59 St"
+        },
+        {
+          "ids": [
+            "631N",
+            "631S"
+          ],
+          "name": "Grand Central-42 St"
+        },
+        {
+          "ids": [
+            "635N",
+            "635S"
+          ],
+          "name": "14 St-Union Sq"
+        },
+        {
+          "ids": [
+            "640N",
+            "640S"
+          ],
+          "name": "Brooklyn Bridge-City Hall"
+        },
+        {
+          "ids": [
+            "418N",
+            "418S"
+          ],
+          "name": "Fulton St"
+        },
+        {
+          "ids": [
+            "419N",
+            "419S"
+          ],
+          "name": "Wall St"
+        },
+        {
+          "ids": [
+            "420N",
+            "420S"
+          ],
+          "name": "Bowling Green"
+        },
+        {
+          "ids": [
+            "423N",
+            "423S"
+          ],
+          "name": "Borough Hall"
+        },
+        {
+          "ids": [
+            "234N",
+            "234S"
+          ],
+          "name": "Nevins St"
+        },
+        {
+          "ids": [
+            "235N",
+            "235S"
+          ],
+          "name": "Atlantic Av-Barclays Ctr"
+        },
+        {
+          "ids": [
+            "239N",
+            "239S"
+          ],
+          "name": "Franklin Av-Medgar Evers College"
+        },
+        {
+          "ids": [
+            "250N",
+            "250S"
+          ],
+          "name": "Crown Hts-Utica Av"
+        },
+        {
+          "ids": [
+            "241N",
+            "241S"
+          ],
+          "name": "President St-Medgar Evers College"
+        },
+        {
+          "ids": [
+            "242N",
+            "242S"
+          ],
+          "name": "Sterling St"
+        },
+        {
+          "ids": [
+            "243N",
+            "243S"
+          ],
+          "name": "Winthrop St"
+        },
+        {
+          "ids": [
+            "244N",
+            "244S"
+          ],
+          "name": "Church Av"
+        },
+        {
+          "ids": [
+            "245N",
+            "245S"
+          ],
+          "name": "Beverly Rd"
+        },
+        {
+          "ids": [
+            "246N",
+            "246S"
+          ],
+          "name": "Newkirk Av"
+        },
+        {
+          "ids": [
+            "247N",
+            "247S"
+          ],
+          "name": "Flatbush Av-Brooklyn College"
+        }
+      ]
+    },
+    {
+      "routeId": "6",
+      "name": "6 — Lexington Avenue Local",
+      "symbolText": "6",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "00933C",
+      "stops": [
+        {
+          "ids": [
+            "601N",
+            "601S"
+          ],
+          "name": "Pelham Bay Park"
+        },
+        {
+          "ids": [
+            "602N",
+            "602S"
+          ],
+          "name": "Buhre Av"
+        },
+        {
+          "ids": [
+            "603N",
+            "603S"
+          ],
+          "name": "Middletown Rd"
+        },
+        {
+          "ids": [
+            "604N",
+            "604S"
+          ],
+          "name": "Westchester Sq-E Tremont Av"
+        },
+        {
+          "ids": [
+            "606N",
+            "606S"
+          ],
+          "name": "Zerega Av"
+        },
+        {
+          "ids": [
+            "607N",
+            "607S"
+          ],
+          "name": "Castle Hill Av"
+        },
+        {
+          "ids": [
+            "608N",
+            "608S"
+          ],
+          "name": "Parkchester"
+        },
+        {
+          "ids": [
+            "609N",
+            "609S"
+          ],
+          "name": "St Lawrence Av"
+        },
+        {
+          "ids": [
+            "610N",
+            "610S"
+          ],
+          "name": "Morrison Av-Soundview"
+        },
+        {
+          "ids": [
+            "611N",
+            "611S"
+          ],
+          "name": "Elder Av"
+        },
+        {
+          "ids": [
+            "612N",
+            "612S"
+          ],
+          "name": "Whitlock Av"
+        },
+        {
+          "ids": [
+            "613N",
+            "613S"
+          ],
+          "name": "Hunts Point Av"
+        },
+        {
+          "ids": [
+            "614N",
+            "614S"
+          ],
+          "name": "Longwood Av"
+        },
+        {
+          "ids": [
+            "615N",
+            "615S"
+          ],
+          "name": "E 149 St"
+        },
+        {
+          "ids": [
+            "616N",
+            "616S"
+          ],
+          "name": "E 143 St-St Mary's St"
+        },
+        {
+          "ids": [
+            "617N",
+            "617S"
+          ],
+          "name": "Cypress Av"
+        },
+        {
+          "ids": [
+            "618N",
+            "618S"
+          ],
+          "name": "Brook Av"
+        },
+        {
+          "ids": [
+            "619N",
+            "619S"
+          ],
+          "name": "3 Av-138 St"
+        },
+        {
+          "ids": [
+            "621N",
+            "621S"
+          ],
+          "name": "125 St"
+        },
+        {
+          "ids": [
+            "622N",
+            "622S"
+          ],
+          "name": "116 St"
+        },
+        {
+          "ids": [
+            "623N",
+            "623S"
+          ],
+          "name": "110 St"
+        },
+        {
+          "ids": [
+            "624N",
+            "624S"
+          ],
+          "name": "103 St"
+        },
+        {
+          "ids": [
+            "625N",
+            "625S"
+          ],
+          "name": "96 St"
+        },
+        {
+          "ids": [
+            "626N",
+            "626S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "627N",
+            "627S"
+          ],
+          "name": "77 St"
+        },
+        {
+          "ids": [
+            "628N",
+            "628S"
+          ],
+          "name": "68 St-Hunter College"
+        },
+        {
+          "ids": [
+            "629N",
+            "629S"
+          ],
+          "name": "59 St"
+        },
+        {
+          "ids": [
+            "630N",
+            "630S"
+          ],
+          "name": "51 St"
+        },
+        {
+          "ids": [
+            "631N",
+            "631S"
+          ],
+          "name": "Grand Central-42 St"
+        },
+        {
+          "ids": [
+            "632N",
+            "632S"
+          ],
+          "name": "33 St"
+        },
+        {
+          "ids": [
+            "633N",
+            "633S"
+          ],
+          "name": "28 St"
+        },
+        {
+          "ids": [
+            "634N",
+            "634S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "635N",
+            "635S"
+          ],
+          "name": "14 St-Union Sq"
+        },
+        {
+          "ids": [
+            "636N",
+            "636S"
+          ],
+          "name": "Astor Pl"
+        },
+        {
+          "ids": [
+            "637N",
+            "637S"
+          ],
+          "name": "Bleecker St"
+        },
+        {
+          "ids": [
+            "638N",
+            "638S"
+          ],
+          "name": "Spring St"
+        },
+        {
+          "ids": [
+            "639N",
+            "639S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "640N",
+            "640S"
+          ],
+          "name": "Brooklyn Bridge-City Hall"
+        }
+      ]
+    },
+    {
+      "routeId": "6X",
+      "name": "6X — Pelham Bay Park Express",
+      "symbolText": "6",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "diamond",
+      "symbolColor": "00A65C",
+      "stops": [
+        {
+          "ids": [
+            "601N",
+            "601S"
+          ],
+          "name": "Pelham Bay Park"
+        },
+        {
+          "ids": [
+            "602N",
+            "602S"
+          ],
+          "name": "Buhre Av"
+        },
+        {
+          "ids": [
+            "603N",
+            "603S"
+          ],
+          "name": "Middletown Rd"
+        },
+        {
+          "ids": [
+            "604N",
+            "604S"
+          ],
+          "name": "Westchester Sq-E Tremont Av"
+        },
+        {
+          "ids": [
+            "606N",
+            "606S"
+          ],
+          "name": "Zerega Av"
+        },
+        {
+          "ids": [
+            "607N",
+            "607S"
+          ],
+          "name": "Castle Hill Av"
+        },
+        {
+          "ids": [
+            "608N",
+            "608S"
+          ],
+          "name": "Parkchester"
+        },
+        {
+          "ids": [
+            "609S"
+          ],
+          "name": "St Lawrence Av"
+        },
+        {
+          "ids": [
+            "610S"
+          ],
+          "name": "Morrison Av-Soundview"
+        },
+        {
+          "ids": [
+            "611S"
+          ],
+          "name": "Elder Av"
+        },
+        {
+          "ids": [
+            "612S"
+          ],
+          "name": "Whitlock Av"
+        },
+        {
+          "ids": [
+            "613N",
+            "613S"
+          ],
+          "name": "Hunts Point Av"
+        },
+        {
+          "ids": [
+            "619N",
+            "619S"
+          ],
+          "name": "3 Av-138 St"
+        },
+        {
+          "ids": [
+            "621N",
+            "621S"
+          ],
+          "name": "125 St"
+        },
+        {
+          "ids": [
+            "622N",
+            "622S"
+          ],
+          "name": "116 St"
+        },
+        {
+          "ids": [
+            "623N",
+            "623S"
+          ],
+          "name": "110 St"
+        },
+        {
+          "ids": [
+            "624N",
+            "624S"
+          ],
+          "name": "103 St"
+        },
+        {
+          "ids": [
+            "625N",
+            "625S"
+          ],
+          "name": "96 St"
+        },
+        {
+          "ids": [
+            "626N",
+            "626S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "627N",
+            "627S"
+          ],
+          "name": "77 St"
+        },
+        {
+          "ids": [
+            "628N",
+            "628S"
+          ],
+          "name": "68 St-Hunter College"
+        },
+        {
+          "ids": [
+            "629N",
+            "629S"
+          ],
+          "name": "59 St"
+        },
+        {
+          "ids": [
+            "630N",
+            "630S"
+          ],
+          "name": "51 St"
+        },
+        {
+          "ids": [
+            "631N",
+            "631S"
+          ],
+          "name": "Grand Central-42 St"
+        },
+        {
+          "ids": [
+            "632N",
+            "632S"
+          ],
+          "name": "33 St"
+        },
+        {
+          "ids": [
+            "633N",
+            "633S"
+          ],
+          "name": "28 St"
+        },
+        {
+          "ids": [
+            "634N",
+            "634S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "635N",
+            "635S"
+          ],
+          "name": "14 St-Union Sq"
+        },
+        {
+          "ids": [
+            "636N",
+            "636S"
+          ],
+          "name": "Astor Pl"
+        },
+        {
+          "ids": [
+            "637N",
+            "637S"
+          ],
+          "name": "Bleecker St"
+        },
+        {
+          "ids": [
+            "638N",
+            "638S"
+          ],
+          "name": "Spring St"
+        },
+        {
+          "ids": [
+            "639N",
+            "639S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "640N",
+            "640S"
+          ],
+          "name": "Brooklyn Bridge-City Hall"
+        }
+      ]
+    },
+    {
+      "routeId": "7",
+      "name": "7 — Flushing Local",
+      "symbolText": "7",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "B933AD",
+      "stops": [
+        {
+          "ids": [
+            "701N",
+            "701S"
+          ],
+          "name": "Flushing-Main St"
+        },
+        {
+          "ids": [
+            "702N",
+            "702S"
+          ],
+          "name": "Mets-Willets Point"
+        },
+        {
+          "ids": [
+            "705N",
+            "705S"
+          ],
+          "name": "111 St"
+        },
+        {
+          "ids": [
+            "706N",
+            "706S"
+          ],
+          "name": "103 St-Corona Plaza"
+        },
+        {
+          "ids": [
+            "707N",
+            "707S"
+          ],
+          "name": "Junction Blvd"
+        },
+        {
+          "ids": [
+            "708N",
+            "708S"
+          ],
+          "name": "90 St-Elmhurst Av"
+        },
+        {
+          "ids": [
+            "709N",
+            "709S"
+          ],
+          "name": "82 St-Jackson Hts"
+        },
+        {
+          "ids": [
+            "710N",
+            "710S"
+          ],
+          "name": "74 St-Broadway"
+        },
+        {
+          "ids": [
+            "711N",
+            "711S"
+          ],
+          "name": "69 St"
+        },
+        {
+          "ids": [
+            "712N",
+            "712S"
+          ],
+          "name": "Woodside-61 St"
+        },
+        {
+          "ids": [
+            "713N",
+            "713S"
+          ],
+          "name": "52 St"
+        },
+        {
+          "ids": [
+            "714N",
+            "714S"
+          ],
+          "name": "46 St-Bliss St"
+        },
+        {
+          "ids": [
+            "715N",
+            "715S"
+          ],
+          "name": "40 St-Lowery St"
+        },
+        {
+          "ids": [
+            "716N",
+            "716S"
+          ],
+          "name": "33 St-Rawson St"
+        },
+        {
+          "ids": [
+            "718N",
+            "718S"
+          ],
+          "name": "Queensboro Plaza"
+        },
+        {
+          "ids": [
+            "719N",
+            "719S"
+          ],
+          "name": "Court Sq"
+        },
+        {
+          "ids": [
+            "720N",
+            "720S"
+          ],
+          "name": "Hunters Point Av"
+        },
+        {
+          "ids": [
+            "721N",
+            "721S"
+          ],
+          "name": "Vernon Blvd-Jackson Av"
+        },
+        {
+          "ids": [
+            "723N",
+            "723S"
+          ],
+          "name": "Grand Central-42 St"
+        },
+        {
+          "ids": [
+            "724N",
+            "724S"
+          ],
+          "name": "5 Av"
+        },
+        {
+          "ids": [
+            "725N",
+            "725S"
+          ],
+          "name": "Times Sq-42 St"
+        },
+        {
+          "ids": [
+            "726N",
+            "726S"
+          ],
+          "name": "34 St-Hudson Yards"
+        }
+      ]
+    },
+    {
+      "routeId": "7X",
+      "name": "7X — Flushing Express",
+      "symbolText": "7",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "diamond",
+      "symbolColor": "B933AD",
+      "stops": [
+        {
+          "ids": [
+            "701N",
+            "701S"
+          ],
+          "name": "Flushing-Main St"
+        },
+        {
+          "ids": [
+            "702N",
+            "702S"
+          ],
+          "name": "Mets-Willets Point"
+        },
+        {
+          "ids": [
+            "707N",
+            "707S"
+          ],
+          "name": "Junction Blvd"
+        },
+        {
+          "ids": [
+            "712N",
+            "712S"
+          ],
+          "name": "Woodside-61 St"
+        },
+        {
+          "ids": [
+            "718N",
+            "718S"
+          ],
+          "name": "Queensboro Plaza"
+        },
+        {
+          "ids": [
+            "719N",
+            "719S"
+          ],
+          "name": "Court Sq"
+        },
+        {
+          "ids": [
+            "720N",
+            "720S"
+          ],
+          "name": "Hunters Point Av"
+        },
+        {
+          "ids": [
+            "721N",
+            "721S"
+          ],
+          "name": "Vernon Blvd-Jackson Av"
+        },
+        {
+          "ids": [
+            "723N",
+            "723S"
+          ],
+          "name": "Grand Central-42 St"
+        },
+        {
+          "ids": [
+            "724N",
+            "724S"
+          ],
+          "name": "5 Av"
+        },
+        {
+          "ids": [
+            "725N",
+            "725S"
+          ],
+          "name": "Times Sq-42 St"
+        },
+        {
+          "ids": [
+            "726N",
+            "726S"
+          ],
+          "name": "34 St-Hudson Yards"
+        }
+      ]
+    },
+    {
+      "routeId": "GS",
+      "name": "S — 42 St Shuttle",
+      "symbolText": "S",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "6D6E71",
+      "stops": [
+        {
+          "ids": [
+            "902N",
+            "902S"
+          ],
+          "name": "Times Sq-42 St"
+        },
+        {
+          "ids": [
+            "901N",
+            "901S"
+          ],
+          "name": "Grand Central-42 St"
+        }
+      ]
+    },
+    {
+      "routeId": "A",
+      "name": "A — 8 Avenue Express",
+      "symbolText": "A",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "2850AD",
+      "stops": [
+        {
+          "ids": [
+            "A02N",
+            "A02S"
+          ],
+          "name": "Inwood-207 St"
+        },
+        {
+          "ids": [
+            "A03N",
+            "A03S"
+          ],
+          "name": "Dyckman St"
+        },
+        {
+          "ids": [
+            "A05N",
+            "A05S"
+          ],
+          "name": "190 St"
+        },
+        {
+          "ids": [
+            "A06N",
+            "A06S"
+          ],
+          "name": "181 St"
+        },
+        {
+          "ids": [
+            "A07N",
+            "A07S"
+          ],
+          "name": "175 St"
+        },
+        {
+          "ids": [
+            "A09N",
+            "A09S"
+          ],
+          "name": "168 St"
+        },
+        {
+          "ids": [
+            "A10N",
+            "A10S"
+          ],
+          "name": "163 St-Amsterdam Av"
+        },
+        {
+          "ids": [
+            "A11N",
+            "A11S"
+          ],
+          "name": "155 St"
+        },
+        {
+          "ids": [
+            "A12N",
+            "A12S"
+          ],
+          "name": "145 St"
+        },
+        {
+          "ids": [
+            "A14N",
+            "A14S"
+          ],
+          "name": "135 St"
+        },
+        {
+          "ids": [
+            "A15N",
+            "A15S"
+          ],
+          "name": "125 St"
+        },
+        {
+          "ids": [
+            "A16N",
+            "A16S"
+          ],
+          "name": "116 St"
+        },
+        {
+          "ids": [
+            "A17N",
+            "A17S"
+          ],
+          "name": "Cathedral Pkwy (110 St)"
+        },
+        {
+          "ids": [
+            "A18N",
+            "A18S"
+          ],
+          "name": "103 St"
+        },
+        {
+          "ids": [
+            "A19N",
+            "A19S"
+          ],
+          "name": "96 St"
+        },
+        {
+          "ids": [
+            "A20N",
+            "A20S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "A21N",
+            "A21S"
+          ],
+          "name": "81 St-Museum of Natural History"
+        },
+        {
+          "ids": [
+            "A22N",
+            "A22S"
+          ],
+          "name": "72 St"
+        },
+        {
+          "ids": [
+            "A24N",
+            "A24S"
+          ],
+          "name": "59 St-Columbus Circle"
+        },
+        {
+          "ids": [
+            "A25N",
+            "A25S"
+          ],
+          "name": "50 St"
+        },
+        {
+          "ids": [
+            "A27N",
+            "A27S"
+          ],
+          "name": "42 St-Port Authority Bus Terminal"
+        },
+        {
+          "ids": [
+            "A28N",
+            "A28S"
+          ],
+          "name": "34 St-Penn Station"
+        },
+        {
+          "ids": [
+            "A30N",
+            "A30S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "A31N",
+            "A31S"
+          ],
+          "name": "14 St"
+        },
+        {
+          "ids": [
+            "A32N",
+            "A32S"
+          ],
+          "name": "W 4 St-Wash Sq"
+        },
+        {
+          "ids": [
+            "A33N",
+            "A33S"
+          ],
+          "name": "Spring St"
+        },
+        {
+          "ids": [
+            "A34N",
+            "A34S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "A36N",
+            "A36S"
+          ],
+          "name": "Chambers St"
+        },
+        {
+          "ids": [
+            "A38N",
+            "A38S"
+          ],
+          "name": "Fulton St"
+        },
+        {
+          "ids": [
+            "A40N",
+            "A40S"
+          ],
+          "name": "High St"
+        },
+        {
+          "ids": [
+            "A41N",
+            "A41S"
+          ],
+          "name": "Jay St-MetroTech"
+        },
+        {
+          "ids": [
+            "A42N",
+            "A42S"
+          ],
+          "name": "Hoyt-Schermerhorn Sts"
+        },
+        {
+          "ids": [
+            "A43N",
+            "A43S"
+          ],
+          "name": "Lafayette Av"
+        },
+        {
+          "ids": [
+            "A44N",
+            "A44S"
+          ],
+          "name": "Clinton-Washington Avs"
+        },
+        {
+          "ids": [
+            "A45N",
+            "A45S"
+          ],
+          "name": "Franklin Av"
+        },
+        {
+          "ids": [
+            "A46N",
+            "A46S"
+          ],
+          "name": "Nostrand Av"
+        },
+        {
+          "ids": [
+            "A47N",
+            "A47S"
+          ],
+          "name": "Kingston-Throop Avs"
+        },
+        {
+          "ids": [
+            "A48N",
+            "A48S"
+          ],
+          "name": "Utica Av"
+        },
+        {
+          "ids": [
+            "A49N",
+            "A49S"
+          ],
+          "name": "Ralph Av"
+        },
+        {
+          "ids": [
+            "A50N",
+            "A50S"
+          ],
+          "name": "Rockaway Av"
+        },
+        {
+          "ids": [
+            "A51N",
+            "A51S"
+          ],
+          "name": "Broadway Junction"
+        },
+        {
+          "ids": [
+            "A52N",
+            "A52S"
+          ],
+          "name": "Liberty Av"
+        },
+        {
+          "ids": [
+            "A53N",
+            "A53S"
+          ],
+          "name": "Van Siclen Av"
+        },
+        {
+          "ids": [
+            "A54N",
+            "A54S"
+          ],
+          "name": "Shepherd Av"
+        },
+        {
+          "ids": [
+            "A55N",
+            "A55S"
+          ],
+          "name": "Euclid Av"
+        },
+        {
+          "ids": [
+            "A57N",
+            "A57S"
+          ],
+          "name": "Grant Av"
+        },
+        {
+          "ids": [
+            "A59N",
+            "A59S"
+          ],
+          "name": "80 St"
+        },
+        {
+          "ids": [
+            "A60N",
+            "A60S"
+          ],
+          "name": "88 St"
+        },
+        {
+          "ids": [
+            "A61N",
+            "A61S"
+          ],
+          "name": "Rockaway Blvd"
+        },
+        {
+          "ids": [
+            "H02N",
+            "H02S"
+          ],
+          "name": "Aqueduct-N Conduit Av"
+        },
+        {
+          "ids": [
+            "H03N",
+            "H03S"
+          ],
+          "name": "Howard Beach-JFK Airport"
+        },
+        {
+          "ids": [
+            "H04N",
+            "H04S"
+          ],
+          "name": "Broad Channel"
+        },
+        {
+          "ids": [
+            "H12N",
+            "H12S"
+          ],
+          "name": "Beach 90 St"
+        },
+        {
+          "ids": [
+            "H13N",
+            "H13S"
+          ],
+          "name": "Beach 98 St"
+        },
+        {
+          "ids": [
+            "H14N",
+            "H14S"
+          ],
+          "name": "Beach 105 St"
+        },
+        {
+          "ids": [
+            "H15N",
+            "H15S"
+          ],
+          "name": "Rockaway Park-Beach 116 St"
+        },
+        {
+          "ids": [
+            "H06N",
+            "H06S"
+          ],
+          "name": "Beach 67 St"
+        },
+        {
+          "ids": [
+            "H07N",
+            "H07S"
+          ],
+          "name": "Beach 60 St"
+        },
+        {
+          "ids": [
+            "H08N",
+            "H08S"
+          ],
+          "name": "Beach 44 St"
+        },
+        {
+          "ids": [
+            "H09N",
+            "H09S"
+          ],
+          "name": "Beach 36 St"
+        },
+        {
+          "ids": [
+            "H10N",
+            "H10S"
+          ],
+          "name": "Beach 25 St"
+        },
+        {
+          "ids": [
+            "H11N",
+            "H11S"
+          ],
+          "name": "Far Rockaway-Mott Av"
+        },
+        {
+          "ids": [
+            "A63N",
+            "A63S"
+          ],
+          "name": "104 St"
+        },
+        {
+          "ids": [
+            "A64N",
+            "A64S"
+          ],
+          "name": "111 St"
+        },
+        {
+          "ids": [
+            "A65N",
+            "A65S"
+          ],
+          "name": "Ozone Park-Lefferts Blvd"
+        }
+      ]
+    },
+    {
+      "routeId": "B",
+      "name": "B — 6 Avenue Express",
+      "symbolText": "B",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "FF6319",
+      "stops": [
+        {
+          "ids": [
+            "D03N",
+            "D03S"
+          ],
+          "name": "Bedford Park Blvd"
+        },
+        {
+          "ids": [
+            "D04N",
+            "D04S"
+          ],
+          "name": "Kingsbridge Rd"
+        },
+        {
+          "ids": [
+            "D05N",
+            "D05S"
+          ],
+          "name": "Fordham Rd"
+        },
+        {
+          "ids": [
+            "D06N",
+            "D06S"
+          ],
+          "name": "182-183 Sts"
+        },
+        {
+          "ids": [
+            "D07N",
+            "D07S"
+          ],
+          "name": "Tremont Av"
+        },
+        {
+          "ids": [
+            "D08N",
+            "D08S"
+          ],
+          "name": "174-175 Sts"
+        },
+        {
+          "ids": [
+            "D09N",
+            "D09S"
+          ],
+          "name": "170 St"
+        },
+        {
+          "ids": [
+            "D10N",
+            "D10S"
+          ],
+          "name": "167 St"
+        },
+        {
+          "ids": [
+            "D11N",
+            "D11S"
+          ],
+          "name": "161 St-Yankee Stadium"
+        },
+        {
+          "ids": [
+            "D12N",
+            "D12S"
+          ],
+          "name": "155 St"
+        },
+        {
+          "ids": [
+            "D13N",
+            "D13S"
+          ],
+          "name": "145 St"
+        },
+        {
+          "ids": [
+            "A14N",
+            "A14S"
+          ],
+          "name": "135 St"
+        },
+        {
+          "ids": [
+            "A15N",
+            "A15S"
+          ],
+          "name": "125 St"
+        },
+        {
+          "ids": [
+            "A16N",
+            "A16S"
+          ],
+          "name": "116 St"
+        },
+        {
+          "ids": [
+            "A17N",
+            "A17S"
+          ],
+          "name": "Cathedral Pkwy (110 St)"
+        },
+        {
+          "ids": [
+            "A18N",
+            "A18S"
+          ],
+          "name": "103 St"
+        },
+        {
+          "ids": [
+            "A19N",
+            "A19S"
+          ],
+          "name": "96 St"
+        },
+        {
+          "ids": [
+            "A20N",
+            "A20S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "A21N",
+            "A21S"
+          ],
+          "name": "81 St-Museum of Natural History"
+        },
+        {
+          "ids": [
+            "A22N",
+            "A22S"
+          ],
+          "name": "72 St"
+        },
+        {
+          "ids": [
+            "A24N",
+            "A24S"
+          ],
+          "name": "59 St-Columbus Circle"
+        },
+        {
+          "ids": [
+            "D14N",
+            "D14S"
+          ],
+          "name": "7 Av"
+        },
+        {
+          "ids": [
+            "D15N",
+            "D15S"
+          ],
+          "name": "47-50 Sts-Rockefeller Ctr"
+        },
+        {
+          "ids": [
+            "D16N",
+            "D16S"
+          ],
+          "name": "42 St-Bryant Pk"
+        },
+        {
+          "ids": [
+            "D17N",
+            "D17S"
+          ],
+          "name": "34 St-Herald Sq"
+        },
+        {
+          "ids": [
+            "D20N",
+            "D20S"
+          ],
+          "name": "W 4 St-Wash Sq"
+        },
+        {
+          "ids": [
+            "D21N",
+            "D21S"
+          ],
+          "name": "Broadway-Lafayette St"
+        },
+        {
+          "ids": [
+            "D22N",
+            "D22S"
+          ],
+          "name": "Grand St"
+        },
+        {
+          "ids": [
+            "R30N",
+            "R30S"
+          ],
+          "name": "DeKalb Av"
+        },
+        {
+          "ids": [
+            "D24N",
+            "D24S"
+          ],
+          "name": "Atlantic Av-Barclays Ctr"
+        },
+        {
+          "ids": [
+            "D25N",
+            "D25S"
+          ],
+          "name": "7 Av"
+        },
+        {
+          "ids": [
+            "D26N",
+            "D26S"
+          ],
+          "name": "Prospect Park"
+        },
+        {
+          "ids": [
+            "D28N",
+            "D28S"
+          ],
+          "name": "Church Av"
+        },
+        {
+          "ids": [
+            "D31N",
+            "D31S"
+          ],
+          "name": "Newkirk Plaza"
+        },
+        {
+          "ids": [
+            "D35N",
+            "D35S"
+          ],
+          "name": "Kings Hwy"
+        },
+        {
+          "ids": [
+            "D39N",
+            "D39S"
+          ],
+          "name": "Sheepshead Bay"
+        },
+        {
+          "ids": [
+            "D40N",
+            "D40S"
+          ],
+          "name": "Brighton Beach"
+        }
+      ]
+    },
+    {
+      "routeId": "C",
+      "name": "C — 8 Avenue Local",
+      "symbolText": "C",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "2850AD",
+      "stops": [
+        {
+          "ids": [
+            "A09N",
+            "A09S"
+          ],
+          "name": "168 St"
+        },
+        {
+          "ids": [
+            "A10N",
+            "A10S"
+          ],
+          "name": "163 St-Amsterdam Av"
+        },
+        {
+          "ids": [
+            "A11N",
+            "A11S"
+          ],
+          "name": "155 St"
+        },
+        {
+          "ids": [
+            "A12N",
+            "A12S"
+          ],
+          "name": "145 St"
+        },
+        {
+          "ids": [
+            "A14N",
+            "A14S"
+          ],
+          "name": "135 St"
+        },
+        {
+          "ids": [
+            "A15N",
+            "A15S"
+          ],
+          "name": "125 St"
+        },
+        {
+          "ids": [
+            "A16N",
+            "A16S"
+          ],
+          "name": "116 St"
+        },
+        {
+          "ids": [
+            "A17N",
+            "A17S"
+          ],
+          "name": "Cathedral Pkwy (110 St)"
+        },
+        {
+          "ids": [
+            "A18N",
+            "A18S"
+          ],
+          "name": "103 St"
+        },
+        {
+          "ids": [
+            "A19N",
+            "A19S"
+          ],
+          "name": "96 St"
+        },
+        {
+          "ids": [
+            "A20N",
+            "A20S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "A21N",
+            "A21S"
+          ],
+          "name": "81 St-Museum of Natural History"
+        },
+        {
+          "ids": [
+            "A22N",
+            "A22S"
+          ],
+          "name": "72 St"
+        },
+        {
+          "ids": [
+            "A24N",
+            "A24S"
+          ],
+          "name": "59 St-Columbus Circle"
+        },
+        {
+          "ids": [
+            "A25N",
+            "A25S"
+          ],
+          "name": "50 St"
+        },
+        {
+          "ids": [
+            "A27N",
+            "A27S"
+          ],
+          "name": "42 St-Port Authority Bus Terminal"
+        },
+        {
+          "ids": [
+            "A28N",
+            "A28S"
+          ],
+          "name": "34 St-Penn Station"
+        },
+        {
+          "ids": [
+            "A30N",
+            "A30S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "A31N",
+            "A31S"
+          ],
+          "name": "14 St"
+        },
+        {
+          "ids": [
+            "A32N",
+            "A32S"
+          ],
+          "name": "W 4 St-Wash Sq"
+        },
+        {
+          "ids": [
+            "A33N",
+            "A33S"
+          ],
+          "name": "Spring St"
+        },
+        {
+          "ids": [
+            "A34N",
+            "A34S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "A36N",
+            "A36S"
+          ],
+          "name": "Chambers St"
+        },
+        {
+          "ids": [
+            "A38N",
+            "A38S"
+          ],
+          "name": "Fulton St"
+        },
+        {
+          "ids": [
+            "A40N",
+            "A40S"
+          ],
+          "name": "High St"
+        },
+        {
+          "ids": [
+            "A41N",
+            "A41S"
+          ],
+          "name": "Jay St-MetroTech"
+        },
+        {
+          "ids": [
+            "A42N",
+            "A42S"
+          ],
+          "name": "Hoyt-Schermerhorn Sts"
+        },
+        {
+          "ids": [
+            "A43N",
+            "A43S"
+          ],
+          "name": "Lafayette Av"
+        },
+        {
+          "ids": [
+            "A44N",
+            "A44S"
+          ],
+          "name": "Clinton-Washington Avs"
+        },
+        {
+          "ids": [
+            "A45N",
+            "A45S"
+          ],
+          "name": "Franklin Av"
+        },
+        {
+          "ids": [
+            "A46N",
+            "A46S"
+          ],
+          "name": "Nostrand Av"
+        },
+        {
+          "ids": [
+            "A47N",
+            "A47S"
+          ],
+          "name": "Kingston-Throop Avs"
+        },
+        {
+          "ids": [
+            "A48N",
+            "A48S"
+          ],
+          "name": "Utica Av"
+        },
+        {
+          "ids": [
+            "A49N",
+            "A49S"
+          ],
+          "name": "Ralph Av"
+        },
+        {
+          "ids": [
+            "A50N",
+            "A50S"
+          ],
+          "name": "Rockaway Av"
+        },
+        {
+          "ids": [
+            "A51N",
+            "A51S"
+          ],
+          "name": "Broadway Junction"
+        },
+        {
+          "ids": [
+            "A52N",
+            "A52S"
+          ],
+          "name": "Liberty Av"
+        },
+        {
+          "ids": [
+            "A53N",
+            "A53S"
+          ],
+          "name": "Van Siclen Av"
+        },
+        {
+          "ids": [
+            "A54N",
+            "A54S"
+          ],
+          "name": "Shepherd Av"
+        },
+        {
+          "ids": [
+            "A55N",
+            "A55S"
+          ],
+          "name": "Euclid Av"
+        }
+      ]
+    },
+    {
+      "routeId": "D",
+      "name": "D — 6 Avenue Express",
+      "symbolText": "D",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "FF6319",
+      "stops": [
+        {
+          "ids": [
+            "D01N",
+            "D01S"
+          ],
+          "name": "Norwood-205 St"
+        },
+        {
+          "ids": [
+            "D03N",
+            "D03S"
+          ],
+          "name": "Bedford Park Blvd"
+        },
+        {
+          "ids": [
+            "D04N",
+            "D04S"
+          ],
+          "name": "Kingsbridge Rd"
+        },
+        {
+          "ids": [
+            "D05N",
+            "D05S"
+          ],
+          "name": "Fordham Rd"
+        },
+        {
+          "ids": [
+            "D06N",
+            "D06S"
+          ],
+          "name": "182-183 Sts"
+        },
+        {
+          "ids": [
+            "D07N",
+            "D07S"
+          ],
+          "name": "Tremont Av"
+        },
+        {
+          "ids": [
+            "D08N",
+            "D08S"
+          ],
+          "name": "174-175 Sts"
+        },
+        {
+          "ids": [
+            "D09N",
+            "D09S"
+          ],
+          "name": "170 St"
+        },
+        {
+          "ids": [
+            "D10N",
+            "D10S"
+          ],
+          "name": "167 St"
+        },
+        {
+          "ids": [
+            "D11N",
+            "D11S"
+          ],
+          "name": "161 St-Yankee Stadium"
+        },
+        {
+          "ids": [
+            "D12N",
+            "D12S"
+          ],
+          "name": "155 St"
+        },
+        {
+          "ids": [
+            "D13N",
+            "D13S"
+          ],
+          "name": "145 St"
+        },
+        {
+          "ids": [
+            "A15N",
+            "A15S"
+          ],
+          "name": "125 St"
+        },
+        {
+          "ids": [
+            "A24N",
+            "A24S"
+          ],
+          "name": "59 St-Columbus Circle"
+        },
+        {
+          "ids": [
+            "D14N",
+            "D14S"
+          ],
+          "name": "7 Av"
+        },
+        {
+          "ids": [
+            "D15N",
+            "D15S"
+          ],
+          "name": "47-50 Sts-Rockefeller Ctr"
+        },
+        {
+          "ids": [
+            "D16N",
+            "D16S"
+          ],
+          "name": "42 St-Bryant Pk"
+        },
+        {
+          "ids": [
+            "D17N",
+            "D17S"
+          ],
+          "name": "34 St-Herald Sq"
+        },
+        {
+          "ids": [
+            "D20N",
+            "D20S"
+          ],
+          "name": "W 4 St-Wash Sq"
+        },
+        {
+          "ids": [
+            "D21N",
+            "D21S"
+          ],
+          "name": "Broadway-Lafayette St"
+        },
+        {
+          "ids": [
+            "D22N",
+            "D22S"
+          ],
+          "name": "Grand St"
+        },
+        {
+          "ids": [
+            "R30N",
+            "R30S"
+          ],
+          "name": "DeKalb Av"
+        },
+        {
+          "ids": [
+            "R31N",
+            "R31S"
+          ],
+          "name": "Atlantic Av-Barclays Ctr"
+        },
+        {
+          "ids": [
+            "R32N",
+            "R32S"
+          ],
+          "name": "Union St"
+        },
+        {
+          "ids": [
+            "R33N",
+            "R33S"
+          ],
+          "name": "4 Av-9 St"
+        },
+        {
+          "ids": [
+            "R34N",
+            "R34S"
+          ],
+          "name": "Prospect Av"
+        },
+        {
+          "ids": [
+            "R35N",
+            "R35S"
+          ],
+          "name": "25 St"
+        },
+        {
+          "ids": [
+            "R36N",
+            "R36S"
+          ],
+          "name": "36 St"
+        },
+        {
+          "ids": [
+            "B12N",
+            "B12S"
+          ],
+          "name": "9 Av"
+        },
+        {
+          "ids": [
+            "B13N",
+            "B13S"
+          ],
+          "name": "Fort Hamilton Pkwy"
+        },
+        {
+          "ids": [
+            "B14N",
+            "B14S"
+          ],
+          "name": "50 St"
+        },
+        {
+          "ids": [
+            "B15N",
+            "B15S"
+          ],
+          "name": "55 St"
+        },
+        {
+          "ids": [
+            "B16N",
+            "B16S"
+          ],
+          "name": "62 St"
+        },
+        {
+          "ids": [
+            "B17N",
+            "B17S"
+          ],
+          "name": "71 St"
+        },
+        {
+          "ids": [
+            "B18N",
+            "B18S"
+          ],
+          "name": "79 St"
+        },
+        {
+          "ids": [
+            "B19N",
+            "B19S"
+          ],
+          "name": "18 Av"
+        },
+        {
+          "ids": [
+            "B20N",
+            "B20S"
+          ],
+          "name": "20 Av"
+        },
+        {
+          "ids": [
+            "B21N",
+            "B21S"
+          ],
+          "name": "Bay Pkwy"
+        },
+        {
+          "ids": [
+            "B22N",
+            "B22S"
+          ],
+          "name": "25 Av"
+        },
+        {
+          "ids": [
+            "B23N",
+            "B23S"
+          ],
+          "name": "Bay 50 St"
+        },
+        {
+          "ids": [
+            "D43N",
+            "D43S"
+          ],
+          "name": "Coney Island-Stillwell Av"
+        }
+      ]
+    },
+    {
+      "routeId": "E",
+      "name": "E — 8 Avenue Local",
+      "symbolText": "E",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "2850AD",
+      "stops": [
+        {
+          "ids": [
+            "G05N",
+            "G05S"
+          ],
+          "name": "Jamaica Center-Parsons/Archer"
+        },
+        {
+          "ids": [
+            "G06N",
+            "G06S"
+          ],
+          "name": "Sutphin Blvd-Archer Av-JFK Airport"
+        },
+        {
+          "ids": [
+            "G07N",
+            "G07S"
+          ],
+          "name": "Jamaica-Van Wyck"
+        },
+        {
+          "ids": [
+            "F05N",
+            "F05S"
+          ],
+          "name": "Briarwood"
+        },
+        {
+          "ids": [
+            "F01N",
+            "F01S"
+          ],
+          "name": "Jamaica-179 St"
+        },
+        {
+          "ids": [
+            "F03N",
+            "F03S"
+          ],
+          "name": "Parsons Blvd"
+        },
+        {
+          "ids": [
+            "F06N",
+            "F06S"
+          ],
+          "name": "Kew Gardens-Union Tpke"
+        },
+        {
+          "ids": [
+            "F07N",
+            "F07S"
+          ],
+          "name": "75 Av"
+        },
+        {
+          "ids": [
+            "G08N",
+            "G08S"
+          ],
+          "name": "Forest Hills-71 Av"
+        },
+        {
+          "ids": [
+            "G09N",
+            "G09S"
+          ],
+          "name": "67 Av"
+        },
+        {
+          "ids": [
+            "G10N",
+            "G10S"
+          ],
+          "name": "63 Dr-Rego Park"
+        },
+        {
+          "ids": [
+            "G11N",
+            "G11S"
+          ],
+          "name": "Woodhaven Blvd"
+        },
+        {
+          "ids": [
+            "G12N",
+            "G12S"
+          ],
+          "name": "Grand Av-Newtown"
+        },
+        {
+          "ids": [
+            "G13N",
+            "G13S"
+          ],
+          "name": "Elmhurst Av"
+        },
+        {
+          "ids": [
+            "G14N",
+            "G14S"
+          ],
+          "name": "Jackson Hts-Roosevelt Av"
+        },
+        {
+          "ids": [
+            "G15N",
+            "G15S"
+          ],
+          "name": "65 St"
+        },
+        {
+          "ids": [
+            "G16N",
+            "G16S"
+          ],
+          "name": "Northern Blvd"
+        },
+        {
+          "ids": [
+            "G18N",
+            "G18S"
+          ],
+          "name": "46 St"
+        },
+        {
+          "ids": [
+            "G19N",
+            "G19S"
+          ],
+          "name": "Steinway St"
+        },
+        {
+          "ids": [
+            "G20N",
+            "G20S"
+          ],
+          "name": "36 St"
+        },
+        {
+          "ids": [
+            "G21N",
+            "G21S"
+          ],
+          "name": "Queens Plaza"
+        },
+        {
+          "ids": [
+            "F09N",
+            "F09S"
+          ],
+          "name": "Court Sq-23 St"
+        },
+        {
+          "ids": [
+            "F11N",
+            "F11S"
+          ],
+          "name": "Lexington Av/53 St"
+        },
+        {
+          "ids": [
+            "F12N",
+            "F12S"
+          ],
+          "name": "5 Av/53 St"
+        },
+        {
+          "ids": [
+            "D14N",
+            "D14S"
+          ],
+          "name": "7 Av"
+        },
+        {
+          "ids": [
+            "A25N",
+            "A25S"
+          ],
+          "name": "50 St"
+        },
+        {
+          "ids": [
+            "A27N",
+            "A27S"
+          ],
+          "name": "42 St-Port Authority Bus Terminal"
+        },
+        {
+          "ids": [
+            "A28N",
+            "A28S"
+          ],
+          "name": "34 St-Penn Station"
+        },
+        {
+          "ids": [
+            "A30N",
+            "A30S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "A31N",
+            "A31S"
+          ],
+          "name": "14 St"
+        },
+        {
+          "ids": [
+            "A32N",
+            "A32S"
+          ],
+          "name": "W 4 St-Wash Sq"
+        },
+        {
+          "ids": [
+            "A33N",
+            "A33S"
+          ],
+          "name": "Spring St"
+        },
+        {
+          "ids": [
+            "A34N",
+            "A34S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "E01N",
+            "E01S"
+          ],
+          "name": "World Trade Center"
+        }
+      ]
+    },
+    {
+      "routeId": "F",
+      "name": "F — Queens Blvd Express/ 6 Av Local",
+      "symbolText": "F",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "FF6319",
+      "stops": [
+        {
+          "ids": [
+            "F01N",
+            "F01S"
+          ],
+          "name": "Jamaica-179 St"
+        },
+        {
+          "ids": [
+            "F02N",
+            "F02S"
+          ],
+          "name": "169 St"
+        },
+        {
+          "ids": [
+            "F03N",
+            "F03S"
+          ],
+          "name": "Parsons Blvd"
+        },
+        {
+          "ids": [
+            "F04N",
+            "F04S"
+          ],
+          "name": "Sutphin Blvd"
+        },
+        {
+          "ids": [
+            "F05N",
+            "F05S"
+          ],
+          "name": "Briarwood"
+        },
+        {
+          "ids": [
+            "F06N",
+            "F06S"
+          ],
+          "name": "Kew Gardens-Union Tpke"
+        },
+        {
+          "ids": [
+            "F07N",
+            "F07S"
+          ],
+          "name": "75 Av"
+        },
+        {
+          "ids": [
+            "G08N",
+            "G08S"
+          ],
+          "name": "Forest Hills-71 Av"
+        },
+        {
+          "ids": [
+            "G14N",
+            "G14S"
+          ],
+          "name": "Jackson Hts-Roosevelt Av"
+        },
+        {
+          "ids": [
+            "B04N",
+            "B04S"
+          ],
+          "name": "21 St-Queensbridge"
+        },
+        {
+          "ids": [
+            "B06N",
+            "B06S"
+          ],
+          "name": "Roosevelt Island"
+        },
+        {
+          "ids": [
+            "B08N",
+            "B08S"
+          ],
+          "name": "Lexington Av/63 St"
+        },
+        {
+          "ids": [
+            "B10N",
+            "B10S"
+          ],
+          "name": "57 St"
+        },
+        {
+          "ids": [
+            "D15N",
+            "D15S"
+          ],
+          "name": "47-50 Sts-Rockefeller Ctr"
+        },
+        {
+          "ids": [
+            "D16N",
+            "D16S"
+          ],
+          "name": "42 St-Bryant Pk"
+        },
+        {
+          "ids": [
+            "D17N",
+            "D17S"
+          ],
+          "name": "34 St-Herald Sq"
+        },
+        {
+          "ids": [
+            "D18N",
+            "D18S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "D19N",
+            "D19S"
+          ],
+          "name": "14 St"
+        },
+        {
+          "ids": [
+            "D20N",
+            "D20S"
+          ],
+          "name": "W 4 St-Wash Sq"
+        },
+        {
+          "ids": [
+            "D21N",
+            "D21S"
+          ],
+          "name": "Broadway-Lafayette St"
+        },
+        {
+          "ids": [
+            "F14N",
+            "F14S"
+          ],
+          "name": "2 Av"
+        },
+        {
+          "ids": [
+            "F15N",
+            "F15S"
+          ],
+          "name": "Delancey St-Essex St"
+        },
+        {
+          "ids": [
+            "F16N",
+            "F16S"
+          ],
+          "name": "East Broadway"
+        },
+        {
+          "ids": [
+            "F18N",
+            "F18S"
+          ],
+          "name": "York St"
+        },
+        {
+          "ids": [
+            "A41N",
+            "A41S"
+          ],
+          "name": "Jay St-MetroTech"
+        },
+        {
+          "ids": [
+            "F20N",
+            "F20S"
+          ],
+          "name": "Bergen St"
+        },
+        {
+          "ids": [
+            "F21N",
+            "F21S"
+          ],
+          "name": "Carroll St"
+        },
+        {
+          "ids": [
+            "F22N",
+            "F22S"
+          ],
+          "name": "Smith-9 Sts"
+        },
+        {
+          "ids": [
+            "F23N",
+            "F23S"
+          ],
+          "name": "4 Av-9 St"
+        },
+        {
+          "ids": [
+            "F24N",
+            "F24S"
+          ],
+          "name": "7 Av"
+        },
+        {
+          "ids": [
+            "F25N",
+            "F25S"
+          ],
+          "name": "15 St-Prospect Park"
+        },
+        {
+          "ids": [
+            "F26N",
+            "F26S"
+          ],
+          "name": "Fort Hamilton Pkwy"
+        },
+        {
+          "ids": [
+            "F27N",
+            "F27S"
+          ],
+          "name": "Church Av"
+        },
+        {
+          "ids": [
+            "F29N",
+            "F29S"
+          ],
+          "name": "Ditmas Av"
+        },
+        {
+          "ids": [
+            "F30N",
+            "F30S"
+          ],
+          "name": "18 Av"
+        },
+        {
+          "ids": [
+            "F31N",
+            "F31S"
+          ],
+          "name": "Avenue I"
+        },
+        {
+          "ids": [
+            "F32N",
+            "F32S"
+          ],
+          "name": "Bay Pkwy"
+        },
+        {
+          "ids": [
+            "F33N",
+            "F33S"
+          ],
+          "name": "Avenue N"
+        },
+        {
+          "ids": [
+            "F34N",
+            "F34S"
+          ],
+          "name": "Avenue P"
+        },
+        {
+          "ids": [
+            "F35N",
+            "F35S"
+          ],
+          "name": "Kings Hwy"
+        },
+        {
+          "ids": [
+            "F36N",
+            "F36S"
+          ],
+          "name": "Avenue U"
+        },
+        {
+          "ids": [
+            "F38N",
+            "F38S"
+          ],
+          "name": "Avenue X"
+        },
+        {
+          "ids": [
+            "F39N",
+            "F39S"
+          ],
+          "name": "Neptune Av"
+        },
+        {
+          "ids": [
+            "D42N",
+            "D42S"
+          ],
+          "name": "W 8 St-NY Aquarium"
+        },
+        {
+          "ids": [
+            "D43N",
+            "D43S"
+          ],
+          "name": "Coney Island-Stillwell Av"
+        }
+      ]
+    },
+    {
+      "routeId": "FS",
+      "name": "S — Franklin Avenue Shuttle",
+      "symbolText": "S",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "6D6E71",
+      "stops": [
+        {
+          "ids": [
+            "S01N",
+            "S01S"
+          ],
+          "name": "Franklin Av"
+        },
+        {
+          "ids": [
+            "S03N",
+            "S03S"
+          ],
+          "name": "Park Pl"
+        },
+        {
+          "ids": [
+            "S04N",
+            "S04S"
+          ],
+          "name": "Botanic Garden"
+        },
+        {
+          "ids": [
+            "D26N",
+            "D26S"
+          ],
+          "name": "Prospect Park"
+        }
+      ]
+    },
+    {
+      "routeId": "G",
+      "name": "G — Brooklyn-Queens Crosstown",
+      "symbolText": "G",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "6CBE45",
+      "stops": [
+        {
+          "ids": [
+            "G22N",
+            "G22S"
+          ],
+          "name": "Court Sq"
+        },
+        {
+          "ids": [
+            "G24N",
+            "G24S"
+          ],
+          "name": "21 St"
+        },
+        {
+          "ids": [
+            "G26N",
+            "G26S"
+          ],
+          "name": "Greenpoint Av"
+        },
+        {
+          "ids": [
+            "G28N",
+            "G28S"
+          ],
+          "name": "Nassau Av"
+        },
+        {
+          "ids": [
+            "G29N",
+            "G29S"
+          ],
+          "name": "Metropolitan Av"
+        },
+        {
+          "ids": [
+            "G30N",
+            "G30S"
+          ],
+          "name": "Broadway"
+        },
+        {
+          "ids": [
+            "G31N",
+            "G31S"
+          ],
+          "name": "Flushing Av"
+        },
+        {
+          "ids": [
+            "G32N",
+            "G32S"
+          ],
+          "name": "Myrtle-Willoughby Avs"
+        },
+        {
+          "ids": [
+            "G33N",
+            "G33S"
+          ],
+          "name": "Bedford-Nostrand Avs"
+        },
+        {
+          "ids": [
+            "G34N",
+            "G34S"
+          ],
+          "name": "Classon Av"
+        },
+        {
+          "ids": [
+            "G35N",
+            "G35S"
+          ],
+          "name": "Clinton-Washington Avs"
+        },
+        {
+          "ids": [
+            "G36N",
+            "G36S"
+          ],
+          "name": "Fulton St"
+        },
+        {
+          "ids": [
+            "A42N",
+            "A42S"
+          ],
+          "name": "Hoyt-Schermerhorn Sts"
+        },
+        {
+          "ids": [
+            "F20N",
+            "F20S"
+          ],
+          "name": "Bergen St"
+        },
+        {
+          "ids": [
+            "F21N",
+            "F21S"
+          ],
+          "name": "Carroll St"
+        },
+        {
+          "ids": [
+            "F22N",
+            "F22S"
+          ],
+          "name": "Smith-9 Sts"
+        },
+        {
+          "ids": [
+            "F23N",
+            "F23S"
+          ],
+          "name": "4 Av-9 St"
+        },
+        {
+          "ids": [
+            "F24N",
+            "F24S"
+          ],
+          "name": "7 Av"
+        },
+        {
+          "ids": [
+            "F25N",
+            "F25S"
+          ],
+          "name": "15 St-Prospect Park"
+        },
+        {
+          "ids": [
+            "F26N",
+            "F26S"
+          ],
+          "name": "Fort Hamilton Pkwy"
+        },
+        {
+          "ids": [
+            "F27N",
+            "F27S"
+          ],
+          "name": "Church Av"
+        }
+      ]
+    },
+    {
+      "routeId": "J",
+      "name": "J — Nassau St Local",
+      "symbolText": "J",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "996633",
+      "stops": [
+        {
+          "ids": [
+            "G05N",
+            "G05S"
+          ],
+          "name": "Jamaica Center-Parsons/Archer"
+        },
+        {
+          "ids": [
+            "G06N",
+            "G06S"
+          ],
+          "name": "Sutphin Blvd-Archer Av-JFK Airport"
+        },
+        {
+          "ids": [
+            "J12N",
+            "J12S"
+          ],
+          "name": "121 St"
+        },
+        {
+          "ids": [
+            "J13N",
+            "J13S"
+          ],
+          "name": "111 St"
+        },
+        {
+          "ids": [
+            "J14N",
+            "J14S"
+          ],
+          "name": "104 St"
+        },
+        {
+          "ids": [
+            "J15N",
+            "J15S"
+          ],
+          "name": "Woodhaven Blvd"
+        },
+        {
+          "ids": [
+            "J16N",
+            "J16S"
+          ],
+          "name": "85 St-Forest Pkwy"
+        },
+        {
+          "ids": [
+            "J17N",
+            "J17S"
+          ],
+          "name": "75 St-Elderts Ln"
+        },
+        {
+          "ids": [
+            "J19N",
+            "J19S"
+          ],
+          "name": "Cypress Hills"
+        },
+        {
+          "ids": [
+            "J20N",
+            "J20S"
+          ],
+          "name": "Crescent St"
+        },
+        {
+          "ids": [
+            "J21N",
+            "J21S"
+          ],
+          "name": "Norwood Av"
+        },
+        {
+          "ids": [
+            "J22N",
+            "J22S"
+          ],
+          "name": "Cleveland St"
+        },
+        {
+          "ids": [
+            "J23N",
+            "J23S"
+          ],
+          "name": "Van Siclen Av"
+        },
+        {
+          "ids": [
+            "J24N",
+            "J24S"
+          ],
+          "name": "Alabama Av"
+        },
+        {
+          "ids": [
+            "J27N",
+            "J27S"
+          ],
+          "name": "Broadway Junction"
+        },
+        {
+          "ids": [
+            "J28N",
+            "J28S"
+          ],
+          "name": "Chauncey St"
+        },
+        {
+          "ids": [
+            "J29N",
+            "J29S"
+          ],
+          "name": "Halsey St"
+        },
+        {
+          "ids": [
+            "J30N",
+            "J30S"
+          ],
+          "name": "Gates Av"
+        },
+        {
+          "ids": [
+            "J31N",
+            "J31S"
+          ],
+          "name": "Kosciuszko St"
+        },
+        {
+          "ids": [
+            "M11N",
+            "M11S"
+          ],
+          "name": "Myrtle Av"
+        },
+        {
+          "ids": [
+            "M12N",
+            "M12S"
+          ],
+          "name": "Flushing Av"
+        },
+        {
+          "ids": [
+            "M13N",
+            "M13S"
+          ],
+          "name": "Lorimer St"
+        },
+        {
+          "ids": [
+            "M14N",
+            "M14S"
+          ],
+          "name": "Hewes St"
+        },
+        {
+          "ids": [
+            "M16N",
+            "M16S"
+          ],
+          "name": "Marcy Av"
+        },
+        {
+          "ids": [
+            "M18N",
+            "M18S"
+          ],
+          "name": "Delancey St-Essex St"
+        },
+        {
+          "ids": [
+            "M19N",
+            "M19S"
+          ],
+          "name": "Bowery"
+        },
+        {
+          "ids": [
+            "M20N",
+            "M20S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "M21N",
+            "M21S"
+          ],
+          "name": "Chambers St"
+        },
+        {
+          "ids": [
+            "M22N",
+            "M22S"
+          ],
+          "name": "Fulton St"
+        },
+        {
+          "ids": [
+            "M23N",
+            "M23S"
+          ],
+          "name": "Broad St"
+        }
+      ]
+    },
+    {
+      "routeId": "L",
+      "name": "L — 14 St-Canarsie Local",
+      "symbolText": "L",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "A7A9AC",
+      "stops": [
+        {
+          "ids": [
+            "L01N",
+            "L01S"
+          ],
+          "name": "8 Av"
+        },
+        {
+          "ids": [
+            "L02N",
+            "L02S"
+          ],
+          "name": "6 Av"
+        },
+        {
+          "ids": [
+            "L03N",
+            "L03S"
+          ],
+          "name": "14 St-Union Sq."
+        },
+        {
+          "ids": [
+            "L05N",
+            "L05S"
+          ],
+          "name": "3 Av"
+        },
+        {
+          "ids": [
+            "L06N",
+            "L06S"
+          ],
+          "name": "1 Av"
+        },
+        {
+          "ids": [
+            "L08N",
+            "L08S"
+          ],
+          "name": "Bedford Av"
+        },
+        {
+          "ids": [
+            "L10N",
+            "L10S"
+          ],
+          "name": "Lorimer St"
+        },
+        {
+          "ids": [
+            "L11N",
+            "L11S"
+          ],
+          "name": "Graham Av"
+        },
+        {
+          "ids": [
+            "L12N",
+            "L12S"
+          ],
+          "name": "Grand St"
+        },
+        {
+          "ids": [
+            "L13N",
+            "L13S"
+          ],
+          "name": "Montrose Av"
+        },
+        {
+          "ids": [
+            "L14N",
+            "L14S"
+          ],
+          "name": "Morgan Av"
+        },
+        {
+          "ids": [
+            "L15N",
+            "L15S"
+          ],
+          "name": "Jefferson St"
+        },
+        {
+          "ids": [
+            "L16N",
+            "L16S"
+          ],
+          "name": "DeKalb Av"
+        },
+        {
+          "ids": [
+            "L17N",
+            "L17S"
+          ],
+          "name": "Myrtle-Wyckoff Avs"
+        },
+        {
+          "ids": [
+            "L19N",
+            "L19S"
+          ],
+          "name": "Halsey St"
+        },
+        {
+          "ids": [
+            "L20N",
+            "L20S"
+          ],
+          "name": "Wilson Av"
+        },
+        {
+          "ids": [
+            "L21N",
+            "L21S"
+          ],
+          "name": "Bushwick Av-Aberdeen St"
+        },
+        {
+          "ids": [
+            "L22N",
+            "L22S"
+          ],
+          "name": "Broadway Junction"
+        },
+        {
+          "ids": [
+            "L24N",
+            "L24S"
+          ],
+          "name": "Atlantic Av"
+        },
+        {
+          "ids": [
+            "L25N",
+            "L25S"
+          ],
+          "name": "Sutter Av"
+        },
+        {
+          "ids": [
+            "L26N",
+            "L26S"
+          ],
+          "name": "Livonia Av"
+        },
+        {
+          "ids": [
+            "L27N",
+            "L27S"
+          ],
+          "name": "New Lots Av"
+        },
+        {
+          "ids": [
+            "L28N",
+            "L28S"
+          ],
+          "name": "East 105 St"
+        },
+        {
+          "ids": [
+            "L29N",
+            "L29S"
+          ],
+          "name": "Canarsie-Rockaway Pkwy"
+        }
+      ]
+    },
+    {
+      "routeId": "M",
+      "name": "M — Queens Blvd Local/6 Av Local",
+      "symbolText": "M",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "FF6319",
+      "stops": [
+        {
+          "ids": [
+            "G08N",
+            "G08S"
+          ],
+          "name": "Forest Hills-71 Av"
+        },
+        {
+          "ids": [
+            "G09N",
+            "G09S"
+          ],
+          "name": "67 Av"
+        },
+        {
+          "ids": [
+            "G10N",
+            "G10S"
+          ],
+          "name": "63 Dr-Rego Park"
+        },
+        {
+          "ids": [
+            "G11N",
+            "G11S"
+          ],
+          "name": "Woodhaven Blvd"
+        },
+        {
+          "ids": [
+            "G12N",
+            "G12S"
+          ],
+          "name": "Grand Av-Newtown"
+        },
+        {
+          "ids": [
+            "G13N",
+            "G13S"
+          ],
+          "name": "Elmhurst Av"
+        },
+        {
+          "ids": [
+            "G14N",
+            "G14S"
+          ],
+          "name": "Jackson Hts-Roosevelt Av"
+        },
+        {
+          "ids": [
+            "G15N",
+            "G15S"
+          ],
+          "name": "65 St"
+        },
+        {
+          "ids": [
+            "G16N",
+            "G16S"
+          ],
+          "name": "Northern Blvd"
+        },
+        {
+          "ids": [
+            "G18N",
+            "G18S"
+          ],
+          "name": "46 St"
+        },
+        {
+          "ids": [
+            "G19N",
+            "G19S"
+          ],
+          "name": "Steinway St"
+        },
+        {
+          "ids": [
+            "G20N",
+            "G20S"
+          ],
+          "name": "36 St"
+        },
+        {
+          "ids": [
+            "G21N",
+            "G21S"
+          ],
+          "name": "Queens Plaza"
+        },
+        {
+          "ids": [
+            "F09N",
+            "F09S"
+          ],
+          "name": "Court Sq-23 St"
+        },
+        {
+          "ids": [
+            "F11N",
+            "F11S"
+          ],
+          "name": "Lexington Av/53 St"
+        },
+        {
+          "ids": [
+            "F12N",
+            "F12S"
+          ],
+          "name": "5 Av/53 St"
+        },
+        {
+          "ids": [
+            "D15N",
+            "D15S"
+          ],
+          "name": "47-50 Sts-Rockefeller Ctr"
+        },
+        {
+          "ids": [
+            "D16N",
+            "D16S"
+          ],
+          "name": "42 St-Bryant Pk"
+        },
+        {
+          "ids": [
+            "D17N",
+            "D17S"
+          ],
+          "name": "34 St-Herald Sq"
+        },
+        {
+          "ids": [
+            "D18N",
+            "D18S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "D19N",
+            "D19S"
+          ],
+          "name": "14 St"
+        },
+        {
+          "ids": [
+            "D20N",
+            "D20S"
+          ],
+          "name": "W 4 St-Wash Sq"
+        },
+        {
+          "ids": [
+            "D21N",
+            "D21S"
+          ],
+          "name": "Broadway-Lafayette St"
+        },
+        {
+          "ids": [
+            "M18N",
+            "M18S"
+          ],
+          "name": "Delancey St-Essex St"
+        },
+        {
+          "ids": [
+            "M16N",
+            "M16S"
+          ],
+          "name": "Marcy Av"
+        },
+        {
+          "ids": [
+            "M14N",
+            "M14S"
+          ],
+          "name": "Hewes St"
+        },
+        {
+          "ids": [
+            "M13N",
+            "M13S"
+          ],
+          "name": "Lorimer St"
+        },
+        {
+          "ids": [
+            "M12N",
+            "M12S"
+          ],
+          "name": "Flushing Av"
+        },
+        {
+          "ids": [
+            "M11N",
+            "M11S"
+          ],
+          "name": "Myrtle Av"
+        },
+        {
+          "ids": [
+            "M10N",
+            "M10S"
+          ],
+          "name": "Central Av"
+        },
+        {
+          "ids": [
+            "M09N",
+            "M09S"
+          ],
+          "name": "Knickerbocker Av"
+        },
+        {
+          "ids": [
+            "M08N",
+            "M08S"
+          ],
+          "name": "Myrtle-Wyckoff Avs"
+        },
+        {
+          "ids": [
+            "M06N",
+            "M06S"
+          ],
+          "name": "Seneca Av"
+        },
+        {
+          "ids": [
+            "M05N",
+            "M05S"
+          ],
+          "name": "Forest Av"
+        },
+        {
+          "ids": [
+            "M04N",
+            "M04S"
+          ],
+          "name": "Fresh Pond Rd"
+        },
+        {
+          "ids": [
+            "M01N",
+            "M01S"
+          ],
+          "name": "Middle Village-Metropolitan Av"
+        }
+      ]
+    },
+    {
+      "routeId": "N",
+      "name": "N — Broadway Local",
+      "symbolText": "N",
+      "symbolTextColor": "000000",
+      "symbolShape": "circle",
+      "symbolColor": "FCCC0A",
+      "stops": [
+        {
+          "ids": [
+            "R01N",
+            "R01S"
+          ],
+          "name": "Astoria-Ditmars Blvd"
+        },
+        {
+          "ids": [
+            "R03N",
+            "R03S"
+          ],
+          "name": "Astoria Blvd"
+        },
+        {
+          "ids": [
+            "R04N",
+            "R04S"
+          ],
+          "name": "30 Av"
+        },
+        {
+          "ids": [
+            "R05N",
+            "R05S"
+          ],
+          "name": "Broadway"
+        },
+        {
+          "ids": [
+            "R06N",
+            "R06S"
+          ],
+          "name": "36 Av"
+        },
+        {
+          "ids": [
+            "R08N",
+            "R08S"
+          ],
+          "name": "39 Av-Dutch Kills"
+        },
+        {
+          "ids": [
+            "R09N",
+            "R09S"
+          ],
+          "name": "Queensboro Plaza"
+        },
+        {
+          "ids": [
+            "R11N",
+            "R11S"
+          ],
+          "name": "Lexington Av/59 St"
+        },
+        {
+          "ids": [
+            "R13N",
+            "R13S"
+          ],
+          "name": "5 Av/59 St"
+        },
+        {
+          "ids": [
+            "Q05S"
+          ],
+          "name": "96 St"
+        },
+        {
+          "ids": [
+            "Q04S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "Q03S"
+          ],
+          "name": "72 St"
+        },
+        {
+          "ids": [
+            "B08S"
+          ],
+          "name": "Lexington Av/63 St"
+        },
+        {
+          "ids": [
+            "R14N",
+            "R14S"
+          ],
+          "name": "57 St-7 Av"
+        },
+        {
+          "ids": [
+            "R15N",
+            "R15S"
+          ],
+          "name": "49 St"
+        },
+        {
+          "ids": [
+            "R16N",
+            "R16S"
+          ],
+          "name": "Times Sq-42 St"
+        },
+        {
+          "ids": [
+            "R17N",
+            "R17S"
+          ],
+          "name": "34 St-Herald Sq"
+        },
+        {
+          "ids": [
+            "R18N",
+            "R18S"
+          ],
+          "name": "28 St"
+        },
+        {
+          "ids": [
+            "R19N",
+            "R19S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "R20N",
+            "R20S"
+          ],
+          "name": "14 St-Union Sq"
+        },
+        {
+          "ids": [
+            "R21N",
+            "R21S"
+          ],
+          "name": "8 St-NYU"
+        },
+        {
+          "ids": [
+            "R22N",
+            "R22S"
+          ],
+          "name": "Prince St"
+        },
+        {
+          "ids": [
+            "R23N",
+            "R23S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "R24N",
+            "R24S"
+          ],
+          "name": "City Hall"
+        },
+        {
+          "ids": [
+            "R25N",
+            "R25S"
+          ],
+          "name": "Cortlandt St"
+        },
+        {
+          "ids": [
+            "R26N",
+            "R26S"
+          ],
+          "name": "Rector St"
+        },
+        {
+          "ids": [
+            "R27N",
+            "R27S"
+          ],
+          "name": "Whitehall St-South Ferry"
+        },
+        {
+          "ids": [
+            "R28N",
+            "R28S"
+          ],
+          "name": "Court St"
+        },
+        {
+          "ids": [
+            "R29N",
+            "R29S"
+          ],
+          "name": "Jay St-MetroTech"
+        },
+        {
+          "ids": [
+            "Q01N",
+            "Q01S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "R30N",
+            "R30S"
+          ],
+          "name": "DeKalb Av"
+        },
+        {
+          "ids": [
+            "R31N",
+            "R31S"
+          ],
+          "name": "Atlantic Av-Barclays Ctr"
+        },
+        {
+          "ids": [
+            "R32N",
+            "R32S"
+          ],
+          "name": "Union St"
+        },
+        {
+          "ids": [
+            "R33N",
+            "R33S"
+          ],
+          "name": "4 Av-9 St"
+        },
+        {
+          "ids": [
+            "R34N",
+            "R34S"
+          ],
+          "name": "Prospect Av"
+        },
+        {
+          "ids": [
+            "R35N",
+            "R35S"
+          ],
+          "name": "25 St"
+        },
+        {
+          "ids": [
+            "R36N",
+            "R36S"
+          ],
+          "name": "36 St"
+        },
+        {
+          "ids": [
+            "R39N",
+            "R39S"
+          ],
+          "name": "45 St"
+        },
+        {
+          "ids": [
+            "R40N",
+            "R40S"
+          ],
+          "name": "53 St"
+        },
+        {
+          "ids": [
+            "R41N",
+            "R41S"
+          ],
+          "name": "59 St"
+        },
+        {
+          "ids": [
+            "N02N",
+            "N02S"
+          ],
+          "name": "8 Av"
+        },
+        {
+          "ids": [
+            "N03N",
+            "N03S"
+          ],
+          "name": "Fort Hamilton Pkwy"
+        },
+        {
+          "ids": [
+            "N04N",
+            "N04S"
+          ],
+          "name": "New Utrecht Av"
+        },
+        {
+          "ids": [
+            "N05N",
+            "N05S"
+          ],
+          "name": "18 Av"
+        },
+        {
+          "ids": [
+            "N06N",
+            "N06S"
+          ],
+          "name": "20 Av"
+        },
+        {
+          "ids": [
+            "N07N",
+            "N07S"
+          ],
+          "name": "Bay Pkwy"
+        },
+        {
+          "ids": [
+            "N08N",
+            "N08S"
+          ],
+          "name": "Kings Hwy"
+        },
+        {
+          "ids": [
+            "N09N",
+            "N09S"
+          ],
+          "name": "Avenue U"
+        },
+        {
+          "ids": [
+            "N10N",
+            "N10S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "D43N",
+            "D43S"
+          ],
+          "name": "Coney Island-Stillwell Av"
+        }
+      ]
+    },
+    {
+      "routeId": "Q",
+      "name": "Q — Broadway Express",
+      "symbolText": "Q",
+      "symbolTextColor": "000000",
+      "symbolShape": "circle",
+      "symbolColor": "FCCC0A",
+      "stops": [
+        {
+          "ids": [
+            "Q05N",
+            "Q05S"
+          ],
+          "name": "96 St"
+        },
+        {
+          "ids": [
+            "Q04N",
+            "Q04S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "Q03N",
+            "Q03S"
+          ],
+          "name": "72 St"
+        },
+        {
+          "ids": [
+            "B08N",
+            "B08S"
+          ],
+          "name": "Lexington Av/63 St"
+        },
+        {
+          "ids": [
+            "R14N",
+            "R14S"
+          ],
+          "name": "57 St-7 Av"
+        },
+        {
+          "ids": [
+            "R15N",
+            "R15S"
+          ],
+          "name": "49 St"
+        },
+        {
+          "ids": [
+            "R16N",
+            "R16S"
+          ],
+          "name": "Times Sq-42 St"
+        },
+        {
+          "ids": [
+            "R17N",
+            "R17S"
+          ],
+          "name": "34 St-Herald Sq"
+        },
+        {
+          "ids": [
+            "R18N",
+            "R18S"
+          ],
+          "name": "28 St"
+        },
+        {
+          "ids": [
+            "R19N",
+            "R19S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "R20N",
+            "R20S"
+          ],
+          "name": "14 St-Union Sq"
+        },
+        {
+          "ids": [
+            "R21N",
+            "R21S"
+          ],
+          "name": "8 St-NYU"
+        },
+        {
+          "ids": [
+            "R22N",
+            "R22S"
+          ],
+          "name": "Prince St"
+        },
+        {
+          "ids": [
+            "Q01N",
+            "Q01S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "R30N",
+            "R30S"
+          ],
+          "name": "DeKalb Av"
+        },
+        {
+          "ids": [
+            "D24N",
+            "D24S"
+          ],
+          "name": "Atlantic Av-Barclays Ctr"
+        },
+        {
+          "ids": [
+            "D25N",
+            "D25S"
+          ],
+          "name": "7 Av"
+        },
+        {
+          "ids": [
+            "D26N",
+            "D26S"
+          ],
+          "name": "Prospect Park"
+        },
+        {
+          "ids": [
+            "D27N",
+            "D27S"
+          ],
+          "name": "Parkside Av"
+        },
+        {
+          "ids": [
+            "D28N",
+            "D28S"
+          ],
+          "name": "Church Av"
+        },
+        {
+          "ids": [
+            "D29N",
+            "D29S"
+          ],
+          "name": "Beverley Rd"
+        },
+        {
+          "ids": [
+            "D30N",
+            "D30S"
+          ],
+          "name": "Cortelyou Rd"
+        },
+        {
+          "ids": [
+            "D31N",
+            "D31S"
+          ],
+          "name": "Newkirk Plaza"
+        },
+        {
+          "ids": [
+            "D32N",
+            "D32S"
+          ],
+          "name": "Avenue H"
+        },
+        {
+          "ids": [
+            "D33N",
+            "D33S"
+          ],
+          "name": "Avenue J"
+        },
+        {
+          "ids": [
+            "D34N",
+            "D34S"
+          ],
+          "name": "Avenue M"
+        },
+        {
+          "ids": [
+            "D35N",
+            "D35S"
+          ],
+          "name": "Kings Hwy"
+        },
+        {
+          "ids": [
+            "D37N",
+            "D37S"
+          ],
+          "name": "Avenue U"
+        },
+        {
+          "ids": [
+            "D38N",
+            "D38S"
+          ],
+          "name": "Neck Rd"
+        },
+        {
+          "ids": [
+            "D39N",
+            "D39S"
+          ],
+          "name": "Sheepshead Bay"
+        },
+        {
+          "ids": [
+            "D40N",
+            "D40S"
+          ],
+          "name": "Brighton Beach"
+        },
+        {
+          "ids": [
+            "D41N",
+            "D41S"
+          ],
+          "name": "Ocean Pkwy"
+        },
+        {
+          "ids": [
+            "D42N",
+            "D42S"
+          ],
+          "name": "W 8 St-NY Aquarium"
+        },
+        {
+          "ids": [
+            "D43N",
+            "D43S"
+          ],
+          "name": "Coney Island-Stillwell Av"
+        }
+      ]
+    },
+    {
+      "routeId": "R",
+      "name": "R — Broadway Local",
+      "symbolText": "R",
+      "symbolTextColor": "000000",
+      "symbolShape": "circle",
+      "symbolColor": "FCCC0A",
+      "stops": [
+        {
+          "ids": [
+            "G08N",
+            "G08S"
+          ],
+          "name": "Forest Hills-71 Av"
+        },
+        {
+          "ids": [
+            "G09N",
+            "G09S"
+          ],
+          "name": "67 Av"
+        },
+        {
+          "ids": [
+            "G10N",
+            "G10S"
+          ],
+          "name": "63 Dr-Rego Park"
+        },
+        {
+          "ids": [
+            "G11N",
+            "G11S"
+          ],
+          "name": "Woodhaven Blvd"
+        },
+        {
+          "ids": [
+            "G12N",
+            "G12S"
+          ],
+          "name": "Grand Av-Newtown"
+        },
+        {
+          "ids": [
+            "G13N",
+            "G13S"
+          ],
+          "name": "Elmhurst Av"
+        },
+        {
+          "ids": [
+            "G14N",
+            "G14S"
+          ],
+          "name": "Jackson Hts-Roosevelt Av"
+        },
+        {
+          "ids": [
+            "G15N",
+            "G15S"
+          ],
+          "name": "65 St"
+        },
+        {
+          "ids": [
+            "G16N",
+            "G16S"
+          ],
+          "name": "Northern Blvd"
+        },
+        {
+          "ids": [
+            "G18N",
+            "G18S"
+          ],
+          "name": "46 St"
+        },
+        {
+          "ids": [
+            "G19N",
+            "G19S"
+          ],
+          "name": "Steinway St"
+        },
+        {
+          "ids": [
+            "G20N",
+            "G20S"
+          ],
+          "name": "36 St"
+        },
+        {
+          "ids": [
+            "G21N",
+            "G21S"
+          ],
+          "name": "Queens Plaza"
+        },
+        {
+          "ids": [
+            "R11N",
+            "R11S"
+          ],
+          "name": "Lexington Av/59 St"
+        },
+        {
+          "ids": [
+            "R13N",
+            "R13S"
+          ],
+          "name": "5 Av/59 St"
+        },
+        {
+          "ids": [
+            "R14N",
+            "R14S"
+          ],
+          "name": "57 St-7 Av"
+        },
+        {
+          "ids": [
+            "R15N",
+            "R15S"
+          ],
+          "name": "49 St"
+        },
+        {
+          "ids": [
+            "R16N",
+            "R16S"
+          ],
+          "name": "Times Sq-42 St"
+        },
+        {
+          "ids": [
+            "R17N",
+            "R17S"
+          ],
+          "name": "34 St-Herald Sq"
+        },
+        {
+          "ids": [
+            "R18N",
+            "R18S"
+          ],
+          "name": "28 St"
+        },
+        {
+          "ids": [
+            "R19N",
+            "R19S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "R20N",
+            "R20S"
+          ],
+          "name": "14 St-Union Sq"
+        },
+        {
+          "ids": [
+            "R21N",
+            "R21S"
+          ],
+          "name": "8 St-NYU"
+        },
+        {
+          "ids": [
+            "R22N",
+            "R22S"
+          ],
+          "name": "Prince St"
+        },
+        {
+          "ids": [
+            "R23N",
+            "R23S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "R24N",
+            "R24S"
+          ],
+          "name": "City Hall"
+        },
+        {
+          "ids": [
+            "R25N",
+            "R25S"
+          ],
+          "name": "Cortlandt St"
+        },
+        {
+          "ids": [
+            "R26N",
+            "R26S"
+          ],
+          "name": "Rector St"
+        },
+        {
+          "ids": [
+            "R27N",
+            "R27S"
+          ],
+          "name": "Whitehall St-South Ferry"
+        },
+        {
+          "ids": [
+            "R28N",
+            "R28S"
+          ],
+          "name": "Court St"
+        },
+        {
+          "ids": [
+            "R29N",
+            "R29S"
+          ],
+          "name": "Jay St-MetroTech"
+        },
+        {
+          "ids": [
+            "R30N",
+            "R30S"
+          ],
+          "name": "DeKalb Av"
+        },
+        {
+          "ids": [
+            "R31N",
+            "R31S"
+          ],
+          "name": "Atlantic Av-Barclays Ctr"
+        },
+        {
+          "ids": [
+            "R32N",
+            "R32S"
+          ],
+          "name": "Union St"
+        },
+        {
+          "ids": [
+            "R33N",
+            "R33S"
+          ],
+          "name": "4 Av-9 St"
+        },
+        {
+          "ids": [
+            "R34N",
+            "R34S"
+          ],
+          "name": "Prospect Av"
+        },
+        {
+          "ids": [
+            "R35N",
+            "R35S"
+          ],
+          "name": "25 St"
+        },
+        {
+          "ids": [
+            "R36N",
+            "R36S"
+          ],
+          "name": "36 St"
+        },
+        {
+          "ids": [
+            "R39N",
+            "R39S"
+          ],
+          "name": "45 St"
+        },
+        {
+          "ids": [
+            "R40N",
+            "R40S"
+          ],
+          "name": "53 St"
+        },
+        {
+          "ids": [
+            "R41N",
+            "R41S"
+          ],
+          "name": "59 St"
+        },
+        {
+          "ids": [
+            "R42N",
+            "R42S"
+          ],
+          "name": "Bay Ridge Av"
+        },
+        {
+          "ids": [
+            "R43N",
+            "R43S"
+          ],
+          "name": "77 St"
+        },
+        {
+          "ids": [
+            "R44N",
+            "R44S"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "R45N",
+            "R45S"
+          ],
+          "name": "Bay Ridge-95 St"
+        }
+      ]
+    },
+    {
+      "routeId": "H",
+      "name": "S — Rockaway Park Shuttle",
+      "symbolText": "S",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "6D6E71",
+      "stops": [
+        {
+          "ids": [
+            "H04N",
+            "H04S"
+          ],
+          "name": "Broad Channel"
+        },
+        {
+          "ids": [
+            "H12N",
+            "H12S"
+          ],
+          "name": "Beach 90 St"
+        },
+        {
+          "ids": [
+            "H13N",
+            "H13S"
+          ],
+          "name": "Beach 98 St"
+        },
+        {
+          "ids": [
+            "H14N",
+            "H14S"
+          ],
+          "name": "Beach 105 St"
+        },
+        {
+          "ids": [
+            "H15N",
+            "H15S"
+          ],
+          "name": "Rockaway Park-Beach 116 St"
+        }
+      ]
+    },
+    {
+      "routeId": "W",
+      "name": "W — Broadway Local",
+      "symbolText": "W",
+      "symbolTextColor": "000000",
+      "symbolShape": "circle",
+      "symbolColor": "FCCC0A",
+      "stops": [
+        {
+          "ids": [
+            "R01N",
+            "R01S"
+          ],
+          "name": "Astoria-Ditmars Blvd"
+        },
+        {
+          "ids": [
+            "R03N",
+            "R03S"
+          ],
+          "name": "Astoria Blvd"
+        },
+        {
+          "ids": [
+            "R04N",
+            "R04S"
+          ],
+          "name": "30 Av"
+        },
+        {
+          "ids": [
+            "R05N",
+            "R05S"
+          ],
+          "name": "Broadway"
+        },
+        {
+          "ids": [
+            "R06N",
+            "R06S"
+          ],
+          "name": "36 Av"
+        },
+        {
+          "ids": [
+            "R08N",
+            "R08S"
+          ],
+          "name": "39 Av-Dutch Kills"
+        },
+        {
+          "ids": [
+            "R09N",
+            "R09S"
+          ],
+          "name": "Queensboro Plaza"
+        },
+        {
+          "ids": [
+            "R11N",
+            "R11S"
+          ],
+          "name": "Lexington Av/59 St"
+        },
+        {
+          "ids": [
+            "R13N",
+            "R13S"
+          ],
+          "name": "5 Av/59 St"
+        },
+        {
+          "ids": [
+            "R14N",
+            "R14S"
+          ],
+          "name": "57 St-7 Av"
+        },
+        {
+          "ids": [
+            "R15N",
+            "R15S"
+          ],
+          "name": "49 St"
+        },
+        {
+          "ids": [
+            "R16N",
+            "R16S"
+          ],
+          "name": "Times Sq-42 St"
+        },
+        {
+          "ids": [
+            "R17N",
+            "R17S"
+          ],
+          "name": "34 St-Herald Sq"
+        },
+        {
+          "ids": [
+            "R18N",
+            "R18S"
+          ],
+          "name": "28 St"
+        },
+        {
+          "ids": [
+            "R19N",
+            "R19S"
+          ],
+          "name": "23 St"
+        },
+        {
+          "ids": [
+            "R20N",
+            "R20S"
+          ],
+          "name": "14 St-Union Sq"
+        },
+        {
+          "ids": [
+            "R21N",
+            "R21S"
+          ],
+          "name": "8 St-NYU"
+        },
+        {
+          "ids": [
+            "R22N",
+            "R22S"
+          ],
+          "name": "Prince St"
+        },
+        {
+          "ids": [
+            "R23N",
+            "R23S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "R24N",
+            "R24S"
+          ],
+          "name": "City Hall"
+        },
+        {
+          "ids": [
+            "R25N",
+            "R25S"
+          ],
+          "name": "Cortlandt St"
+        },
+        {
+          "ids": [
+            "R26N",
+            "R26S"
+          ],
+          "name": "Rector St"
+        },
+        {
+          "ids": [
+            "R27N",
+            "R27S"
+          ],
+          "name": "Whitehall St-South Ferry"
+        },
+        {
+          "ids": [
+            "R28N",
+            "R28S"
+          ],
+          "name": "Court St"
+        },
+        {
+          "ids": [
+            "R29N",
+            "R29S"
+          ],
+          "name": "Jay St-MetroTech"
+        },
+        {
+          "ids": [
+            "R30N",
+            "R30S"
+          ],
+          "name": "DeKalb Av"
+        },
+        {
+          "ids": [
+            "R31N",
+            "R31S"
+          ],
+          "name": "Atlantic Av-Barclays Ctr"
+        },
+        {
+          "ids": [
+            "R32N",
+            "R32S"
+          ],
+          "name": "Union St"
+        },
+        {
+          "ids": [
+            "R33N",
+            "R33S"
+          ],
+          "name": "4 Av-9 St"
+        },
+        {
+          "ids": [
+            "R34N",
+            "R34S"
+          ],
+          "name": "Prospect Av"
+        },
+        {
+          "ids": [
+            "R35N",
+            "R35S"
+          ],
+          "name": "25 St"
+        },
+        {
+          "ids": [
+            "R36N",
+            "R36S"
+          ],
+          "name": "36 St"
+        },
+        {
+          "ids": [
+            "R39N",
+            "R39S"
+          ],
+          "name": "45 St"
+        },
+        {
+          "ids": [
+            "R40N",
+            "R40S"
+          ],
+          "name": "53 St"
+        },
+        {
+          "ids": [
+            "R41N",
+            "R41S"
+          ],
+          "name": "59 St"
+        },
+        {
+          "ids": [
+            "N02N",
+            "N02S"
+          ],
+          "name": "8 Av"
+        },
+        {
+          "ids": [
+            "N03N",
+            "N03S"
+          ],
+          "name": "Fort Hamilton Pkwy"
+        },
+        {
+          "ids": [
+            "N04N",
+            "N04S"
+          ],
+          "name": "New Utrecht Av"
+        },
+        {
+          "ids": [
+            "N05N",
+            "N05S"
+          ],
+          "name": "18 Av"
+        },
+        {
+          "ids": [
+            "N06N",
+            "N06S"
+          ],
+          "name": "20 Av"
+        },
+        {
+          "ids": [
+            "N07N",
+            "N07S"
+          ],
+          "name": "Bay Pkwy"
+        },
+        {
+          "ids": [
+            "N08N",
+            "N08S"
+          ],
+          "name": "Kings Hwy"
+        },
+        {
+          "ids": [
+            "N09N",
+            "N09S"
+          ],
+          "name": "Avenue U"
+        },
+        {
+          "ids": [
+            "N10N",
+            "N10S"
+          ],
+          "name": "86 St"
+        }
+      ]
+    },
+    {
+      "routeId": "Z",
+      "name": "Z — Nassau St Express",
+      "symbolText": "Z",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "996633",
+      "stops": [
+        {
+          "ids": [
+            "G05N",
+            "G05S"
+          ],
+          "name": "Jamaica Center-Parsons/Archer"
+        },
+        {
+          "ids": [
+            "G06N",
+            "G06S"
+          ],
+          "name": "Sutphin Blvd-Archer Av-JFK Airport"
+        },
+        {
+          "ids": [
+            "J12N",
+            "J12S"
+          ],
+          "name": "121 St"
+        },
+        {
+          "ids": [
+            "J14N",
+            "J14S"
+          ],
+          "name": "104 St"
+        },
+        {
+          "ids": [
+            "J15N",
+            "J15S"
+          ],
+          "name": "Woodhaven Blvd"
+        },
+        {
+          "ids": [
+            "J17N",
+            "J17S"
+          ],
+          "name": "75 St-Elderts Ln"
+        },
+        {
+          "ids": [
+            "J20N",
+            "J20S"
+          ],
+          "name": "Crescent St"
+        },
+        {
+          "ids": [
+            "J21N",
+            "J21S"
+          ],
+          "name": "Norwood Av"
+        },
+        {
+          "ids": [
+            "J23N",
+            "J23S"
+          ],
+          "name": "Van Siclen Av"
+        },
+        {
+          "ids": [
+            "J24N",
+            "J24S"
+          ],
+          "name": "Alabama Av"
+        },
+        {
+          "ids": [
+            "J27N",
+            "J27S"
+          ],
+          "name": "Broadway Junction"
+        },
+        {
+          "ids": [
+            "J28N",
+            "J28S"
+          ],
+          "name": "Chauncey St"
+        },
+        {
+          "ids": [
+            "J30N",
+            "J30S"
+          ],
+          "name": "Gates Av"
+        },
+        {
+          "ids": [
+            "M11N",
+            "M11S"
+          ],
+          "name": "Myrtle Av"
+        },
+        {
+          "ids": [
+            "M16N",
+            "M16S"
+          ],
+          "name": "Marcy Av"
+        },
+        {
+          "ids": [
+            "M18N",
+            "M18S"
+          ],
+          "name": "Delancey St-Essex St"
+        },
+        {
+          "ids": [
+            "M19N",
+            "M19S"
+          ],
+          "name": "Bowery"
+        },
+        {
+          "ids": [
+            "M20N",
+            "M20S"
+          ],
+          "name": "Canal St"
+        },
+        {
+          "ids": [
+            "M21N",
+            "M21S"
+          ],
+          "name": "Chambers St"
+        },
+        {
+          "ids": [
+            "M22N",
+            "M22S"
+          ],
+          "name": "Fulton St"
+        },
+        {
+          "ids": [
+            "M23N",
+            "M23S"
+          ],
+          "name": "Broad St"
+        }
+      ]
+    },
+    {
+      "routeId": "SI",
+      "name": "SIR — Staten Island Railway",
+      "symbolText": "SIR",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "circle",
+      "symbolColor": "127BC5",
+      "stops": [
+        {
+          "ids": [
+            "S31N",
+            "S31S"
+          ],
+          "name": "St George"
+        },
+        {
+          "ids": [
+            "S30N",
+            "S30S"
+          ],
+          "name": "Tompkinsville"
+        },
+        {
+          "ids": [
+            "S29N",
+            "S29S"
+          ],
+          "name": "Stapleton"
+        },
+        {
+          "ids": [
+            "S28N",
+            "S28S"
+          ],
+          "name": "Clifton"
+        },
+        {
+          "ids": [
+            "S27N",
+            "S27S"
+          ],
+          "name": "Grasmere"
+        },
+        {
+          "ids": [
+            "S26N",
+            "S26S"
+          ],
+          "name": "Old Town"
+        },
+        {
+          "ids": [
+            "S25N",
+            "S25S"
+          ],
+          "name": "Dongan Hills"
+        },
+        {
+          "ids": [
+            "S24N",
+            "S24S"
+          ],
+          "name": "Jefferson Av"
+        },
+        {
+          "ids": [
+            "S23N",
+            "S23S"
+          ],
+          "name": "Grant City"
+        },
+        {
+          "ids": [
+            "S22N",
+            "S22S"
+          ],
+          "name": "New Dorp"
+        },
+        {
+          "ids": [
+            "S21N",
+            "S21S"
+          ],
+          "name": "Oakwood Heights"
+        },
+        {
+          "ids": [
+            "S20N",
+            "S20S"
+          ],
+          "name": "Bay Terrace"
+        },
+        {
+          "ids": [
+            "S19N",
+            "S19S"
+          ],
+          "name": "Great Kills"
+        },
+        {
+          "ids": [
+            "S18N",
+            "S18S"
+          ],
+          "name": "Eltingville"
+        },
+        {
+          "ids": [
+            "S17N",
+            "S17S"
+          ],
+          "name": "Annadale"
+        },
+        {
+          "ids": [
+            "S16N",
+            "S16S"
+          ],
+          "name": "Huguenot"
+        },
+        {
+          "ids": [
+            "S15N",
+            "S15S"
+          ],
+          "name": "Prince's Bay"
+        },
+        {
+          "ids": [
+            "S14N",
+            "S14S"
+          ],
+          "name": "Pleasant Plains"
+        },
+        {
+          "ids": [
+            "S13N",
+            "S13S"
+          ],
+          "name": "Richmond Valley"
+        },
+        {
+          "ids": [
+            "S11N",
+            "S11S"
+          ],
+          "name": "Arthur Kill"
+        },
+        {
+          "ids": [
+            "S09N",
+            "S09S"
+          ],
+          "name": "Tottenville"
+        }
+      ]
+    }
+  ]
+}
