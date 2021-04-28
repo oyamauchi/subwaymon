@@ -35,8 +35,14 @@ class SubwayMonView: NSView {
   }
 
   func setStopIds(stopIds: [StopId], feedInfo: FeedInfo) {
-    selectedStopIds = stopIds
+    if self.feedInfo !== feedInfo {
+      // If we're switching to a different provider, the stop IDs in the currently-loaded feed are
+      // now unusable, so clear it out.
+      self.feed = nil
+    }
     self.feedInfo = feedInfo
+    selectedStopIds = stopIds
+
     sendRequest()
   }
 
@@ -121,7 +127,6 @@ class SubwayMonView: NSView {
     }
 
     feedInProgress = true
-    feed = nil
 
     #if LOCAL_SERVER
     let host = "http://localhost:5000"
