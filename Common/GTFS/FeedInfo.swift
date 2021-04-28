@@ -9,7 +9,7 @@
 import AppKit
 
 class FeedInfo {
-  private static let providerIds = ["mta"]
+  private static let providerIds = ["mbta", "mta"]
   private static var feedInfos = [Int: FeedInfo]()
   static let providerMenu = createProviderMenu()
 
