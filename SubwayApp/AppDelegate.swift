@@ -1,10 +1,5 @@
-//
-//  AppDelegate.swift
-//  SubwayApp
-//
-//  Created by Owen Yamauchi on 2/12/18.
-//  Copyright © 2018 Owen Yamauchi. All rights reserved.
-//
+// AppDelegate.swift
+// Copyright 2021 Owen Yamauchi
 
 import Cocoa
 
@@ -21,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   @IBOutlet var stopMenu: NSPopUpButton!
 
   private var feedInfo: FeedInfo!
-  private let defaults: UserDefaults = UserDefaults.standard
+  private let defaults = UserDefaults.standard
 
   private func selectItem(inMenu menu: NSPopUpButton, withDefaultsKey key: String) {
     if let savedTitle = defaults.string(forKey: key) {

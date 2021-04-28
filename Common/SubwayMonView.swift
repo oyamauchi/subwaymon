@@ -1,10 +1,5 @@
-//
-//  SwiftSubwayMonView.swift
-//  SubwayMon
-//
-//  Created by Owen Yamauchi on 3/4/18.
-//  Copyright © 2018 Owen Yamauchi. All rights reserved.
-//
+// SubwayMonView.swift
+// Copyright 2021 Owen Yamauchi
 
 import AppKit
 
@@ -38,7 +33,7 @@ class SubwayMonView: NSView {
     if self.feedInfo !== feedInfo {
       // If we're switching to a different provider, the stop IDs in the currently-loaded feed are
       // now unusable, so clear it out.
-      self.feed = nil
+      feed = nil
     }
     self.feedInfo = feedInfo
     selectedStopIds = stopIds
@@ -102,7 +97,7 @@ class SubwayMonView: NSView {
     updateViews(updates: feed?.northbound ?? [], top: true)
     updateViews(updates: feed?.southbound ?? [], top: false)
 
-    if self.feed != nil {
+    if feed != nil {
       // Draw the separator between the two halves
       let line = NSBezierPath()
       line.move(to: NSMakePoint(0, bounds.size.height / 2))
@@ -129,12 +124,12 @@ class SubwayMonView: NSView {
     feedInProgress = true
 
     #if LOCAL_SERVER
-    let host = "http://localhost:5000"
+      let host = "http://localhost:5000"
     #else
-    let host = "https://subwaymon.owenyamauchi.com"
+      let host = "https://subwaymon.owenyamauchi.com"
     #endif
 
-    let queryString = selectedStopIds.map() {
+    let queryString = selectedStopIds.map {
       "stop_id=\($0.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)"
     }.joined(separator: "&")
 

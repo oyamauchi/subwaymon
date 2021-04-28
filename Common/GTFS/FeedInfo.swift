@@ -1,10 +1,5 @@
-//
-//  StopsFileInfo.swift
-//  SubwayMon
-//
-//  Created by Owen Yamauchi on 3/10/18.
-//  Copyright © 2018 Owen Yamauchi. All rights reserved.
-//
+// FeedInfo.swift
+// Copyright 2021 Owen Yamauchi
 
 import AppKit
 
@@ -69,18 +64,19 @@ class FeedInfo {
                                                   withExtension: "json")!
     let data = try? Data(contentsOf: url)
     let providerInfo = try? JSONDecoder().decode(ProviderInfo.self, from: data!)
-    self.name = providerInfo!.name
+    name = providerInfo!.name
 
     var routeTag = 1
     routeMenu = NSMenu()
     routeMenu.autoenablesItems = false
 
     for routeInfo in providerInfo!.routes {
-      let symbol: RouteSymbol = RouteSymbol(
+      let symbol = RouteSymbol(
         text: routeInfo.symbolText,
         textColor: RouteSymbol.colorFrom(hexString: routeInfo.symbolTextColor),
         shape: RouteSymbol.Shape(rawValue: routeInfo.symbolShape)!,
-        color: RouteSymbol.colorFrom(hexString: routeInfo.symbolColor))
+        color: RouteSymbol.colorFrom(hexString: routeInfo.symbolColor)
+      )
       routeToSymbol[routeInfo.routeId] = symbol
 
       routeTagToStopDicts[routeTag] = routeInfo.stops

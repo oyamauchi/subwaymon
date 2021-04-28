@@ -1,10 +1,5 @@
-//
-//  SubwayMonScreenSaverView.swift
-//  SubwayMon
-//
-//  Created by Owen Yamauchi on 3/4/18.
-//  Copyright © 2018 Owen Yamauchi. All rights reserved.
-//
+// SubwayMonScreenSaverView.swift
+// Copyright 2021 Owen Yamauchi
 
 import ScreenSaver
 

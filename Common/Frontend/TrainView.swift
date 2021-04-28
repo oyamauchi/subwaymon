@@ -1,10 +1,5 @@
-//
-//  TrainView.swift
-//  SubwayMon
-//
-//  Created by Owen Yamauchi on 2/25/18.
-//  Copyright © 2018 Owen Yamauchi. All rights reserved.
-//
+// TrainView.swift
+// Copyright 2021 Owen Yamauchi
 
 import AppKit
 
@@ -25,7 +20,7 @@ class TrainView: NSView {
     var firstField = fields.startIndex
 
     while firstField < fields.endIndex {
-      let attempt = fields[firstField..<fields.endIndex].joined(separator: "-")
+      let attempt = fields[firstField ..< fields.endIndex].joined(separator: "-")
 
       if attempt.size(withAttributes: attributes).width <= width {
         return attempt
@@ -37,7 +32,7 @@ class TrainView: NSView {
     var attempt = fields[0]
 
     while attempt.size(withAttributes: attributes).width > width, attempt.count > 1 {
-      let range = attempt.index(attempt.endIndex, offsetBy: -2)..<attempt.endIndex
+      let range = attempt.index(attempt.endIndex, offsetBy: -2) ..< attempt.endIndex
       attempt = attempt.replacingCharacters(in: range, with: "\u{2026}")
     }
 

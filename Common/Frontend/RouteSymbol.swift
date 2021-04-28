@@ -1,10 +1,5 @@
-//
-//  RouteSymbol.swift
-//  SubwayMon
-//
-//  Created by Owen Yamauchi on 12/11/20.
-//  Copyright © 2020 Owen Yamauchi. All rights reserved.
-//
+// RouteSymbol.swift
+// Copyright 2021 Owen Yamauchi
 
 import AppKit
 
@@ -24,6 +19,7 @@ struct RouteSymbol {
     let g = Int(hexString.prefix(4).suffix(2), radix: 16)!
     let b = Int(hexString.suffix(2), radix: 16)!
     return NSColor(
-      red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: 1.0)
+      red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: 1.0
+    )
   }
 }
