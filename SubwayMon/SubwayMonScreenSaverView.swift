@@ -5,21 +5,20 @@ import ScreenSaver
 
 class SubwayMonScreenSaverView: ScreenSaverView {
   @IBOutlet var configSheet: NSWindow!
-  @IBOutlet var popupMenu: NSPopUpButton!
+  @IBOutlet var providerMenu: NSPopUpButton!
+  @IBOutlet var routeMenu: NSPopUpButton!
+  @IBOutlet var stopMenu: NSPopUpButton!
 
   private var subwayView: SubwayMonView!
+  private var menuManager: MenuManager!
 
-  private let kSelectedStationKey = "SelectedStation"
+  private let defaults = ScreenSaverDefaults(forModuleWithName: "com.oyamauchi.SubwayMon")!
+
+  private static let kSelectedProviderIdKey = "SelectedProviderId"
+  private static let kSelectedStopIdsKey = "SelectedStopIds"
 
   @IBAction func closeSheet(sender _: Any) {
-    let defaults = ScreenSaverDefaults(forModuleWithName: "com.oyamauchi.SubwayMon")!
-    let stopId = FeedInfo.shared.stopId(forTag: popupMenu.selectedTag())
-    defaults.set(stopId, forKey: kSelectedStationKey)
-    defaults.synchronize()
-
-    subwayView.selectedStopId = stopId
-
-    NSApplication.shared().endSheet(configSheet)
+    configSheet.sheetParent?.endSheet(configSheet)
   }
 
   override init?(frame: NSRect, isPreview: Bool) {
@@ -33,16 +32,35 @@ class SubwayMonScreenSaverView: ScreenSaverView {
 
     animationTimeInterval = 5.0
 
-    let defaults = ScreenSaverDefaults(forModuleWithName: "com.oyamauchi.SubwayMon")!
-    // Grand Central on the Lex by default
-    let stopId = defaults.string(forKey: kSelectedStationKey) ?? "631"
-
     subwayView = SubwayMonView(frame: bounds)
-    subwayView.initialize(stopId: stopId)
     addSubview(subwayView)
 
-    popupMenu.menu = FeedInfo.shared.menu
-    popupMenu.selectItem(withTag: FeedInfo.shared.tag(forStopId: stopId))
+    if let savedStopIds = defaults.stringArray(forKey: SubwayMonScreenSaverView.kSelectedStopIdsKey),
+       let savedProviderId = defaults.string(forKey: SubwayMonScreenSaverView.kSelectedProviderIdKey),
+       let feedInfo = FeedInfo.feedInfo(forProviderId: savedProviderId)
+    {
+      subwayView.setStopIds(stopIds: savedStopIds, feedInfo: feedInfo)
+      subwayView.needsDisplay = true
+    }
+
+    menuManager = MenuManager(
+      defaults: defaults,
+      providerMenu: providerMenu,
+      routeMenu: routeMenu,
+      stopMenu: stopMenu,
+      onStopIdsSelected: { [unowned self] (stopIds: [StopId], feedInfo: FeedInfo) -> Void in
+        self.setAndSave(stopIds: stopIds, feedInfo: feedInfo)
+      }
+    )
+  }
+
+  func setAndSave(stopIds: [StopId], feedInfo: FeedInfo) {
+    defaults.set(stopIds, forKey: SubwayMonScreenSaverView.kSelectedStopIdsKey)
+    defaults.set(feedInfo.providerId, forKey: SubwayMonScreenSaverView.kSelectedProviderIdKey)
+    defaults.synchronize()
+
+    subwayView.setStopIds(stopIds: stopIds, feedInfo: feedInfo)
+    subwayView.needsDisplay = true
   }
 
   required init?(coder: NSCoder) {
@@ -53,11 +71,6 @@ class SubwayMonScreenSaverView: ScreenSaverView {
     needsDisplay = true
   }
 
-  override func hasConfigureSheet() -> Bool {
-    return true
-  }
-
-  override func configureSheet() -> NSWindow? {
-    return configSheet
-  }
+  override var hasConfigureSheet: Bool { true }
+  override var configureSheet: NSWindow? { configSheet }
 }

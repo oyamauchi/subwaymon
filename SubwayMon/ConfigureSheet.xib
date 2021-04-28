@@ -1,38 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SubwayMonScreenSaverView">
             <connections>
                 <outlet property="configSheet" destination="31" id="o6L-Y6-coz"/>
-                <outlet property="popupMenu" destination="3" id="kLb-bB-0NR"/>
+                <outlet property="providerMenu" destination="PAK-Qj-l3j" id="KKp-Im-u7W"/>
+                <outlet property="routeMenu" destination="p3W-8g-Rhc" id="Jhv-n2-o0s"/>
+                <outlet property="stopMenu" destination="eWC-YT-KPW" id="2cw-Qx-QIK"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="31" customClass="NSPanel">
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="31" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="139" y="81" width="315" height="102"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <rect key="contentRect" x="139" y="81" width="315" height="164"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <view key="contentView" id="32">
-                <rect key="frame" x="0.0" y="0.0" width="315" height="102"/>
+                <rect key="frame" x="0.0" y="0.0" width="315" height="164"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3">
-                        <rect key="frame" x="18" y="58" width="280" height="26"/>
-                        <popUpButtonCell key="cell" type="push" title="Bedford Park Blvd - Lehman College" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" autoenablesItems="NO" selectedItem="6" id="4">
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PAK-Qj-l3j">
+                        <rect key="frame" x="18" y="120" width="280" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="h7U-jL-MiZ" id="v6V-yh-F33">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="menu"/>
-                            <menu key="menu" title="OtherViews" autoenablesItems="NO" id="5">
+                            <font key="font" metaFont="system"/>
+                            <menu key="menu" id="Sfh-zJ-Ihm">
                                 <items>
-                                    <menuItem title="Bedford Park Blvd - Lehman College" state="on" id="6"/>
-                                    <menuItem title="Item 2" id="7"/>
-                                    <menuItem title="Item 3" id="8"/>
+                                    <menuItem title="Item 1" state="on" id="h7U-jL-MiZ"/>
+                                    <menuItem title="Item 2" id="olZ-YK-d8k"/>
+                                    <menuItem title="Item 3" id="PXl-eP-vKq"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                    </popUpButton>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3W-8g-Rhc">
+                        <rect key="frame" x="18" y="89" width="280" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="xte-JT-SiM" id="2KT-xK-NKc">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <menu key="menu" id="4ln-6X-u57">
+                                <items>
+                                    <menuItem title="Item 1" state="on" id="xte-JT-SiM"/>
+                                    <menuItem title="Item 2" id="vbc-L4-ww6"/>
+                                    <menuItem title="Item 3" id="mk6-cz-RnH"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                    </popUpButton>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eWC-YT-KPW">
+                        <rect key="frame" x="18" y="58" width="280" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="rSI-g9-Zry" id="q2S-UQ-IeT">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <menu key="menu" id="muf-AH-wd2">
+                                <items>
+                                    <menuItem title="Item 1" state="on" id="rSI-g9-Zry"/>
+                                    <menuItem title="Item 2" id="nVs-ev-SVf"/>
+                                    <menuItem title="Item 3" id="Gch-hD-Zuv"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
@@ -52,13 +85,11 @@ DQ
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3" firstAttribute="top" secondItem="32" secondAttribute="top" constant="20" symbolic="YES" id="34"/>
-                    <constraint firstItem="3" firstAttribute="leading" secondItem="32" secondAttribute="leading" constant="20" symbolic="YES" id="35"/>
-                    <constraint firstAttribute="trailing" secondItem="3" secondAttribute="trailing" constant="20" symbolic="YES" id="36"/>
                     <constraint firstAttribute="trailing" secondItem="23" secondAttribute="trailing" constant="20" symbolic="YES" id="38"/>
                     <constraint firstAttribute="bottom" secondItem="23" secondAttribute="bottom" constant="20" symbolic="YES" id="39"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="118.5" y="-15"/>
         </window>
     </objects>
 </document>

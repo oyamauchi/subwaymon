@@ -94,6 +94,15 @@ class FeedInfo {
     return feedInfos[tag]!
   }
 
+  static func feedInfo(forProviderId providerId: String) -> FeedInfo? {
+    for feedInfo in feedInfos.values {
+      if feedInfo.providerId == providerId {
+        return feedInfo
+      }
+    }
+    return nil
+  }
+
   func stopMenu(forRouteTag routeTag: Int) -> NSMenu {
     stopTagToStopIds.removeAll()
 
