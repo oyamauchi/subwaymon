@@ -20,12 +20,12 @@ class TrainView: NSView {
     withAttributes attributes: [NSAttributedString.Key: Any],
     toWidth width: CGFloat
   ) -> String {
-    let fields = text.components(separatedBy: " - ")
+    let fields = text.components(separatedBy: "-")
 
     var firstField = fields.startIndex
 
     while firstField < fields.endIndex {
-      let attempt = fields[firstField..<fields.endIndex].joined(separator: " - ")
+      let attempt = fields[firstField..<fields.endIndex].joined(separator: "-")
 
       if attempt.size(withAttributes: attributes).width <= width {
         return attempt
