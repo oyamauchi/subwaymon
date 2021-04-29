@@ -3,7 +3,7 @@
   "routes": [
     {
       "routeId": "1",
-      "name": "1 — Broadway - 7 Avenue Local",
+      "name": "1 \u2014 Broadway - 7 Avenue Local",
       "symbolText": "1",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -279,7 +279,7 @@
     },
     {
       "routeId": "2",
-      "name": "2 — 7 Avenue Express",
+      "name": "2 \u2014 7 Avenue Express",
       "symbolText": "2",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -786,7 +786,7 @@
     },
     {
       "routeId": "3",
-      "name": "3 — 7 Avenue Express",
+      "name": "3 \u2014 7 Avenue Express",
       "symbolText": "3",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -1034,7 +1034,7 @@
     },
     {
       "routeId": "4",
-      "name": "4 — Lexington Avenue Express",
+      "name": "4 \u2014 Lexington Avenue Express",
       "symbolText": "4",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -1422,7 +1422,7 @@
     },
     {
       "routeId": "5",
-      "name": "5 — Lexington Avenue Express",
+      "name": "5 \u2014 Lexington Avenue Express",
       "symbolText": "5",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -1696,10 +1696,64 @@
         },
         {
           "ids": [
+            "248N"
+          ],
+          "name": "Nostrand Av"
+        },
+        {
+          "ids": [
+            "249N"
+          ],
+          "name": "Kingston Av"
+        },
+        {
+          "ids": [
             "250N",
             "250S"
           ],
           "name": "Crown Hts-Utica Av"
+        },
+        {
+          "ids": [
+            "251N"
+          ],
+          "name": "Sutter Av-Rutland Rd"
+        },
+        {
+          "ids": [
+            "252N"
+          ],
+          "name": "Saratoga Av"
+        },
+        {
+          "ids": [
+            "253N"
+          ],
+          "name": "Rockaway Av"
+        },
+        {
+          "ids": [
+            "254N"
+          ],
+          "name": "Junius St"
+        },
+        {
+          "ids": [
+            "255N"
+          ],
+          "name": "Pennsylvania Av"
+        },
+        {
+          "ids": [
+            "256N"
+          ],
+          "name": "Van Siclen Av"
+        },
+        {
+          "ids": [
+            "257N"
+          ],
+          "name": "New Lots Av"
         },
         {
           "ids": [
@@ -1753,8 +1807,192 @@
       ]
     },
     {
+      "routeId": "5X",
+      "name": "5X \u2014 Lexington Avenue Express",
+      "symbolText": "5",
+      "symbolTextColor": "FFFFFF",
+      "symbolShape": "diamond",
+      "symbolColor": "00933C",
+      "stops": [
+        {
+          "ids": [
+            "501N"
+          ],
+          "name": "Eastchester-Dyre Av"
+        },
+        {
+          "ids": [
+            "502N"
+          ],
+          "name": "Baychester Av"
+        },
+        {
+          "ids": [
+            "503N"
+          ],
+          "name": "Gun Hill Rd"
+        },
+        {
+          "ids": [
+            "504N"
+          ],
+          "name": "Pelham Pkwy"
+        },
+        {
+          "ids": [
+            "505N"
+          ],
+          "name": "Morris Park"
+        },
+        {
+          "ids": [
+            "213N"
+          ],
+          "name": "E 180 St"
+        },
+        {
+          "ids": [
+            "221N"
+          ],
+          "name": "3 Av-149 St"
+        },
+        {
+          "ids": [
+            "222N"
+          ],
+          "name": "149 St-Grand Concourse"
+        },
+        {
+          "ids": [
+            "416N"
+          ],
+          "name": "138 St-Grand Concourse"
+        },
+        {
+          "ids": [
+            "621N"
+          ],
+          "name": "125 St"
+        },
+        {
+          "ids": [
+            "626N"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "629N"
+          ],
+          "name": "59 St"
+        },
+        {
+          "ids": [
+            "631N"
+          ],
+          "name": "Grand Central-42 St"
+        },
+        {
+          "ids": [
+            "635N"
+          ],
+          "name": "14 St-Union Sq"
+        },
+        {
+          "ids": [
+            "640N"
+          ],
+          "name": "Brooklyn Bridge-City Hall"
+        },
+        {
+          "ids": [
+            "418N"
+          ],
+          "name": "Fulton St"
+        },
+        {
+          "ids": [
+            "419N"
+          ],
+          "name": "Wall St"
+        },
+        {
+          "ids": [
+            "420N"
+          ],
+          "name": "Bowling Green"
+        },
+        {
+          "ids": [
+            "423N"
+          ],
+          "name": "Borough Hall"
+        },
+        {
+          "ids": [
+            "234N"
+          ],
+          "name": "Nevins St"
+        },
+        {
+          "ids": [
+            "235N"
+          ],
+          "name": "Atlantic Av-Barclays Ctr"
+        },
+        {
+          "ids": [
+            "239N"
+          ],
+          "name": "Franklin Av-Medgar Evers College"
+        },
+        {
+          "ids": [
+            "241N"
+          ],
+          "name": "President St-Medgar Evers College"
+        },
+        {
+          "ids": [
+            "242N"
+          ],
+          "name": "Sterling St"
+        },
+        {
+          "ids": [
+            "243N"
+          ],
+          "name": "Winthrop St"
+        },
+        {
+          "ids": [
+            "244N"
+          ],
+          "name": "Church Av"
+        },
+        {
+          "ids": [
+            "245N"
+          ],
+          "name": "Beverly Rd"
+        },
+        {
+          "ids": [
+            "246N"
+          ],
+          "name": "Newkirk Av"
+        },
+        {
+          "ids": [
+            "247N"
+          ],
+          "name": "Flatbush Av-Brooklyn College"
+        }
+      ]
+    },
+    {
       "routeId": "6",
-      "name": "6 — Lexington Avenue Local",
+      "name": "6 \u2014 Lexington Avenue Local",
       "symbolText": "6",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -2030,7 +2268,7 @@
     },
     {
       "routeId": "6X",
-      "name": "6X — Pelham Bay Park Express",
+      "name": "6X \u2014 Pelham Bay Park Express",
       "symbolText": "6",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "diamond",
@@ -2267,7 +2505,7 @@
     },
     {
       "routeId": "7",
-      "name": "7 — Flushing Local",
+      "name": "7 \u2014 Flushing Local",
       "symbolText": "7",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -2431,7 +2669,7 @@
     },
     {
       "routeId": "7X",
-      "name": "7X — Flushing Express",
+      "name": "7X \u2014 Flushing Express",
       "symbolText": "7",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "diamond",
@@ -2525,7 +2763,7 @@
     },
     {
       "routeId": "GS",
-      "name": "S — 42 St Shuttle",
+      "name": "S \u2014 42 St Shuttle",
       "symbolText": "S",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -2549,7 +2787,7 @@
     },
     {
       "routeId": "A",
-      "name": "A — 8 Avenue Express",
+      "name": "A \u2014 8 Avenue Express",
       "symbolText": "A",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -2900,6 +3138,12 @@
         },
         {
           "ids": [
+            "H01N"
+          ],
+          "name": "Aqueduct Racetrack"
+        },
+        {
+          "ids": [
             "H02N",
             "H02S"
           ],
@@ -3014,7 +3258,7 @@
     },
     {
       "routeId": "B",
-      "name": "B — 6 Avenue Express",
+      "name": "B \u2014 6 Avenue Express",
       "symbolText": "B",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -3094,6 +3338,12 @@
           "ids": [
             "D13N",
             "D13S"
+          ],
+          "name": "145 St"
+        },
+        {
+          "ids": [
+            "A12N"
           ],
           "name": "145 St"
         },
@@ -3283,7 +3533,7 @@
     },
     {
       "routeId": "C",
-      "name": "C — 8 Avenue Local",
+      "name": "C \u2014 8 Avenue Local",
       "symbolText": "C",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -3573,7 +3823,7 @@
     },
     {
       "routeId": "D",
-      "name": "D — 6 Avenue Express",
+      "name": "D \u2014 6 Avenue Express",
       "symbolText": "D",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -3870,7 +4120,7 @@
     },
     {
       "routeId": "E",
-      "name": "E — 8 Avenue Local",
+      "name": "E \u2014 8 Avenue Local",
       "symbolText": "E",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -3899,13 +4149,6 @@
         },
         {
           "ids": [
-            "F05N",
-            "F05S"
-          ],
-          "name": "Briarwood"
-        },
-        {
-          "ids": [
             "F01N",
             "F01S"
           ],
@@ -3913,10 +4156,29 @@
         },
         {
           "ids": [
+            "F02N"
+          ],
+          "name": "169 St"
+        },
+        {
+          "ids": [
             "F03N",
             "F03S"
           ],
           "name": "Parsons Blvd"
+        },
+        {
+          "ids": [
+            "F04N"
+          ],
+          "name": "Sutphin Blvd"
+        },
+        {
+          "ids": [
+            "F05N",
+            "F05S"
+          ],
+          "name": "Briarwood"
         },
         {
           "ids": [
@@ -4118,7 +4380,7 @@
     },
     {
       "routeId": "F",
-      "name": "F — Queens Blvd Express/ 6 Av Local",
+      "name": "F \u2014 Queens Blvd Express/ 6 Av Local",
       "symbolText": "F",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -4443,7 +4705,7 @@
     },
     {
       "routeId": "FS",
-      "name": "S — Franklin Avenue Shuttle",
+      "name": "S \u2014 Franklin Avenue Shuttle",
       "symbolText": "S",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -4481,7 +4743,7 @@
     },
     {
       "routeId": "G",
-      "name": "G — Brooklyn-Queens Crosstown",
+      "name": "G \u2014 Brooklyn-Queens Crosstown",
       "symbolText": "G",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -4638,7 +4900,7 @@
     },
     {
       "routeId": "J",
-      "name": "J — Nassau St Local",
+      "name": "J \u2014 Nassau St Local",
       "symbolText": "J",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -4858,7 +5120,7 @@
     },
     {
       "routeId": "L",
-      "name": "L — 14 St-Canarsie Local",
+      "name": "L \u2014 14 St-Canarsie Local",
       "symbolText": "L",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -5036,7 +5298,7 @@
     },
     {
       "routeId": "M",
-      "name": "M — Queens Blvd Local/6 Av Local",
+      "name": "M \u2014 Queens Blvd Local/6 Av Local",
       "symbolText": "M",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -5298,7 +5560,7 @@
     },
     {
       "routeId": "N",
-      "name": "N — Broadway Local",
+      "name": "N \u2014 Broadway Local",
       "symbolText": "N",
       "symbolTextColor": "000000",
       "symbolShape": "circle",
@@ -5654,7 +5916,7 @@
     },
     {
       "routeId": "Q",
-      "name": "Q — Broadway Express",
+      "name": "Q \u2014 Broadway Express",
       "symbolText": "Q",
       "symbolTextColor": "000000",
       "symbolShape": "circle",
@@ -5757,6 +6019,78 @@
             "Q01S"
           ],
           "name": "Canal St"
+        },
+        {
+          "ids": [
+            "R31N"
+          ],
+          "name": "Atlantic Av-Barclays Ctr"
+        },
+        {
+          "ids": [
+            "R36N"
+          ],
+          "name": "36 St"
+        },
+        {
+          "ids": [
+            "R41N"
+          ],
+          "name": "59 St"
+        },
+        {
+          "ids": [
+            "N02N"
+          ],
+          "name": "8 Av"
+        },
+        {
+          "ids": [
+            "N03N"
+          ],
+          "name": "Fort Hamilton Pkwy"
+        },
+        {
+          "ids": [
+            "N04N"
+          ],
+          "name": "New Utrecht Av"
+        },
+        {
+          "ids": [
+            "N05N"
+          ],
+          "name": "18 Av"
+        },
+        {
+          "ids": [
+            "N06N"
+          ],
+          "name": "20 Av"
+        },
+        {
+          "ids": [
+            "N07N"
+          ],
+          "name": "Bay Pkwy"
+        },
+        {
+          "ids": [
+            "N08N"
+          ],
+          "name": "Kings Hwy"
+        },
+        {
+          "ids": [
+            "N09N"
+          ],
+          "name": "Avenue U"
+        },
+        {
+          "ids": [
+            "N10N"
+          ],
+          "name": "86 St"
         },
         {
           "ids": [
@@ -5902,12 +6236,36 @@
     },
     {
       "routeId": "R",
-      "name": "R — Broadway Local",
+      "name": "R \u2014 Broadway Local",
       "symbolText": "R",
       "symbolTextColor": "000000",
       "symbolShape": "circle",
       "symbolColor": "FCCC0A",
       "stops": [
+        {
+          "ids": [
+            "Q05N"
+          ],
+          "name": "96 St"
+        },
+        {
+          "ids": [
+            "Q04N"
+          ],
+          "name": "86 St"
+        },
+        {
+          "ids": [
+            "Q03N"
+          ],
+          "name": "72 St"
+        },
+        {
+          "ids": [
+            "B08N"
+          ],
+          "name": "Lexington Av/63 St"
+        },
         {
           "ids": [
             "G08N",
@@ -6227,7 +6585,7 @@
     },
     {
       "routeId": "H",
-      "name": "S — Rockaway Park Shuttle",
+      "name": "S \u2014 Rockaway Park Shuttle",
       "symbolText": "S",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -6272,7 +6630,7 @@
     },
     {
       "routeId": "W",
-      "name": "W — Broadway Local",
+      "name": "W \u2014 Broadway Local",
       "symbolText": "W",
       "symbolTextColor": "000000",
       "symbolShape": "circle",
@@ -6590,7 +6948,7 @@
     },
     {
       "routeId": "Z",
-      "name": "Z — Nassau St Express",
+      "name": "Z \u2014 Nassau St Express",
       "symbolText": "Z",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
@@ -6747,7 +7105,7 @@
     },
     {
       "routeId": "SI",
-      "name": "SIR — Staten Island Railway",
+      "name": "SIR \u2014 Staten Island Railway",
       "symbolText": "SIR",
       "symbolTextColor": "FFFFFF",
       "symbolShape": "circle",
