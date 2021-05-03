@@ -24,6 +24,8 @@
 		9387C19020329D49000BB42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9387C18F20329D49000BB42A /* Assets.xcassets */; };
 		9387C19320329D49000BB42A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9387C19120329D49000BB42A /* MainMenu.xib */; };
 		93A4FF0C17C849AB003F90A0 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */; };
+		93C2C8D92640963D002C240A /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2C8D82640963D002C240A /* MenuManager.swift */; };
+		93C2C8DA2640963D002C240A /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2C8D82640963D002C240A /* MenuManager.swift */; };
 		93C5C1452054DBDE00492A2D /* FeedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1442054DBDE00492A2D /* FeedInfo.swift */; };
 		93C5C1462054DBDE00492A2D /* FeedInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C5C1442054DBDE00492A2D /* FeedInfo.swift */; };
 		93EC28CE17C484FC00F5F90B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC28CD17C484FC00F5F90B /* Cocoa.framework */; };
@@ -44,6 +46,7 @@
 		9387C19220329D49000BB42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9387C19420329D49000BB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4FF0B17C849AB003F90A0 /* ConfigureSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
+		93C2C8D82640963D002C240A /* MenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
 		93C5C1442054DBDE00492A2D /* FeedInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInfo.swift; sourceTree = "<group>"; };
 		93EC28CA17C484FC00F5F90B /* SubwayMon.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SubwayMon.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EC28CD17C484FC00F5F90B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -161,6 +164,7 @@
 			children = (
 				934F347B2638E0D200E6FC68 /* RouteSymbol.swift */,
 				93175C0520435EBB00FBD535 /* TrainView.swift */,
+				93C2C8D82640963D002C240A /* MenuManager.swift */,
 			);
 			path = Frontend;
 			sourceTree = "<group>";
@@ -297,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C2C8DA2640963D002C240A /* MenuManager.swift in Sources */,
 				93650967204C9EB300705BCF /* SubwayMonView.swift in Sources */,
 				93175C0720435EBB00FBD535 /* TrainView.swift in Sources */,
 				934F347D2638E0D200E6FC68 /* RouteSymbol.swift in Sources */,
@@ -310,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C2C8D92640963D002C240A /* MenuManager.swift in Sources */,
 				93650969204CE85E00705BCF /* SubwayMonScreenSaverView.swift in Sources */,
 				93650966204C9EB300705BCF /* SubwayMonView.swift in Sources */,
 				93175C0620435EBB00FBD535 /* TrainView.swift in Sources */,

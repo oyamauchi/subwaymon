@@ -15,45 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   @IBOutlet var routeMenu: NSPopUpButton!
   @IBOutlet var stopMenu: NSPopUpButton!
 
-  private var feedInfo: FeedInfo!
   private let defaults = UserDefaults.standard
-
-  private func selectItem(inMenu menu: NSPopUpButton, withDefaultsKey key: String) {
-    if let savedTitle = defaults.string(forKey: key) {
-      menu.selectItem(withTitle: savedTitle)
-    }
-    if menu.selectedTag() < 0 {
-      defaults.removeObject(forKey: key)
-      menu.selectItem(at: 0)
-    }
-  }
-
-  @IBAction func providerMenuSelected(_ sender: NSPopUpButton) {
-    defaults.set(sender.titleOfSelectedItem, forKey: providerDefaultsKey)
-
-    feedInfo = FeedInfo.feedInfo(forTag: sender.selectedTag())
-    routeMenu.menu = feedInfo.routeMenu
-    routeMenu.isEnabled = true
-    selectItem(inMenu: routeMenu, withDefaultsKey: routeDefaultsKey)
-    routeMenuSelected(routeMenu)
-  }
-
-  @IBAction func routeMenuSelected(_ sender: NSPopUpButton) {
-    defaults.set(sender.titleOfSelectedItem, forKey: routeDefaultsKey)
-
-    stopMenu.menu = feedInfo.stopMenu(forRouteTag: sender.selectedTag())
-    stopMenu.isEnabled = true
-    selectItem(inMenu: stopMenu, withDefaultsKey: stopDefaultsKey)
-    stopMenuSelected(stopMenu)
-  }
-
-  @IBAction func stopMenuSelected(_ sender: NSPopUpButton) {
-    defaults.set(sender.titleOfSelectedItem, forKey: stopDefaultsKey)
-
-    let stopIds = feedInfo.stopIdsFor(stopTag: sender.selectedTag())
-    subway.setStopIds(stopIds: stopIds, feedInfo: feedInfo)
-    subway.needsDisplay = true
-  }
+  private var menuManager: MenuManager!
 
   @objc
   func timerFired() {
@@ -61,9 +24,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   }
 
   func applicationDidFinishLaunching(_: Notification) {
-    providerMenu.menu = FeedInfo.providerMenu
-    selectItem(inMenu: providerMenu, withDefaultsKey: providerDefaultsKey)
-    providerMenuSelected(providerMenu)
+    menuManager = MenuManager(
+      defaults: defaults,
+      providerMenu: providerMenu,
+      routeMenu: routeMenu,
+      stopMenu: stopMenu,
+      onStopIdsSelected: {
+        [unowned self]
+        (stopIds: [StopId], feedInfo: FeedInfo) -> Void in
+        self.subway.setStopIds(stopIds: stopIds, feedInfo: feedInfo)
+        self.subway.needsDisplay = true
+      }
+    )
 
     Timer.scheduledTimer(
       timeInterval: 5.0,

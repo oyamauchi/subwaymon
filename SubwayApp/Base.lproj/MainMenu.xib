@@ -689,7 +689,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="480" height="402"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
             <value key="minSize" type="size" width="373" height="350"/>
             <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="480" height="402"/>
@@ -722,9 +722,6 @@
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
-                                        <connections>
-                                            <action selector="providerMenuSelected:" target="Voe-Tx-rLC" id="Kqe-lt-s7c"/>
-                                        </connections>
                                     </popUpButton>
                                 </subviews>
                                 <visibilityPriorities>
@@ -754,9 +751,6 @@
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" autoenablesItems="NO" id="jf0-SP-3e0"/>
                                         </popUpButtonCell>
-                                        <connections>
-                                            <action selector="routeMenuSelected:" target="Voe-Tx-rLC" id="cZe-ZZ-EZe"/>
-                                        </connections>
                                     </popUpButton>
                                 </subviews>
                                 <visibilityPriorities>
@@ -786,9 +780,6 @@
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" autoenablesItems="NO" id="VH9-I2-397"/>
                                         </popUpButtonCell>
-                                        <connections>
-                                            <action selector="stopMenuSelected:" target="Voe-Tx-rLC" id="z9o-ot-9wG"/>
-                                        </connections>
                                     </popUpButton>
                                 </subviews>
                                 <visibilityPriorities>
